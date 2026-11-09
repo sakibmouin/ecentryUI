@@ -46,7 +46,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 - [x] **T10 Build documentation shell and example harness** (depends on T02,T07).
   - Acceptance: Navigation, component routes, preview/code tabs and example compilation work.
   - Verify: `npm run build:docs && npm run test:e2e -- docs-shell`.
-- [ ] **T11 Build Vite consumer fixture** (depends on T09).
+- [x] **T11 Build Vite consumer fixture** (depends on T09).
   - Acceptance: Clean install, sample registry item import, theme override and production build pass.
   - Verify: `npm run test:consumer -- vite`.
 - [ ] **T12 Build Next.js consumer fixture** (depends on T09).
