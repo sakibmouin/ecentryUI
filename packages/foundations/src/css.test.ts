@@ -37,5 +37,8 @@ describe("theme CSS", () => {
     expect(() => createTheme({ tokens: { "colors.ink": "red/*" } })).toThrow(
       /colors\.ink/,
     );
+    expect(() =>
+      createTheme({ tokens: { "colors.ink": "</style><script>" } }),
+    ).toThrow(/colors\.ink/);
   });
 });

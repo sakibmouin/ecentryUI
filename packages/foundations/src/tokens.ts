@@ -33,7 +33,7 @@ function validateValue(path: string, value: unknown): asserts value is string {
     (character) => character.charCodeAt(0) < 32,
   );
   if (
-    /[;{}]/.test(withoutReferences) ||
+    /[;{}<>]/.test(withoutReferences) ||
     /\/\*|\*\//.test(withoutReferences) ||
     hasControlCharacter
   ) {

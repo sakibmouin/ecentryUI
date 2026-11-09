@@ -13,7 +13,7 @@ Run these commands from the repository root:
 
 - `npm ci` installs the locked workspace dependencies.
 - `npm run build` compiles the TypeScript packages.
-- `npm run typecheck` checks package types without emitting files.
+- `npm run typecheck` checks package and test types without emitting files.
 - `npm run lint` checks source and test files with ESLint.
 - `npm run format:check` checks formatting with Prettier.
 - `npm test -- --run` runs Vitest once.

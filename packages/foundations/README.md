@@ -1,6 +1,6 @@
 # Design foundations
 
-`@ecentry/foundations` defines the token schema, resolves values for light and dark appearances, and generates scoped CSS. Appearance management follows in a later task.
+`@ecentry/foundations` defines the token schema, resolves values for light and dark appearances, and generates scoped CSS. Its optional React subpath manages appearance without adding React to CSS-only consumers.
 
 ```ts
 import {
@@ -23,3 +23,19 @@ renderThemeCss(theme, { scope: ".app" }); // CSS variables scoped to .app
 Token paths use lowercase dot-separated names such as `colors.surface.raised`. `{path}` references may appear inside values and can point to primitive or semantic tokens. `createTheme` checks both appearances for missing references and cycles and never changes the supplied object. `resolveTokens` returns a sorted, read-only path-to-value map. The default theme is exported as `defaultTheme`.
 
 `renderThemeCss` emits `--ec-` variables by default. Put `data-ec-theme="dark"` on the scope or a descendant to activate dark semantic values; a nested `data-ec-theme="light"` restores light values. Its layer order is `ec.reset`, `ec.tokens`, `ec.components`, `ec.variants`, then `ec.utilities`. Consumer rules outside a layer take precedence over normal layered rules.
+
+## React appearance
+
+```tsx
+import {
+  AppearanceProvider,
+  AppearancePortal,
+  useAppearance,
+} from "@ecentry/foundations/react";
+
+<AppearanceProvider defaultAppearance="system" storageKey="app-appearance">
+  <App />
+</AppearanceProvider>;
+```
+
+`useAppearance()` returns the selected mode, resolved light/dark value, and `setAppearance`. Pass `appearance` and `onAppearanceChange` for controlled use. A nested provider can force an appearance; render overlays through `AppearancePortal` so they keep that scope after moving to `document.body`. The provider emits its scoped CSS and a small pre-hydration script before children, so system or stored appearance can apply before first paint. Pass `nonce` when your content security policy requires one. Storage is used only when `storageKey` is supplied and appearance is uncontrolled.
