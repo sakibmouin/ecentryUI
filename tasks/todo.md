@@ -67,7 +67,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/input/input.tsx`, `input.css`, `input.test.tsx`, `index.ts`, `apps/docs/content/components/input.mdx`.
   - Acceptance: semantic behavior and theme states; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/input/input.test.tsx && npm run test:e2e -- input`.
-- [ ] **T015 Dialog behavior** (depends on T07,T08,T09,T10).
+- [x] **T015 Dialog behavior** (depends on T07,T08,T09,T10).
   - Files: `packages/react/src/components/dialog/dialog.tsx`, `dialog.test.tsx`.
   - Acceptance: modal focus trap, nesting, Escape and restoration; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/dialog/dialog.test.tsx`.
