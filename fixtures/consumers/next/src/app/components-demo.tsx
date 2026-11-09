@@ -11,6 +11,7 @@ import {
   DialogTrigger,
 } from "../components/ui/dialog/index";
 import { AbsoluteCenter } from "../components/ui/absolute-center/index";
+import { AspectRatio } from "../components/ui/aspect-ratio/index";
 
 export function ComponentsDemo() {
   return (
@@ -34,6 +35,13 @@ export function ComponentsDemo() {
       >
         <AbsoluteCenter>Installed center</AbsoluteCenter>
       </div>
+      <AspectRatio
+        ratio={4 / 3}
+        style={{ width: 120 }}
+        data-testid="aspect-frame"
+      >
+        <div>Installed ratio</div>
+      </AspectRatio>
     </section>
   );
 }

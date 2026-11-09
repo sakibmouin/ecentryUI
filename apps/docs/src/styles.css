@@ -515,6 +515,19 @@ footer {
 .content-inner tr:last-child td {
   border-bottom: 0;
 }
+.content-inner .api-scroll {
+  overflow-x: auto;
+}
+.content-inner .api-scroll:focus-visible {
+  outline: 2px solid #168873;
+  outline-offset: 2px;
+}
+.content-inner .api-scroll table {
+  display: table;
+  width: max-content;
+  min-width: 100%;
+  overflow: visible;
+}
 
 .input-showcase {
   display: grid;
@@ -666,10 +679,63 @@ footer {
   font-size: 12px;
   font-weight: 700;
 }
+
+.aspect-demo-grid {
+  display: grid;
+  box-sizing: border-box;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  padding: 36px;
+  background: #fff;
+}
+.aspect-demo-group > span {
+  display: block;
+  margin-bottom: 10px;
+  color: #526459;
+  font-size: 12px;
+  font-weight: 700;
+}
+.aspect-demo-wide {
+  grid-column: 1 / -1;
+}
+.aspect-demo-art {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #fff;
+  text-align: center;
+}
+.aspect-demo-art strong {
+  font-size: 22px;
+  letter-spacing: -0.04em;
+}
+.aspect-demo-art span {
+  font-size: 13px;
+  opacity: 0.9;
+}
+.aspect-demo-art-wide {
+  background: linear-gradient(135deg, #173f3e, #116e5e);
+}
+.aspect-demo-art-square {
+  background: linear-gradient(135deg, #644b28, #865b23);
+}
+.aspect-demo-art-portrait {
+  background: linear-gradient(135deg, #23385d, #415c88);
+}
 @media (max-width: 620px) {
   .absolute-demo-grid {
     grid-template-columns: 1fr;
     padding: 24px;
+  }
+  .aspect-demo-grid {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+  .aspect-demo-wide {
+    grid-column: auto;
   }
 }
 @media (max-width: 620px) {

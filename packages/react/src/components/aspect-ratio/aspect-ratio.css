@@ -1,0 +1,27 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-aspect-ratio {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    aspect-ratio: var(--ec-aspect-ratio, 16 / 9);
+    overflow: hidden;
+  }
+  .ec-aspect-ratio > * {
+    position: absolute;
+    inset: 0;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+  .ec-aspect-ratio > :is(img, video) {
+    object-fit: cover;
+  }
+  .ec-aspect-ratio > iframe {
+    border: 0;
+  }
+}

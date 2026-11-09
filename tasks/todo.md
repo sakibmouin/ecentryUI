@@ -89,7 +89,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/absolute-center/absolute-center.tsx`, `absolute-center.css`, `absolute-center.test.tsx`, `index.ts`, `apps/docs/content/components/absolute-center.mdx`.
   - Acceptance: responsive layout, intrinsic sizing and RTL; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/absolute-center/absolute-center.test.tsx && npm run test:e2e -- absolute-center`.
-- [ ] **T018 Aspect Ratio component** (depends on T016).
+- [x] **T018 Aspect Ratio component** (depends on T016).
   - Files: `packages/react/src/components/aspect-ratio/aspect-ratio.tsx`, `aspect-ratio.css`, `aspect-ratio.test.tsx`, `index.ts`, `apps/docs/content/components/aspect-ratio.mdx`.
   - Acceptance: responsive layout, intrinsic sizing and RTL; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/aspect-ratio/aspect-ratio.test.tsx && npm run test:e2e -- aspect-ratio`.

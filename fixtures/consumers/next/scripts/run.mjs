@@ -99,7 +99,13 @@ try {
     [cli, "add", "sample", "--registry", path.join(root, "registry"), "--yes"],
     { cwd: root, stdio: "inherit" },
   );
-  for (const component of ["button", "input", "dialog", "absolute-center"]) {
+  for (const component of [
+    "button",
+    "input",
+    "dialog",
+    "absolute-center",
+    "aspect-ratio",
+  ]) {
     execFileSync(
       process.execPath,
       [
@@ -200,6 +206,9 @@ try {
       Math.abs(center.x + center.width / 2 - (parent.x + parent.width / 2)) > 1
     )
       throw new Error("Next Absolute Center did not center horizontally");
+    const frame = await page.getByTestId("aspect-frame").boundingBox();
+    if (!frame || Math.abs(frame.width / frame.height - 4 / 3) > 0.02)
+      throw new Error("Next Aspect Ratio did not keep its ratio");
     if (errors.length)
       throw new Error(`Next hydration errors: ${errors.join(" | ")}`);
   } finally {

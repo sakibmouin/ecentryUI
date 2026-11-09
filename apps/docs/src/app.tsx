@@ -6,6 +6,7 @@ import ButtonDocs from "../content/components/button.mdx";
 import InputDocs from "../content/components/input.mdx";
 import DialogDocs from "../content/components/dialog.mdx";
 import AbsoluteCenterDocs from "../content/components/absolute-center.mdx";
+import AspectRatioDocs from "../content/components/aspect-ratio.mdx";
 
 export const routes = [
   "/",
@@ -14,6 +15,7 @@ export const routes = [
   "/components/input/",
   "/components/dialog/",
   "/components/absolute-center/",
+  "/components/aspect-ratio/",
 ] as const;
 
 const componentLinks = [
@@ -21,6 +23,7 @@ const componentLinks = [
   { title: "Input", href: "/components/input/" },
   { title: "Dialog", href: "/components/dialog/" },
   { title: "Absolute Center", href: "/components/absolute-center/" },
+  { title: "Aspect Ratio", href: "/components/aspect-ratio/" },
 ];
 
 function Home() {
@@ -223,6 +226,8 @@ export function App({ routePath }: { routePath: string }) {
               <DialogDocs />
             ) : route === "/components/absolute-center/" ? (
               <AbsoluteCenterDocs />
+            ) : route === "/components/aspect-ratio/" ? (
+              <AspectRatioDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

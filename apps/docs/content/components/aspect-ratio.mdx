@@ -1,0 +1,51 @@
+import { AspectRatioExample } from "../../src/examples/aspect-ratio.tsx";
+import aspectRatioSource from "../../src/examples/aspect-ratio.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Aspect Ratio
+</div>
+<span className="section-index">LAYOUT COMPONENT</span>
+
+# Aspect Ratio
+
+Keep images, video, embeds, and other content at a steady shape as their container changes width.
+
+## Install
+
+```sh
+ecentry add aspect-ratio
+```
+
+Import `AspectRatio` from the installed `components/ui/aspect-ratio/` directory.
+
+## Preview
+
+<ExamplePanel source={aspectRatioSource}>
+  <AspectRatioExample />
+</ExamplePanel>
+
+## Ratios and media
+
+The default is 16:9. Set a positive numeric `ratio`, such as `1` for a square or `3 / 4` for portrait media. The direct child fills the frame. Images and videos use `object-fit: cover`; embedded frames keep their own accessible title and controls.
+
+The wrapper remains 100% of its available width, so height responds to container width. Use `style` or `className` for a maximum width and other overrides. `as` changes the wrapper element, and the ref points to that element.
+
+## Accessibility
+
+Aspect Ratio does not change its child's semantics. Give images useful `alt` text, give iframes a `title`, and keep interactive media keyboard accessible.
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Aspect Ratio API" tabIndex={0}>
+
+| Prop        | Type                 | Default  | Purpose               |
+| ----------- | -------------------- | -------- | --------------------- |
+| `ratio`     | Positive `number`    | `16 / 9` | Width-to-height ratio |
+| `as`        | React element type   | `div`    | Wrapper element       |
+| `className` | `string`             | -        | Custom wrapper styles |
+| `style`     | React CSS properties | -        | Local style overrides |
+
+</div>
+
+Native HTML and ARIA attributes pass through to the wrapper.

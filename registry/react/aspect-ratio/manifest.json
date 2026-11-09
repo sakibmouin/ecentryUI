@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "aspect-ratio",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["aspect-ratio.css", "aspect-ratio.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "aspect-ratio.css": "24aa1892500288a810dd9ba39c4e496d37bbe2e3248345f139d41270bf10cc19",
+    "aspect-ratio.tsx": "73d9675e286ef67e5aa3125910c4b5aca8bcd30401434ed5436230035c6c8ff9",
+    "index.ts": "04a97ac991dccdf8f013a7b1c8c838f2f12e9945dbd14b73e04bed73c1a2d58a",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/aspect-ratio/",
+  "license": "MIT"
+}

@@ -6,12 +6,14 @@ import { buttonRegistryItem } from "../packages/react/dist/components/button/met
 import { inputRegistryItem } from "../packages/react/dist/components/input/metadata.js";
 import { dialogRegistryItem } from "../packages/react/dist/components/dialog/metadata.js";
 import { absoluteCenterRegistryItem } from "../packages/react/dist/components/absolute-center/metadata.js";
+import { aspectRatioRegistryItem } from "../packages/react/dist/components/aspect-ratio/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
   inputRegistryItem,
   dialogRegistryItem,
   absoluteCenterRegistryItem,
+  aspectRatioRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

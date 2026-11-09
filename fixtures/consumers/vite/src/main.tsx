@@ -13,6 +13,7 @@ import {
   DialogTrigger,
 } from "./components/ui/dialog/index.js";
 import { AbsoluteCenter } from "./components/ui/absolute-center/index.js";
+import { AspectRatio } from "./components/ui/aspect-ratio/index.js";
 
 const theme = createTheme({
   tokens: { "colors.ink": "#142d24" },
@@ -43,5 +44,12 @@ createRoot(document.getElementById("root")!).render(
     >
       <AbsoluteCenter>Installed center</AbsoluteCenter>
     </div>
+    <AspectRatio
+      ratio={4 / 3}
+      style={{ width: 120 }}
+      data-testid="aspect-frame"
+    >
+      <div>Installed ratio</div>
+    </AspectRatio>
   </AppearanceProvider>,
 );
