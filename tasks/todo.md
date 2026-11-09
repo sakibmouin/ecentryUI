@@ -30,7 +30,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 ### Checkpoint after T06
 - [x] Foundations tests, appearance browser flow and accessibility checks pass.
 
-- [ ] **T07 Define React component contract and primitive gate** (depends on T05,T06).
+- [x] **T07 Define React component contract and primitive gate** (depends on T05,T06).
   - Acceptance: Public prop conventions, slot contract and primitive evaluation for Button, Input and Dialog are reviewed; type tests pass.
   - Verify: `npm run typecheck && npm test -- --run packages/react`.
 - [ ] **T08 Build registry schema and generator** (depends on T07).

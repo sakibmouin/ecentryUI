@@ -1,0 +1,59 @@
+import type { ComponentPropsWithRef, ReactNode } from "react";
+
+export type ComponentSize = "sm" | "md" | "lg";
+export type ComponentColor = "neutral" | "brand" | "danger";
+
+export interface ButtonProps extends Omit<
+  ComponentPropsWithRef<"button">,
+  "color"
+> {
+  variant?: "solid" | "outline" | "ghost" | "text";
+  size?: ComponentSize;
+  color?: ComponentColor;
+  loading?: boolean;
+  loadingText?: string;
+}
+
+export interface InputProps extends Omit<
+  ComponentPropsWithRef<"input">,
+  "size" | "color"
+> {
+  variant?: "outline" | "filled" | "flushed";
+  size?: ComponentSize;
+  color?: ComponentColor;
+  invalid?: boolean;
+  onValueChange?: (
+    value: string,
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => void;
+}
+
+export type DialogChangeReason =
+  "trigger" | "close" | "escape" | "backdrop" | "programmatic";
+
+export interface DialogChangeDetail {
+  reason: DialogChangeReason;
+  event?: Event;
+}
+
+export interface DialogRootProps {
+  children: ReactNode;
+  open?: boolean;
+  defaultOpen?: boolean;
+  onOpenChange?: (open: boolean, detail: DialogChangeDetail) => void;
+  modal?: boolean;
+}
+
+export type DialogTriggerProps = ComponentPropsWithRef<"button">;
+export type DialogCloseProps = ComponentPropsWithRef<"button">;
+
+export interface DialogContentProps extends Omit<
+  ComponentPropsWithRef<"dialog">,
+  "open" | "onClose"
+> {
+  size?: ComponentSize;
+  closeOnBackdrop?: boolean;
+}
+
+export type DialogTitleProps = ComponentPropsWithRef<"h2">;
+export type DialogDescriptionProps = ComponentPropsWithRef<"p">;
