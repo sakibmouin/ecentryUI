@@ -18,6 +18,7 @@ import { Bleed } from "./components/ui/bleed/index.js";
 import { Box } from "./components/ui/box/index.js";
 import { Center, Circle, Square } from "./components/ui/center/index.js";
 import { Container } from "./components/ui/container/index.js";
+import { Flex, Spacer } from "./components/ui/flex/index.js";
 
 const theme = createTheme({
   tokens: { "colors.ink": "#142d24" },
@@ -73,5 +74,13 @@ createRoot(document.getElementById("root")!).render(
     <Container maxWidth={400} data-testid="installed-container">
       Installed container
     </Container>
+    <Flex
+      direction={{ base: "column", md: "row" }}
+      data-testid="installed-flex"
+    >
+      <span>Flex start</span>
+      <Spacer data-testid="installed-spacer" />
+      <span>Flex end</span>
+    </Flex>
   </AppearanceProvider>,
 );

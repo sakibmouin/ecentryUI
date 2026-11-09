@@ -935,6 +935,50 @@ footer {
   outline: 2px solid var(--ec-colors-focus, Highlight);
   outline-offset: 2px;
 }
+.flex-demo {
+  display: grid;
+  gap: 14px;
+  padding: 36px;
+  background: var(--ec-colors-background, #fff);
+  color: var(--ec-colors-text, #19211c);
+}
+.flex-demo-label {
+  color: var(--ec-colors-accent, #116e5e);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+.flex-demo-row,
+.flex-demo-toolbar {
+  padding: 18px;
+  border: 1px dashed var(--ec-colors-border, #dce0dc);
+  border-radius: 12px;
+  background: var(--ec-colors-surface, #f7f9f7);
+}
+.flex-demo-row > span,
+.flex-demo-toolbar > span {
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: var(--ec-colors-accent, #116e5e);
+  color: var(--ec-colors-background, #fff);
+  font-size: 12px;
+  font-weight: 700;
+}
+.flex-demo > button {
+  justify-self: start;
+  padding: 8px 4px;
+  border: 0;
+  background: transparent;
+  color: var(--ec-colors-accent, #116e5e);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.flex-demo > button:focus-visible {
+  outline: 2px solid var(--ec-colors-focus, Highlight);
+  outline-offset: 2px;
+}
 @media (max-width: 620px) {
   .absolute-demo-grid {
     grid-template-columns: 1fr;
@@ -964,6 +1008,9 @@ footer {
     grid-template-columns: 1fr;
   }
   .container-demo {
+    padding: 24px;
+  }
+  .flex-demo {
     padding: 24px;
   }
 }

@@ -11,6 +11,7 @@ import BleedDocs from "../content/components/bleed.mdx";
 import BoxDocs from "../content/components/box.mdx";
 import CenterDocs from "../content/components/center.mdx";
 import ContainerDocs from "../content/components/container.mdx";
+import FlexDocs from "../content/components/flex.mdx";
 
 export const routes = [
   "/",
@@ -24,6 +25,7 @@ export const routes = [
   "/components/box/",
   "/components/center/",
   "/components/container/",
+  "/components/flex/",
 ] as const;
 
 const componentLinks = [
@@ -36,6 +38,7 @@ const componentLinks = [
   { title: "Box", href: "/components/box/" },
   { title: "Center", href: "/components/center/" },
   { title: "Container", href: "/components/container/" },
+  { title: "Flex", href: "/components/flex/" },
 ];
 
 function Home() {
@@ -248,6 +251,8 @@ export function App({ routePath }: { routePath: string }) {
               <CenterDocs />
             ) : route === "/components/container/" ? (
               <ContainerDocs />
+            ) : route === "/components/flex/" ? (
+              <FlexDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

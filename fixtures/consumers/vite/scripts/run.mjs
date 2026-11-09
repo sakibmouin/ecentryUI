@@ -107,6 +107,7 @@ try {
     "box",
     "center",
     "container",
+    "flex",
   ]) {
     execFileSync(
       process.execPath,
@@ -225,6 +226,21 @@ try {
       .boundingBox();
     if (!container || Math.abs(container.width - 400) > 1)
       throw new Error("Installed Container did not apply its width cap");
+    const flex = page.getByTestId("installed-flex");
+    if (
+      (await flex.evaluate(
+        (element) => globalThis.getComputedStyle(element).flexDirection,
+      )) !== "row"
+    )
+      throw new Error("Installed Flex did not apply responsive direction");
+    if (
+      (await page
+        .getByTestId("installed-spacer")
+        .evaluate(
+          (element) => globalThis.getComputedStyle(element).flexGrow,
+        )) !== "1"
+    )
+      throw new Error("Installed Spacer did not grow");
   } finally {
     await browser.close();
     await new Promise((resolve, reject) =>

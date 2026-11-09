@@ -109,6 +109,7 @@ try {
     "box",
     "center",
     "container",
+    "flex",
   ]) {
     execFileSync(
       process.execPath,
@@ -136,7 +137,8 @@ try {
     !html.includes("Installed input") ||
     !html.includes("Installed box") ||
     !html.includes("Centered") ||
-    !html.includes("Installed container")
+    !html.includes("Installed container") ||
+    !html.includes("Flex start")
   ) {
     throw new Error("Next did not render the component into static HTML");
   }
@@ -253,6 +255,21 @@ try {
       .boundingBox();
     if (!container || Math.abs(container.width - 400) > 1)
       throw new Error("Next Container did not apply its width cap");
+    const flex = page.getByTestId("installed-flex");
+    if (
+      (await flex.evaluate(
+        (element) => globalThis.getComputedStyle(element).flexDirection,
+      )) !== "row"
+    )
+      throw new Error("Next Flex did not apply responsive direction");
+    if (
+      (await page
+        .getByTestId("installed-spacer")
+        .evaluate(
+          (element) => globalThis.getComputedStyle(element).flexGrow,
+        )) !== "1"
+    )
+      throw new Error("Next Spacer did not grow");
     if (errors.length)
       throw new Error(`Next hydration errors: ${errors.join(" | ")}`);
   } finally {

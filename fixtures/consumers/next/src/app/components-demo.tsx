@@ -16,6 +16,7 @@ import { Bleed } from "../components/ui/bleed/index";
 import { Box } from "../components/ui/box/index";
 import { Center, Circle, Square } from "../components/ui/center/index";
 import { Container } from "../components/ui/container/index";
+import { Flex, Spacer } from "../components/ui/flex/index";
 
 export function ComponentsDemo() {
   return (
@@ -64,6 +65,14 @@ export function ComponentsDemo() {
       <Container maxWidth={400} data-testid="installed-container">
         Installed container
       </Container>
+      <Flex
+        direction={{ base: "column", md: "row" }}
+        data-testid="installed-flex"
+      >
+        <span>Flex start</span>
+        <Spacer data-testid="installed-spacer" />
+        <span>Flex end</span>
+      </Flex>
     </section>
   );
 }

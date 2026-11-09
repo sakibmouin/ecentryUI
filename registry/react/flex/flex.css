@@ -1,0 +1,95 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-flex {
+    display: flex;
+    min-width: 0;
+    flex-direction: var(--ec-flex-direction-base);
+    align-items: var(--ec-flex-align-base);
+    justify-content: var(--ec-flex-justify-base);
+    flex-wrap: var(--ec-flex-wrap-base);
+    gap: var(--ec-flex-gap-base);
+    flex-basis: var(--ec-flex-basis-base);
+    flex-grow: var(--ec-flex-grow-base);
+    flex-shrink: var(--ec-flex-shrink-base);
+  }
+  .ec-flex--inline {
+    display: inline-flex;
+  }
+  .ec-spacer {
+    flex: 1 1 0%;
+  }
+}
+
+@layer ec.variants {
+  @media (min-width: 40rem) {
+    .ec-flex {
+      flex-direction: var(
+        --ec-flex-direction-sm,
+        var(--ec-flex-direction-base)
+      );
+      align-items: var(--ec-flex-align-sm, var(--ec-flex-align-base));
+      justify-content: var(--ec-flex-justify-sm, var(--ec-flex-justify-base));
+      flex-wrap: var(--ec-flex-wrap-sm, var(--ec-flex-wrap-base));
+      gap: var(--ec-flex-gap-sm, var(--ec-flex-gap-base));
+    }
+  }
+  @media (min-width: 48rem) {
+    .ec-flex {
+      flex-direction: var(
+        --ec-flex-direction-md,
+        var(--ec-flex-direction-sm, var(--ec-flex-direction-base))
+      );
+      align-items: var(
+        --ec-flex-align-md,
+        var(--ec-flex-align-sm, var(--ec-flex-align-base))
+      );
+      justify-content: var(
+        --ec-flex-justify-md,
+        var(--ec-flex-justify-sm, var(--ec-flex-justify-base))
+      );
+      flex-wrap: var(
+        --ec-flex-wrap-md,
+        var(--ec-flex-wrap-sm, var(--ec-flex-wrap-base))
+      );
+      gap: var(
+        --ec-flex-gap-md,
+        var(--ec-flex-gap-sm, var(--ec-flex-gap-base))
+      );
+    }
+  }
+  @media (min-width: 64rem) {
+    .ec-flex {
+      flex-direction: var(
+        --ec-flex-direction-lg,
+        var(
+          --ec-flex-direction-md,
+          var(--ec-flex-direction-sm, var(--ec-flex-direction-base))
+        )
+      );
+      align-items: var(
+        --ec-flex-align-lg,
+        var(
+          --ec-flex-align-md,
+          var(--ec-flex-align-sm, var(--ec-flex-align-base))
+        )
+      );
+      justify-content: var(
+        --ec-flex-justify-lg,
+        var(
+          --ec-flex-justify-md,
+          var(--ec-flex-justify-sm, var(--ec-flex-justify-base))
+        )
+      );
+      flex-wrap: var(
+        --ec-flex-wrap-lg,
+        var(--ec-flex-wrap-md, var(--ec-flex-wrap-sm, var(--ec-flex-wrap-base)))
+      );
+      gap: var(
+        --ec-flex-gap-lg,
+        var(--ec-flex-gap-md, var(--ec-flex-gap-sm, var(--ec-flex-gap-base)))
+      );
+    }
+  }
+}

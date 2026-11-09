@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "flex",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["flex.css", "flex.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "flex.css": "665510afd9bb2ea5c64e87be8bd7eaf8b4e5b3242f1b272c24c0a877b9321cb2",
+    "flex.tsx": "d3789cdf68217684859e10e6fcab9248a8881f0a537f7180e12f04ca6be331af",
+    "index.ts": "cacc7e5716f47e3933cabb0f98e01b87247b70f9d52747bb58317b0dc894344e",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/flex/",
+  "license": "MIT"
+}

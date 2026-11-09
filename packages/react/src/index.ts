@@ -21,6 +21,7 @@ import "./components/bleed/bleed.css";
 import "./components/box/box.css";
 import "./components/center/center.css";
 import "./components/container/container.css";
+import "./components/flex/flex.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -30,6 +31,7 @@ export { Bleed } from "./components/bleed/bleed.js";
 export { Box } from "./components/box/box.js";
 export { Center, Square, Circle } from "./components/center/center.js";
 export { Container } from "./components/container/container.js";
+export { Flex, Spacer } from "./components/flex/flex.js";
 export {
   DialogRoot,
   DialogTrigger,

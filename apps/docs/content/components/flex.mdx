@@ -1,0 +1,48 @@
+import { FlexExample } from "../../src/examples/flex.tsx";
+import flexSource from "../../src/examples/flex.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Flex
+</div>
+<span className="section-index">LAYOUT COMPONENT</span>
+
+# Flex
+
+Flex arranges children on one axis and controls their alignment, spacing, and wrapping. Spacer grows between items, including in RTL layouts.
+
+## Install
+
+```sh
+ecentry add flex
+```
+
+Import `Flex` and `Spacer` from the installed `components/ui/flex/` directory.
+
+## Preview
+
+<ExamplePanel source={flexSource}>
+  <FlexExample />
+</ExamplePanel>
+
+## Responsive layout
+
+`direction`, `align`, `justify`, `wrap`, and `gap` accept a single value or an object with `base`, `sm`, `md`, and `lg` values. Breakpoints start at 40rem, 48rem, and 64rem. Missing values retain the last defined setting. Numeric gaps are pixels; strings use any CSS length or token variable.
+
+Set `inline` for `inline-flex`. `basis`, `grow`, and `shrink` control Flex when it is nested inside another flex layout. Use `as` for a semantic wrapper. Spacer uses flex growth to separate siblings without choosing a fixed gap; its default host is a `div` and can be changed with `as`.
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Flex API" tabIndex={0}>
+
+| Prop                                    | Type                  | Purpose                     |
+| --------------------------------------- | --------------------- | --------------------------- |
+| `as`, `inline`                          | element type, boolean | Host and display mode       |
+| `direction`, `align`, `justify`, `wrap` | Responsive CSS values | Main and cross axis layout  |
+| `gap`                                   | Responsive CSS length | Space between items         |
+| `basis`, `grow`, `shrink`               | CSS values            | Flex behavior as a child    |
+| `className`, `style`                    | Native React props    | Custom layout and overrides |
+
+</div>
+
+Flex and Spacer forward refs and native HTML and ARIA attributes. DOM order remains unchanged when visual direction changes.

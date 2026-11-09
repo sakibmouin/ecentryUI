@@ -11,6 +11,7 @@ import { bleedRegistryItem } from "../packages/react/dist/components/bleed/metad
 import { boxRegistryItem } from "../packages/react/dist/components/box/metadata.js";
 import { centerRegistryItem } from "../packages/react/dist/components/center/metadata.js";
 import { containerRegistryItem } from "../packages/react/dist/components/container/metadata.js";
+import { flexRegistryItem } from "../packages/react/dist/components/flex/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -22,6 +23,7 @@ for (const item of [
   boxRegistryItem,
   centerRegistryItem,
   containerRegistryItem,
+  flexRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(
