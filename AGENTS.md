@@ -2,19 +2,19 @@
 
 ## Project Structure & Module Organization
 
-Approved product contracts live in `docs/specs/`, with the implementation sequence in `tasks/plan.md` and `tasks/todo.md`. Installed skill instructions live under `.agents/skills/`, with versions in `skills-lock.json`. There is no application source or test suite yet. Keep future source and tests close together and document the resulting layout in the README.
+Approved product contracts live in `docs/specs/`; implementation status is in `tasks/todo.md`. npm workspaces are under `packages/` and `apps/`, with Vitest smoke tests in `tests/` and browser tests in `tests/e2e/`. Installed skill instructions live under `.agents/skills/`, with versions in `skills-lock.json`. Keep component tests beside their source as the catalog is built.
 
 ## Build, Test, and Development Commands
 
-No package manifest, build script, or test runner is present, so there are no project commands to run yet. Add the install, development, build, lint, and test commands to the README when the application is introduced. Run those commands from the repository root and keep examples in this guide aligned with the actual scripts.
+Run `npm ci`, `npm run build`, `npm run typecheck`, `npm run lint`, `npm test -- --run`, and `npm run test:e2e` from the root. See the [README](README.md) for each command's purpose and the Playwright browser setup. Docs development commands will be added with the site.
 
 ## Coding Style & Naming Conventions
 
-Follow the formatter and linter configured by the codebase once they exist; do not impose a language style before a language is chosen. Use descriptive names, group files by feature or responsibility, and keep changes small and focused. Prefer simple, maintainable implementations over extra layers built for a one-off task.
+Use strict TypeScript, two-space indentation, Prettier, and the root ESLint config. Use kebab-case component folders and PascalCase React exports. Group files by feature or responsibility and keep changes small and focused.
 
 ## Testing Guidelines
 
-There is no test framework or coverage threshold in this workspace. Add tests alongside new behavior and document their naming pattern and run command when a runner is configured. For bug fixes, reproduce the user-facing issue end to end before changing code, then verify the fix in the same flow. Resolve lint failures and flaky tests before considering work complete.
+Vitest runs `*.test.ts` and `*.test.tsx`; Playwright runs `tests/e2e/*.spec.ts`. Add tests alongside new behavior. For bug fixes, reproduce the user-facing issue end to end before changing code, then verify the fix in the same flow. Resolve lint failures and flaky tests before considering work complete.
 
 ## Commit & Pull Request Guidelines
 

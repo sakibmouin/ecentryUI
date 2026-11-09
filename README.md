@@ -2,11 +2,23 @@
 
 ecentryUI is a planned open-source, AI-native UI component library and design platform. The first release focuses on a comprehensive React component catalog, consumer-owned source, accessible interactions, adaptable themes, and detailed documentation. Other frameworks, charts, and AI design tools are planned for later phases.
 
-The specifications are approved, and implementation is planned. No component library or documentation website has been implemented yet.
+The specifications are approved. The npm and TypeScript workspace is in place; components and the documentation website are still being built.
 
 - [Read the specifications](docs/specs/README.md)
 - [Review the implementation plan](tasks/plan.md)
 
-Implementation begins after the implementation plan is reviewed.
+## Development
+
+Run these commands from the repository root:
+
+- `npm ci` installs the locked workspace dependencies.
+- `npm run build` compiles the TypeScript packages.
+- `npm run typecheck` checks package types without emitting files.
+- `npm run lint` checks source and test files with ESLint.
+- `npm run format:check` checks formatting with Prettier.
+- `npm test -- --run` runs Vitest once.
+- `npx playwright install chromium` installs the browser used by `npm run test:e2e`.
+
+The current tests are workspace smoke checks. Component tests and documentation flows will be added with their implementation tasks.
 
 Licensed under [MIT](LICENSE).

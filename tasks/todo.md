@@ -7,7 +7,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 - [x] **T01 Capture visual and interaction baseline** (depends on None).
   - Acceptance: Record representative desktop/mobile, light/dark, focus, disabled, overlay and form states in ignored `.local/`; verify notes and screenshots exist.
   - Verify: Review `.local/reference/` screenshots and notes locally.
-- [ ] **T02 Create npm workspace and baseline scripts** (depends on T01).
+- [x] **T02 Create npm workspace and baseline scripts** (depends on T01).
   - Acceptance: Add workspace packages, strict TS config, formatter/linter, Vitest and Playwright; a smoke test, typecheck, lint and build pass.
   - Verify: `npm ci && npm run build && npm run typecheck && npm run lint && npm test -- --run`.
 - [ ] **T03 Implement token schema and resolver** (depends on T02).

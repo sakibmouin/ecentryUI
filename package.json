@@ -9,9 +9,19 @@
   ],
   "scripts": {
     "build": "tsc -b",
-    "typecheck": "tsc -b --noEmit"
+    "typecheck": "tsc -b --noEmit",
+    "lint": "eslint .",
+    "format:check": "prettier --check package.json tsconfig.base.json tsconfig.json eslint.config.mjs vitest.config.ts playwright.config.ts packages apps tests",
+    "test": "vitest",
+    "test:e2e": "playwright test"
   },
   "devDependencies": {
-    "typescript": "^7.0.2"
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.65.0",
+    "eslint": "^10.14.0",
+    "prettier": "^3.9.10",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.72.1",
+    "vitest": "^5.1.0"
   }
 }
