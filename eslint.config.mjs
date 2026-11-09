@@ -15,7 +15,7 @@ export default tseslint.config(
   },
   eslint.configs.recommended,
   {
-    files: ["fixtures/**/scripts/*.mjs"],
+    files: ["fixtures/**/scripts/*.mjs", "fixtures/consumers/*.mjs"],
     languageOptions: {
       globals: { process: "readonly", console: "readonly" },
     },

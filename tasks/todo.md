@@ -49,12 +49,12 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 - [x] **T11 Build Vite consumer fixture** (depends on T09).
   - Acceptance: Clean install, sample registry item import, theme override and production build pass.
   - Verify: `npm run test:consumer -- vite`.
-- [ ] **T12 Build Next.js consumer fixture** (depends on T09).
+- [x] **T12 Build Next.js consumer fixture** (depends on T09).
   - Acceptance: Sample registry item SSR render, hydration and production build pass.
   - Verify: `npm run test:consumer -- next`.
 
 ### Checkpoint after T12
-- [ ] Vite and Next.js consumer fixtures build cleanly.
+- [x] Vite and Next.js consumer fixtures build cleanly.
 
 
 ## First complete slices

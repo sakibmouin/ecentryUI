@@ -43,3 +43,5 @@ import {
 `useAppearance()` returns the selected mode, resolved light/dark value, and `setAppearance`. Pass `appearance` and `onAppearanceChange` for controlled use. A nested provider can force an appearance; render overlays through `AppearancePortal` so they keep that scope after moving to `document.body`. The provider emits its scoped CSS and a small pre-hydration script before children, so system or stored appearance can apply before first paint. Pass `nonce` when your content security policy requires one. Storage is used only when `storageKey` is supplied and appearance is uncontrolled.
 
 Pass `direction="rtl"` on a provider for right-to-left layout. Nested providers inherit direction unless they specify their own, and portals keep the nearest provider's direction.
+
+The React subpath is a client component entry point, so a Next.js Server Component can render `AppearanceProvider` directly while passing serializable theme tokens and client component children.

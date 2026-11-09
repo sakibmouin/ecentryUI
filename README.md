@@ -21,6 +21,7 @@ Run these commands from the repository root:
 - `npm run dev:docs` starts the documentation site locally.
 - `npm run build:docs` creates static documentation pages and client assets.
 - `npm run test:consumer -- vite` installs a sample item in a clean Vite project and checks its production render.
+- `npm run test:consumer -- next` verifies the sample item in a clean Next.js project, including SSR and hydration.
 - `npx playwright install chromium` installs the browser used by `npm run test:e2e`.
 
 Foundation, registry, and CLI tests are active. Component tests and documentation flows will be added with their implementation tasks.
