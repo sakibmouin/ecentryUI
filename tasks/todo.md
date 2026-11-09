@@ -101,7 +101,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 ### Checkpoint after T019
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T020 Box component** (depends on T016).
+- [x] **T020 Box component** (depends on T016).
   - Files: `packages/react/src/components/box/box.tsx`, `box.css`, `box.test.tsx`, `index.ts`, `apps/docs/content/components/box.mdx`.
   - Acceptance: responsive layout, intrinsic sizing and RTL; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/box/box.test.tsx && npm run test:e2e -- box`.

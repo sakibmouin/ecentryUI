@@ -1,0 +1,198 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-box {
+    box-sizing: border-box;
+    padding: var(--ec-box-padding-base);
+    padding-inline: var(
+      --ec-box-padding-inline-base,
+      var(--ec-box-padding-base)
+    );
+    margin: var(--ec-box-margin-base);
+    margin-inline: var(--ec-box-margin-inline-base, var(--ec-box-margin-base));
+    width: var(--ec-box-width-base);
+    max-width: var(--ec-box-max-width-base);
+    gap: var(--ec-box-gap-base);
+    background: var(--ec-box-background-base);
+    color: var(--ec-box-color-base);
+    display: var(--ec-box-display-base);
+  }
+}
+
+@layer ec.variants {
+  @media (min-width: 40rem) {
+    .ec-box {
+      padding: var(--ec-box-padding-sm, var(--ec-box-padding-base));
+      padding-inline: var(
+        --ec-box-padding-inline-sm,
+        var(
+          --ec-box-padding-inline-base,
+          var(--ec-box-padding-sm, var(--ec-box-padding-base))
+        )
+      );
+      margin: var(--ec-box-margin-sm, var(--ec-box-margin-base));
+      margin-inline: var(
+        --ec-box-margin-inline-sm,
+        var(
+          --ec-box-margin-inline-base,
+          var(--ec-box-margin-sm, var(--ec-box-margin-base))
+        )
+      );
+      width: var(--ec-box-width-sm, var(--ec-box-width-base));
+      max-width: var(--ec-box-max-width-sm, var(--ec-box-max-width-base));
+      gap: var(--ec-box-gap-sm, var(--ec-box-gap-base));
+      background: var(--ec-box-background-sm, var(--ec-box-background-base));
+      color: var(--ec-box-color-sm, var(--ec-box-color-base));
+      display: var(--ec-box-display-sm, var(--ec-box-display-base));
+    }
+  }
+  @media (min-width: 48rem) {
+    .ec-box {
+      padding: var(
+        --ec-box-padding-md,
+        var(--ec-box-padding-sm, var(--ec-box-padding-base))
+      );
+      padding-inline: var(
+        --ec-box-padding-inline-md,
+        var(
+          --ec-box-padding-inline-sm,
+          var(
+            --ec-box-padding-inline-base,
+            var(
+              --ec-box-padding-md,
+              var(--ec-box-padding-sm, var(--ec-box-padding-base))
+            )
+          )
+        )
+      );
+      margin: var(
+        --ec-box-margin-md,
+        var(--ec-box-margin-sm, var(--ec-box-margin-base))
+      );
+      margin-inline: var(
+        --ec-box-margin-inline-md,
+        var(
+          --ec-box-margin-inline-sm,
+          var(
+            --ec-box-margin-inline-base,
+            var(
+              --ec-box-margin-md,
+              var(--ec-box-margin-sm, var(--ec-box-margin-base))
+            )
+          )
+        )
+      );
+      width: var(
+        --ec-box-width-md,
+        var(--ec-box-width-sm, var(--ec-box-width-base))
+      );
+      max-width: var(
+        --ec-box-max-width-md,
+        var(--ec-box-max-width-sm, var(--ec-box-max-width-base))
+      );
+      gap: var(--ec-box-gap-md, var(--ec-box-gap-sm, var(--ec-box-gap-base)));
+      background: var(
+        --ec-box-background-md,
+        var(--ec-box-background-sm, var(--ec-box-background-base))
+      );
+      color: var(
+        --ec-box-color-md,
+        var(--ec-box-color-sm, var(--ec-box-color-base))
+      );
+      display: var(
+        --ec-box-display-md,
+        var(--ec-box-display-sm, var(--ec-box-display-base))
+      );
+    }
+  }
+  @media (min-width: 64rem) {
+    .ec-box {
+      padding: var(
+        --ec-box-padding-lg,
+        var(
+          --ec-box-padding-md,
+          var(--ec-box-padding-sm, var(--ec-box-padding-base))
+        )
+      );
+      padding-inline: var(
+        --ec-box-padding-inline-lg,
+        var(
+          --ec-box-padding-inline-md,
+          var(
+            --ec-box-padding-inline-sm,
+            var(
+              --ec-box-padding-inline-base,
+              var(
+                --ec-box-padding-lg,
+                var(
+                  --ec-box-padding-md,
+                  var(--ec-box-padding-sm, var(--ec-box-padding-base))
+                )
+              )
+            )
+          )
+        )
+      );
+      margin: var(
+        --ec-box-margin-lg,
+        var(
+          --ec-box-margin-md,
+          var(--ec-box-margin-sm, var(--ec-box-margin-base))
+        )
+      );
+      margin-inline: var(
+        --ec-box-margin-inline-lg,
+        var(
+          --ec-box-margin-inline-md,
+          var(
+            --ec-box-margin-inline-sm,
+            var(
+              --ec-box-margin-inline-base,
+              var(
+                --ec-box-margin-lg,
+                var(
+                  --ec-box-margin-md,
+                  var(--ec-box-margin-sm, var(--ec-box-margin-base))
+                )
+              )
+            )
+          )
+        )
+      );
+      width: var(
+        --ec-box-width-lg,
+        var(--ec-box-width-md, var(--ec-box-width-sm, var(--ec-box-width-base)))
+      );
+      max-width: var(
+        --ec-box-max-width-lg,
+        var(
+          --ec-box-max-width-md,
+          var(--ec-box-max-width-sm, var(--ec-box-max-width-base))
+        )
+      );
+      gap: var(
+        --ec-box-gap-lg,
+        var(--ec-box-gap-md, var(--ec-box-gap-sm, var(--ec-box-gap-base)))
+      );
+      background: var(
+        --ec-box-background-lg,
+        var(
+          --ec-box-background-md,
+          var(--ec-box-background-sm, var(--ec-box-background-base))
+        )
+      );
+      color: var(
+        --ec-box-color-lg,
+        var(--ec-box-color-md, var(--ec-box-color-sm, var(--ec-box-color-base)))
+      );
+      display: var(
+        --ec-box-display-lg,
+        var(
+          --ec-box-display-md,
+          var(--ec-box-display-sm, var(--ec-box-display-base))
+        )
+      );
+    }
+  }
+}

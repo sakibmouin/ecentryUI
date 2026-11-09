@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "box",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["box.css", "box.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "box.css": "5d68b4a5e288281e1783b9196235ed74abcb12b8c52de1484c7bdd5e52d8fa1b",
+    "box.tsx": "b1b6b580f52cf5614e3cc4ee282bc0f018ebc180f16ecce0f010bd1863180e1d",
+    "index.ts": "ccd27597621bbe98207de29b4c2797764dc0bc2c2fca6700af3ef1a3fd337aae",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": ["colors.surface", "colors.text"],
+  "docsUrl": "https://ecentry.dev/components/box/",
+  "license": "MIT"
+}

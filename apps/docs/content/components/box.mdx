@@ -1,0 +1,52 @@
+import { BoxExample } from "../../src/examples/box.tsx";
+import boxSource from "../../src/examples/box.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Box
+</div>
+<span className="section-index">LAYOUT COMPONENT</span>
+
+# Box
+
+Use Box as a semantic layout wrapper with token-aware colors and responsive spacing. It renders a `div` by default and forwards its ref and native attributes.
+
+## Install
+
+```sh
+ecentry add box
+```
+
+Import `Box` from the installed `components/ui/box/` directory.
+
+## Preview
+
+<ExamplePanel source={boxSource}>
+  <BoxExample />
+</ExamplePanel>
+
+## Responsive styles
+
+Style props accept a CSS value or an object with `base`, `sm`, `md`, and `lg` values. The breakpoints are 40rem, 48rem, and 64rem. Values flow from the last defined breakpoint, so `padding={{ base: 16, md: 32 }}` remains 16px at `sm` and becomes 32px at `md`.
+
+Numbers for spacing and dimensions are pixels. Use strings for other CSS units and token variables, such as `background="var(--ec-colors-surface)"`. `marginInline` and `paddingInline` use logical directions in RTL. Native `style` wins over a Box style prop when both set the same CSS property.
+
+Use `className` for hover, focus, and other selectors; Box adds no style runtime or generated rules to the page. `as` changes the wrapper element. Choose a semantic element where it carries meaning.
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Box API" tabIndex={0}>
+
+| Prop                       | Type                         | Purpose                  |
+| -------------------------- | ---------------------------- | ------------------------ |
+| `as`                       | React element type           | Rendered element         |
+| `padding`, `paddingInline` | Responsive CSS length        | Inner spacing            |
+| `margin`, `marginInline`   | Responsive CSS length        | Outer spacing            |
+| `width`, `maxWidth`, `gap` | Responsive CSS length        | Size and layout spacing  |
+| `background`, `color`      | Responsive CSS color         | Surface and text         |
+| `display`                  | Responsive CSS display value | Layout mode              |
+| `className`, `style`       | Native React props           | Custom CSS and overrides |
+
+</div>
+
+All other native HTML and ARIA attributes pass through to the wrapper.

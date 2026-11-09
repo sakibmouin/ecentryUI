@@ -104,6 +104,7 @@ try {
     "absolute-center",
     "aspect-ratio",
     "bleed",
+    "box",
   ]) {
     execFileSync(
       process.execPath,
@@ -189,6 +190,13 @@ try {
     const bleed = await page.getByTestId("bleed-content").boundingBox();
     if (!bleedParent || !bleed || Math.abs(bleed.x - bleedParent.x) > 1)
       throw new Error("Installed Bleed did not escape inline padding");
+    const box = page.getByTestId("installed-box");
+    if (
+      (await box.evaluate(
+        (element) => globalThis.getComputedStyle(element).padding,
+      )) !== "24px"
+    )
+      throw new Error("Installed Box did not apply responsive padding");
   } finally {
     await browser.close();
     await new Promise((resolve, reject) =>

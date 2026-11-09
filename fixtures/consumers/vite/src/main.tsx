@@ -15,6 +15,7 @@ import {
 import { AbsoluteCenter } from "./components/ui/absolute-center/index.js";
 import { AspectRatio } from "./components/ui/aspect-ratio/index.js";
 import { Bleed } from "./components/ui/bleed/index.js";
+import { Box } from "./components/ui/box/index.js";
 
 const theme = createTheme({
   tokens: { "colors.ink": "#142d24" },
@@ -55,5 +56,8 @@ createRoot(document.getElementById("root")!).render(
     <div style={{ width: 200, padding: 16 }} data-testid="bleed-parent">
       <Bleed data-testid="bleed-content">Installed bleed</Bleed>
     </div>
+    <Box padding={{ base: 8, md: 24 }} data-testid="installed-box">
+      Installed box
+    </Box>
   </AppearanceProvider>,
 );

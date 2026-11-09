@@ -106,6 +106,7 @@ try {
     "absolute-center",
     "aspect-ratio",
     "bleed",
+    "box",
   ]) {
     execFileSync(
       process.execPath,
@@ -130,7 +131,8 @@ try {
     !html.includes("Next consumer fixture") ||
     !html.includes("Count:") ||
     !html.includes("Installed button") ||
-    !html.includes("Installed input")
+    !html.includes("Installed input") ||
+    !html.includes("Installed box")
   ) {
     throw new Error("Next did not render the component into static HTML");
   }
@@ -214,6 +216,13 @@ try {
     const bleed = await page.getByTestId("bleed-content").boundingBox();
     if (!bleedParent || !bleed || Math.abs(bleed.x - bleedParent.x) > 1)
       throw new Error("Next Bleed did not escape inline padding");
+    const box = page.getByTestId("installed-box");
+    if (
+      (await box.evaluate(
+        (element) => globalThis.getComputedStyle(element).padding,
+      )) !== "24px"
+    )
+      throw new Error("Next Box did not apply responsive padding");
     if (errors.length)
       throw new Error(`Next hydration errors: ${errors.join(" | ")}`);
   } finally {

@@ -13,6 +13,7 @@ import {
 import { AbsoluteCenter } from "../components/ui/absolute-center/index";
 import { AspectRatio } from "../components/ui/aspect-ratio/index";
 import { Bleed } from "../components/ui/bleed/index";
+import { Box } from "../components/ui/box/index";
 
 export function ComponentsDemo() {
   return (
@@ -46,6 +47,9 @@ export function ComponentsDemo() {
       <div style={{ width: 200, padding: 16 }} data-testid="bleed-parent">
         <Bleed data-testid="bleed-content">Installed bleed</Bleed>
       </div>
+      <Box padding={{ base: 8, md: 24 }} data-testid="installed-box">
+        Installed box
+      </Box>
     </section>
   );
 }
