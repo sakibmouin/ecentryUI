@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "absolute-center",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": [
+    "absolute-center.css",
+    "absolute-center.tsx",
+    "index.ts",
+    "styles.d.ts"
+  ],
+  "hashes": {
+    "absolute-center.css": "e9ab7d101b86fd786ff094ef75c63efedf548b7f116970cab0de2a5e6a6ff2f1",
+    "absolute-center.tsx": "71c70ca4708500abfca42c80057551382ce62560e2257d98536a9c4c26230f64",
+    "index.ts": "bb30c55c2981ebccf0475d9ccdd5e0042d6e324a5fc8f4f7c90510ff2b2f1db3",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/absolute-center/",
+  "license": "MIT"
+}

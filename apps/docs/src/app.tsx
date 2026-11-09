@@ -5,6 +5,7 @@ import counterSource from "./examples/counter.tsx?raw";
 import ButtonDocs from "../content/components/button.mdx";
 import InputDocs from "../content/components/input.mdx";
 import DialogDocs from "../content/components/dialog.mdx";
+import AbsoluteCenterDocs from "../content/components/absolute-center.mdx";
 
 export const routes = [
   "/",
@@ -12,12 +13,14 @@ export const routes = [
   "/components/button/",
   "/components/input/",
   "/components/dialog/",
+  "/components/absolute-center/",
 ] as const;
 
 const componentLinks = [
   { title: "Button", href: "/components/button/" },
   { title: "Input", href: "/components/input/" },
   { title: "Dialog", href: "/components/dialog/" },
+  { title: "Absolute Center", href: "/components/absolute-center/" },
 ];
 
 function Home() {
@@ -218,6 +221,8 @@ export function App({ routePath }: { routePath: string }) {
               <InputDocs />
             ) : route === "/components/dialog/" ? (
               <DialogDocs />
+            ) : route === "/components/absolute-center/" ? (
+              <AbsoluteCenterDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

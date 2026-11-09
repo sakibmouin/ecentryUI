@@ -10,6 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../components/ui/dialog/index";
+import { AbsoluteCenter } from "../components/ui/absolute-center/index";
 
 export function ComponentsDemo() {
   return (
@@ -27,6 +28,12 @@ export function ComponentsDemo() {
           <DialogClose>Close dialog</DialogClose>
         </DialogContent>
       </DialogRoot>
+      <div
+        style={{ position: "relative", width: 200, height: 100 }}
+        data-testid="absolute-parent"
+      >
+        <AbsoluteCenter>Installed center</AbsoluteCenter>
+      </div>
     </section>
   );
 }

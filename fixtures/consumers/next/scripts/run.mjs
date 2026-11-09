@@ -99,7 +99,7 @@ try {
     [cli, "add", "sample", "--registry", path.join(root, "registry"), "--yes"],
     { cwd: root, stdio: "inherit" },
   );
-  for (const component of ["button", "input", "dialog"]) {
+  for (const component of ["button", "input", "dialog", "absolute-center"]) {
     execFileSync(
       process.execPath,
       [
@@ -192,6 +192,14 @@ try {
         .isVisible()
     )
       throw new Error("Next Dialog did not close after hydration");
+    const parent = await page.getByTestId("absolute-parent").boundingBox();
+    const center = await page.getByText("Installed center").boundingBox();
+    if (
+      !parent ||
+      !center ||
+      Math.abs(center.x + center.width / 2 - (parent.x + parent.width / 2)) > 1
+    )
+      throw new Error("Next Absolute Center did not center horizontally");
     if (errors.length)
       throw new Error(`Next hydration errors: ${errors.join(" | ")}`);
   } finally {

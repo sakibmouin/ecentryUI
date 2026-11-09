@@ -633,6 +633,45 @@ footer {
   justify-content: flex-end;
   margin-top: 24px;
 }
+
+.absolute-demo-grid {
+  display: grid;
+  box-sizing: border-box;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 36px;
+  background: #fff;
+}
+.absolute-demo-group > span {
+  display: block;
+  margin-bottom: 10px;
+  color: #526459;
+  font-size: 12px;
+  font-weight: 700;
+}
+.absolute-demo-frame {
+  position: relative;
+  height: 140px;
+  overflow: hidden;
+  border: 1px dashed #c5d5c9;
+  border-radius: 8px;
+  background: #f5f9f6;
+}
+.absolute-demo-badge {
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #116e5e;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+@media (max-width: 620px) {
+  .absolute-demo-grid {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+}
 @media (max-width: 620px) {
   .dialog-showcase {
     padding: 24px;

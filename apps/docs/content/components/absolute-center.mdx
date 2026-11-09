@@ -1,0 +1,43 @@
+import { AbsoluteCenterExample } from "../../src/examples/absolute-center.tsx";
+import absoluteCenterSource from "../../src/examples/absolute-center.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Absolute Center
+</div>
+<span className="section-index">LAYOUT COMPONENT</span>
+
+# Absolute Center
+
+Position content at the center of a parent without changing the surrounding layout. Set `position: relative` on the parent; Absolute Center uses absolute positioning.
+
+## Install
+
+```sh
+ecentry add absolute-center
+```
+
+Import `AbsoluteCenter` from the installed `components/ui/absolute-center/` directory.
+
+## Preview
+
+<ExamplePanel source={absoluteCenterSource}>
+  <AbsoluteCenterExample />
+</ExamplePanel>
+
+## Axis and RTL
+
+The default `axis="both"` centers horizontally and vertically. Use `horizontal` to leave the vertical position to normal absolute positioning, or `vertical` to leave the horizontal position alone. Logical inline positioning and direction-aware translation keep the horizontal center correct in RTL containers.
+
+The component takes the intrinsic width of its content, capped at the parent width. Use `className` or `style` to customize it. `as` changes the rendered element, and the ref points to that element.
+
+## API
+
+| Prop        | Type                             | Default | Purpose               |
+| ----------- | -------------------------------- | ------- | --------------------- |
+| `axis`      | `horizontal \| vertical \| both` | `both`  | Centering direction   |
+| `as`        | React element type               | `div`   | Rendered element      |
+| `className` | `string`                         | -       | Custom root styles    |
+| `style`     | React CSS properties             | -       | Local style overrides |
+
+Native HTML and ARIA attributes pass through to the rendered element.

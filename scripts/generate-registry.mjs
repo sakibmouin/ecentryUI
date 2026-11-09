@@ -5,11 +5,13 @@ import { generateRegistryItem } from "@ecentry/registry-schema";
 import { buttonRegistryItem } from "../packages/react/dist/components/button/metadata.js";
 import { inputRegistryItem } from "../packages/react/dist/components/input/metadata.js";
 import { dialogRegistryItem } from "../packages/react/dist/components/dialog/metadata.js";
+import { absoluteCenterRegistryItem } from "../packages/react/dist/components/absolute-center/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
   inputRegistryItem,
   dialogRegistryItem,
+  absoluteCenterRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

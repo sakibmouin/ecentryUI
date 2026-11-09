@@ -97,7 +97,7 @@ try {
     [cli, "add", "sample", "--registry", path.join(root, "registry"), "--yes"],
     { cwd: root, stdio: "inherit" },
   );
-  for (const component of ["button", "input", "dialog"]) {
+  for (const component of ["button", "input", "dialog", "absolute-center"]) {
     execFileSync(
       process.execPath,
       [
@@ -167,6 +167,14 @@ try {
     await dialog.getByRole("button", { name: "Close dialog" }).click();
     if (await dialog.isVisible())
       throw new Error("Installed Dialog did not close");
+    const parent = await page.getByTestId("absolute-parent").boundingBox();
+    const center = await page.getByText("Installed center").boundingBox();
+    if (
+      !parent ||
+      !center ||
+      Math.abs(center.x + center.width / 2 - (parent.x + parent.width / 2)) > 1
+    )
+      throw new Error("Installed Absolute Center did not center horizontally");
   } finally {
     await browser.close();
     await new Promise((resolve, reject) =>

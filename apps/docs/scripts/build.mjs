@@ -53,7 +53,11 @@ const template = await readFile(path.join(appRoot, "dist/index.html"), "utf8");
 for (const route of routes) {
   const pageName =
     route === "/" ? "Overview" : route.split("/").filter(Boolean).at(-1);
-  const title = `${pageName?.replace(/^./, (letter) => letter.toUpperCase())} | ecentryUI documentation`;
+  const pageTitle = pageName
+    ?.split("-")
+    .map((word) => word.replace(/^./, (letter) => letter.toUpperCase()))
+    .join(" ");
+  const title = `${pageTitle} | ecentryUI documentation`;
   const html = template
     .replace(
       "<title>ecentryUI documentation</title>",

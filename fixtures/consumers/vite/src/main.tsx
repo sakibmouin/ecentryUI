@@ -12,6 +12,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./components/ui/dialog/index.js";
+import { AbsoluteCenter } from "./components/ui/absolute-center/index.js";
 
 const theme = createTheme({
   tokens: { "colors.ink": "#142d24" },
@@ -36,5 +37,11 @@ createRoot(document.getElementById("root")!).render(
         <DialogClose>Close dialog</DialogClose>
       </DialogContent>
     </DialogRoot>
+    <div
+      style={{ position: "relative", width: 200, height: 100 }}
+      data-testid="absolute-parent"
+    >
+      <AbsoluteCenter>Installed center</AbsoluteCenter>
+    </div>
   </AppearanceProvider>,
 );
