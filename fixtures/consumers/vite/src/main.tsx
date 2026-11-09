@@ -17,6 +17,7 @@ import { AspectRatio } from "./components/ui/aspect-ratio/index.js";
 import { Bleed } from "./components/ui/bleed/index.js";
 import { Box } from "./components/ui/box/index.js";
 import { Center, Circle, Square } from "./components/ui/center/index.js";
+import { Container } from "./components/ui/container/index.js";
 
 const theme = createTheme({
   tokens: { "colors.ink": "#142d24" },
@@ -69,5 +70,8 @@ createRoot(document.getElementById("root")!).render(
     <Circle size={48} data-testid="installed-circle">
       2
     </Circle>
+    <Container maxWidth={400} data-testid="installed-container">
+      Installed container
+    </Container>
   </AppearanceProvider>,
 );

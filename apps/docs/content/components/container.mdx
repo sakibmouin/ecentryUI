@@ -1,0 +1,49 @@
+import { ContainerExample } from "../../src/examples/container.tsx";
+import containerSource from "../../src/examples/container.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Container
+</div>
+<span className="section-index">LAYOUT COMPONENT</span>
+
+# Container
+
+Container keeps page content fluid while capping its width and centering it in the available space. Logical inline gutters work in LTR and RTL.
+
+## Install
+
+```sh
+ecentry add container
+```
+
+Import `Container` from the installed `components/ui/container/` directory.
+
+## Preview
+
+<ExamplePanel source={containerSource}>
+  <ContainerExample />
+</ExamplePanel>
+
+## Width and gutters
+
+The default maximum is 90rem. Use `maxWidth` with `sm` (40rem), `md` (48rem), `lg` (64rem), `xl` (80rem), or `2xl` (90rem). A CSS length such as `42ch`, or a pixel number, also works. `fluid` removes the cap. Container always fills the available width until it reaches its maximum.
+
+The default inline gutter is 1rem and grows to 1.5rem at 40rem viewport width. Set `gutter` to a CSS length or pixel number to override it. `centerContent` aligns child items on the inline axis with flex layout; use it only when the children should be centered independently.
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Container API" tabIndex={0}>
+
+| Prop                 | Type                          | Purpose                      |
+| -------------------- | ----------------------------- | ---------------------------- |
+| `as`                 | React element type            | Rendered element             |
+| `maxWidth`           | preset, CSS length, or number | Width cap                    |
+| `gutter`             | CSS length or number          | Logical inline padding       |
+| `fluid`              | boolean                       | Fill the parent width        |
+| `centerContent`      | boolean                       | Align children in the center |
+| `className`, `style` | Native React props            | Custom layout and overrides  |
+
+</div>
+
+All native HTML and ARIA attributes pass through to the wrapper, and its ref points to the rendered element.

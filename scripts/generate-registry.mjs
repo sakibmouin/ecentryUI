@@ -10,6 +10,7 @@ import { aspectRatioRegistryItem } from "../packages/react/dist/components/aspec
 import { bleedRegistryItem } from "../packages/react/dist/components/bleed/metadata.js";
 import { boxRegistryItem } from "../packages/react/dist/components/box/metadata.js";
 import { centerRegistryItem } from "../packages/react/dist/components/center/metadata.js";
+import { containerRegistryItem } from "../packages/react/dist/components/container/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -20,6 +21,7 @@ for (const item of [
   bleedRegistryItem,
   boxRegistryItem,
   centerRegistryItem,
+  containerRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

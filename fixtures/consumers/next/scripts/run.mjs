@@ -108,6 +108,7 @@ try {
     "bleed",
     "box",
     "center",
+    "container",
   ]) {
     execFileSync(
       process.execPath,
@@ -134,7 +135,8 @@ try {
     !html.includes("Installed button") ||
     !html.includes("Installed input") ||
     !html.includes("Installed box") ||
-    !html.includes("Centered")
+    !html.includes("Centered") ||
+    !html.includes("Installed container")
   ) {
     throw new Error("Next did not render the component into static HTML");
   }
@@ -246,6 +248,11 @@ try {
       Math.abs(circle.height - 48) > 1
     )
       throw new Error("Next Square or Circle did not apply size");
+    const container = await page
+      .getByTestId("installed-container")
+      .boundingBox();
+    if (!container || Math.abs(container.width - 400) > 1)
+      throw new Error("Next Container did not apply its width cap");
     if (errors.length)
       throw new Error(`Next hydration errors: ${errors.join(" | ")}`);
   } finally {

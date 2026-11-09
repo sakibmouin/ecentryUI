@@ -109,13 +109,13 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/center/center.tsx`, `center.css`, `center.test.tsx`, `index.ts`, `apps/docs/content/components/center.mdx`.
   - Acceptance: responsive layout, intrinsic sizing and RTL; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/center/center.test.tsx && npm run test:e2e -- center`.
-- [ ] **T022 Container component** (depends on T016).
+- [x] **T022 Container component** (depends on T016).
   - Files: `packages/react/src/components/container/container.tsx`, `container.css`, `container.test.tsx`, `index.ts`, `apps/docs/content/components/container.mdx`.
   - Acceptance: responsive layout, intrinsic sizing and RTL; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/container/container.test.tsx && npm run test:e2e -- container`.
 
 ### Checkpoint after T022
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T023 Flex component** (depends on T016).
   - Files: `packages/react/src/components/flex/flex.tsx`, `flex.css`, `flex.test.tsx`, `index.ts`, `apps/docs/content/components/flex.mdx`.

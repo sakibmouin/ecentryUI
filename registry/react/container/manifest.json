@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "container",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["container.css", "container.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "container.css": "3e5cc180ba2f6b7bdcd743e32900027a3a1ad622c098818410ac72d1b795bda5",
+    "container.tsx": "87ccc08b57ff770cb8ec83111f59b865a3333ed91286e5e30e996130e576fd79",
+    "index.ts": "f748dd2cbf32189e1b02d24578ac19afafc89c9f0cf81d669572095887d3b816",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/container/",
+  "license": "MIT"
+}

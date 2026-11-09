@@ -1,0 +1,28 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: var(--ec-container-max-width, 90rem);
+    margin-inline: auto;
+    padding-inline: var(--ec-container-gutter, 1rem);
+  }
+
+  .ec-container--fluid {
+    max-width: none;
+  }
+
+  .ec-container--center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: 40rem) {
+    .ec-container {
+      padding-inline: var(--ec-container-gutter, 1.5rem);
+    }
+  }
+}

@@ -15,6 +15,7 @@ import { AspectRatio } from "../components/ui/aspect-ratio/index";
 import { Bleed } from "../components/ui/bleed/index";
 import { Box } from "../components/ui/box/index";
 import { Center, Circle, Square } from "../components/ui/center/index";
+import { Container } from "../components/ui/container/index";
 
 export function ComponentsDemo() {
   return (
@@ -60,6 +61,9 @@ export function ComponentsDemo() {
       <Circle size={48} data-testid="installed-circle">
         2
       </Circle>
+      <Container maxWidth={400} data-testid="installed-container">
+        Installed container
+      </Container>
     </section>
   );
 }

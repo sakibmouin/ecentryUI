@@ -887,6 +887,54 @@ footer {
   outline: 2px solid var(--ec-colors-focus, Highlight);
   outline-offset: 2px;
 }
+.container-demo {
+  display: grid;
+  gap: 18px;
+  padding: 36px;
+  background: var(--ec-colors-background, #fff);
+  color: var(--ec-colors-text, #19211c);
+}
+.container-demo-frame {
+  padding: 18px 0;
+  border: 1px dashed var(--ec-colors-border, #dce0dc);
+  border-radius: 12px;
+}
+.container-demo-label {
+  display: block;
+  margin: 0 20px 12px;
+  color: var(--ec-colors-accent, #116e5e);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+.container-demo-panel {
+  padding-block: 20px;
+  border-radius: 8px;
+  background: var(--ec-colors-surface, #f7f9f7);
+}
+.container-demo-panel h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+.container-demo-panel p {
+  margin: 0;
+  font-size: 13px;
+}
+.container-demo > button {
+  justify-self: start;
+  padding: 8px 4px;
+  border: 0;
+  background: transparent;
+  color: var(--ec-colors-accent, #116e5e);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.container-demo > button:focus-visible {
+  outline: 2px solid var(--ec-colors-focus, Highlight);
+  outline-offset: 2px;
+}
 @media (max-width: 620px) {
   .absolute-demo-grid {
     grid-template-columns: 1fr;
@@ -914,6 +962,9 @@ footer {
   }
   .center-demo-grid {
     grid-template-columns: 1fr;
+  }
+  .container-demo {
+    padding: 24px;
   }
 }
 @media (max-width: 620px) {

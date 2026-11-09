@@ -106,6 +106,7 @@ try {
     "bleed",
     "box",
     "center",
+    "container",
   ]) {
     execFileSync(
       process.execPath,
@@ -219,6 +220,11 @@ try {
       Math.abs(circle.height - 48) > 1
     )
       throw new Error("Installed Square or Circle did not apply size");
+    const container = await page
+      .getByTestId("installed-container")
+      .boundingBox();
+    if (!container || Math.abs(container.width - 400) > 1)
+      throw new Error("Installed Container did not apply its width cap");
   } finally {
     await browser.close();
     await new Promise((resolve, reject) =>
