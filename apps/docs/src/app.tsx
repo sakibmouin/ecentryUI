@@ -1,7 +1,8 @@
-import { useId, useState } from "react";
-import type { KeyboardEvent, ReactNode } from "react";
+import { useState } from "react";
 import { CounterExample } from "./examples/counter.js";
+import { ExamplePanel } from "./example-panel.js";
 import counterSource from "./examples/counter.tsx?raw";
+import ButtonDocs from "../content/components/button.mdx";
 
 export const routes = [
   "/",
@@ -16,64 +17,6 @@ const componentLinks = [
   { title: "Input", href: "/components/input/" },
   { title: "Dialog", href: "/components/dialog/" },
 ];
-
-function ExamplePanel({
-  children,
-  source,
-}: {
-  children: ReactNode;
-  source: string;
-}) {
-  const id = useId();
-  const [tab, setTab] = useState<"preview" | "code">("preview");
-  function onTabKeyDown(event: KeyboardEvent<HTMLButtonElement>) {
-    if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
-      event.preventDefault();
-      const next = tab === "preview" ? "code" : "preview";
-      setTab(next);
-      document.getElementById(`${id}-example-tab-${next}`)?.focus();
-    }
-  }
-  return (
-    <section className="example-panel" aria-label="Live example">
-      <div className="example-tabs" role="tablist" aria-label="Example view">
-        <button
-          id={`${id}-example-tab-preview`}
-          role="tab"
-          aria-selected={tab === "preview"}
-          tabIndex={tab === "preview" ? 0 : -1}
-          onClick={() => setTab("preview")}
-          onKeyDown={onTabKeyDown}
-        >
-          Preview
-        </button>
-        <button
-          id={`${id}-example-tab-code`}
-          role="tab"
-          aria-selected={tab === "code"}
-          tabIndex={tab === "code" ? 0 : -1}
-          onClick={() => setTab("code")}
-          onKeyDown={onTabKeyDown}
-        >
-          Code
-        </button>
-      </div>
-      <div
-        role="tabpanel"
-        aria-labelledby={`${id}-example-tab-${tab}`}
-        className={tab === "preview" ? "example-preview" : "example-code"}
-      >
-        {tab === "preview" ? (
-          children
-        ) : (
-          <pre>
-            <code>{source}</code>
-          </pre>
-        )}
-      </div>
-    </section>
-  );
-}
 
 function Home() {
   return (
@@ -202,8 +145,8 @@ export function App({ routePath }: { routePath: string }) {
         Skip to content
       </a>
       <header className="site-header">
-        <a className="brand" href="/" aria-label="ecentryUI home">
-          <span className="brand-symbol">
+        <a className="brand" href="/">
+          <span className="brand-symbol" aria-hidden="true">
             e<span>✳</span>
           </span>
           <span>
@@ -267,6 +210,8 @@ export function App({ routePath }: { routePath: string }) {
               <Home />
             ) : route === "/guides/examples/" ? (
               <Examples />
+            ) : route === "/components/button/" ? (
+              <ButtonDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

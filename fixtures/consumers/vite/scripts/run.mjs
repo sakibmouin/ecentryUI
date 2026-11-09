@@ -97,6 +97,18 @@ try {
     [cli, "add", "sample", "--registry", path.join(root, "registry"), "--yes"],
     { cwd: root, stdio: "inherit" },
   );
+  execFileSync(
+    process.execPath,
+    [
+      cli,
+      "add",
+      "button",
+      "--registry",
+      path.join(repo, "registry/react"),
+      "--yes",
+    ],
+    { cwd: root, stdio: "inherit" },
+  );
   execFileSync("npm", ["run", "build"], { cwd: root, stdio: "inherit" });
   const html = await readFile(path.join(root, "dist/index.html"), "utf8");
   if (!html.includes("assets/index-"))
@@ -136,6 +148,13 @@ try {
     );
     if (color !== "rgb(20, 45, 36)")
       throw new Error(`Theme override failed: ${color}`);
+    const button = page.getByRole("button", { name: "Installed button" });
+    await button.waitFor();
+    const background = await button.evaluate(
+      (element) => globalThis.getComputedStyle(element).backgroundColor,
+    );
+    if (background !== "rgb(17, 110, 94)")
+      throw new Error(`Installed Button style failed: ${background}`);
   } finally {
     await browser.close();
     await new Promise((resolve, reject) =>

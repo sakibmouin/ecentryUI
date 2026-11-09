@@ -6,7 +6,7 @@ Approved product contracts live in `docs/specs/`; implementation status is in `t
 
 ## Build, Test, and Development Commands
 
-Run `npm ci`, `npm run build`, `npm run typecheck`, `npm run lint`, `npm test -- --run`, and `npm run test:e2e` from the root. See the [README](README.md) for each command's purpose and the Playwright browser setup. Docs development commands will be added with the site.
+Run `npm ci`, `npm run build`, `npm run typecheck`, `npm run lint`, `npm run format:check`, `npm test -- --run`, and `npm run test:e2e` from the root. Use `npm run registry:generate` after changing canonical component source, then `npm run registry:validate`. See the [README](README.md) for command details and Playwright setup.
 
 ## Coding Style & Naming Conventions
 

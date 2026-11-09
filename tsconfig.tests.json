@@ -8,6 +8,7 @@
   "include": [
     "packages/**/*.test.ts",
     "packages/**/*.test.tsx",
+    "packages/react/src/styles.d.ts",
     "tests/**/*.ts",
     "tests/**/*.tsx",
     "*.config.ts"

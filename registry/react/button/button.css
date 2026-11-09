@@ -1,0 +1,147 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-button {
+    --ec-button-fill: var(--ec-colors-accent, #116e5e);
+    --ec-button-on-fill: var(--ec-colors-background, #fff);
+    --ec-button-hover: var(--ec-colors-accent-hover, #0d584b);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    min-height: 40px;
+    padding: 0 16px;
+    border: 1px solid transparent;
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-button-fill);
+    color: var(--ec-button-on-fill);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    transition:
+      background-color var(--ec-motion-duration-fast, 120ms),
+      border-color var(--ec-motion-duration-fast, 120ms),
+      box-shadow var(--ec-motion-duration-fast, 120ms);
+  }
+
+  .ec-button[data-ec-color="neutral"] {
+    --ec-button-fill: var(--ec-colors-text, #19211c);
+    --ec-button-on-fill: var(--ec-colors-background, #fff);
+    --ec-button-hover: var(--ec-colors-neutral-700, #414a45);
+  }
+
+  .ec-button[data-ec-color="danger"] {
+    --ec-button-fill: var(--ec-colors-danger, #c43843);
+    --ec-button-on-fill: #fff;
+    --ec-button-hover: #a72835;
+  }
+
+  .ec-button[data-ec-size="sm"] {
+    min-height: 32px;
+    padding-inline: 12px;
+    font-size: 12px;
+  }
+  .ec-button[data-ec-size="lg"] {
+    min-height: 48px;
+    padding-inline: 20px;
+    font-size: 16px;
+  }
+  .ec-button:not(:disabled):hover {
+    background: var(--ec-button-hover);
+  }
+  .ec-button:not(:disabled):active {
+    transform: translateY(1px);
+  }
+  .ec-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-button[data-ec-loading] {
+    cursor: wait;
+  }
+  .ec-button-spinner {
+    width: 1em;
+    height: 1em;
+    flex: none;
+    border: 2px solid currentColor;
+    border-inline-end-color: transparent;
+    border-radius: 50%;
+    animation: ec-button-spin 0.8s linear infinite;
+  }
+  .ec-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  @keyframes ec-button-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@layer ec.variants {
+  .ec-button[data-ec-variant="outline"] {
+    border-color: var(--ec-button-fill);
+    background: transparent;
+    color: var(--ec-button-fill);
+  }
+  .ec-button[data-ec-variant="ghost"],
+  .ec-button[data-ec-variant="text"] {
+    background: transparent;
+    color: var(--ec-button-fill);
+  }
+  .ec-button[data-ec-variant="outline"]:not(:disabled):hover,
+  .ec-button[data-ec-variant="ghost"]:not(:disabled):hover,
+  .ec-button[data-ec-variant="text"]:not(:disabled):hover {
+    background: color-mix(in srgb, var(--ec-button-fill) 10%, transparent);
+  }
+  .ec-button[data-ec-variant="text"] {
+    padding-inline: 4px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+@layer ec.utilities {
+  .ec-button:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-button {
+      border-color: ButtonText;
+      background: ButtonFace;
+      color: ButtonText;
+    }
+    .ec-button:disabled {
+      opacity: 1;
+      color: GrayText;
+      border-color: GrayText;
+    }
+    .ec-button:focus-visible {
+      outline-color: Highlight;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ec-button-spinner {
+      animation: none;
+    }
+    .ec-button:not(:disabled):active {
+      transform: none;
+    }
+  }
+}

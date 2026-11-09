@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "button",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["button.css", "button.tsx", "index.ts"],
+  "hashes": {
+    "button.css": "37ca5ffb5dfbefd6374bd8320511e73a4f6304e619b0e4a651868b6b95dc921a",
+    "button.tsx": "5eb61d6a7d346e93c04adabd0119602fbfc1fab0e20c293453f70cfd51b5bd87",
+    "index.ts": "156e314b53cd381b1c1e4d042acaf18c70e9c9c08535ab00391fb6127527dcb5"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.accent.hover",
+    "colors.background",
+    "colors.danger",
+    "colors.focus",
+    "colors.text",
+    "motion.duration.fast",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/button/",
+  "license": "MIT"
+}

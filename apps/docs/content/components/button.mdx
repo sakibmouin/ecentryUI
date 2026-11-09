@@ -1,0 +1,49 @@
+import { ButtonExample } from "../../src/examples/button.tsx";
+import buttonSource from "../../src/examples/button.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Button
+</div>
+<span className="section-index">ACTION COMPONENT</span>
+
+# Button
+
+Use Button for a clear, immediate action. Its native button element handles keyboard activation and form submission when you set `type="submit"`.
+
+## Install
+
+```sh
+ecentry add button
+```
+
+The installed source and CSS live in your configured `components/ui/button/` directory. Import `Button` from that directory.
+
+## Preview
+
+<ExamplePanel source={buttonSource}>
+  <ButtonExample />
+</ExamplePanel>
+
+## Variants and sizes
+
+`solid` is the default. Choose `outline` for a secondary action, `ghost` for a quiet action, and `text` for an inline action. Sizes are `sm`, `md` (default), and `lg`. Colors are `brand` (default), `neutral`, and `danger`.
+
+## States and accessibility
+
+The button supports hover, active, visible keyboard focus, disabled, and loading states. `loading` disables activation and announces the busy state. Use `loadingText` to replace the visible label while work is in progress. Icon-only buttons need an `aria-label`. High contrast and reduced motion preferences are respected by the stylesheet.
+
+For form submission, set `type="submit"`; otherwise Button defaults to `type="button"` to avoid accidental submissions. The component forwards a ref to the native button.
+
+## API
+
+| Prop          | Type                                | Default  | Purpose                     |
+| ------------- | ----------------------------------- | -------- | --------------------------- |
+| `variant`     | `solid \| outline \| ghost \| text` | `solid`  | Visual emphasis             |
+| `size`        | `sm \| md \| lg`                    | `md`     | Control height and spacing  |
+| `color`       | `brand \| neutral \| danger`        | `brand`  | Semantic color              |
+| `loading`     | `boolean`                           | `false`  | Busy and disabled state     |
+| `loadingText` | `string`                            | -        | Visible label while loading |
+| `type`        | Native button type                  | `button` | Use `submit` for forms      |
+
+All other native button props, including `disabled`, `onClick`, `aria-*`, and `className`, pass through to the element.

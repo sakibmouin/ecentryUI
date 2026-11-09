@@ -1,18 +1,8 @@
 import type { ComponentPropsWithRef, ReactNode } from "react";
+export type { ButtonProps } from "./components/button/button.js";
 
 export type ComponentSize = "sm" | "md" | "lg";
 export type ComponentColor = "neutral" | "brand" | "danger";
-
-export interface ButtonProps extends Omit<
-  ComponentPropsWithRef<"button">,
-  "color"
-> {
-  variant?: "solid" | "outline" | "ghost" | "text";
-  size?: ComponentSize;
-  color?: ComponentColor;
-  loading?: boolean;
-  loadingText?: string;
-}
 
 export interface InputProps extends Omit<
   ComponentPropsWithRef<"input">,

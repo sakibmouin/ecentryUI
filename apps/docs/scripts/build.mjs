@@ -3,6 +3,8 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { build } from "esbuild";
+import mdx from "@mdx-js/esbuild";
+import remarkGfm from "remark-gfm";
 
 const appRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -24,6 +26,7 @@ await build({
   format: "esm",
   packages: "external",
   jsx: "automatic",
+  loader: { ".css": "empty" },
   plugins: [
     {
       name: "raw-examples",
@@ -41,6 +44,7 @@ await build({
         );
       },
     },
+    mdx({ remarkPlugins: [remarkGfm] }),
   ],
 });
 

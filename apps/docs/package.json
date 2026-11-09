@@ -9,7 +9,10 @@
     "preview": "vite preview --host 127.0.0.1"
   },
   "devDependencies": {
+    "@mdx-js/esbuild": "^3.1.1",
+    "@mdx-js/rollup": "^3.1.1",
     "@vitejs/plugin-react": "^6.3.0",
+    "remark-gfm": "^4.0.1",
     "vite": "^8.3.7"
   }
 }

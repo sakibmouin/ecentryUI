@@ -12,3 +12,4 @@ export type {
   DialogTriggerProps,
   InputProps,
 } from "./contracts.js";
+export { Button, buttonRecipe } from "./components/button/index.js";
