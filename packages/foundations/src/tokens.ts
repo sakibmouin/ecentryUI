@@ -29,7 +29,14 @@ function validateValue(path: string, value: unknown): asserts value is string {
     throw new Error(`Token ${path} needs a non-empty CSS value`);
   }
   const withoutReferences = value.replace(reference, "");
-  if (/[;{}]/.test(withoutReferences)) {
+  const hasControlCharacter = Array.from(withoutReferences).some(
+    (character) => character.charCodeAt(0) < 32,
+  );
+  if (
+    /[;{}]/.test(withoutReferences) ||
+    /\/\*|\*\//.test(withoutReferences) ||
+    hasControlCharacter
+  ) {
     throw new Error(`Token ${path} contains an invalid CSS value`);
   }
 }

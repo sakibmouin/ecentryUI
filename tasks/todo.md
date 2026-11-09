@@ -17,7 +17,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 ### Checkpoint after T03
 - [x] Unit tests, typecheck and workspace build pass.
 
-- [ ] **T04 Implement CSS variables and style layers** (depends on T03).
+- [x] **T04 Implement CSS variables and style layers** (depends on T03).
   - Acceptance: Generate scoped variables, variant precedence and reset CSS; token override fixture passes.
   - Verify: `npm test -- --run packages/foundations`.
 - [ ] **T05 Implement appearance provider** (depends on T04).

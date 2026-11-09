@@ -13,7 +13,7 @@
     "lint": "eslint .",
     "format:check": "prettier --check package.json tsconfig.base.json tsconfig.json eslint.config.mjs vitest.config.ts playwright.config.ts packages apps tests",
     "test": "vitest",
-    "test:e2e": "playwright test"
+    "test:e2e": "npm run build && playwright test"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
