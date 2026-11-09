@@ -17,8 +17,9 @@ Run these commands from the repository root:
 - `npm run lint` checks source and test files with ESLint.
 - `npm run format:check` checks formatting with Prettier.
 - `npm test -- --run` runs Vitest once.
+- `npm run registry:validate` checks generated component payloads against canonical source.
 - `npx playwright install chromium` installs the browser used by `npm run test:e2e`.
 
-The current tests are workspace smoke checks. Component tests and documentation flows will be added with their implementation tasks.
+Foundation, registry, and CLI tests are active. Component tests and documentation flows will be added with their implementation tasks.
 
 Licensed under [MIT](LICENSE).

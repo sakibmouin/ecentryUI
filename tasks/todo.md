@@ -36,12 +36,12 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 - [x] **T08 Build registry schema and generator** (depends on T07).
   - Acceptance: Validate item IDs, hashes and dependency closure; generated payload equals canonical source.
   - Verify: `npm run registry:validate && npm test -- --run packages/registry-schema`.
-- [ ] **T09 Build CLI init and add** (depends on T08).
+- [x] **T09 Build CLI init and add** (depends on T08).
   - Acceptance: Dry run and install write only declared files; a minimal fixture item can be installed.
   - Verify: `npm test -- --run packages/cli && npm run registry:validate`.
 
 ### Checkpoint after T09
-- [ ] Registry validation and CLI fixture install pass.
+- [x] Registry validation and CLI fixture install pass.
 
 - [ ] **T10 Build documentation shell and example harness** (depends on T02,T07).
   - Acceptance: Navigation, component routes, preview/code tabs and example compilation work.
