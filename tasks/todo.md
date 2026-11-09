@@ -4,7 +4,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 ## Foundation
 
-- [ ] **T01 Capture visual and interaction baseline** (depends on None).
+- [x] **T01 Capture visual and interaction baseline** (depends on None).
   - Acceptance: Record representative desktop/mobile, light/dark, focus, disabled, overlay and form states in ignored `.local/`; verify notes and screenshots exist.
   - Verify: Review `.local/reference/` screenshots and notes locally.
 - [ ] **T02 Create npm workspace and baseline scripts** (depends on T01).
