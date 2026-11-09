@@ -14,6 +14,7 @@ import {
 } from "./components/ui/dialog/index.js";
 import { AbsoluteCenter } from "./components/ui/absolute-center/index.js";
 import { AspectRatio } from "./components/ui/aspect-ratio/index.js";
+import { Bleed } from "./components/ui/bleed/index.js";
 
 const theme = createTheme({
   tokens: { "colors.ink": "#142d24" },
@@ -51,5 +52,8 @@ createRoot(document.getElementById("root")!).render(
     >
       <div>Installed ratio</div>
     </AspectRatio>
+    <div style={{ width: 200, padding: 16 }} data-testid="bleed-parent">
+      <Bleed data-testid="bleed-content">Installed bleed</Bleed>
+    </div>
   </AppearanceProvider>,
 );

@@ -103,6 +103,7 @@ try {
     "dialog",
     "absolute-center",
     "aspect-ratio",
+    "bleed",
   ]) {
     execFileSync(
       process.execPath,
@@ -184,6 +185,10 @@ try {
     const frame = await page.getByTestId("aspect-frame").boundingBox();
     if (!frame || Math.abs(frame.width / frame.height - 4 / 3) > 0.02)
       throw new Error("Installed Aspect Ratio did not keep its ratio");
+    const bleedParent = await page.getByTestId("bleed-parent").boundingBox();
+    const bleed = await page.getByTestId("bleed-content").boundingBox();
+    if (!bleedParent || !bleed || Math.abs(bleed.x - bleedParent.x) > 1)
+      throw new Error("Installed Bleed did not escape inline padding");
   } finally {
     await browser.close();
     await new Promise((resolve, reject) =>

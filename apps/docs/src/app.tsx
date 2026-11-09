@@ -7,6 +7,7 @@ import InputDocs from "../content/components/input.mdx";
 import DialogDocs from "../content/components/dialog.mdx";
 import AbsoluteCenterDocs from "../content/components/absolute-center.mdx";
 import AspectRatioDocs from "../content/components/aspect-ratio.mdx";
+import BleedDocs from "../content/components/bleed.mdx";
 
 export const routes = [
   "/",
@@ -16,6 +17,7 @@ export const routes = [
   "/components/dialog/",
   "/components/absolute-center/",
   "/components/aspect-ratio/",
+  "/components/bleed/",
 ] as const;
 
 const componentLinks = [
@@ -24,6 +26,7 @@ const componentLinks = [
   { title: "Dialog", href: "/components/dialog/" },
   { title: "Absolute Center", href: "/components/absolute-center/" },
   { title: "Aspect Ratio", href: "/components/aspect-ratio/" },
+  { title: "Bleed", href: "/components/bleed/" },
 ];
 
 function Home() {
@@ -228,6 +231,8 @@ export function App({ routePath }: { routePath: string }) {
               <AbsoluteCenterDocs />
             ) : route === "/components/aspect-ratio/" ? (
               <AspectRatioDocs />
+            ) : route === "/components/bleed/" ? (
+              <BleedDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

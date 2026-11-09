@@ -1,0 +1,13 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-bleed {
+    display: flow-root;
+    box-sizing: border-box;
+    margin-inline-start: calc(-1 * var(--ec-bleed-inline-start, 0px));
+    margin-inline-end: calc(-1 * var(--ec-bleed-inline-end, 0px));
+    margin-block-start: calc(-1 * var(--ec-bleed-block-start, 0px));
+    margin-block-end: calc(-1 * var(--ec-bleed-block-end, 0px));
+  }
+}

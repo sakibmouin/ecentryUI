@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "bleed",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["bleed.css", "bleed.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "bleed.css": "806185af463caa536992f8dc5ea6565c079a39bed132fce06269a2cad3babe8b",
+    "bleed.tsx": "141943fdeac1e7f01f8bd160f3dfad113258618e2803750e17465d60e84263a3",
+    "index.ts": "b2df21c894f8d96b601cdaa6b9dd1a1b90155966d6f650cef0cf704dcf362e77",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/bleed/",
+  "license": "MIT"
+}

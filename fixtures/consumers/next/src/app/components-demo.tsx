@@ -12,6 +12,7 @@ import {
 } from "../components/ui/dialog/index";
 import { AbsoluteCenter } from "../components/ui/absolute-center/index";
 import { AspectRatio } from "../components/ui/aspect-ratio/index";
+import { Bleed } from "../components/ui/bleed/index";
 
 export function ComponentsDemo() {
   return (
@@ -42,6 +43,9 @@ export function ComponentsDemo() {
       >
         <div>Installed ratio</div>
       </AspectRatio>
+      <div style={{ width: 200, padding: 16 }} data-testid="bleed-parent">
+        <Bleed data-testid="bleed-content">Installed bleed</Bleed>
+      </div>
     </section>
   );
 }

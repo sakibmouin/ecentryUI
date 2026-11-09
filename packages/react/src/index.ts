@@ -17,11 +17,13 @@ import "./components/input/input.css";
 import "./components/dialog/dialog.css";
 import "./components/absolute-center/absolute-center.css";
 import "./components/aspect-ratio/aspect-ratio.css";
+import "./components/bleed/bleed.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
 export { AbsoluteCenter } from "./components/absolute-center/absolute-center.js";
 export { AspectRatio } from "./components/aspect-ratio/aspect-ratio.js";
+export { Bleed } from "./components/bleed/bleed.js";
 export {
   DialogRoot,
   DialogTrigger,

@@ -725,12 +725,51 @@ footer {
 .aspect-demo-art-portrait {
   background: linear-gradient(135deg, #23385d, #415c88);
 }
+.bleed-demo-grid {
+  display: grid;
+  box-sizing: border-box;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  padding: 36px;
+  background: #fff;
+}
+.bleed-demo-group > span {
+  display: block;
+  margin-bottom: 10px;
+  color: #526459;
+  font-size: 12px;
+  font-weight: 700;
+}
+.bleed-demo-inset {
+  padding: 16px;
+  min-height: 125px;
+  border: 1px dashed #c5d5c9;
+  border-radius: 8px;
+  background: #f5f9f6;
+}
+.bleed-demo-inset > p {
+  margin: 0 0 14px;
+  color: #526459;
+  font-size: 12px;
+}
+.bleed-demo-surface {
+  padding: 14px 16px;
+  background: #116e5e;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
 @media (max-width: 620px) {
   .absolute-demo-grid {
     grid-template-columns: 1fr;
     padding: 24px;
   }
   .aspect-demo-grid {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+  .bleed-demo-grid {
     grid-template-columns: 1fr;
     padding: 24px;
   }

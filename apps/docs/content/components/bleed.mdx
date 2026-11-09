@@ -1,0 +1,48 @@
+import { BleedExample } from "../../src/examples/bleed.tsx";
+import bleedSource from "../../src/examples/bleed.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Bleed
+</div>
+<span className="section-index">LAYOUT COMPONENT</span>
+
+# Bleed
+
+Extend content past a padded container's boundaries. Bleed uses negative logical margins, so the direction follows LTR or RTL text flow.
+
+## Install
+
+```sh
+ecentry add bleed
+```
+
+Import `Bleed` from the installed `components/ui/bleed/` directory.
+
+## Preview
+
+<ExamplePanel source={bleedSource}>
+  <BleedExample />
+</ExamplePanel>
+
+## Directions and amounts
+
+The default extends 16px on both inline edges, which matches a common padded container. Set `inline` or `block` to change both edges on that axis. Override one edge with `inlineStart`, `inlineEnd`, `blockStart`, or `blockEnd`. Pass a nonnegative number for pixels or a CSS length such as `"2rem"`.
+
+Bleed keeps the child's semantic content. Use `as` to choose a different wrapper element, or `className` and `style` for local styling. Avoid placing it inside a parent with `overflow: hidden` when the extended edges must remain visible.
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Bleed API" tabIndex={0}>
+
+| Prop                       | Type               | Default | Purpose                 |
+| -------------------------- | ------------------ | ------- | ----------------------- |
+| `inline`                   | `number \| string` | `16`    | Both inline edges       |
+| `block`                    | `number \| string` | `0`     | Both block edges        |
+| `inlineStart`, `inlineEnd` | `number \| string` | -       | Override an inline edge |
+| `blockStart`, `blockEnd`   | `number \| string` | -       | Override a block edge   |
+| `as`                       | React element type | `div`   | Wrapper element         |
+
+</div>
+
+Native HTML and ARIA attributes pass through to the wrapper.

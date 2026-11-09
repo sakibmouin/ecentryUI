@@ -105,6 +105,7 @@ try {
     "dialog",
     "absolute-center",
     "aspect-ratio",
+    "bleed",
   ]) {
     execFileSync(
       process.execPath,
@@ -209,6 +210,10 @@ try {
     const frame = await page.getByTestId("aspect-frame").boundingBox();
     if (!frame || Math.abs(frame.width / frame.height - 4 / 3) > 0.02)
       throw new Error("Next Aspect Ratio did not keep its ratio");
+    const bleedParent = await page.getByTestId("bleed-parent").boundingBox();
+    const bleed = await page.getByTestId("bleed-content").boundingBox();
+    if (!bleedParent || !bleed || Math.abs(bleed.x - bleedParent.x) > 1)
+      throw new Error("Next Bleed did not escape inline padding");
     if (errors.length)
       throw new Error(`Next hydration errors: ${errors.join(" | ")}`);
   } finally {
