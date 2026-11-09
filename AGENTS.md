@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-This repository currently contains `skills-lock.json` and the skill instructions under `.agents/skills/`. It has no application source, tests, or assets yet. When adding them, keep related code and tests close together, document the chosen layout in a README, and avoid introducing directories with no clear purpose. Treat `skills-lock.json` as the record of installed skills and consult the corresponding `SKILL.md` before using one.
+Approved product contracts live in `docs/specs/`, with the implementation sequence in `tasks/plan.md` and `tasks/todo.md`. Installed skill instructions live under `.agents/skills/`, with versions in `skills-lock.json`. There is no application source or test suite yet. Keep future source and tests close together and document the resulting layout in the README.
 
 ## Build, Test, and Development Commands
 
@@ -18,4 +18,4 @@ There is no test framework or coverage threshold in this workspace. Add tests al
 
 ## Commit & Pull Request Guidelines
 
-This directory has no Git history, so it provides no established commit message convention. Until one is adopted, use concise imperative subjects that describe the change. Keep commits focused. Pull requests should explain the change, link relevant issues, list verification performed, and include screenshots for visible UI changes. Do not add an agent co-author to commits or manually edit generated files or `CHANGELOG.md`.
+Always apply [git-workflow-and-versioning](.agents/skills/git-workflow-and-versioning/SKILL.md) for changes in this repository. Use focused commits with a descriptive `type: subject` message, as in `docs: clarify component guidance`. Pull requests should explain the change, link relevant issues, list verification performed, and include screenshots for visible UI changes. Do not add an agent co-author to commits or manually edit generated files or `CHANGELOG.md`.
