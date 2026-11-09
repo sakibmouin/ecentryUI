@@ -13,7 +13,8 @@
     "lint": "eslint .",
     "format:check": "prettier --check package.json tsconfig.base.json tsconfig.json tsconfig.tests.json eslint.config.mjs vitest.config.ts playwright.config.ts packages apps tests",
     "test": "vitest",
-    "test:e2e": "npm run build && playwright test"
+    "test:e2e": "npm run build && playwright test",
+    "registry:validate": "npm run build && node packages/registry-schema/dist/validate-repository.js"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
