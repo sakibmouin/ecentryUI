@@ -10,12 +10,12 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 - [x] **T02 Create npm workspace and baseline scripts** (depends on T01).
   - Acceptance: Add workspace packages, strict TS config, formatter/linter, Vitest and Playwright; a smoke test, typecheck, lint and build pass.
   - Verify: `npm ci && npm run build && npm run typecheck && npm run lint && npm test -- --run`.
-- [ ] **T03 Implement token schema and resolver** (depends on T02).
+- [x] **T03 Implement token schema and resolver** (depends on T02).
   - Acceptance: Tokens, semantic aliases and validation reject missing references and cycles; output is deterministic.
   - Verify: `npm test -- --run packages/foundations`.
 
 ### Checkpoint after T03
-- [ ] Unit tests, typecheck and workspace build pass.
+- [x] Unit tests, typecheck and workspace build pass.
 
 - [ ] **T04 Implement CSS variables and style layers** (depends on T03).
   - Acceptance: Generate scoped variables, variant precedence and reset CSS; token override fixture passes.
