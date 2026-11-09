@@ -1,0 +1,47 @@
+import { DialogExample } from "../../src/examples/dialog.tsx";
+import dialogSource from "../../src/examples/dialog.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Dialog
+</div>
+<span className="section-index">OVERLAY COMPONENT</span>
+
+# Dialog
+
+Use Dialog to ask for a decision or collect focused information. The native dialog element provides modal focus behavior and top-layer stacking.
+
+## Install
+
+```sh
+ecentry add dialog
+```
+
+Import the parts from the installed `components/ui/dialog/` directory. The source and CSS are editable in your app.
+
+## Preview
+
+<ExamplePanel source={dialogSource}>
+  <DialogExample />
+</ExamplePanel>
+
+## Structure and state
+
+Wrap `DialogTrigger` and `DialogContent` in `DialogRoot`. Give every content a `DialogTitle`; add `DialogDescription` when helpful. Put `DialogClose` inside content to provide an explicit close action. Content sizes are `sm`, `md` (default), and `lg`.
+
+The dialog is uncontrolled by default. Use `defaultOpen` for an initially open dialog, or `open` with `onOpenChange` for controlled state. The callback receives the next state and a reason: `trigger`, `close`, `escape`, `backdrop`, or `programmatic`. `modal={false}` uses native nonmodal behavior.
+
+## Accessibility and dismissal
+
+The trigger exposes `aria-haspopup`, `aria-expanded`, and `aria-controls`. Content is associated with its title and optional description. Modal dialogs keep focus inside while open; closing restores focus to the trigger. Escape closes the topmost dialog. Backdrop clicks close by default; set `closeOnBackdrop={false}` to keep it open. Nested dialogs stack in order.
+
+## API
+
+| Part                | Key props                                      | Purpose                     |
+| ------------------- | ---------------------------------------------- | --------------------------- |
+| `DialogRoot`        | `open`, `defaultOpen`, `onOpenChange`, `modal` | Controls state and modality |
+| `DialogTrigger`     | Native button props                            | Opens the dialog            |
+| `DialogContent`     | `size`, `closeOnBackdrop`, native dialog props | Modal surface and dismissal |
+| `DialogTitle`       | Native heading props                           | Accessible name             |
+| `DialogDescription` | Native paragraph props                         | Accessible description      |
+| `DialogClose`       | Native button props                            | Closes the dialog           |

@@ -97,7 +97,7 @@ try {
     [cli, "add", "sample", "--registry", path.join(root, "registry"), "--yes"],
     { cwd: root, stdio: "inherit" },
   );
-  for (const component of ["button", "input"]) {
+  for (const component of ["button", "input", "dialog"]) {
     execFileSync(
       process.execPath,
       [
@@ -161,6 +161,12 @@ try {
     await input.waitFor();
     if ((await input.inputValue()) !== "Ready")
       throw new Error("Installed Input did not render its initial value");
+    await page.getByRole("button", { name: "Installed dialog" }).click();
+    const dialog = page.getByRole("dialog", { name: "Installed dialog title" });
+    await dialog.waitFor();
+    await dialog.getByRole("button", { name: "Close dialog" }).click();
+    if (await dialog.isVisible())
+      throw new Error("Installed Dialog did not close");
   } finally {
     await browser.close();
     await new Promise((resolve, reject) =>

@@ -1,0 +1,113 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-dialog {
+    box-sizing: border-box;
+    width: min(100% - 32px, 520px);
+    max-height: min(88dvh, 800px);
+    margin: auto;
+    padding: 28px;
+    overflow: auto;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-lg, 12px);
+    background: var(--ec-colors-background, #fff);
+    color: var(--ec-colors-text, #19211c);
+    box-shadow: 0 20px 64px rgb(0 0 0 / 20%);
+    font: inherit;
+  }
+  .ec-dialog::backdrop {
+    background: rgb(16 23 19 / 65%);
+  }
+  .ec-dialog-title {
+    margin: 0;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1.25;
+  }
+  .ec-dialog-description {
+    margin: 8px 0 24px;
+    color: var(--ec-colors-text-muted, #59635b);
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .ec-dialog-trigger,
+  .ec-dialog-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0 16px;
+    border: 1px solid var(--ec-colors-accent, #116e5e);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-accent, #116e5e);
+    color: var(--ec-colors-background, #fff);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .ec-dialog-close {
+    background: transparent;
+    color: var(--ec-colors-accent, #116e5e);
+  }
+  .ec-dialog-trigger:disabled,
+  .ec-dialog-close:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+@layer ec.variants {
+  .ec-dialog[data-ec-size="sm"] {
+    width: min(100% - 32px, 400px);
+  }
+  .ec-dialog[data-ec-size="lg"] {
+    width: min(100% - 32px, 680px);
+  }
+  .ec-dialog-trigger:not(:disabled):hover {
+    background: var(--ec-colors-accent-hover, #0d584b);
+  }
+  .ec-dialog-close:not(:disabled):hover {
+    background: color-mix(
+      in srgb,
+      var(--ec-colors-accent, #116e5e) 10%,
+      transparent
+    );
+  }
+}
+
+@layer ec.utilities {
+  .ec-dialog-trigger:focus-visible,
+  .ec-dialog-close:focus-visible,
+  .ec-dialog:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-dialog,
+    .ec-dialog-trigger,
+    .ec-dialog-close {
+      border-color: ButtonText;
+      background: Canvas;
+      color: CanvasText;
+    }
+    .ec-dialog-trigger:focus-visible,
+    .ec-dialog-close:focus-visible,
+    .ec-dialog:focus-visible {
+      outline-color: Highlight;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ec-dialog,
+    .ec-dialog-trigger,
+    .ec-dialog-close {
+      animation: none;
+      transition: none;
+    }
+  }
+}

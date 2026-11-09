@@ -1,6 +1,7 @@
 import { AppearanceProvider } from "@ecentry/foundations/react";
 import { createTheme } from "@ecentry/foundations";
 import { Sample } from "../components/ui/sample/index";
+import { ComponentsDemo } from "./components-demo";
 
 const theme = createTheme({
   tokens: { "colors.ink": "#142d24" },
@@ -15,6 +16,7 @@ export default function Page() {
       <h1>Next consumer fixture</h1>
       <AppearanceProvider theme={theme} defaultAppearance="light">
         <Sample />
+        <ComponentsDemo />
       </AppearanceProvider>
     </main>
   );

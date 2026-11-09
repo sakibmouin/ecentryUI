@@ -25,6 +25,6 @@ Run these commands from the repository root:
 - `npm run test:consumer -- next` verifies the sample item in a clean Next.js project, including SSR and hydration.
 - `npx playwright install chromium` installs the browser used by `npm run test:e2e`.
 
-Foundation, registry, CLI, Button, and Input tests are active. Component and documentation coverage grows with each implementation task.
+Foundation, registry, CLI, Button, Input, and Dialog tests are active. Component and documentation coverage grows with each implementation task.
 
 Licensed under [MIT](LICENSE).

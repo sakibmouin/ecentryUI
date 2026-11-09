@@ -71,14 +71,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/dialog/dialog.tsx`, `dialog.test.tsx`.
   - Acceptance: modal focus trap, nesting, Escape and restoration; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/dialog/dialog.test.tsx`.
-- [ ] **T016 Dialog presentation and docs** (depends on T015).
+- [x] **T016 Dialog presentation and docs** (depends on T015).
   - Files: `packages/react/src/components/dialog/dialog.css`, `index.ts`, `apps/docs/content/components/dialog.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- dialog`.
 
 ### Checkpoint: first slices
-- [ ] Button, Input and Dialog install and render in Vite and Next.js; themes, keyboard flow, SSR and docs build pass.
-- [ ] Run `npm run build && npm run typecheck && npm run lint && npm test -- --run && npm run registry:validate && npm run build:docs`.
+- [x] Button, Input and Dialog install and render in Vite and Next.js; themes, keyboard flow, SSR and docs build pass.
+- [x] Run `npm run build && npm run typecheck && npm run lint && npm test -- --run && npm run registry:validate && npm run build:docs`.
 
 ## Remaining catalog waves
 

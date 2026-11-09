@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "dialog",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["dialog.css", "dialog.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "dialog.css": "dce9b05154e44d2ffd03b48afdbecbedc549efafa904ebbe925d38e8e8d41ce1",
+    "dialog.tsx": "a8be9e7e92ed2d4566afb02d63a04f4eb9544eb52c5f34e95b0ddb96cda62bb2",
+    "index.ts": "c596ec9d54d665596514b18ef7f8785056bfd625d1e13713a99899602341d475",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.accent.hover",
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.text",
+    "colors.text.muted",
+    "radii.lg",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/dialog/",
+  "license": "MIT"
+}

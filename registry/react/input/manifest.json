@@ -3,11 +3,12 @@
   "id": "input",
   "version": "0.1.0",
   "framework": "react",
-  "files": ["index.ts", "input.css", "input.tsx"],
+  "files": ["index.ts", "input.css", "input.tsx", "styles.d.ts"],
   "hashes": {
-    "index.ts": "8fbfe298ec009c382b89cd5977640bbb55f2ba6d64debd57b2e453f223531579",
+    "index.ts": "ce43a141c63e0a986a76b6bf33f036559774a26201f6aeaeba1cd4a99b7eaf09",
     "input.css": "aec2a11878c58d9d66e960d966fdb5d5900760fd90ec478a0577be27ba1b48ef",
-    "input.tsx": "2ee154b3043146550060f205319e522d620456cd7338a70b6cf653a5994ca1bc"
+    "input.tsx": "2ee154b3043146550060f205319e522d620456cd7338a70b6cf653a5994ca1bc",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
   },
   "dependencies": [],
   "peerDependencies": { "react": ">=18" },

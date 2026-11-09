@@ -99,13 +99,32 @@ try {
     [cli, "add", "sample", "--registry", path.join(root, "registry"), "--yes"],
     { cwd: root, stdio: "inherit" },
   );
+  for (const component of ["button", "input", "dialog"]) {
+    execFileSync(
+      process.execPath,
+      [
+        cli,
+        "add",
+        component,
+        "--registry",
+        path.join(repo, "registry/react"),
+        "--yes",
+      ],
+      { cwd: root, stdio: "inherit" },
+    );
+  }
   execFileSync("npm", ["run", "build"], {
     cwd: root,
     stdio: "inherit",
     env: { ...process.env, NEXT_TELEMETRY_DISABLED: "1" },
   });
   const html = await readFile(path.join(root, "out/index.html"), "utf8");
-  if (!html.includes("Next consumer fixture") || !html.includes("Count:")) {
+  if (
+    !html.includes("Next consumer fixture") ||
+    !html.includes("Count:") ||
+    !html.includes("Installed button") ||
+    !html.includes("Installed input")
+  ) {
     throw new Error("Next did not render the component into static HTML");
   }
 
@@ -159,6 +178,20 @@ try {
     await page
       .getByRole("button", { name: "Count: 1" })
       .waitFor({ timeout: 10_000 });
+    const input = page.getByRole("textbox", { name: "Installed input" });
+    if ((await input.inputValue()) !== "Ready")
+      throw new Error("Next Input did not hydrate its initial value");
+    await page.getByRole("button", { name: "Installed dialog" }).click();
+    await page
+      .getByRole("dialog", { name: "Installed dialog title" })
+      .waitFor();
+    await page.getByRole("button", { name: "Close dialog" }).click();
+    if (
+      await page
+        .getByRole("dialog", { name: "Installed dialog title" })
+        .isVisible()
+    )
+      throw new Error("Next Dialog did not close after hydration");
     if (errors.length)
       throw new Error(`Next hydration errors: ${errors.join(" | ")}`);
   } finally {

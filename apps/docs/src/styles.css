@@ -569,3 +569,72 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+.dialog-showcase {
+  padding: 36px;
+  background: var(--ec-colors-surface, #fff);
+  color: var(--ec-colors-text, #19211c);
+}
+.dialog-showcase > p {
+  margin: 0 0 18px;
+}
+.dialog-showcase-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.dialog-showcase .ec-dialog-trigger,
+.dialog-showcase .ec-dialog-close,
+.dialog-showcase .ec-dialog,
+.dialog-theme-toggle {
+  font-family: "DM Sans", sans-serif;
+}
+.dialog-theme-toggle {
+  padding: 8px 4px;
+  border: 0;
+  background: transparent;
+  color: var(--ec-colors-accent, #116e5e);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.dialog-theme-toggle:focus-visible {
+  outline: 2px solid var(--ec-colors-focus, Highlight);
+  outline-offset: 2px;
+}
+.dialog-field {
+  display: grid;
+  gap: 8px;
+  color: var(--ec-colors-text, #19211c);
+  font-size: 13px;
+  font-weight: 600;
+}
+.dialog-field input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--ec-colors-border, #dce0dc);
+  border-radius: var(--ec-radii-md, 8px);
+  background: var(--ec-colors-background, #fff);
+  color: var(--ec-colors-text, #19211c);
+  font: inherit;
+}
+.dialog-field input:focus-visible {
+  outline: 2px solid var(--ec-colors-focus, Highlight);
+  outline-offset: 2px;
+}
+.dialog-field + .ec-dialog-trigger {
+  margin-top: 16px;
+}
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+@media (max-width: 620px) {
+  .dialog-showcase {
+    padding: 24px;
+  }
+}

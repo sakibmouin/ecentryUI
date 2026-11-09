@@ -15,6 +15,10 @@ export const buttonRegistryItem = {
       source: "packages/react/src/components/button/index.ts",
       path: "index.ts",
     },
+    {
+      source: "packages/react/src/components/button/styles.d.ts",
+      path: "styles.d.ts",
+    },
   ],
   dependencies: [],
   peerDependencies: { react: ">=18" },

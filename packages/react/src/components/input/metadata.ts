@@ -15,6 +15,10 @@ export const inputRegistryItem = {
       source: "packages/react/src/components/input/index.ts",
       path: "index.ts",
     },
+    {
+      source: "packages/react/src/components/input/styles.d.ts",
+      path: "styles.d.ts",
+    },
   ],
   dependencies: [],
   peerDependencies: { react: ">=18" },
