@@ -1,0 +1,45 @@
+import { CenterExample } from "../../src/examples/center.tsx";
+import centerSource from "../../src/examples/center.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Center
+</div>
+<span className="section-index">LAYOUT COMPONENT</span>
+
+# Center
+
+Center places content on both axes with flex layout. Use `inline` when the centered content should flow with surrounding text. Square and Circle add equal dimensions for icons, badges, and counts.
+
+## Install
+
+```sh
+ecentry add center
+```
+
+Import `Center`, `Square`, or `Circle` from the installed `components/ui/center/` directory.
+
+## Preview
+
+<ExamplePanel source={centerSource}>
+  <CenterExample />
+</ExamplePanel>
+
+## Usage
+
+Give Center a size through `className` or `style` when its content needs room to move. It has no fixed height by default. `inline` changes the layout to `inline-flex` and preserves intrinsic width. Square and Circle accept a `size` in pixels when numeric or any CSS length when a string, such as `size="3rem"`.
+
+Use `as` for a meaningful wrapper element, and provide accessible text or a label for content that is otherwise visual. All three components forward refs and native HTML and ARIA attributes. Flex centering works the same in LTR and RTL.
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Center API" tabIndex={0}>
+
+| Component      | Prop                 | Type                 | Purpose                         |
+| -------------- | -------------------- | -------------------- | ------------------------------- |
+| Center         | `as`                 | React element type   | Rendered element                |
+| Center         | `inline`             | boolean              | Use inline flex layout          |
+| Square, Circle | `size`               | number or CSS length | Equal width and height          |
+| All            | `className`, `style` | Native React props   | Layout and visual customization |
+
+</div>

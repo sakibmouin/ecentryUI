@@ -105,7 +105,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/box/box.tsx`, `box.css`, `box.test.tsx`, `index.ts`, `apps/docs/content/components/box.mdx`.
   - Acceptance: responsive layout, intrinsic sizing and RTL; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/box/box.test.tsx && npm run test:e2e -- box`.
-- [ ] **T021 Center component** (depends on T016).
+- [x] **T021 Center component** (depends on T016).
   - Files: `packages/react/src/components/center/center.tsx`, `center.css`, `center.test.tsx`, `index.ts`, `apps/docs/content/components/center.mdx`.
   - Acceptance: responsive layout, intrinsic sizing and RTL; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/center/center.test.tsx && npm run test:e2e -- center`.

@@ -1,0 +1,26 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 0;
+  }
+
+  .ec-center--inline {
+    display: inline-flex;
+  }
+
+  .ec-square {
+    width: var(--ec-center-size);
+    height: var(--ec-center-size);
+    flex: none;
+  }
+
+  .ec-circle {
+    border-radius: 50%;
+  }
+}

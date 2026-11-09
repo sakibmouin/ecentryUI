@@ -14,6 +14,7 @@ import { AbsoluteCenter } from "../components/ui/absolute-center/index";
 import { AspectRatio } from "../components/ui/aspect-ratio/index";
 import { Bleed } from "../components/ui/bleed/index";
 import { Box } from "../components/ui/box/index";
+import { Center, Circle, Square } from "../components/ui/center/index";
 
 export function ComponentsDemo() {
   return (
@@ -50,6 +51,15 @@ export function ComponentsDemo() {
       <Box padding={{ base: 8, md: 24 }} data-testid="installed-box">
         Installed box
       </Box>
+      <Center style={{ width: 160, height: 80 }} data-testid="installed-center">
+        <span>Centered</span>
+      </Center>
+      <Square size={48} data-testid="installed-square">
+        1
+      </Square>
+      <Circle size={48} data-testid="installed-circle">
+        2
+      </Circle>
     </section>
   );
 }

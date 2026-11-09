@@ -107,6 +107,7 @@ try {
     "aspect-ratio",
     "bleed",
     "box",
+    "center",
   ]) {
     execFileSync(
       process.execPath,
@@ -132,7 +133,8 @@ try {
     !html.includes("Count:") ||
     !html.includes("Installed button") ||
     !html.includes("Installed input") ||
-    !html.includes("Installed box")
+    !html.includes("Installed box") ||
+    !html.includes("Centered")
   ) {
     throw new Error("Next did not render the component into static HTML");
   }
@@ -223,6 +225,27 @@ try {
       )) !== "24px"
     )
       throw new Error("Next Box did not apply responsive padding");
+    const centerBox = await page.getByTestId("installed-center").boundingBox();
+    const centerText = await page.getByText("Centered").boundingBox();
+    if (
+      !centerBox ||
+      !centerText ||
+      Math.abs(
+        centerText.x +
+          centerText.width / 2 -
+          (centerBox.x + centerBox.width / 2),
+      ) > 1
+    )
+      throw new Error("Next Center did not center its content");
+    const square = await page.getByTestId("installed-square").boundingBox();
+    const circle = await page.getByTestId("installed-circle").boundingBox();
+    if (
+      !square ||
+      !circle ||
+      Math.abs(square.width - 48) > 1 ||
+      Math.abs(circle.height - 48) > 1
+    )
+      throw new Error("Next Square or Circle did not apply size");
     if (errors.length)
       throw new Error(`Next hydration errors: ${errors.join(" | ")}`);
   } finally {

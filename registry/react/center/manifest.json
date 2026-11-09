@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "center",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["center.css", "center.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "center.css": "c33bfd268971df2c9e035627c759d7229edc8269a9eb100a9a12ede330c95fd9",
+    "center.tsx": "0fba7a40288038b2315e7ed6cf5a472348e2615a51441fdea6d99be1a64771d1",
+    "index.ts": "ea6431301f6a9843632ee97eac85c6346222e5975380104493b3feb65dfa5f06",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/center/",
+  "license": "MIT"
+}

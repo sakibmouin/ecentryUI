@@ -16,6 +16,7 @@ import { AbsoluteCenter } from "./components/ui/absolute-center/index.js";
 import { AspectRatio } from "./components/ui/aspect-ratio/index.js";
 import { Bleed } from "./components/ui/bleed/index.js";
 import { Box } from "./components/ui/box/index.js";
+import { Center, Circle, Square } from "./components/ui/center/index.js";
 
 const theme = createTheme({
   tokens: { "colors.ink": "#142d24" },
@@ -59,5 +60,14 @@ createRoot(document.getElementById("root")!).render(
     <Box padding={{ base: 8, md: 24 }} data-testid="installed-box">
       Installed box
     </Box>
+    <Center style={{ width: 160, height: 80 }} data-testid="installed-center">
+      <span>Centered</span>
+    </Center>
+    <Square size={48} data-testid="installed-square">
+      1
+    </Square>
+    <Circle size={48} data-testid="installed-circle">
+      2
+    </Circle>
   </AppearanceProvider>,
 );
