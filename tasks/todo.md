@@ -43,7 +43,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 ### Checkpoint after T09
 - [x] Registry validation and CLI fixture install pass.
 
-- [ ] **T10 Build documentation shell and example harness** (depends on T02,T07).
+- [x] **T10 Build documentation shell and example harness** (depends on T02,T07).
   - Acceptance: Navigation, component routes, preview/code tabs and example compilation work.
   - Verify: `npm run build:docs && npm run test:e2e -- docs-shell`.
 - [ ] **T11 Build Vite consumer fixture** (depends on T09).
