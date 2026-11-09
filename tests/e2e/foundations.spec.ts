@@ -1,5 +1,10 @@
 import { expect, test } from "@playwright/test";
-import { createTheme, renderThemeCss } from "@ecentry/foundations";
+import {
+  createTheme,
+  defaultTheme,
+  renderResponsiveCss,
+  renderThemeCss,
+} from "@ecentry/foundations";
 
 test("scoped tokens switch appearance and preserve variant precedence", async ({
   page,
@@ -42,4 +47,36 @@ test("scoped tokens switch appearance and preserve variant precedence", async ({
     "color",
     "rgb(16, 16, 16)",
   );
+});
+
+test("responsive layout and focus respect RTL, contrast and motion", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 700 });
+  await page.setContent(`
+    <style>
+      ${renderThemeCss(defaultTheme)}
+      ${renderResponsiveCss(defaultTheme, ".layout", {
+        "padding-inline-start": { base: "8px", md: "24px" },
+        "transition-duration": "var(--ec-motion-duration-normal)",
+      })}
+    </style>
+    <main dir="rtl">
+      <button class="layout ec-focus-ring">Open</button>
+    </main>
+  `);
+  const button = page.getByRole("button", { name: "Open" });
+  await expect(button).toHaveCSS("padding-right", "8px");
+  await page.setViewportSize({ width: 800, height: 700 });
+  await expect(button).toHaveCSS("padding-right", "24px");
+  await page.keyboard.press("Tab");
+  await expect(button).toBeFocused();
+  await expect(button).toHaveCSS("outline-width", "2px");
+  await page.emulateMedia({
+    contrast: "more",
+    reducedMotion: "reduce",
+    forcedColors: "active",
+  });
+  await expect(button).toHaveCSS("outline-width", "3px");
+  await expect(button).toHaveCSS("transition-duration", "0s");
 });

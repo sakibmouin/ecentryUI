@@ -75,7 +75,7 @@ describe("AppearanceProvider", () => {
 
   it("inherits the nearest nested appearance inside a portal", async () => {
     render(
-      <AppearanceProvider defaultAppearance="dark">
+      <AppearanceProvider defaultAppearance="dark" direction="rtl">
         <AppearanceProvider defaultAppearance="light">
           <AppearancePortal>
             <span data-testid="portalled">Content</span>
@@ -87,6 +87,7 @@ describe("AppearanceProvider", () => {
     const portal = await screen.findByTestId("portalled");
     const portalScope = portal.closest("[data-ec-scope]");
     expect(portalScope?.getAttribute("data-ec-theme")).toBe("light");
+    expect(portalScope?.getAttribute("dir")).toBe("rtl");
     expect(portalScope?.parentElement).toBe(document.body);
   });
 

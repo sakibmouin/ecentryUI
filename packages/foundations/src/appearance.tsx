@@ -22,6 +22,7 @@ export interface AppearanceProviderProps {
   onAppearanceChange?: (appearance: AppearanceMode) => void;
   storageKey?: string;
   nonce?: string;
+  direction?: "ltr" | "rtl";
 }
 
 export interface AppearanceContextValue {
@@ -32,6 +33,7 @@ export interface AppearanceContextValue {
 
 interface InternalContext extends AppearanceContextValue {
   scopeId: string;
+  direction: "ltr" | "rtl";
 }
 
 const AppearanceContext = createContext<InternalContext | null>(null);
@@ -60,7 +62,10 @@ export function AppearanceProvider({
   onAppearanceChange,
   storageKey,
   nonce,
+  direction: suppliedDirection,
 }: AppearanceProviderProps) {
+  const parent = useContext(AppearanceContext);
+  const direction = suppliedDirection ?? parent?.direction ?? "ltr";
   const scopeId = `ec${useId()
     .replaceAll(/[^a-z0-9]/gi, "")
     .toLowerCase()}`;
@@ -109,7 +114,13 @@ export function AppearanceProvider({
   const css = renderThemeCss(theme, { scope: `[data-ec-scope="${scopeId}"]` });
   return (
     <AppearanceContext.Provider
-      value={{ appearance, resolvedAppearance, setAppearance, scopeId }}
+      value={{
+        appearance,
+        resolvedAppearance,
+        setAppearance,
+        scopeId,
+        direction,
+      }}
     >
       <style
         nonce={nonce}
@@ -119,6 +130,7 @@ export function AppearanceProvider({
       <div
         data-ec-scope={scopeId}
         data-ec-theme={resolvedAppearance}
+        dir={direction}
         suppressHydrationWarning
       >
         <script
@@ -158,12 +170,16 @@ export function AppearancePortal({
   children,
   container,
 }: AppearancePortalProps) {
-  const { scopeId, resolvedAppearance } = useInternalAppearance();
+  const { scopeId, resolvedAppearance, direction } = useInternalAppearance();
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
   return createPortal(
-    <div data-ec-scope={scopeId} data-ec-theme={resolvedAppearance}>
+    <div
+      data-ec-scope={scopeId}
+      data-ec-theme={resolvedAppearance}
+      dir={direction}
+    >
       {children}
     </div>,
     container ?? document.body,

@@ -23,12 +23,12 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 - [x] **T05 Implement appearance provider** (depends on T04).
   - Acceptance: Light/dark/system, persistence, nested appearance, portal inheritance and SSR hydration pass.
   - Verify: `npm test -- --run packages/foundations && npm run test:e2e -- appearance`.
-- [ ] **T06 Implement responsive, RTL and motion rules** (depends on T04).
+- [x] **T06 Implement responsive, RTL and motion rules** (depends on T04).
   - Acceptance: Breakpoints, logical properties, focus ring, high contrast and reduced motion have fixture tests.
   - Verify: `npm test -- --run packages/foundations && npm run test:e2e -- foundations`.
 
 ### Checkpoint after T06
-- [ ] Foundations tests, appearance browser flow and accessibility checks pass.
+- [x] Foundations tests, appearance browser flow and accessibility checks pass.
 
 - [ ] **T07 Define React component contract and primitive gate** (depends on T05,T06).
   - Acceptance: Public prop conventions, slot contract and primitive evaluation for Button, Input and Dialog are reviewed; type tests pass.

@@ -43,7 +43,12 @@ export function renderThemeCss(
     light: `:where(${scope}, ${scope} [data-ec-theme="light"])`,
     dark: `:where(${scope}[data-ec-theme="dark"], ${scope} [data-ec-theme="dark"])`,
     reset: `:where(${scope}, ${scope} *, ${scope} *::before, ${scope} *::after)`,
+    focus: `:where(${scope} .ec-focus-ring, ${scope}.ec-focus-ring):focus-visible`,
+    all: `:where(${scope}, ${scope} *)`,
   };
+  const motionDurations = Object.keys(light)
+    .filter((path) => path.startsWith("motion.duration."))
+    .map((path) => `      ${variableName(path)}: 0ms;`);
 
   return [
     layerOrder,
@@ -57,6 +62,20 @@ export function renderThemeCss(
     ...(darkDeclarations.length
       ? [`  ${selectors.dark} {`, ...darkDeclarations, "  }"]
       : []),
+    "}",
+    "@layer ec.utilities {",
+    `  ${selectors.focus} { outline: 2px solid var(--${theme.prefix}-colors-focus, Highlight); outline-offset: 2px; }`,
+    "  @media (prefers-contrast: more) {",
+    `    ${selectors.focus} { outline-width: 3px; }`,
+    "  }",
+    "  @media (forced-colors: active) {",
+    `    ${selectors.focus} { outline-color: Highlight; }`,
+    "  }",
+    "  @media (prefers-reduced-motion: reduce) {",
+    `    ${selectors.all} {`,
+    ...motionDurations,
+    "    }",
+    "  }",
     "}",
     "",
   ].join("\n");

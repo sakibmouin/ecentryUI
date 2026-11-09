@@ -20,6 +20,9 @@ describe("theme CSS", () => {
     expect(css).toContain("--custom-colors-text: #ffffff;");
     expect(css).toBe(renderThemeCss(theme, { scope: ".preview" }));
     expect(css.match(/--custom-colors-paper: #ffffff;/g)).toHaveLength(1);
+    expect(css).toContain("prefers-reduced-motion: reduce");
+    expect(css).toContain("forced-colors: active");
+    expect(css).toContain(".ec-focus-ring");
   });
 
   it("rejects ambiguous variable names and unsafe scopes", () => {
