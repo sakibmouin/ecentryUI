@@ -1,0 +1,9 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/foundations" },
+    { "path": "./packages/react" },
+    { "path": "./packages/registry-schema" },
+    { "path": "./packages/cli" }
+  ]
+}
