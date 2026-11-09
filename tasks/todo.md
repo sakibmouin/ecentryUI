@@ -63,7 +63,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/button/button.tsx`, `button.css`, `button.test.tsx`, `index.ts`, `apps/docs/content/components/button.mdx`.
   - Acceptance: semantic behavior and theme states; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/button/button.test.tsx && npm run test:e2e -- button`.
-- [ ] **T014 Input component** (depends on T07,T08,T09,T10).
+- [x] **T014 Input component** (depends on T07,T08,T09,T10).
   - Files: `packages/react/src/components/input/input.tsx`, `input.css`, `input.test.tsx`, `index.ts`, `apps/docs/content/components/input.mdx`.
   - Acceptance: semantic behavior and theme states; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/input/input.test.tsx && npm run test:e2e -- input`.

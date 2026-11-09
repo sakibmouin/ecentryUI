@@ -1,0 +1,110 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-input {
+    --ec-input-border: var(--ec-colors-border, #dce0dc);
+    --ec-input-accent: var(--ec-colors-accent, #116e5e);
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 40px;
+    padding: 0 12px;
+    border: 1px solid var(--ec-input-border);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, #fff);
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.4;
+    transition:
+      border-color var(--ec-motion-duration-fast, 120ms),
+      box-shadow var(--ec-motion-duration-fast, 120ms);
+  }
+  .ec-input::placeholder {
+    color: var(--ec-colors-text-muted, #59635b);
+    opacity: 1;
+  }
+  .ec-input[data-ec-size="sm"] {
+    min-height: 32px;
+    padding-inline: 10px;
+    font-size: 12px;
+  }
+  .ec-input[data-ec-size="lg"] {
+    min-height: 48px;
+    padding-inline: 16px;
+    font-size: 16px;
+  }
+  .ec-input[data-ec-color="neutral"] {
+    --ec-input-accent: var(--ec-colors-text, #19211c);
+  }
+  .ec-input[data-ec-color="danger"],
+  .ec-input[aria-invalid="true"] {
+    --ec-input-accent: var(--ec-colors-danger, #c43843);
+  }
+  .ec-input[aria-invalid="true"] {
+    --ec-input-border: var(--ec-input-accent);
+  }
+  .ec-input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-input:read-only:not(:disabled) {
+    background: var(--ec-colors-surface, #f8f9f8);
+  }
+}
+
+@layer ec.variants {
+  .ec-input[data-ec-variant="filled"] {
+    border-color: transparent;
+    background: color-mix(
+      in srgb,
+      var(--ec-colors-text, #19211c) 7%,
+      var(--ec-colors-surface, #f8f9f8)
+    );
+  }
+  .ec-input[data-ec-variant="flushed"] {
+    padding-inline: 0;
+    border: 0;
+    border-bottom: 1px solid var(--ec-input-border);
+    border-radius: 0;
+    background: transparent;
+  }
+  .ec-input[data-ec-variant="filled"][aria-invalid="true"] {
+    border-color: var(--ec-input-accent);
+  }
+  .ec-input:not(:disabled):focus-visible {
+    border-color: var(--ec-input-accent);
+  }
+}
+
+@layer ec.utilities {
+  .ec-input:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-input {
+      border-color: FieldText;
+      background: Field;
+      color: FieldText;
+    }
+    .ec-input[aria-invalid="true"] {
+      border-color: Mark;
+    }
+    .ec-input:disabled {
+      opacity: 1;
+      color: GrayText;
+      border-color: GrayText;
+    }
+    .ec-input:focus-visible {
+      outline-color: Highlight;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ec-input {
+      transition: none;
+    }
+  }
+}

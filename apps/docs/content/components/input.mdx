@@ -1,0 +1,48 @@
+import { InputExample } from "../../src/examples/input.tsx";
+import inputSource from "../../src/examples/input.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Input
+</div>
+<span className="section-index">FORM COMPONENT</span>
+
+# Input
+
+Use Input for a single line of text. It keeps native form submission, reset, selection, autofill, and keyboard behavior.
+
+## Install
+
+```sh
+ecentry add input
+```
+
+Import `Input` from the installed `components/ui/input/` directory. The source and CSS are yours to edit.
+
+## Preview
+
+<ExamplePanel source={inputSource}>
+  <InputExample />
+</ExamplePanel>
+
+## Variants and sizes
+
+`outline` is the default. Use `filled` for a tinted surface or `flushed` for a bottom border. Sizes are `sm`, `md` (default), and `lg`. Colors are `brand` (default), `neutral`, and `danger`.
+
+## Forms and accessibility
+
+Provide a visible label with `<label htmlFor="...">` or by wrapping Input in a label. Connect helper and error text with `aria-describedby`. Set `invalid` to expose `aria-invalid="true"` and the error border. Native `required`, `disabled`, and `readOnly` attributes work as expected.
+
+Use `defaultValue` for uncontrolled input or `value` with `onChange` or `onValueChange` for controlled input. `onValueChange` receives the new string and the change event. Input forwards its ref to the native element. The stylesheet supports keyboard focus, forced colors, and reduced motion.
+
+## API
+
+| Prop            | Type                           | Default   | Purpose               |
+| --------------- | ------------------------------ | --------- | --------------------- |
+| `variant`       | `outline \| filled \| flushed` | `outline` | Surface and border    |
+| `size`          | `sm \| md \| lg`               | `md`      | Height and spacing    |
+| `color`         | `brand \| neutral \| danger`   | `brand`   | Focus color           |
+| `invalid`       | `boolean`                      | `false`   | Error border and ARIA |
+| `onValueChange` | `(value, event) => void`       | -         | Value change callback |
+
+All native input props, including `type`, `name`, `value`, `defaultValue`, `onChange`, `required`, `disabled`, `readOnly`, `aria-*`, and `className`, pass through.

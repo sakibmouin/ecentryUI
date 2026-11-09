@@ -13,3 +13,4 @@ export type {
   InputProps,
 } from "./contracts.js";
 export { Button, buttonRecipe } from "./components/button/index.js";
+export { Input, inputRecipe } from "./components/input/index.js";

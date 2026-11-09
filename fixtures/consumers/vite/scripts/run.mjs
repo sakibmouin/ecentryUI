@@ -97,18 +97,20 @@ try {
     [cli, "add", "sample", "--registry", path.join(root, "registry"), "--yes"],
     { cwd: root, stdio: "inherit" },
   );
-  execFileSync(
-    process.execPath,
-    [
-      cli,
-      "add",
-      "button",
-      "--registry",
-      path.join(repo, "registry/react"),
-      "--yes",
-    ],
-    { cwd: root, stdio: "inherit" },
-  );
+  for (const component of ["button", "input"]) {
+    execFileSync(
+      process.execPath,
+      [
+        cli,
+        "add",
+        component,
+        "--registry",
+        path.join(repo, "registry/react"),
+        "--yes",
+      ],
+      { cwd: root, stdio: "inherit" },
+    );
+  }
   execFileSync("npm", ["run", "build"], { cwd: root, stdio: "inherit" });
   const html = await readFile(path.join(root, "dist/index.html"), "utf8");
   if (!html.includes("assets/index-"))
@@ -155,6 +157,10 @@ try {
     );
     if (background !== "rgb(17, 110, 94)")
       throw new Error(`Installed Button style failed: ${background}`);
+    const input = page.getByRole("textbox", { name: "Installed input" });
+    await input.waitFor();
+    if ((await input.inputValue()) !== "Ready")
+      throw new Error("Installed Input did not render its initial value");
   } finally {
     await browser.close();
     await new Promise((resolve, reject) =>

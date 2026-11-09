@@ -3,6 +3,7 @@ import { CounterExample } from "./examples/counter.js";
 import { ExamplePanel } from "./example-panel.js";
 import counterSource from "./examples/counter.tsx?raw";
 import ButtonDocs from "../content/components/button.mdx";
+import InputDocs from "../content/components/input.mdx";
 
 export const routes = [
   "/",
@@ -212,6 +213,8 @@ export function App({ routePath }: { routePath: string }) {
               <Examples />
             ) : route === "/components/button/" ? (
               <ButtonDocs />
+            ) : route === "/components/input/" ? (
+              <InputDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

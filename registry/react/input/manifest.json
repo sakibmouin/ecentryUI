@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "input",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "input.css", "input.tsx"],
+  "hashes": {
+    "index.ts": "8fbfe298ec009c382b89cd5977640bbb55f2ba6d64debd57b2e453f223531579",
+    "input.css": "aec2a11878c58d9d66e960d966fdb5d5900760fd90ec478a0577be27ba1b48ef",
+    "input.tsx": "2ee154b3043146550060f205319e522d620456cd7338a70b6cf653a5994ca1bc"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.surface",
+    "colors.text",
+    "colors.text.muted",
+    "motion.duration.fast",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/input/",
+  "license": "MIT"
+}

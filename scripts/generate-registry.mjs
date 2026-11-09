@@ -3,8 +3,9 @@ import path from "node:path";
 import { format } from "prettier";
 import { generateRegistryItem } from "@ecentry/registry-schema";
 import { buttonRegistryItem } from "../packages/react/dist/components/button/metadata.js";
+import { inputRegistryItem } from "../packages/react/dist/components/input/metadata.js";
 
-for (const item of [buttonRegistryItem]) {
+for (const item of [buttonRegistryItem, inputRegistryItem]) {
   const sources = Object.fromEntries(
     await Promise.all(
       item.files.map(async (file) => [

@@ -1,22 +1,9 @@
 import type { ComponentPropsWithRef, ReactNode } from "react";
 export type { ButtonProps } from "./components/button/button.js";
+export type { InputProps } from "./components/input/input.js";
 
 export type ComponentSize = "sm" | "md" | "lg";
 export type ComponentColor = "neutral" | "brand" | "danger";
-
-export interface InputProps extends Omit<
-  ComponentPropsWithRef<"input">,
-  "size" | "color"
-> {
-  variant?: "outline" | "filled" | "flushed";
-  size?: ComponentSize;
-  color?: ComponentColor;
-  invalid?: boolean;
-  onValueChange?: (
-    value: string,
-    event: React.ChangeEvent<HTMLInputElement>,
-  ) => void;
-}
 
 export type DialogChangeReason =
   "trigger" | "close" | "escape" | "backdrop" | "programmatic";
