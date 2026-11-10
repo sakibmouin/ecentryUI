@@ -109,6 +109,7 @@ try {
     "container",
     "flex",
     "float",
+    "floating-panel",
   ]) {
     execFileSync(
       process.execPath,
@@ -253,6 +254,14 @@ try {
       ) > 1
     )
       throw new Error("Installed Float did not anchor at bottom start");
+    await page
+      .getByRole("button", { name: "Installed floating panel" })
+      .click();
+    const panel = page.getByRole("dialog", { name: "Installed panel title" });
+    await panel.waitFor();
+    await panel.getByRole("button", { name: "Close installed panel" }).click();
+    if (await panel.isVisible())
+      throw new Error("Installed Floating Panel did not close");
   } finally {
     await browser.close();
     await new Promise((resolve, reject) =>

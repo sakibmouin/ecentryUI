@@ -18,6 +18,14 @@ import { Center, Circle, Square } from "../components/ui/center/index";
 import { Container } from "../components/ui/container/index";
 import { Flex, Spacer } from "../components/ui/flex/index";
 import { Float } from "../components/ui/float/index";
+import {
+  FloatingPanelRoot,
+  FloatingPanelTrigger,
+  FloatingPanelPortal,
+  FloatingPanelContent,
+  FloatingPanelTitle,
+  FloatingPanelClose,
+} from "../components/ui/floating-panel/index";
 
 export function ComponentsDemo() {
   return (
@@ -82,6 +90,15 @@ export function ComponentsDemo() {
           Installed float
         </Float>
       </div>
+      <FloatingPanelRoot>
+        <FloatingPanelTrigger>Installed floating panel</FloatingPanelTrigger>
+        <FloatingPanelPortal>
+          <FloatingPanelContent>
+            <FloatingPanelTitle>Installed panel title</FloatingPanelTitle>
+            <FloatingPanelClose>Close installed panel</FloatingPanelClose>
+          </FloatingPanelContent>
+        </FloatingPanelPortal>
+      </FloatingPanelRoot>
     </section>
   );
 }

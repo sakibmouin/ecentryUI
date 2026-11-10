@@ -1,0 +1,54 @@
+import { FloatingPanelExample } from "../../src/examples/floating-panel.tsx";
+import floatingPanelSource from "../../src/examples/floating-panel.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Floating Panel
+</div>
+<span className="section-index">LAYOUT COMPONENT</span>
+
+# Floating Panel
+
+Floating Panel keeps a movable, resizable workspace surface above page content. It is nonmodal, so people can continue working elsewhere on the page.
+
+## Install
+
+```sh
+ecentry add floating-panel
+```
+
+Import the parts from the installed `components/ui/floating-panel/` directory. The component needs `react` and `react-dom`.
+
+## Preview
+
+<ExamplePanel source={floatingPanelSource}>
+  <FloatingPanelExample />
+</ExamplePanel>
+
+## Composition and behavior
+
+Wrap a trigger and portal in `FloatingPanelRoot`. Compose `Content`, `Header`, `Title`, `Body`, and `Close` inside the portal. Add `DragHandle` and one or more `ResizeHandle` parts where the user can reach them. The portal uses the nearest appearance scope, so the panel follows light and dark tokens.
+
+The trigger opens the panel. Escape closes the top panel and returns focus to its trigger. Outside clicks leave it open by default; set `closeOnOutside` to change that. A focused drag or resize handle accepts arrow keys in 10px steps, or 1px with Shift. The eight resize axes are `n`, `s`, `e`, `w`, `ne`, `nw`, `se`, and `sw`.
+
+Use `StageButton` for `minimized`, `default`, or `maximized` states. The root can control `open`, `position`, `size`, and `stage`, or use their `default*` counterparts. `minSize`, `maxSize`, `gridSize`, and `allowOverflow` constrain movement. Position and size change callbacks fire during interaction; `onPositionChangeEnd` and `onSizeChangeEnd` fire when a pointer interaction ends.
+
+## Accessibility
+
+`Content` is a named nonmodal dialog. Give the panel a `Title`. Controls are native buttons with visible focus. Keep icon-only handles and actions labeled. The panel has no focus trap, so the rest of the application stays reachable.
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Floating Panel API" tabIndex={0}>
+
+| Part or prop                                                    | Purpose                                                      |
+| --------------------------------------------------------------- | ------------------------------------------------------------ |
+| `Root`                                                          | State, callbacks, movement constraints, and close behavior   |
+| `Trigger`, `Portal`, `Content`                                  | Open and render the floating dialog                          |
+| `Header`, `Title`, `Body`, `Close`                              | Structure and controls                                       |
+| `DragHandle`, `ResizeHandle`                                    | Pointer and keyboard movement; resize handle requires `axis` |
+| `StageButton`                                                   | Set `stage` to `default`, `minimized`, or `maximized`        |
+| `position`, `size`, `stage`, `open`                             | Controlled state                                             |
+| `defaultPosition`, `defaultSize`, `defaultStage`, `defaultOpen` | Initial uncontrolled state                                   |
+
+</div>

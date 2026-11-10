@@ -23,6 +23,7 @@ import "./components/center/center.css";
 import "./components/container/container.css";
 import "./components/flex/flex.css";
 import "./components/float/float.css";
+import "./components/floating-panel/floating-panel.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -34,6 +35,34 @@ export { Center, Square, Circle } from "./components/center/center.js";
 export { Container } from "./components/container/container.js";
 export { Flex, Spacer } from "./components/flex/flex.js";
 export { Float } from "./components/float/float.js";
+export {
+  FloatingPanelRoot,
+  FloatingPanelTrigger,
+  FloatingPanelPortal,
+  FloatingPanelContent,
+  FloatingPanelHeader,
+  FloatingPanelBody,
+  FloatingPanelTitle,
+  FloatingPanelDragHandle,
+  FloatingPanelResizeHandle,
+  FloatingPanelClose,
+  FloatingPanelStageButton,
+} from "./components/floating-panel/floating-panel.js";
+export type {
+  FloatingPanelRootProps,
+  FloatingPanelPortalProps,
+  FloatingPanelContentProps,
+  FloatingPanelTitleProps,
+  FloatingPanelDragHandleProps,
+  FloatingPanelResizeHandleProps,
+  FloatingPanelStageButtonProps,
+  PanelPosition,
+  PanelSize,
+  PanelStage,
+  PanelOpenDetail,
+  PanelOpenReason,
+  ResizeAxis,
+} from "./components/floating-panel/floating-panel.js";
 export {
   DialogRoot,
   DialogTrigger,

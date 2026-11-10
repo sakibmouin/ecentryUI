@@ -133,7 +133,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 ### Checkpoint after T025
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T026 Floating Panel presentation and docs** (depends on T025).
+- [x] **T026 Floating Panel presentation and docs** (depends on T025).
   - Files: `packages/react/src/components/floating-panel/floating-panel.css`, `index.ts`, `apps/docs/content/components/floating-panel.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- floating-panel`.

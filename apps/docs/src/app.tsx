@@ -13,6 +13,7 @@ import CenterDocs from "../content/components/center.mdx";
 import ContainerDocs from "../content/components/container.mdx";
 import FlexDocs from "../content/components/flex.mdx";
 import FloatDocs from "../content/components/float.mdx";
+import FloatingPanelDocs from "../content/components/floating-panel.mdx";
 
 export const routes = [
   "/",
@@ -28,6 +29,7 @@ export const routes = [
   "/components/container/",
   "/components/flex/",
   "/components/float/",
+  "/components/floating-panel/",
 ] as const;
 
 const componentLinks = [
@@ -42,6 +44,7 @@ const componentLinks = [
   { title: "Container", href: "/components/container/" },
   { title: "Flex", href: "/components/flex/" },
   { title: "Float", href: "/components/float/" },
+  { title: "Floating Panel", href: "/components/floating-panel/" },
 ];
 
 function Home() {
@@ -258,6 +261,8 @@ export function App({ routePath }: { routePath: string }) {
               <FlexDocs />
             ) : route === "/components/float/" ? (
               <FloatDocs />
+            ) : route === "/components/floating-panel/" ? (
+              <FloatingPanelDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

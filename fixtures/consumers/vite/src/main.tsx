@@ -20,6 +20,14 @@ import { Center, Circle, Square } from "./components/ui/center/index.js";
 import { Container } from "./components/ui/container/index.js";
 import { Flex, Spacer } from "./components/ui/flex/index.js";
 import { Float } from "./components/ui/float/index.js";
+import {
+  FloatingPanelRoot,
+  FloatingPanelTrigger,
+  FloatingPanelPortal,
+  FloatingPanelContent,
+  FloatingPanelTitle,
+  FloatingPanelClose,
+} from "./components/ui/floating-panel/index.js";
 
 const theme = createTheme({
   tokens: { "colors.ink": "#142d24" },
@@ -91,5 +99,14 @@ createRoot(document.getElementById("root")!).render(
         Installed float
       </Float>
     </div>
+    <FloatingPanelRoot>
+      <FloatingPanelTrigger>Installed floating panel</FloatingPanelTrigger>
+      <FloatingPanelPortal>
+        <FloatingPanelContent>
+          <FloatingPanelTitle>Installed panel title</FloatingPanelTitle>
+          <FloatingPanelClose>Close installed panel</FloatingPanelClose>
+        </FloatingPanelContent>
+      </FloatingPanelPortal>
+    </FloatingPanelRoot>
   </AppearanceProvider>,
 );

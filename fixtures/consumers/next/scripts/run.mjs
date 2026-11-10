@@ -111,6 +111,7 @@ try {
     "container",
     "flex",
     "float",
+    "floating-panel",
   ]) {
     execFileSync(
       process.execPath,
@@ -140,7 +141,8 @@ try {
     !html.includes("Centered") ||
     !html.includes("Installed container") ||
     !html.includes("Flex start") ||
-    !html.includes("Installed float")
+    !html.includes("Installed float") ||
+    !html.includes("Installed floating panel")
   ) {
     throw new Error("Next did not render the component into static HTML");
   }
@@ -283,6 +285,14 @@ try {
       ) > 1
     )
       throw new Error("Next Float did not anchor at bottom start");
+    await page
+      .getByRole("button", { name: "Installed floating panel" })
+      .click();
+    const panel = page.getByRole("dialog", { name: "Installed panel title" });
+    await panel.waitFor();
+    await panel.getByRole("button", { name: "Close installed panel" }).click();
+    if (await panel.isVisible())
+      throw new Error("Next Floating Panel did not close after hydration");
     if (errors.length)
       throw new Error(`Next hydration errors: ${errors.join(" | ")}`);
   } finally {

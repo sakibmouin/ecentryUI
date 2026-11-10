@@ -1,0 +1,216 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-floating-panel {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-lg, 12px);
+    background: var(--ec-colors-background, #fff);
+    color: var(--ec-colors-text, #19211c);
+    box-shadow: 0 16px 48px rgb(0 0 0 / 18%);
+    font: inherit;
+  }
+  .ec-floating-panel-header {
+    display: flex;
+    flex: none;
+    align-items: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 0 12px 0 16px;
+    border-bottom: 1px solid var(--ec-colors-border, #dce0dc);
+  }
+  .ec-floating-panel .ec-floating-panel-title {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    margin: 0;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 650;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .ec-floating-panel-body {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .ec-floating-panel-trigger {
+    min-height: 40px;
+    padding: 0 16px;
+    border: 1px solid var(--ec-colors-accent, #116e5e);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-accent, #116e5e);
+    color: var(--ec-colors-background, #fff);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .ec-floating-panel-drag-handle,
+  .ec-floating-panel-stage-button,
+  .ec-floating-panel-close {
+    display: inline-grid;
+    flex: none;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    border-radius: var(--ec-radii-md, 8px);
+    background: transparent;
+    color: var(--ec-colors-text-muted, #59635b);
+    font: inherit;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .ec-floating-panel-drag-handle {
+    cursor: grab;
+    touch-action: none;
+  }
+  .ec-floating-panel-drag-handle:active {
+    cursor: grabbing;
+  }
+  .ec-floating-panel-resize-handle {
+    position: absolute;
+    z-index: 1;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: transparent;
+    font-size: 0;
+    touch-action: none;
+  }
+  .ec-floating-panel-resize-handle[data-axis="n"],
+  .ec-floating-panel-resize-handle[data-axis="s"] {
+    inset-inline: 16px;
+    height: 8px;
+    cursor: ns-resize;
+  }
+  .ec-floating-panel-resize-handle[data-axis="n"] {
+    top: 0;
+  }
+  .ec-floating-panel-resize-handle[data-axis="s"] {
+    bottom: 0;
+  }
+  .ec-floating-panel-resize-handle[data-axis="e"],
+  .ec-floating-panel-resize-handle[data-axis="w"] {
+    top: 16px;
+    bottom: 16px;
+    width: 8px;
+    cursor: ew-resize;
+  }
+  .ec-floating-panel-resize-handle[data-axis="e"] {
+    right: 0;
+  }
+  .ec-floating-panel-resize-handle[data-axis="w"] {
+    left: 0;
+  }
+  .ec-floating-panel-resize-handle[data-axis="ne"],
+  .ec-floating-panel-resize-handle[data-axis="nw"],
+  .ec-floating-panel-resize-handle[data-axis="se"],
+  .ec-floating-panel-resize-handle[data-axis="sw"] {
+    width: 18px;
+    height: 18px;
+  }
+  .ec-floating-panel-resize-handle[data-axis="ne"],
+  .ec-floating-panel-resize-handle[data-axis="sw"] {
+    cursor: nesw-resize;
+  }
+  .ec-floating-panel-resize-handle[data-axis="nw"],
+  .ec-floating-panel-resize-handle[data-axis="se"] {
+    cursor: nwse-resize;
+  }
+  .ec-floating-panel-resize-handle[data-axis="ne"],
+  .ec-floating-panel-resize-handle[data-axis="nw"] {
+    top: 0;
+  }
+  .ec-floating-panel-resize-handle[data-axis="se"],
+  .ec-floating-panel-resize-handle[data-axis="sw"] {
+    bottom: 0;
+  }
+  .ec-floating-panel-resize-handle[data-axis="ne"],
+  .ec-floating-panel-resize-handle[data-axis="se"] {
+    right: 0;
+  }
+  .ec-floating-panel-resize-handle[data-axis="nw"],
+  .ec-floating-panel-resize-handle[data-axis="sw"] {
+    left: 0;
+  }
+}
+
+@layer ec.variants {
+  .ec-floating-panel[data-stage="minimized"] {
+    border-radius: var(--ec-radii-md, 8px);
+  }
+  .ec-floating-panel[data-stage="minimized"] .ec-floating-panel-header {
+    border-bottom: 0;
+  }
+  .ec-floating-panel[data-stage="maximized"] {
+    border-radius: 0;
+  }
+  .ec-floating-panel[data-stage="default"]
+    .ec-floating-panel-stage-button[data-stage-target="default"],
+  .ec-floating-panel[data-stage="minimized"]
+    .ec-floating-panel-stage-button[data-stage-target="minimized"],
+  .ec-floating-panel[data-stage="maximized"]
+    .ec-floating-panel-stage-button[data-stage-target="maximized"] {
+    display: none;
+  }
+  .ec-floating-panel[data-stage="minimized"] .ec-floating-panel-resize-handle,
+  .ec-floating-panel[data-stage="maximized"] .ec-floating-panel-resize-handle {
+    display: none;
+  }
+  .ec-floating-panel-trigger:not(:disabled):hover {
+    background: var(--ec-colors-accent-hover, #0d584b);
+  }
+  .ec-floating-panel-stage-button:hover,
+  .ec-floating-panel-close:hover,
+  .ec-floating-panel-drag-handle:hover {
+    background: color-mix(
+      in srgb,
+      var(--ec-colors-text, #19211c) 9%,
+      transparent
+    );
+  }
+}
+
+@layer ec.utilities {
+  .ec-floating-panel:focus-visible,
+  .ec-floating-panel button:focus-visible,
+  .ec-floating-panel-trigger:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  .ec-floating-panel button:disabled,
+  .ec-floating-panel-trigger:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  @media (forced-colors: active) {
+    .ec-floating-panel {
+      border-color: CanvasText;
+      background: Canvas;
+      color: CanvasText;
+    }
+    .ec-floating-panel button:focus-visible,
+    .ec-floating-panel:focus-visible {
+      outline-color: Highlight;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ec-floating-panel,
+    .ec-floating-panel button {
+      transition: none;
+      animation: none;
+    }
+  }
+}

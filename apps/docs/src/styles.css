@@ -1116,3 +1116,72 @@ footer {
     padding: 24px;
   }
 }
+.floating-panel-demo {
+  position: relative;
+  min-height: 270px;
+  padding: 28px;
+  border: 1px solid var(--ec-colors-border, #dce0dc);
+  border-radius: 12px;
+  background: var(--ec-colors-background, #fff);
+  color: var(--ec-colors-text, #19211c);
+}
+.floating-panel-demo-intro {
+  max-width: 420px;
+}
+.floating-panel-demo-intro p {
+  margin: 12px 0 20px;
+  color: var(--ec-colors-text-muted, #59635b);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.floating-panel-demo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.floating-panel-mode {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--ec-colors-border, #dce0dc);
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.floating-panel-mode:focus-visible {
+  outline: 2px solid var(--ec-colors-focus, Highlight);
+  outline-offset: 2px;
+}
+.floating-panel-note {
+  margin-top: 0;
+  font-weight: 650;
+}
+.main-content .ec-floating-panel-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.25;
+}
+.floating-panel-tag {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  background: color-mix(
+    in srgb,
+    var(--ec-colors-accent, #116e5e) 12%,
+    transparent
+  );
+  color: var(--ec-colors-accent, #116e5e);
+  font-size: 12px;
+  font-weight: 650;
+}
+@media (max-width: 600px) {
+  .floating-panel-demo {
+    min-height: 230px;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "floating-panel",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": [
+    "floating-panel.css",
+    "floating-panel.tsx",
+    "index.ts",
+    "styles.d.ts"
+  ],
+  "hashes": {
+    "floating-panel.css": "9a1fc024db0155b9e2171e2b50ab008200d5adb4e53e8188eafeab5b4da72107",
+    "floating-panel.tsx": "6b206a16eb16b2d14a8b2edc788f287e79e77a78cbf4e5aed6a8ee6a892a1f0b",
+    "index.ts": "17d91102f2c86fb260a81e19f7d50188869de3e98d6bb3ada8d026ef98c97bf3",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18", "react-dom": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.accent.hover",
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.text",
+    "colors.text.muted",
+    "radii.lg",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/floating-panel/",
+  "license": "MIT"
+}

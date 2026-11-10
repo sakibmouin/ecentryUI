@@ -7,9 +7,13 @@ import {
   FloatingPanelRoot,
   FloatingPanelTrigger,
   FloatingPanelContent,
+  FloatingPanelPortal,
+  FloatingPanelHeader,
+  FloatingPanelBody,
   FloatingPanelTitle,
   FloatingPanelDragHandle,
   FloatingPanelResizeHandle,
+  FloatingPanelStageButton,
   FloatingPanelClose,
 } from "./floating-panel.js";
 
@@ -22,16 +26,27 @@ function Example(
     <FloatingPanelRoot {...props}>
       <FloatingPanelTrigger>Open panel</FloatingPanelTrigger>
       <FloatingPanelContent>
-        <FloatingPanelTitle>Notes</FloatingPanelTitle>
-        <FloatingPanelDragHandle>Move panel</FloatingPanelDragHandle>
-        <p>Panel body</p>
+        <FloatingPanelHeader>
+          <FloatingPanelTitle>Notes</FloatingPanelTitle>
+          <FloatingPanelDragHandle>Move panel</FloatingPanelDragHandle>
+          <FloatingPanelStageButton stage="minimized">
+            Minimize
+          </FloatingPanelStageButton>
+          <FloatingPanelStageButton stage="maximized">
+            Maximize
+          </FloatingPanelStageButton>
+          <FloatingPanelStageButton stage="default">
+            Restore
+          </FloatingPanelStageButton>
+          <FloatingPanelClose>Close panel</FloatingPanelClose>
+        </FloatingPanelHeader>
+        <FloatingPanelBody>Panel body</FloatingPanelBody>
         <FloatingPanelResizeHandle axis="se">
           Resize panel
         </FloatingPanelResizeHandle>
         <FloatingPanelResizeHandle axis="w">
           Resize west
         </FloatingPanelResizeHandle>
-        <FloatingPanelClose>Close panel</FloatingPanelClose>
       </FloatingPanelContent>
     </FloatingPanelRoot>
   );
@@ -178,7 +193,11 @@ describe("FloatingPanel", () => {
         <Example defaultOpen />
       </>,
     );
-    expect(screen.getAllByRole("dialog", { name: "Notes" })).toHaveLength(2);
+    const dialogs = screen.getAllByRole("dialog", { name: "Notes" });
+    expect(dialogs).toHaveLength(2);
+    expect(Number(dialogs[1]!.style.zIndex)).toBeGreaterThan(
+      Number(dialogs[0]!.style.zIndex),
+    );
     fireEvent.keyDown(document, { key: "Escape" });
     expect(screen.getAllByRole("dialog", { name: "Notes" })).toHaveLength(1);
     fireEvent.pointerDown(document.body);
@@ -217,5 +236,45 @@ describe("FloatingPanel", () => {
     fireEvent.pointerUp(window, { pointerId: 5 });
     expect(dialog.style.left).toBe(`${window.innerWidth - 250}px`);
     expect(dialog.style.top).toBe(`${window.innerHeight - 200}px`);
+  });
+
+  it("minimizes, maximizes, and restores the original rect", () => {
+    const onStageChange = vi.fn();
+    render(
+      <Example
+        defaultOpen
+        defaultPosition={{ x: 40, y: 60 }}
+        defaultSize={{ width: 300, height: 200 }}
+        onStageChange={onStageChange}
+      />,
+    );
+    const dialog = screen.getByRole("dialog", { name: "Notes" });
+    fireEvent.click(screen.getByRole("button", { name: "Minimize" }));
+    expect(dialog.getAttribute("data-stage")).toBe("minimized");
+    expect(dialog.style.height).toBe("48px");
+    expect(screen.getByText("Panel body").hasAttribute("hidden")).toBe(true);
+    fireEvent.click(screen.getByRole("button", { name: "Maximize" }));
+    expect(dialog.style.left).toBe("0px");
+    expect(dialog.style.width).toBe("100vw");
+    fireEvent.click(screen.getByRole("button", { name: "Restore" }));
+    expect(dialog.style.left).toBe("40px");
+    expect(dialog.style.width).toBe("300px");
+    expect(screen.getByText("Panel body").hasAttribute("hidden")).toBe(false);
+    expect(onStageChange).toHaveBeenLastCalledWith("default");
+  });
+
+  it("can portal content to a supplied layer while preserving its dialog label", () => {
+    render(
+      <FloatingPanelRoot defaultOpen>
+        <FloatingPanelTrigger>Open</FloatingPanelTrigger>
+        <FloatingPanelPortal container={document.body}>
+          <FloatingPanelContent>
+            <FloatingPanelTitle>Portaled notes</FloatingPanelTitle>
+          </FloatingPanelContent>
+        </FloatingPanelPortal>
+      </FloatingPanelRoot>,
+    );
+    const dialog = screen.getByRole("dialog", { name: "Portaled notes" });
+    expect(dialog.parentElement).toBe(document.body);
   });
 });
