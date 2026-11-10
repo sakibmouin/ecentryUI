@@ -220,7 +220,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/heading/heading.tsx`, `heading.css`, `heading.test.tsx`, `index.ts`, `apps/docs/content/components/heading.mdx`.
   - Acceptance: semantic text, wrapping and typography; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/heading/heading.test.tsx && npm run test:e2e -- heading`.
-- [ ] **T042 Highlight component** (depends on T016).
+- [x] **T042 Highlight component** (depends on T016).
   - Files: `packages/react/src/components/highlight/highlight.tsx`, `highlight.css`, `highlight.test.tsx`, `index.ts`, `apps/docs/content/components/highlight.mdx`.
   - Acceptance: semantic text, wrapping and typography; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/highlight/highlight.test.tsx && npm run test:e2e -- highlight`.

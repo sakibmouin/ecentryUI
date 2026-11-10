@@ -1,0 +1,11 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-highlight {
+    padding-inline: 0.15em;
+    border-radius: 0.2em;
+    background: #d8f0a8;
+    color: #244a2c;
+    overflow-wrap: anywhere;
+  }
+}

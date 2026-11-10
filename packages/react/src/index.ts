@@ -37,6 +37,7 @@ import "./components/code/code.css";
 import "./components/code-block/code-block.css";
 import "./components/em/em.css";
 import "./components/heading/heading.css";
+import "./components/highlight/highlight.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -75,6 +76,8 @@ export { Em } from "./components/em/em.js";
 export type { EmProps } from "./components/em/em.js";
 export { Heading } from "./components/heading/heading.js";
 export type { HeadingProps } from "./components/heading/heading.js";
+export { Highlight } from "./components/highlight/highlight.js";
+export type { HighlightProps } from "./components/highlight/highlight.js";
 export type {
   SplitterRootProps,
   SplitterPanelProps,

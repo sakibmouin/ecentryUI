@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "highlight",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["highlight.css", "highlight.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "highlight.css": "3b31365f1b7cd8427f2b40fe82624e44f2270d001b674b11f9c5de2a7c4e0651",
+    "highlight.tsx": "e3ca53f705b38d0a249ab3ec093aab7d4f0c4592dfa42211738f29901e7f48f1",
+    "index.ts": "bb6a1446936bd037c732a23d9bcae3d3a153d69da0383fadb11201c6e5ed3ae3",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/highlight/",
+  "license": "MIT"
+}

@@ -27,6 +27,7 @@ import CodeDocs from "../content/components/code.mdx";
 import CodeBlockDocs from "../content/components/code-block.mdx";
 import EmDocs from "../content/components/em.mdx";
 import HeadingDocs from "../content/components/heading.mdx";
+import HighlightDocs from "../content/components/highlight.mdx";
 
 export const routes = [
   "/",
@@ -56,6 +57,7 @@ export const routes = [
   "/components/code-block/",
   "/components/em/",
   "/components/heading/",
+  "/components/highlight/",
 ] as const;
 
 const componentLinks = [
@@ -84,6 +86,7 @@ const componentLinks = [
   { title: "Code Block", href: "/components/code-block/" },
   { title: "Em", href: "/components/em/" },
   { title: "Heading", href: "/components/heading/" },
+  { title: "Highlight", href: "/components/highlight/" },
 ];
 
 function Home() {
@@ -328,6 +331,8 @@ export function App({ routePath }: { routePath: string }) {
               <EmDocs />
             ) : route === "/components/heading/" ? (
               <HeadingDocs />
+            ) : route === "/components/highlight/" ? (
+              <HighlightDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (
