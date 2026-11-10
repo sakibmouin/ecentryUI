@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "grid",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["grid.css", "grid.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "grid.css": "6eb3b4fa263aa8b3e5d9a3fe7ae7826b0ab6ca27af56ba8b6a6037c294fb0b23",
+    "grid.tsx": "8b5ddfaef58a715d9797931dfaa8abc9ad3134694694c0222aacd4417049ed01",
+    "index.ts": "731b132c59268679e60c426da8d116540fd443351a44f0facc7bb3fe46e65628",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/grid/",
+  "license": "MIT"
+}

@@ -1,0 +1,50 @@
+import { GridExample } from "../../src/examples/grid.tsx";
+import gridSource from "../../src/examples/grid.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Grid
+</div>
+<span className="section-index">LAYOUT COMPONENT</span>
+
+# Grid
+
+Grid creates explicit rows and columns for structured layouts. GridItem controls placement and spans without changing DOM order.
+
+## Install
+
+```sh
+ecentry add grid
+```
+
+Import `Grid` and `GridItem` from the installed `components/ui/grid/` directory.
+
+## Preview
+
+<ExamplePanel source={gridSource}>
+  <GridExample />
+</ExamplePanel>
+
+## Responsive tracks and placement
+
+Use `templateColumns`, `templateRows`, or `templateAreas` to define tracks. `autoColumns`, `autoRows`, and `autoFlow` control implicit tracks. Set `gap`, `rowGap`, or `columnGap` with pixel numbers or CSS lengths. Track and gap props accept a value or an object with `base`, `sm`, `md`, and `lg` values; breakpoints start at 40rem, 48rem, and 64rem. Missing values retain the last defined setting.
+
+GridItem accepts `colSpan` and `rowSpan` as positive integers, including responsive values. For exact placement, use `column`, `row`, `area`, `colStart`, `colEnd`, `rowStart`, and `rowEnd`. Grid layout follows `dir="rtl"` without reordering the DOM. Use `as` for semantic hosts and `inline` for `inline-grid`.
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Grid API" tabIndex={0}>
+
+| Part and prop                                                         | Purpose                             |
+| --------------------------------------------------------------------- | ----------------------------------- |
+| `Grid` `templateColumns`, `templateRows`, `templateAreas`             | Explicit tracks and named areas     |
+| `Grid` `autoColumns`, `autoRows`, `autoFlow`                          | Implicit track sizing and placement |
+| `Grid` `gap`, `rowGap`, `columnGap`                                   | Spacing between tracks              |
+| `Grid` `alignItems`, `justifyItems`, `alignContent`, `justifyContent` | Alignment                           |
+| `GridItem` `colSpan`, `rowSpan`, `column`, `row`, `area`              | Item placement and spans            |
+| `GridItem` `colStart`, `colEnd`, `rowStart`, `rowEnd`                 | Explicit line placement             |
+| `GridItem` `alignSelf`, `justifySelf`                                 | Item alignment                      |
+
+</div>
+
+Both parts forward refs, native HTML attributes, `className`, and `style`. Native styles can override layout props.

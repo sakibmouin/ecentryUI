@@ -110,6 +110,7 @@ try {
     "flex",
     "float",
     "floating-panel",
+    "grid",
   ]) {
     execFileSync(
       process.execPath,
@@ -262,6 +263,15 @@ try {
     await panel.getByRole("button", { name: "Close installed panel" }).click();
     if (await panel.isVisible())
       throw new Error("Installed Floating Panel did not close");
+    const grid = page.getByTestId("installed-grid");
+    if (
+      (await grid.evaluate(
+        (element) =>
+          globalThis.getComputedStyle(element).gridTemplateColumns.split(" ")
+            .length,
+      )) !== 2
+    )
+      throw new Error("Installed Grid did not render two tracks");
   } finally {
     await browser.close();
     await new Promise((resolve, reject) =>

@@ -1,0 +1,462 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-grid {
+    box-sizing: border-box;
+    display: grid;
+    min-width: 0;
+    grid-template-columns: var(--ec-grid-template-columns-base);
+    grid-template-rows: var(--ec-grid-template-rows-base);
+    grid-template-areas: var(--ec-grid-template-areas-base);
+    grid-auto-columns: var(--ec-grid-auto-columns-base);
+    grid-auto-rows: var(--ec-grid-auto-rows-base);
+    grid-auto-flow: var(--ec-grid-auto-flow-base);
+    gap: var(--ec-grid-gap-base);
+    align-items: var(--ec-grid-align-items-base);
+    justify-items: var(--ec-grid-justify-items-base);
+    align-content: var(--ec-grid-align-content-base);
+    justify-content: var(--ec-grid-justify-content-base);
+  }
+  .ec-grid--inline {
+    display: inline-grid;
+  }
+  .ec-grid[data-ec-grid-row-gap] {
+    grid-row-gap: var(--ec-grid-row-gap-base);
+  }
+  .ec-grid[data-ec-grid-column-gap] {
+    grid-column-gap: var(--ec-grid-column-gap-base);
+  }
+  .ec-grid-item {
+    box-sizing: border-box;
+    min-width: 0;
+    align-self: var(--ec-grid-item-align-self-base);
+    justify-self: var(--ec-grid-item-justify-self-base);
+  }
+  .ec-grid-item[data-ec-grid-item-area] {
+    grid-area: var(--ec-grid-item-area-base);
+  }
+  .ec-grid-item[data-ec-grid-item-column] {
+    grid-column: var(--ec-grid-item-column-base);
+  }
+  .ec-grid-item[data-ec-grid-item-row] {
+    grid-row: var(--ec-grid-item-row-base);
+  }
+  .ec-grid-item[data-ec-grid-item-column-start] {
+    grid-column-start: var(--ec-grid-item-column-start-base);
+  }
+  .ec-grid-item[data-ec-grid-item-column-end] {
+    grid-column-end: var(--ec-grid-item-column-end-base);
+  }
+  .ec-grid-item[data-ec-grid-item-row-start] {
+    grid-row-start: var(--ec-grid-item-row-start-base);
+  }
+  .ec-grid-item[data-ec-grid-item-row-end] {
+    grid-row-end: var(--ec-grid-item-row-end-base);
+  }
+}
+
+@layer ec.variants {
+  @media (min-width: 40rem) {
+    .ec-grid {
+      grid-template-columns: var(
+        --ec-grid-template-columns-sm,
+        var(--ec-grid-template-columns-base)
+      );
+      grid-template-rows: var(
+        --ec-grid-template-rows-sm,
+        var(--ec-grid-template-rows-base)
+      );
+      grid-template-areas: var(
+        --ec-grid-template-areas-sm,
+        var(--ec-grid-template-areas-base)
+      );
+      grid-auto-columns: var(
+        --ec-grid-auto-columns-sm,
+        var(--ec-grid-auto-columns-base)
+      );
+      grid-auto-rows: var(
+        --ec-grid-auto-rows-sm,
+        var(--ec-grid-auto-rows-base)
+      );
+      grid-auto-flow: var(
+        --ec-grid-auto-flow-sm,
+        var(--ec-grid-auto-flow-base)
+      );
+      gap: var(--ec-grid-gap-sm, var(--ec-grid-gap-base));
+      align-items: var(
+        --ec-grid-align-items-sm,
+        var(--ec-grid-align-items-base)
+      );
+      justify-items: var(
+        --ec-grid-justify-items-sm,
+        var(--ec-grid-justify-items-base)
+      );
+      align-content: var(
+        --ec-grid-align-content-sm,
+        var(--ec-grid-align-content-base)
+      );
+      justify-content: var(
+        --ec-grid-justify-content-sm,
+        var(--ec-grid-justify-content-base)
+      );
+    }
+    .ec-grid[data-ec-grid-row-gap] {
+      grid-row-gap: var(--ec-grid-row-gap-sm, var(--ec-grid-row-gap-base));
+    }
+    .ec-grid[data-ec-grid-column-gap] {
+      grid-column-gap: var(
+        --ec-grid-column-gap-sm,
+        var(--ec-grid-column-gap-base)
+      );
+    }
+    .ec-grid-item {
+      align-self: var(
+        --ec-grid-item-align-self-sm,
+        var(--ec-grid-item-align-self-base)
+      );
+      justify-self: var(
+        --ec-grid-item-justify-self-sm,
+        var(--ec-grid-item-justify-self-base)
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-area] {
+      grid-area: var(--ec-grid-item-area-sm, var(--ec-grid-item-area-base));
+    }
+    .ec-grid-item[data-ec-grid-item-column] {
+      grid-column: var(
+        --ec-grid-item-column-sm,
+        var(--ec-grid-item-column-base)
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-row] {
+      grid-row: var(--ec-grid-item-row-sm, var(--ec-grid-item-row-base));
+    }
+    .ec-grid-item[data-ec-grid-item-column-start] {
+      grid-column-start: var(
+        --ec-grid-item-column-start-sm,
+        var(--ec-grid-item-column-start-base)
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-column-end] {
+      grid-column-end: var(
+        --ec-grid-item-column-end-sm,
+        var(--ec-grid-item-column-end-base)
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-row-start] {
+      grid-row-start: var(
+        --ec-grid-item-row-start-sm,
+        var(--ec-grid-item-row-start-base)
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-row-end] {
+      grid-row-end: var(
+        --ec-grid-item-row-end-sm,
+        var(--ec-grid-item-row-end-base)
+      );
+    }
+  }
+  @media (min-width: 48rem) {
+    .ec-grid {
+      grid-template-columns: var(
+        --ec-grid-template-columns-md,
+        var(--ec-grid-template-columns-sm, var(--ec-grid-template-columns-base))
+      );
+      grid-template-rows: var(
+        --ec-grid-template-rows-md,
+        var(--ec-grid-template-rows-sm, var(--ec-grid-template-rows-base))
+      );
+      grid-template-areas: var(
+        --ec-grid-template-areas-md,
+        var(--ec-grid-template-areas-sm, var(--ec-grid-template-areas-base))
+      );
+      grid-auto-columns: var(
+        --ec-grid-auto-columns-md,
+        var(--ec-grid-auto-columns-sm, var(--ec-grid-auto-columns-base))
+      );
+      grid-auto-rows: var(
+        --ec-grid-auto-rows-md,
+        var(--ec-grid-auto-rows-sm, var(--ec-grid-auto-rows-base))
+      );
+      grid-auto-flow: var(
+        --ec-grid-auto-flow-md,
+        var(--ec-grid-auto-flow-sm, var(--ec-grid-auto-flow-base))
+      );
+      gap: var(
+        --ec-grid-gap-md,
+        var(--ec-grid-gap-sm, var(--ec-grid-gap-base))
+      );
+      align-items: var(
+        --ec-grid-align-items-md,
+        var(--ec-grid-align-items-sm, var(--ec-grid-align-items-base))
+      );
+      justify-items: var(
+        --ec-grid-justify-items-md,
+        var(--ec-grid-justify-items-sm, var(--ec-grid-justify-items-base))
+      );
+      align-content: var(
+        --ec-grid-align-content-md,
+        var(--ec-grid-align-content-sm, var(--ec-grid-align-content-base))
+      );
+      justify-content: var(
+        --ec-grid-justify-content-md,
+        var(--ec-grid-justify-content-sm, var(--ec-grid-justify-content-base))
+      );
+    }
+    .ec-grid[data-ec-grid-row-gap] {
+      grid-row-gap: var(
+        --ec-grid-row-gap-md,
+        var(--ec-grid-row-gap-sm, var(--ec-grid-row-gap-base))
+      );
+    }
+    .ec-grid[data-ec-grid-column-gap] {
+      grid-column-gap: var(
+        --ec-grid-column-gap-md,
+        var(--ec-grid-column-gap-sm, var(--ec-grid-column-gap-base))
+      );
+    }
+    .ec-grid-item {
+      align-self: var(
+        --ec-grid-item-align-self-md,
+        var(--ec-grid-item-align-self-sm, var(--ec-grid-item-align-self-base))
+      );
+      justify-self: var(
+        --ec-grid-item-justify-self-md,
+        var(
+          --ec-grid-item-justify-self-sm,
+          var(--ec-grid-item-justify-self-base)
+        )
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-area] {
+      grid-area: var(
+        --ec-grid-item-area-md,
+        var(--ec-grid-item-area-sm, var(--ec-grid-item-area-base))
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-column] {
+      grid-column: var(
+        --ec-grid-item-column-md,
+        var(--ec-grid-item-column-sm, var(--ec-grid-item-column-base))
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-row] {
+      grid-row: var(
+        --ec-grid-item-row-md,
+        var(--ec-grid-item-row-sm, var(--ec-grid-item-row-base))
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-column-start] {
+      grid-column-start: var(
+        --ec-grid-item-column-start-md,
+        var(
+          --ec-grid-item-column-start-sm,
+          var(--ec-grid-item-column-start-base)
+        )
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-column-end] {
+      grid-column-end: var(
+        --ec-grid-item-column-end-md,
+        var(--ec-grid-item-column-end-sm, var(--ec-grid-item-column-end-base))
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-row-start] {
+      grid-row-start: var(
+        --ec-grid-item-row-start-md,
+        var(--ec-grid-item-row-start-sm, var(--ec-grid-item-row-start-base))
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-row-end] {
+      grid-row-end: var(
+        --ec-grid-item-row-end-md,
+        var(--ec-grid-item-row-end-sm, var(--ec-grid-item-row-end-base))
+      );
+    }
+  }
+  @media (min-width: 64rem) {
+    .ec-grid {
+      grid-template-columns: var(
+        --ec-grid-template-columns-lg,
+        var(
+          --ec-grid-template-columns-md,
+          var(
+            --ec-grid-template-columns-sm,
+            var(--ec-grid-template-columns-base)
+          )
+        )
+      );
+      grid-template-rows: var(
+        --ec-grid-template-rows-lg,
+        var(
+          --ec-grid-template-rows-md,
+          var(--ec-grid-template-rows-sm, var(--ec-grid-template-rows-base))
+        )
+      );
+      grid-template-areas: var(
+        --ec-grid-template-areas-lg,
+        var(
+          --ec-grid-template-areas-md,
+          var(--ec-grid-template-areas-sm, var(--ec-grid-template-areas-base))
+        )
+      );
+      grid-auto-columns: var(
+        --ec-grid-auto-columns-lg,
+        var(
+          --ec-grid-auto-columns-md,
+          var(--ec-grid-auto-columns-sm, var(--ec-grid-auto-columns-base))
+        )
+      );
+      grid-auto-rows: var(
+        --ec-grid-auto-rows-lg,
+        var(
+          --ec-grid-auto-rows-md,
+          var(--ec-grid-auto-rows-sm, var(--ec-grid-auto-rows-base))
+        )
+      );
+      grid-auto-flow: var(
+        --ec-grid-auto-flow-lg,
+        var(
+          --ec-grid-auto-flow-md,
+          var(--ec-grid-auto-flow-sm, var(--ec-grid-auto-flow-base))
+        )
+      );
+      gap: var(
+        --ec-grid-gap-lg,
+        var(--ec-grid-gap-md, var(--ec-grid-gap-sm, var(--ec-grid-gap-base)))
+      );
+      align-items: var(
+        --ec-grid-align-items-lg,
+        var(
+          --ec-grid-align-items-md,
+          var(--ec-grid-align-items-sm, var(--ec-grid-align-items-base))
+        )
+      );
+      justify-items: var(
+        --ec-grid-justify-items-lg,
+        var(
+          --ec-grid-justify-items-md,
+          var(--ec-grid-justify-items-sm, var(--ec-grid-justify-items-base))
+        )
+      );
+      align-content: var(
+        --ec-grid-align-content-lg,
+        var(
+          --ec-grid-align-content-md,
+          var(--ec-grid-align-content-sm, var(--ec-grid-align-content-base))
+        )
+      );
+      justify-content: var(
+        --ec-grid-justify-content-lg,
+        var(
+          --ec-grid-justify-content-md,
+          var(--ec-grid-justify-content-sm, var(--ec-grid-justify-content-base))
+        )
+      );
+    }
+    .ec-grid[data-ec-grid-row-gap] {
+      grid-row-gap: var(
+        --ec-grid-row-gap-lg,
+        var(
+          --ec-grid-row-gap-md,
+          var(--ec-grid-row-gap-sm, var(--ec-grid-row-gap-base))
+        )
+      );
+    }
+    .ec-grid[data-ec-grid-column-gap] {
+      grid-column-gap: var(
+        --ec-grid-column-gap-lg,
+        var(
+          --ec-grid-column-gap-md,
+          var(--ec-grid-column-gap-sm, var(--ec-grid-column-gap-base))
+        )
+      );
+    }
+    .ec-grid-item {
+      align-self: var(
+        --ec-grid-item-align-self-lg,
+        var(
+          --ec-grid-item-align-self-md,
+          var(--ec-grid-item-align-self-sm, var(--ec-grid-item-align-self-base))
+        )
+      );
+      justify-self: var(
+        --ec-grid-item-justify-self-lg,
+        var(
+          --ec-grid-item-justify-self-md,
+          var(
+            --ec-grid-item-justify-self-sm,
+            var(--ec-grid-item-justify-self-base)
+          )
+        )
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-area] {
+      grid-area: var(
+        --ec-grid-item-area-lg,
+        var(
+          --ec-grid-item-area-md,
+          var(--ec-grid-item-area-sm, var(--ec-grid-item-area-base))
+        )
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-column] {
+      grid-column: var(
+        --ec-grid-item-column-lg,
+        var(
+          --ec-grid-item-column-md,
+          var(--ec-grid-item-column-sm, var(--ec-grid-item-column-base))
+        )
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-row] {
+      grid-row: var(
+        --ec-grid-item-row-lg,
+        var(
+          --ec-grid-item-row-md,
+          var(--ec-grid-item-row-sm, var(--ec-grid-item-row-base))
+        )
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-column-start] {
+      grid-column-start: var(
+        --ec-grid-item-column-start-lg,
+        var(
+          --ec-grid-item-column-start-md,
+          var(
+            --ec-grid-item-column-start-sm,
+            var(--ec-grid-item-column-start-base)
+          )
+        )
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-column-end] {
+      grid-column-end: var(
+        --ec-grid-item-column-end-lg,
+        var(
+          --ec-grid-item-column-end-md,
+          var(--ec-grid-item-column-end-sm, var(--ec-grid-item-column-end-base))
+        )
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-row-start] {
+      grid-row-start: var(
+        --ec-grid-item-row-start-lg,
+        var(
+          --ec-grid-item-row-start-md,
+          var(--ec-grid-item-row-start-sm, var(--ec-grid-item-row-start-base))
+        )
+      );
+    }
+    .ec-grid-item[data-ec-grid-item-row-end] {
+      grid-row-end: var(
+        --ec-grid-item-row-end-lg,
+        var(
+          --ec-grid-item-row-end-md,
+          var(--ec-grid-item-row-end-sm, var(--ec-grid-item-row-end-base))
+        )
+      );
+    }
+  }
+}

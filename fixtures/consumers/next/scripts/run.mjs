@@ -112,6 +112,7 @@ try {
     "flex",
     "float",
     "floating-panel",
+    "grid",
   ]) {
     execFileSync(
       process.execPath,
@@ -142,7 +143,8 @@ try {
     !html.includes("Installed container") ||
     !html.includes("Flex start") ||
     !html.includes("Installed float") ||
-    !html.includes("Installed floating panel")
+    !html.includes("Installed floating panel") ||
+    !html.includes("Grid first")
   ) {
     throw new Error("Next did not render the component into static HTML");
   }
@@ -293,6 +295,15 @@ try {
     await panel.getByRole("button", { name: "Close installed panel" }).click();
     if (await panel.isVisible())
       throw new Error("Next Floating Panel did not close after hydration");
+    const grid = page.getByTestId("installed-grid");
+    if (
+      (await grid.evaluate(
+        (element) =>
+          globalThis.getComputedStyle(element).gridTemplateColumns.split(" ")
+            .length,
+      )) !== 2
+    )
+      throw new Error("Next Grid did not render two tracks");
     if (errors.length)
       throw new Error(`Next hydration errors: ${errors.join(" | ")}`);
   } finally {

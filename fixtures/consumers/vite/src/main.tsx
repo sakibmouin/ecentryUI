@@ -20,6 +20,7 @@ import { Center, Circle, Square } from "./components/ui/center/index.js";
 import { Container } from "./components/ui/container/index.js";
 import { Flex, Spacer } from "./components/ui/flex/index.js";
 import { Float } from "./components/ui/float/index.js";
+import { Grid, GridItem } from "./components/ui/grid/index.js";
 import {
   FloatingPanelRoot,
   FloatingPanelTrigger,
@@ -108,5 +109,13 @@ createRoot(document.getElementById("root")!).render(
         </FloatingPanelContent>
       </FloatingPanelPortal>
     </FloatingPanelRoot>
+    <Grid
+      templateColumns="repeat(2, minmax(0, 1fr))"
+      gap={8}
+      data-testid="installed-grid"
+    >
+      <GridItem>Grid first</GridItem>
+      <GridItem>Grid second</GridItem>
+    </Grid>
   </AppearanceProvider>,
 );
