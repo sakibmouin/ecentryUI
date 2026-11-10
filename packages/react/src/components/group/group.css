@@ -1,0 +1,92 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-group {
+    box-sizing: border-box;
+    display: flex;
+    min-width: 0;
+    align-items: stretch;
+    gap: var(--ec-group-gap-base, 8px);
+  }
+  .ec-group--inline {
+    display: inline-flex;
+  }
+  .ec-group[data-orientation="vertical"] {
+    flex-direction: column;
+  }
+  .ec-group[data-grow] > * {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+@layer ec.variants {
+  .ec-group[data-attached] {
+    gap: 0;
+  }
+  .ec-group[data-attached] > * {
+    position: relative;
+  }
+  .ec-group[data-attached] > :focus-visible {
+    z-index: 1;
+  }
+  .ec-group[data-attached][data-orientation="horizontal"] > :not(:first-child) {
+    margin-inline-start: -1px;
+  }
+  .ec-group[data-attached][data-orientation="horizontal"]
+    > :first-child:not(:last-child) {
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+  }
+  .ec-group[data-attached][data-orientation="horizontal"]
+    > :last-child:not(:first-child) {
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+  }
+  .ec-group[data-attached][data-orientation="horizontal"]
+    > :not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+  .ec-group[data-attached][data-orientation="vertical"] > :not(:first-child) {
+    margin-block-start: -1px;
+  }
+  .ec-group[data-attached][data-orientation="vertical"]
+    > :first-child:not(:last-child) {
+    border-end-start-radius: 0;
+    border-end-end-radius: 0;
+  }
+  .ec-group[data-attached][data-orientation="vertical"]
+    > :last-child:not(:first-child) {
+    border-start-start-radius: 0;
+    border-start-end-radius: 0;
+  }
+  .ec-group[data-attached][data-orientation="vertical"]
+    > :not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+  @media (min-width: 40rem) {
+    .ec-group:not([data-attached]) {
+      gap: var(--ec-group-gap-sm, var(--ec-group-gap-base, 8px));
+    }
+  }
+  @media (min-width: 48rem) {
+    .ec-group:not([data-attached]) {
+      gap: var(
+        --ec-group-gap-md,
+        var(--ec-group-gap-sm, var(--ec-group-gap-base, 8px))
+      );
+    }
+  }
+  @media (min-width: 64rem) {
+    .ec-group:not([data-attached]) {
+      gap: var(
+        --ec-group-gap-lg,
+        var(
+          --ec-group-gap-md,
+          var(--ec-group-gap-sm, var(--ec-group-gap-base, 8px))
+        )
+      );
+    }
+  }
+}

@@ -15,6 +15,7 @@ import FlexDocs from "../content/components/flex.mdx";
 import FloatDocs from "../content/components/float.mdx";
 import FloatingPanelDocs from "../content/components/floating-panel.mdx";
 import GridDocs from "../content/components/grid.mdx";
+import GroupDocs from "../content/components/group.mdx";
 
 export const routes = [
   "/",
@@ -32,6 +33,7 @@ export const routes = [
   "/components/float/",
   "/components/floating-panel/",
   "/components/grid/",
+  "/components/group/",
 ] as const;
 
 const componentLinks = [
@@ -48,6 +50,7 @@ const componentLinks = [
   { title: "Float", href: "/components/float/" },
   { title: "Floating Panel", href: "/components/floating-panel/" },
   { title: "Grid", href: "/components/grid/" },
+  { title: "Group", href: "/components/group/" },
 ];
 
 function Home() {
@@ -268,6 +271,8 @@ export function App({ routePath }: { routePath: string }) {
               <FloatingPanelDocs />
             ) : route === "/components/grid/" ? (
               <GridDocs />
+            ) : route === "/components/group/" ? (
+              <GroupDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

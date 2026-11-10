@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "group",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["group.css", "group.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "group.css": "9ff75b2de7a13c3a98549625e894fb2a0175ac101197a8bd0048daf43348b751",
+    "group.tsx": "7acf229e4d6edb9afc26063f12a3e8c3344e9a7db7fd91b022db9f3aafb91c33",
+    "index.ts": "fb3e27b830a23d92233a449f2170009dc81998f6554bb3e2890e8ba82dc61b19",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/group/",
+  "license": "MIT"
+}

@@ -111,6 +111,7 @@ try {
     "float",
     "floating-panel",
     "grid",
+    "group",
   ]) {
     execFileSync(
       process.execPath,
@@ -272,6 +273,13 @@ try {
       )) !== 2
     )
       throw new Error("Installed Grid did not render two tracks");
+    if (
+      (await page
+        .getByTestId("installed-group")
+        .evaluate((element) => globalThis.getComputedStyle(element).gap)) !==
+      "0px"
+    )
+      throw new Error("Installed Group did not attach controls");
   } finally {
     await browser.close();
     await new Promise((resolve, reject) =>

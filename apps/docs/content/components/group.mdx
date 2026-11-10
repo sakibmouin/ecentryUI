@@ -1,0 +1,49 @@
+import { GroupExample } from "../../src/examples/group.tsx";
+import groupSource from "../../src/examples/group.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Group
+</div>
+<span className="section-index">LAYOUT COMPONENT</span>
+
+# Group
+
+Group keeps related controls together. It can attach neighboring borders or make every child share the available width.
+
+## Install
+
+```sh
+ecentry add group
+```
+
+Import `Group` from the installed `components/ui/group/` directory.
+
+## Preview
+
+<ExamplePanel source={groupSource}>
+  <GroupExample />
+</ExamplePanel>
+
+## Attached and growing controls
+
+Set `attached` to remove gaps, collapse neighboring borders, and join child corners. Attachment follows text direction, so the first control stays on the start side in RTL. Use `grow` to give every direct child an equal share of the group width. Add `orientation="vertical"` for a stacked group.
+
+Set `gap` to a pixel number or CSS length when controls are separate. It accepts responsive `base`, `sm`, `md`, and `lg` values at 40rem, 48rem, and 64rem. `attached` uses zero gap. Use `inline` for an intrinsic inline flex group and `as` for a semantic host.
+
+Group does not change child behavior. Give related controls `role="group"` and an accessible label when they form one named set. Keep each child as a native button, input, or link with its own accessible name and focus style.
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Group API" tabIndex={0}>
+
+| Prop                 | Purpose                                   |
+| -------------------- | ----------------------------------------- |
+| `attached`           | Join direct child borders and corners     |
+| `grow`               | Let direct children share available width |
+| `orientation`        | `horizontal` by default, or `vertical`    |
+| `gap`                | Responsive spacing for separate children  |
+| `as`, `inline`       | Host element and display mode             |
+| `className`, `style` | Native appearance and layout overrides    |
+
+</div>

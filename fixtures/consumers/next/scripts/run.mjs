@@ -113,6 +113,7 @@ try {
     "float",
     "floating-panel",
     "grid",
+    "group",
   ]) {
     execFileSync(
       process.execPath,
@@ -144,7 +145,8 @@ try {
     !html.includes("Flex start") ||
     !html.includes("Installed float") ||
     !html.includes("Installed floating panel") ||
-    !html.includes("Grid first")
+    !html.includes("Grid first") ||
+    !html.includes("First action")
   ) {
     throw new Error("Next did not render the component into static HTML");
   }
@@ -304,6 +306,13 @@ try {
       )) !== 2
     )
       throw new Error("Next Grid did not render two tracks");
+    if (
+      (await page
+        .getByTestId("installed-group")
+        .evaluate((element) => globalThis.getComputedStyle(element).gap)) !==
+      "0px"
+    )
+      throw new Error("Next Group did not attach controls");
     if (errors.length)
       throw new Error(`Next hydration errors: ${errors.join(" | ")}`);
   } finally {

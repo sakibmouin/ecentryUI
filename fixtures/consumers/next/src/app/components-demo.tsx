@@ -19,6 +19,7 @@ import { Container } from "../components/ui/container/index";
 import { Flex, Spacer } from "../components/ui/flex/index";
 import { Float } from "../components/ui/float/index";
 import { Grid, GridItem } from "../components/ui/grid/index";
+import { Group } from "../components/ui/group/index";
 import {
   FloatingPanelRoot,
   FloatingPanelTrigger,
@@ -108,6 +109,15 @@ export function ComponentsDemo() {
         <GridItem>Grid first</GridItem>
         <GridItem>Grid second</GridItem>
       </Grid>
+      <Group
+        attached
+        role="group"
+        aria-label="Installed group"
+        data-testid="installed-group"
+      >
+        <button type="button">First action</button>
+        <button type="button">Second action</button>
+      </Group>
     </section>
   );
 }

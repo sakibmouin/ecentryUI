@@ -25,6 +25,7 @@ import "./components/flex/flex.css";
 import "./components/float/float.css";
 import "./components/floating-panel/floating-panel.css";
 import "./components/grid/grid.css";
+import "./components/group/group.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -37,6 +38,11 @@ export { Container } from "./components/container/container.js";
 export { Flex, Spacer } from "./components/flex/flex.js";
 export { Float } from "./components/float/float.js";
 export { Grid, GridItem } from "./components/grid/grid.js";
+export { Group } from "./components/group/group.js";
+export type {
+  GroupProps,
+  GroupResponsiveValue,
+} from "./components/group/group.js";
 export type {
   GridProps,
   GridItemProps,

@@ -141,13 +141,13 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/grid/grid.tsx`, `grid.css`, `grid.test.tsx`, `index.ts`, `apps/docs/content/components/grid.mdx`.
   - Acceptance: responsive layout, intrinsic sizing and RTL; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/grid/grid.test.tsx && npm run test:e2e -- grid`.
-- [ ] **T028 Group component** (depends on T016).
+- [x] **T028 Group component** (depends on T016).
   - Files: `packages/react/src/components/group/group.tsx`, `group.css`, `group.test.tsx`, `index.ts`, `apps/docs/content/components/group.mdx`.
   - Acceptance: responsive layout, intrinsic sizing and RTL; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/group/group.test.tsx && npm run test:e2e -- group`.
 
 ### Checkpoint after T028
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T029 Scroll Area component** (depends on T016).
   - Files: `packages/react/src/components/scroll-area/scroll-area.tsx`, `scroll-area.css`, `scroll-area.test.tsx`, `index.ts`, `apps/docs/content/components/scroll-area.mdx`.

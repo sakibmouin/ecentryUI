@@ -21,6 +21,7 @@ import { Container } from "./components/ui/container/index.js";
 import { Flex, Spacer } from "./components/ui/flex/index.js";
 import { Float } from "./components/ui/float/index.js";
 import { Grid, GridItem } from "./components/ui/grid/index.js";
+import { Group } from "./components/ui/group/index.js";
 import {
   FloatingPanelRoot,
   FloatingPanelTrigger,
@@ -117,5 +118,14 @@ createRoot(document.getElementById("root")!).render(
       <GridItem>Grid first</GridItem>
       <GridItem>Grid second</GridItem>
     </Grid>
+    <Group
+      attached
+      role="group"
+      aria-label="Installed group"
+      data-testid="installed-group"
+    >
+      <button type="button">First action</button>
+      <button type="button">Second action</button>
+    </Group>
   </AppearanceProvider>,
 );

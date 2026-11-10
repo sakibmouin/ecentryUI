@@ -15,6 +15,7 @@ import { flexRegistryItem } from "../packages/react/dist/components/flex/metadat
 import { floatRegistryItem } from "../packages/react/dist/components/float/metadata.js";
 import { floatingPanelRegistryItem } from "../packages/react/dist/components/floating-panel/metadata.js";
 import { gridRegistryItem } from "../packages/react/dist/components/grid/metadata.js";
+import { groupRegistryItem } from "../packages/react/dist/components/group/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -30,6 +31,7 @@ for (const item of [
   floatRegistryItem,
   floatingPanelRegistryItem,
   gridRegistryItem,
+  groupRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(
