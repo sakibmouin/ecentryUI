@@ -26,6 +26,7 @@ import { blockquoteRegistryItem } from "../packages/react/dist/components/blockq
 import { codeRegistryItem } from "../packages/react/dist/components/code/metadata.js";
 import { codeBlockRegistryItem } from "../packages/react/dist/components/code-block/metadata.js";
 import { emRegistryItem } from "../packages/react/dist/components/em/metadata.js";
+import { headingRegistryItem } from "../packages/react/dist/components/heading/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -52,6 +53,7 @@ for (const item of [
   codeRegistryItem,
   codeBlockRegistryItem,
   emRegistryItem,
+  headingRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

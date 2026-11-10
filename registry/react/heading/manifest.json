@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "heading",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["heading.css", "heading.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "heading.css": "2d43bb2734a1e96de4deff85ba6f5a80fd89e188096929331b5262ec9b809b51",
+    "heading.tsx": "b2c107eeb1dad6d81fcc8b072c5ba11e10a0ccc39ef153868b8e67951318cb81",
+    "index.ts": "812da2c98b6b4c3acf24f368b4838c05c8b1fe233b1bdada2428723c91d9864d",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/heading/",
+  "license": "MIT"
+}

@@ -1,0 +1,13 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-heading {
+    margin: 0;
+    color: #214b3d;
+    font-family: Manrope, sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+}

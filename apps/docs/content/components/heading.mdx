@@ -1,0 +1,25 @@
+import { HeadingExample } from "../../src/examples/heading.tsx";
+import headingSource from "../../src/examples/heading.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Heading
+</div>
+
+<span className="section-index">TYPOGRAPHY COMPONENT</span>
+
+# Heading
+
+Heading provides a semantic heading host with readable wrapping and consistent typography.
+
+## Install
+
+`ecentry add heading`
+
+## Preview
+
+<ExamplePanel source={headingSource}>
+  <HeadingExample />
+</ExamplePanel>
+## API Use `as` to choose the appropriate heading level. Native attributes,
+refs, and style overrides are forwarded.
