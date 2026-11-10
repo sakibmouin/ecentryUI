@@ -125,13 +125,13 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/float/float.tsx`, `float.css`, `float.test.tsx`, `index.ts`, `apps/docs/content/components/float.mdx`.
   - Acceptance: responsive layout, intrinsic sizing and RTL; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/float/float.test.tsx && npm run test:e2e -- float`.
-- [ ] **T025 Floating Panel behavior** (depends on T016).
+- [x] **T025 Floating Panel behavior** (depends on T016).
   - Files: `packages/react/src/components/floating-panel/floating-panel.tsx`, `floating-panel.test.tsx`.
   - Acceptance: drag, resize, positioning and keyboard access; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/floating-panel/floating-panel.test.tsx`.
 
 ### Checkpoint after T025
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T026 Floating Panel presentation and docs** (depends on T025).
   - Files: `packages/react/src/components/floating-panel/floating-panel.css`, `index.ts`, `apps/docs/content/components/floating-panel.mdx`.
