@@ -1,0 +1,40 @@
+import { CodeExample } from "../../src/examples/code.tsx";
+import codeSource from "../../src/examples/code.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Code
+</div>
+<span className="section-index">TYPOGRAPHY COMPONENT</span>
+
+# Code
+
+Code marks inline commands and snippets with semantic markup. Set `block` for
+a full-width, wrapping code surface that remains readable with long tokens.
+
+## Install
+
+```sh
+ecentry add code
+```
+
+## Preview
+
+<ExamplePanel source={codeSource}>
+  <CodeExample />
+</ExamplePanel>
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Code API" tabIndex={0}>
+
+| Prop                 | Type               | Purpose                                         |
+| -------------------- | ------------------ | ----------------------------------------------- |
+| `as`                 | element type       | Semantic host element                           |
+| `block`              | boolean            | Use block presentation and preserve line breaks |
+| `className`, `style` | native React props | Custom typography overrides                     |
+
+</div>
+
+Code forwards refs and native HTML and ARIA attributes. Content wraps safely
+instead of forcing its parent wider.

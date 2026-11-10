@@ -33,6 +33,7 @@ import "./components/splitter/splitter.css";
 import "./components/stack/stack.css";
 import "./components/wrap/wrap.css";
 import "./components/blockquote/blockquote.css";
+import "./components/code/code.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -63,6 +64,8 @@ export { Wrap } from "./components/wrap/wrap.js";
 export type { WrapProps, WrapResponsiveValue } from "./components/wrap/wrap.js";
 export { Blockquote } from "./components/blockquote/blockquote.js";
 export type { BlockquoteProps } from "./components/blockquote/blockquote.js";
+export { Code } from "./components/code/code.js";
+export type { CodeProps } from "./components/code/code.js";
 export type {
   SplitterRootProps,
   SplitterPanelProps,

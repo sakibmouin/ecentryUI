@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "code",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["code.css", "code.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "code.css": "078e0aaad675889e51de533093f67a2f3ab7db063d150df9db1c08b094859260",
+    "code.tsx": "8d18458c38ceb7e340e3592fdb43721f577afd769d7e310d229ebfdb0b4760da",
+    "index.ts": "cb3c4aa05ac270f824d4e97e8c9986e1d100929836f1f382b383376892bab32c",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/code/",
+  "license": "MIT"
+}

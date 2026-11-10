@@ -23,6 +23,7 @@ import SplitterDocs from "../content/components/splitter.mdx";
 import StackDocs from "../content/components/stack.mdx";
 import WrapDocs from "../content/components/wrap.mdx";
 import BlockquoteDocs from "../content/components/blockquote.mdx";
+import CodeDocs from "../content/components/code.mdx";
 
 export const routes = [
   "/",
@@ -48,6 +49,7 @@ export const routes = [
   "/components/stack/",
   "/components/wrap/",
   "/components/blockquote/",
+  "/components/code/",
 ] as const;
 
 const componentLinks = [
@@ -72,6 +74,7 @@ const componentLinks = [
   { title: "Stack", href: "/components/stack/" },
   { title: "Wrap", href: "/components/wrap/" },
   { title: "Blockquote", href: "/components/blockquote/" },
+  { title: "Code", href: "/components/code/" },
 ];
 
 function Home() {
@@ -308,6 +311,8 @@ export function App({ routePath }: { routePath: string }) {
               <WrapDocs />
             ) : route === "/components/blockquote/" ? (
               <BlockquoteDocs />
+            ) : route === "/components/code/" ? (
+              <CodeDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

@@ -1,0 +1,26 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-code {
+    display: inline;
+    box-decoration-break: clone;
+    padding-inline: 0.3em;
+    border: 1px solid #d5e3d8;
+    border-radius: 0.3rem;
+    background: #f1f7f2;
+    color: #214b3d;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 0.88em;
+    overflow-wrap: anywhere;
+  }
+
+  .ec-code[data-block] {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+  }
+}

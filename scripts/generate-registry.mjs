@@ -23,6 +23,7 @@ import { splitterRegistryItem } from "../packages/react/dist/components/splitter
 import { stackRegistryItem } from "../packages/react/dist/components/stack/metadata.js";
 import { wrapRegistryItem } from "../packages/react/dist/components/wrap/metadata.js";
 import { blockquoteRegistryItem } from "../packages/react/dist/components/blockquote/metadata.js";
+import { codeRegistryItem } from "../packages/react/dist/components/code/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -46,6 +47,7 @@ for (const item of [
   stackRegistryItem,
   wrapRegistryItem,
   blockquoteRegistryItem,
+  codeRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(
