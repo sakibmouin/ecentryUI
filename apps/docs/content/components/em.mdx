@@ -1,0 +1,27 @@
+import { EmExample } from "../../src/examples/em.tsx";
+import emSource from "../../src/examples/em.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Em
+</div>
+<span className="section-index">TYPOGRAPHY COMPONENT</span>
+
+# Em
+
+Em renders semantic emphasis with readable wrapping.
+
+## Install
+
+`ecentry add em`
+
+## Preview
+
+<ExamplePanel source={emSource}>
+  <EmExample />
+</ExamplePanel>
+
+## API
+
+Use `as` for a custom semantic host. `className`, `style`, refs, and native
+attributes are forwarded.

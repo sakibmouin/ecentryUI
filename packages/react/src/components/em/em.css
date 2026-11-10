@@ -1,0 +1,9 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-em {
+    color: #214b3d;
+    font-style: italic;
+    overflow-wrap: anywhere;
+  }
+}

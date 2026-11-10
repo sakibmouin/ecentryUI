@@ -208,7 +208,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/code-block/code-block.css`, `index.ts`, `apps/docs/content/components/code-block.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- code-block`.
-- [ ] **T040 Em component** (depends on T016).
+- [x] **T040 Em component** (depends on T016).
   - Files: `packages/react/src/components/em/em.tsx`, `em.css`, `em.test.tsx`, `index.ts`, `apps/docs/content/components/em.mdx`.
   - Acceptance: semantic text, wrapping and typography; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/em/em.test.tsx && npm run test:e2e -- em`.

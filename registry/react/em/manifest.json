@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "em",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["em.css", "em.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "em.css": "4f69b746eb2db0662f546bd4975d2c91438f42c24e80e337f2562f583ad51f8f",
+    "em.tsx": "670e1400b3497cc01511c8bcbbddbaba1860c2889e3ddacc1aa427b020bf820a",
+    "index.ts": "54e80803eb64ab651e178d2d5f1c4aa00991e027546b90bf0b7ffacf1b223075",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/em/",
+  "license": "MIT"
+}
