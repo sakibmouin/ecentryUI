@@ -1,0 +1,40 @@
+import { BlockquoteExample } from "../../src/examples/blockquote.tsx";
+import blockquoteSource from "../../src/examples/blockquote.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Blockquote
+</div>
+<span className="section-index">TYPOGRAPHY COMPONENT</span>
+
+# Blockquote
+
+Blockquote presents quoted text with semantic markup, readable measure, and
+wrapping that remains safe for long content.
+
+## Install
+
+```sh
+ecentry add blockquote
+```
+
+## Preview
+
+<ExamplePanel source={blockquoteSource}>
+  <BlockquoteExample />
+</ExamplePanel>
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Blockquote API" tabIndex={0}>
+
+| Prop                 | Type               | Purpose                      |
+| -------------------- | ------------------ | ---------------------------- |
+| `as`                 | element type       | Semantic host element        |
+| `cite`               | string             | Source URL for the quotation |
+| `className`, `style` | native React props | Custom typography overrides  |
+
+</div>
+
+Blockquote forwards refs and native HTML and ARIA attributes. A nested `cite`
+element is styled as an attribution line.

@@ -22,6 +22,7 @@ import SimpleGridDocs from "../content/components/simple-grid.mdx";
 import SplitterDocs from "../content/components/splitter.mdx";
 import StackDocs from "../content/components/stack.mdx";
 import WrapDocs from "../content/components/wrap.mdx";
+import BlockquoteDocs from "../content/components/blockquote.mdx";
 
 export const routes = [
   "/",
@@ -46,6 +47,7 @@ export const routes = [
   "/components/splitter/",
   "/components/stack/",
   "/components/wrap/",
+  "/components/blockquote/",
 ] as const;
 
 const componentLinks = [
@@ -69,6 +71,7 @@ const componentLinks = [
   { title: "Splitter", href: "/components/splitter/" },
   { title: "Stack", href: "/components/stack/" },
   { title: "Wrap", href: "/components/wrap/" },
+  { title: "Blockquote", href: "/components/blockquote/" },
 ];
 
 function Home() {
@@ -303,6 +306,8 @@ export function App({ routePath }: { routePath: string }) {
               <StackDocs />
             ) : route === "/components/wrap/" ? (
               <WrapDocs />
+            ) : route === "/components/blockquote/" ? (
+              <BlockquoteDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

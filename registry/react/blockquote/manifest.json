@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "blockquote",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["blockquote.css", "blockquote.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "blockquote.css": "60f84df0211fb35ef1bd784359fbbb166ae9bffbeed8c12871b4805f5c3dabb1",
+    "blockquote.tsx": "387a6c1013195dd997fe9ae04185b915d841cfbd2688d43865f17e0cf8983c6a",
+    "index.ts": "a3fc4db9a7f9b26ead9b0eb32aef33f3420c00d1e16c4cae8b3cfbc5912b2afb",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/blockquote/",
+  "license": "MIT"
+}

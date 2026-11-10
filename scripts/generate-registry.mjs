@@ -22,6 +22,7 @@ import { simpleGridRegistryItem } from "../packages/react/dist/components/simple
 import { splitterRegistryItem } from "../packages/react/dist/components/splitter/metadata.js";
 import { stackRegistryItem } from "../packages/react/dist/components/stack/metadata.js";
 import { wrapRegistryItem } from "../packages/react/dist/components/wrap/metadata.js";
+import { blockquoteRegistryItem } from "../packages/react/dist/components/blockquote/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -44,6 +45,7 @@ for (const item of [
   splitterRegistryItem,
   stackRegistryItem,
   wrapRegistryItem,
+  blockquoteRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

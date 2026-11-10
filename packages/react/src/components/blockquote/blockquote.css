@@ -1,0 +1,30 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-blockquote {
+    box-sizing: border-box;
+    max-width: 70ch;
+    margin: 0;
+    padding-block: 0.25rem;
+    padding-inline: 1rem;
+    border-inline-start: 3px solid #12715d;
+    color: #29453a;
+    font-size: clamp(1rem, 0.95rem + 0.2vw, 1.15rem);
+    font-style: italic;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+  }
+
+  .ec-blockquote cite {
+    display: block;
+    margin-block-start: 0.75rem;
+    color: #526459;
+    font-size: 0.8em;
+    font-style: normal;
+  }
+
+  .ec-blockquote cite::before {
+    content: "- ";
+  }
+}

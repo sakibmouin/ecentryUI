@@ -188,7 +188,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 ## Typography and content
 
-- [ ] **T036 Blockquote component** (depends on T016).
+- [x] **T036 Blockquote component** (depends on T016).
   - Files: `packages/react/src/components/blockquote/blockquote.tsx`, `blockquote.css`, `blockquote.test.tsx`, `index.ts`, `apps/docs/content/components/blockquote.mdx`.
   - Acceptance: semantic text, wrapping and typography; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/blockquote/blockquote.test.tsx && npm run test:e2e -- blockquote`.
