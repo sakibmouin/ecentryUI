@@ -21,6 +21,7 @@ import { separatorRegistryItem } from "../packages/react/dist/components/separat
 import { simpleGridRegistryItem } from "../packages/react/dist/components/simple-grid/metadata.js";
 import { splitterRegistryItem } from "../packages/react/dist/components/splitter/metadata.js";
 import { stackRegistryItem } from "../packages/react/dist/components/stack/metadata.js";
+import { wrapRegistryItem } from "../packages/react/dist/components/wrap/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -42,6 +43,7 @@ for (const item of [
   simpleGridRegistryItem,
   splitterRegistryItem,
   stackRegistryItem,
+  wrapRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

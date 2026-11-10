@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "wrap",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "styles.d.ts", "wrap.css", "wrap.tsx"],
+  "hashes": {
+    "index.ts": "000dbe6bb57dd406b10475d18088cd1d3eeca17e1549555e027c3252181f6056",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b",
+    "wrap.css": "558dec6530cbea6d47fdfc591df4a912338489999753111d9a0089ed957b60e1",
+    "wrap.tsx": "3f9c3773acfff167c018a36536a9596d2b478c2a7a0e359a7785aa2d207e0e2b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/wrap/",
+  "license": "MIT"
+}

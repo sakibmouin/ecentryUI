@@ -1,0 +1,164 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-wrap {
+    box-sizing: border-box;
+    display: flex;
+    min-width: 0;
+    flex-wrap: wrap;
+    align-items: var(--ec-wrap-align-base, stretch);
+    justify-content: var(--ec-wrap-justify-base, flex-start);
+    gap: var(--ec-wrap-gap-base, 8px);
+  }
+  .ec-wrap[data-ec-wrap-row-gap] {
+    row-gap: var(--ec-wrap-row-gap-base, var(--ec-wrap-gap-base, 8px));
+  }
+  .ec-wrap[data-ec-wrap-column-gap] {
+    column-gap: var(--ec-wrap-column-gap-base, var(--ec-wrap-gap-base, 8px));
+  }
+}
+
+@layer ec.variants {
+  @media (min-width: 40rem) {
+    .ec-wrap {
+      align-items: var(--ec-wrap-align-sm, var(--ec-wrap-align-base, stretch));
+      justify-content: var(
+        --ec-wrap-justify-sm,
+        var(--ec-wrap-justify-base, flex-start)
+      );
+      gap: var(--ec-wrap-gap-sm, var(--ec-wrap-gap-base, 8px));
+    }
+    .ec-wrap[data-ec-wrap-row-gap] {
+      row-gap: var(
+        --ec-wrap-row-gap-sm,
+        var(
+          --ec-wrap-row-gap-base,
+          var(--ec-wrap-gap-sm, var(--ec-wrap-gap-base, 8px))
+        )
+      );
+    }
+    .ec-wrap[data-ec-wrap-column-gap] {
+      column-gap: var(
+        --ec-wrap-column-gap-sm,
+        var(
+          --ec-wrap-column-gap-base,
+          var(--ec-wrap-gap-sm, var(--ec-wrap-gap-base, 8px))
+        )
+      );
+    }
+  }
+  @media (min-width: 48rem) {
+    .ec-wrap {
+      align-items: var(
+        --ec-wrap-align-md,
+        var(--ec-wrap-align-sm, var(--ec-wrap-align-base, stretch))
+      );
+      justify-content: var(
+        --ec-wrap-justify-md,
+        var(--ec-wrap-justify-sm, var(--ec-wrap-justify-base, flex-start))
+      );
+      gap: var(
+        --ec-wrap-gap-md,
+        var(--ec-wrap-gap-sm, var(--ec-wrap-gap-base, 8px))
+      );
+    }
+    .ec-wrap[data-ec-wrap-row-gap] {
+      row-gap: var(
+        --ec-wrap-row-gap-md,
+        var(
+          --ec-wrap-row-gap-sm,
+          var(
+            --ec-wrap-row-gap-base,
+            var(
+              --ec-wrap-gap-md,
+              var(--ec-wrap-gap-sm, var(--ec-wrap-gap-base, 8px))
+            )
+          )
+        )
+      );
+    }
+    .ec-wrap[data-ec-wrap-column-gap] {
+      column-gap: var(
+        --ec-wrap-column-gap-md,
+        var(
+          --ec-wrap-column-gap-sm,
+          var(
+            --ec-wrap-column-gap-base,
+            var(
+              --ec-wrap-gap-md,
+              var(--ec-wrap-gap-sm, var(--ec-wrap-gap-base, 8px))
+            )
+          )
+        )
+      );
+    }
+  }
+  @media (min-width: 64rem) {
+    .ec-wrap {
+      align-items: var(
+        --ec-wrap-align-lg,
+        var(
+          --ec-wrap-align-md,
+          var(--ec-wrap-align-sm, var(--ec-wrap-align-base, stretch))
+        )
+      );
+      justify-content: var(
+        --ec-wrap-justify-lg,
+        var(
+          --ec-wrap-justify-md,
+          var(--ec-wrap-justify-sm, var(--ec-wrap-justify-base, flex-start))
+        )
+      );
+      gap: var(
+        --ec-wrap-gap-lg,
+        var(
+          --ec-wrap-gap-md,
+          var(--ec-wrap-gap-sm, var(--ec-wrap-gap-base, 8px))
+        )
+      );
+    }
+    .ec-wrap[data-ec-wrap-row-gap] {
+      row-gap: var(
+        --ec-wrap-row-gap-lg,
+        var(
+          --ec-wrap-row-gap-md,
+          var(
+            --ec-wrap-row-gap-sm,
+            var(
+              --ec-wrap-row-gap-base,
+              var(
+                --ec-wrap-gap-lg,
+                var(
+                  --ec-wrap-gap-md,
+                  var(--ec-wrap-gap-sm, var(--ec-wrap-gap-base, 8px))
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+    .ec-wrap[data-ec-wrap-column-gap] {
+      column-gap: var(
+        --ec-wrap-column-gap-lg,
+        var(
+          --ec-wrap-column-gap-md,
+          var(
+            --ec-wrap-column-gap-sm,
+            var(
+              --ec-wrap-column-gap-base,
+              var(
+                --ec-wrap-gap-lg,
+                var(
+                  --ec-wrap-gap-md,
+                  var(--ec-wrap-gap-sm, var(--ec-wrap-gap-base, 8px))
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }
+}

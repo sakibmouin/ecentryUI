@@ -181,7 +181,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 ### Checkpoint after T034
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T035 Wrap component** (depends on T016).
+- [x] **T035 Wrap component** (depends on T016).
   - Files: `packages/react/src/components/wrap/wrap.tsx`, `wrap.css`, `wrap.test.tsx`, `index.ts`, `apps/docs/content/components/wrap.mdx`.
   - Acceptance: responsive layout, intrinsic sizing and RTL; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/wrap/wrap.test.tsx && npm run test:e2e -- wrap`.

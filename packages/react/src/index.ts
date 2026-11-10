@@ -31,6 +31,7 @@ import "./components/separator/separator.css";
 import "./components/simple-grid/simple-grid.css";
 import "./components/splitter/splitter.css";
 import "./components/stack/stack.css";
+import "./components/wrap/wrap.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -57,6 +58,8 @@ export type {
   StackProps,
   StackResponsiveValue,
 } from "./components/stack/stack.js";
+export { Wrap } from "./components/wrap/wrap.js";
+export type { WrapProps, WrapResponsiveValue } from "./components/wrap/wrap.js";
 export type {
   SplitterRootProps,
   SplitterPanelProps,

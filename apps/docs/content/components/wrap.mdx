@@ -1,0 +1,41 @@
+import { WrapExample } from "../../src/examples/wrap.tsx";
+import wrapSource from "../../src/examples/wrap.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Wrap
+</div>
+<span className="section-index">LAYOUT COMPONENT</span>
+
+# Wrap
+
+Wrap places children on a flexible row and moves them onto additional lines
+when space runs out. Alignment and spacing can change at each breakpoint.
+
+## Install
+
+```sh
+ecentry add wrap
+```
+
+## Preview
+
+<ExamplePanel source={wrapSource}>
+  <WrapExample />
+</ExamplePanel>
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Wrap API" tabIndex={0}>
+
+| Prop                         | Type                   | Purpose                          |
+| ---------------------------- | ---------------------- | -------------------------------- |
+| `as`                         | element type           | Semantic host element            |
+| `align`, `justify`           | responsive flex values | Line and main-axis alignment     |
+| `gap`, `rowGap`, `columnGap` | responsive CSS length  | Space between children and lines |
+| `className`, `style`         | native React props     | Custom layout and overrides      |
+
+</div>
+
+Wrap forwards refs and native HTML and ARIA attributes, and preserves child DOM
+order in RTL layouts.
