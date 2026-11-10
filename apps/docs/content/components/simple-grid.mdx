@@ -1,0 +1,53 @@
+import { SimpleGridExample } from "../../src/examples/simple-grid.tsx";
+import simpleGridSource from "../../src/examples/simple-grid.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Simple Grid
+</div>
+<span className="section-index">LAYOUT COMPONENT</span>
+
+# Simple Grid
+
+Simple Grid arranges equal-width cards in responsive columns. Choose a track count or set a minimum child width for automatic fitting.
+
+## Install
+
+```sh
+ecentry add simple-grid
+```
+
+Import `SimpleGrid` from the installed `components/ui/simple-grid/` directory.
+
+## Preview
+
+<ExamplePanel source={simpleGridSource}>
+  <SimpleGridExample />
+</ExamplePanel>
+
+## Responsive columns
+
+Use `columns={3}` for a fixed count or `columns={{ base: 1, sm: 2, lg: 3 }}` for responsive tracks. Breakpoints begin at 40rem, 48rem, and 64rem. A missing breakpoint keeps the most recent value. Without `columns`, the grid has one column.
+
+## Automatic fitting
+
+Use `minChildWidth={160}` or a CSS length such as `"12rem"` to fit as many tracks as the container can hold. The minimum shrinks to the container width when necessary, avoiding horizontal overflow. `columns` and `minChildWidth` cannot be used together.
+
+## Gaps and semantics
+
+`gap`, `rowGap`, and `columnGap` accept pixel numbers, CSS lengths, or responsive objects. Row and column gaps override their respective side of `gap`. Use `as` for semantic markup, such as a `section`, and supply an accessible name when the region needs one. Grid placement follows `dir="rtl"` without changing DOM order.
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Simple Grid API" tabIndex={0}>
+
+| Prop                         | Purpose                                             |
+| ---------------------------- | --------------------------------------------------- |
+| `as`                         | HTML host, default `div`                            |
+| `columns`                    | Positive integer track count, optionally responsive |
+| `minChildWidth`              | Minimum auto-fit track width, optionally responsive |
+| `gap`, `rowGap`, `columnGap` | Spacing between tracks, optionally responsive       |
+
+</div>
+
+Native HTML attributes, `className`, `style`, and refs are forwarded. Native styles can override layout props.

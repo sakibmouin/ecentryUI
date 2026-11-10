@@ -1,0 +1,140 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-simple-grid {
+    box-sizing: border-box;
+    display: grid;
+    min-width: 0;
+    --ec-simple-grid-active-columns: var(--ec-simple-grid-columns-base, 1);
+    --ec-simple-grid-active-min-width: var(
+      --ec-simple-grid-min-width-base,
+      12rem
+    );
+    --ec-simple-grid-active-gap: var(--ec-simple-grid-gap-base, 0px);
+    --ec-simple-grid-active-row-gap: var(--ec-simple-grid-row-gap-base);
+    --ec-simple-grid-active-column-gap: var(--ec-simple-grid-column-gap-base);
+    grid-template-columns: repeat(
+      var(--ec-simple-grid-active-columns),
+      minmax(0, 1fr)
+    );
+    gap: var(--ec-simple-grid-active-gap);
+  }
+  .ec-simple-grid[data-ec-simple-grid-mode="auto-fit"] {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(100%, var(--ec-simple-grid-active-min-width)), 1fr)
+    );
+  }
+  .ec-simple-grid[data-ec-simple-grid-row-gap] {
+    row-gap: var(--ec-simple-grid-active-row-gap);
+  }
+  .ec-simple-grid[data-ec-simple-grid-column-gap] {
+    column-gap: var(--ec-simple-grid-active-column-gap);
+  }
+}
+
+@layer ec.variants {
+  @media (min-width: 40rem) {
+    .ec-simple-grid {
+      --ec-simple-grid-active-columns: var(
+        --ec-simple-grid-columns-sm,
+        var(--ec-simple-grid-columns-base, 1)
+      );
+      --ec-simple-grid-active-min-width: var(
+        --ec-simple-grid-min-width-sm,
+        var(--ec-simple-grid-min-width-base, 12rem)
+      );
+      --ec-simple-grid-active-gap: var(
+        --ec-simple-grid-gap-sm,
+        var(--ec-simple-grid-gap-base, 0px)
+      );
+      --ec-simple-grid-active-row-gap: var(
+        --ec-simple-grid-row-gap-sm,
+        var(--ec-simple-grid-row-gap-base)
+      );
+      --ec-simple-grid-active-column-gap: var(
+        --ec-simple-grid-column-gap-sm,
+        var(--ec-simple-grid-column-gap-base)
+      );
+    }
+  }
+  @media (min-width: 48rem) {
+    .ec-simple-grid {
+      --ec-simple-grid-active-columns: var(
+        --ec-simple-grid-columns-md,
+        var(--ec-simple-grid-columns-sm, var(--ec-simple-grid-columns-base, 1))
+      );
+      --ec-simple-grid-active-min-width: var(
+        --ec-simple-grid-min-width-md,
+        var(
+          --ec-simple-grid-min-width-sm,
+          var(--ec-simple-grid-min-width-base, 12rem)
+        )
+      );
+      --ec-simple-grid-active-gap: var(
+        --ec-simple-grid-gap-md,
+        var(--ec-simple-grid-gap-sm, var(--ec-simple-grid-gap-base, 0px))
+      );
+      --ec-simple-grid-active-row-gap: var(
+        --ec-simple-grid-row-gap-md,
+        var(--ec-simple-grid-row-gap-sm, var(--ec-simple-grid-row-gap-base))
+      );
+      --ec-simple-grid-active-column-gap: var(
+        --ec-simple-grid-column-gap-md,
+        var(
+          --ec-simple-grid-column-gap-sm,
+          var(--ec-simple-grid-column-gap-base)
+        )
+      );
+    }
+  }
+  @media (min-width: 64rem) {
+    .ec-simple-grid {
+      --ec-simple-grid-active-columns: var(
+        --ec-simple-grid-columns-lg,
+        var(
+          --ec-simple-grid-columns-md,
+          var(
+            --ec-simple-grid-columns-sm,
+            var(--ec-simple-grid-columns-base, 1)
+          )
+        )
+      );
+      --ec-simple-grid-active-min-width: var(
+        --ec-simple-grid-min-width-lg,
+        var(
+          --ec-simple-grid-min-width-md,
+          var(
+            --ec-simple-grid-min-width-sm,
+            var(--ec-simple-grid-min-width-base, 12rem)
+          )
+        )
+      );
+      --ec-simple-grid-active-gap: var(
+        --ec-simple-grid-gap-lg,
+        var(
+          --ec-simple-grid-gap-md,
+          var(--ec-simple-grid-gap-sm, var(--ec-simple-grid-gap-base, 0px))
+        )
+      );
+      --ec-simple-grid-active-row-gap: var(
+        --ec-simple-grid-row-gap-lg,
+        var(
+          --ec-simple-grid-row-gap-md,
+          var(--ec-simple-grid-row-gap-sm, var(--ec-simple-grid-row-gap-base))
+        )
+      );
+      --ec-simple-grid-active-column-gap: var(
+        --ec-simple-grid-column-gap-lg,
+        var(
+          --ec-simple-grid-column-gap-md,
+          var(
+            --ec-simple-grid-column-gap-sm,
+            var(--ec-simple-grid-column-gap-base)
+          )
+        )
+      );
+    }
+  }
+}

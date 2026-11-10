@@ -157,13 +157,13 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/separator/separator.tsx`, `separator.css`, `separator.test.tsx`, `index.ts`, `apps/docs/content/components/separator.mdx`.
   - Acceptance: responsive layout, intrinsic sizing and RTL; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/separator/separator.test.tsx && npm run test:e2e -- separator`.
-- [ ] **T031 Simple Grid component** (depends on T016).
+- [x] **T031 Simple Grid component** (depends on T016).
   - Files: `packages/react/src/components/simple-grid/simple-grid.tsx`, `simple-grid.css`, `simple-grid.test.tsx`, `index.ts`, `apps/docs/content/components/simple-grid.mdx`.
   - Acceptance: responsive layout, intrinsic sizing and RTL; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/simple-grid/simple-grid.test.tsx && npm run test:e2e -- simple-grid`.
 
 ### Checkpoint after T031
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T032 Splitter behavior** (depends on T016).
   - Files: `packages/react/src/components/splitter/splitter.tsx`, `splitter.test.tsx`.

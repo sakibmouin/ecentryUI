@@ -24,6 +24,7 @@ import { Grid, GridItem } from "./components/ui/grid/index.js";
 import { Group } from "./components/ui/group/index.js";
 import { ScrollArea } from "./components/ui/scroll-area/index.js";
 import { Separator } from "./components/ui/separator/index.js";
+import { SimpleGrid } from "./components/ui/simple-grid/index.js";
 import {
   FloatingPanelRoot,
   FloatingPanelTrigger,
@@ -141,5 +142,13 @@ createRoot(document.getElementById("root")!).render(
       aria-label="Installed divider"
       data-testid="installed-separator"
     />
+    <SimpleGrid
+      columns={{ base: 1, sm: 2 }}
+      gap={8}
+      data-testid="installed-simple-grid"
+    >
+      <span>First card</span>
+      <span>Second card</span>
+    </SimpleGrid>
   </AppearanceProvider>,
 );

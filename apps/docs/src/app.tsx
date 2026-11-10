@@ -18,6 +18,7 @@ import GridDocs from "../content/components/grid.mdx";
 import GroupDocs from "../content/components/group.mdx";
 import ScrollAreaDocs from "../content/components/scroll-area.mdx";
 import SeparatorDocs from "../content/components/separator.mdx";
+import SimpleGridDocs from "../content/components/simple-grid.mdx";
 
 export const routes = [
   "/",
@@ -38,6 +39,7 @@ export const routes = [
   "/components/group/",
   "/components/scroll-area/",
   "/components/separator/",
+  "/components/simple-grid/",
 ] as const;
 
 const componentLinks = [
@@ -57,6 +59,7 @@ const componentLinks = [
   { title: "Group", href: "/components/group/" },
   { title: "Scroll Area", href: "/components/scroll-area/" },
   { title: "Separator", href: "/components/separator/" },
+  { title: "Simple Grid", href: "/components/simple-grid/" },
 ];
 
 function Home() {
@@ -283,6 +286,8 @@ export function App({ routePath }: { routePath: string }) {
               <ScrollAreaDocs />
             ) : route === "/components/separator/" ? (
               <SeparatorDocs />
+            ) : route === "/components/simple-grid/" ? (
+              <SimpleGridDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

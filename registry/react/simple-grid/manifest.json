@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "simple-grid",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "simple-grid.css", "simple-grid.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "346d892340ca73ab3a1daba29e92a02dbb99f804a049affcf2e4793bdc259c4d",
+    "simple-grid.css": "6de52913dc1041a4ed44e8891917b4c8fa51319c9dc0296216b263bd612677ed",
+    "simple-grid.tsx": "b6623551865e78ed0446503f1737d94409162b4c98f04c536c9d1dc18a402511",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/simple-grid/",
+  "license": "MIT"
+}

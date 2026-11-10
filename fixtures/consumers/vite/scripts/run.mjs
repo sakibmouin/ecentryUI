@@ -114,6 +114,7 @@ try {
     "group",
     "scroll-area",
     "separator",
+    "simple-grid",
   ]) {
     execFileSync(
       process.execPath,
@@ -297,6 +298,15 @@ try {
       throw new Error(
         "Installed Separator did not expose horizontal semantics",
       );
+    const simpleGrid = page.getByTestId("installed-simple-grid");
+    if (
+      (await simpleGrid.evaluate(
+        (element) =>
+          globalThis.getComputedStyle(element).gridTemplateColumns.split(" ")
+            .length,
+      )) !== 2
+    )
+      throw new Error("Installed Simple Grid did not render two tracks");
   } finally {
     await browser.close();
     await new Promise((resolve, reject) =>

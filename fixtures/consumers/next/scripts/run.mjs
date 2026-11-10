@@ -116,6 +116,7 @@ try {
     "group",
     "scroll-area",
     "separator",
+    "simple-grid",
   ]) {
     execFileSync(
       process.execPath,
@@ -150,7 +151,8 @@ try {
     !html.includes("Grid first") ||
     !html.includes("First action") ||
     !html.includes("Installed scroll area") ||
-    !html.includes("Installed divider")
+    !html.includes("Installed divider") ||
+    !html.includes("First card")
   ) {
     throw new Error("Next did not render the component into static HTML");
   }
@@ -330,6 +332,15 @@ try {
     });
     if ((await separator.getAttribute("aria-orientation")) !== "horizontal")
       throw new Error("Next Separator did not expose horizontal semantics");
+    const simpleGrid = page.getByTestId("installed-simple-grid");
+    if (
+      (await simpleGrid.evaluate(
+        (element) =>
+          globalThis.getComputedStyle(element).gridTemplateColumns.split(" ")
+            .length,
+      )) !== 2
+    )
+      throw new Error("Next Simple Grid did not render two tracks");
     if (errors.length)
       throw new Error(`Next hydration errors: ${errors.join(" | ")}`);
   } finally {
