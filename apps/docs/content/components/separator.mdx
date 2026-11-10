@@ -1,0 +1,51 @@
+import { SeparatorExample } from "../../src/examples/separator.tsx";
+import separatorSource from "../../src/examples/separator.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Separator
+</div>
+<span className="section-index">LAYOUT COMPONENT</span>
+
+# Separator
+
+Separator marks a visual break between related pieces of content. Use a label when the break needs a visible name.
+
+## Install
+
+```sh
+ecentry add separator
+```
+
+Import `Separator` from the installed `components/ui/separator/` directory.
+
+## Preview
+
+<ExamplePanel source={separatorSource}>
+  <SeparatorExample />
+</ExamplePanel>
+
+## Appearance and layout
+
+Choose `solid` (default), `dashed`, or `dotted` with `variant`. `size` sets line weight from `xs` through `lg`. Add `label` and place it at `start`, `center`, or `end` with `labelPlacement`. Start and end follow text direction.
+
+`orientation` defaults to horizontal. Set it to `vertical` within a row that gives the separator height, or pass responsive `base`, `sm`, `md`, and `lg` values. Responsive orientation switches at 40rem, 48rem, and 64rem. A responsive separator uses a presentational role because `aria-orientation` cannot describe two layouts at once.
+
+## Accessibility
+
+An unlabeled separator is decorative by default and hidden from assistive technology. A string label creates a named `separator` role. Set `decorative={false}` and `aria-label` for an unlabeled semantic divider. Vertical semantic dividers include `aria-orientation="vertical"`. For a custom label element, provide an accessible name explicitly.
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Separator API" tabIndex={0}>
+
+| Prop                      | Purpose                                    |
+| ------------------------- | ------------------------------------------ |
+| `orientation`             | Horizontal, vertical, or responsive layout |
+| `variant`                 | Solid, dashed, or dotted line              |
+| `size`                    | `xs`, `sm`, `md`, or `lg` weight           |
+| `label`, `labelPlacement` | Optional label and logical placement       |
+| `decorative`              | Control assistive technology semantics     |
+| `as`, `className`         | Host element and custom appearance         |
+
+</div>

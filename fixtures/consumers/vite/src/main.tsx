@@ -23,6 +23,7 @@ import { Float } from "./components/ui/float/index.js";
 import { Grid, GridItem } from "./components/ui/grid/index.js";
 import { Group } from "./components/ui/group/index.js";
 import { ScrollArea } from "./components/ui/scroll-area/index.js";
+import { Separator } from "./components/ui/separator/index.js";
 import {
   FloatingPanelRoot,
   FloatingPanelTrigger,
@@ -135,5 +136,10 @@ createRoot(document.getElementById("root")!).render(
         </div>
       ))}
     </ScrollArea>
+    <Separator
+      decorative={false}
+      aria-label="Installed divider"
+      data-testid="installed-separator"
+    />
   </AppearanceProvider>,
 );

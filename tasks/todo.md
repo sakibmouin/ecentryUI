@@ -153,7 +153,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/scroll-area/scroll-area.tsx`, `scroll-area.css`, `scroll-area.test.tsx`, `index.ts`, `apps/docs/content/components/scroll-area.mdx`.
   - Acceptance: responsive layout, intrinsic sizing and RTL; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/scroll-area/scroll-area.test.tsx && npm run test:e2e -- scroll-area`.
-- [ ] **T030 Separator component** (depends on T016).
+- [x] **T030 Separator component** (depends on T016).
   - Files: `packages/react/src/components/separator/separator.tsx`, `separator.css`, `separator.test.tsx`, `index.ts`, `apps/docs/content/components/separator.mdx`.
   - Acceptance: responsive layout, intrinsic sizing and RTL; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/separator/separator.test.tsx && npm run test:e2e -- separator`.

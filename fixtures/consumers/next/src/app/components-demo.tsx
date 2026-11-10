@@ -21,6 +21,7 @@ import { Float } from "../components/ui/float/index";
 import { Grid, GridItem } from "../components/ui/grid/index";
 import { Group } from "../components/ui/group/index";
 import { ScrollArea } from "../components/ui/scroll-area/index";
+import { Separator } from "../components/ui/separator/index";
 import {
   FloatingPanelRoot,
   FloatingPanelTrigger,
@@ -126,6 +127,11 @@ export function ComponentsDemo() {
           </div>
         ))}
       </ScrollArea>
+      <Separator
+        decorative={false}
+        aria-label="Installed divider"
+        data-testid="installed-separator"
+      />
     </section>
   );
 }

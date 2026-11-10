@@ -113,6 +113,7 @@ try {
     "grid",
     "group",
     "scroll-area",
+    "separator",
   ]) {
     execFileSync(
       process.execPath,
@@ -289,6 +290,13 @@ try {
     await expect
       .poll(() => scrollArea.evaluate((element) => element.scrollTop))
       .toBeGreaterThan(0);
+    const separator = page.getByRole("separator", {
+      name: "Installed divider",
+    });
+    if ((await separator.getAttribute("aria-orientation")) !== "horizontal")
+      throw new Error(
+        "Installed Separator did not expose horizontal semantics",
+      );
   } finally {
     await browser.close();
     await new Promise((resolve, reject) =>

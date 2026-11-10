@@ -27,6 +27,7 @@ import "./components/floating-panel/floating-panel.css";
 import "./components/grid/grid.css";
 import "./components/group/group.css";
 import "./components/scroll-area/scroll-area.css";
+import "./components/separator/separator.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -41,6 +42,12 @@ export { Float } from "./components/float/float.js";
 export { Grid, GridItem } from "./components/grid/grid.js";
 export { Group } from "./components/group/group.js";
 export { ScrollArea } from "./components/scroll-area/scroll-area.js";
+export { Separator } from "./components/separator/separator.js";
+export type {
+  SeparatorProps,
+  SeparatorOrientation,
+  SeparatorResponsiveOrientation,
+} from "./components/separator/separator.js";
 export type {
   ScrollAreaProps,
   ScrollAreaResponsiveValue,

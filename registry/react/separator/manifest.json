@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "separator",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "separator.css", "separator.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "e317dc31f3dc763196767ab79acc2d6f4709e2ed7912be242d03a3df05e95ef1",
+    "separator.css": "7ebde4fbcff27d49c6a779ac5939086c0c633ea2ef87866919b079bb99d1deab",
+    "separator.tsx": "d63eab00f0c797b6b606e4bb0e968a0a5357292404a554daebe9f1f2bbab742c",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": ["colors.border", "colors.text.muted"],
+  "docsUrl": "https://ecentry.dev/components/separator/",
+  "license": "MIT"
+}
