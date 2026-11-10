@@ -16,6 +16,7 @@ import { floatRegistryItem } from "../packages/react/dist/components/float/metad
 import { floatingPanelRegistryItem } from "../packages/react/dist/components/floating-panel/metadata.js";
 import { gridRegistryItem } from "../packages/react/dist/components/grid/metadata.js";
 import { groupRegistryItem } from "../packages/react/dist/components/group/metadata.js";
+import { scrollAreaRegistryItem } from "../packages/react/dist/components/scroll-area/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -32,6 +33,7 @@ for (const item of [
   floatingPanelRegistryItem,
   gridRegistryItem,
   groupRegistryItem,
+  scrollAreaRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

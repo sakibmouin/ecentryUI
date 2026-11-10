@@ -1,0 +1,170 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-scroll-area {
+    box-sizing: border-box;
+    display: block;
+    min-inline-size: 0;
+    max-block-size: var(--ec-scroll-area-max-height-base, 240px);
+    max-inline-size: var(--ec-scroll-area-max-width-base, 100%);
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    --ec-scrollbar-thickness: 10px;
+  }
+  .ec-scroll-area[data-axis="horizontal"] {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .ec-scroll-area[data-axis="both"] {
+    overflow: auto;
+  }
+  .ec-scroll-area::-webkit-scrollbar {
+    width: var(--ec-scrollbar-thickness);
+    height: var(--ec-scrollbar-thickness);
+  }
+  .ec-scroll-area::-webkit-scrollbar-track,
+  .ec-scroll-area::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  .ec-scroll-area::-webkit-scrollbar-thumb {
+    border: 2px solid transparent;
+    border-radius: 999px;
+    background: color-mix(
+      in srgb,
+      var(--ec-colors-text-muted, #59635b) 54%,
+      transparent
+    );
+    background-clip: padding-box;
+  }
+  @supports (-moz-appearance: none) {
+    .ec-scroll-area {
+      scrollbar-width: thin;
+      scrollbar-color: color-mix(
+          in srgb,
+          var(--ec-colors-text-muted, #59635b) 54%,
+          transparent
+        )
+        transparent;
+    }
+  }
+}
+
+@layer ec.variants {
+  .ec-scroll-area[data-size="xs"] {
+    --ec-scrollbar-thickness: 6px;
+  }
+  .ec-scroll-area[data-size="sm"] {
+    --ec-scrollbar-thickness: 8px;
+  }
+  .ec-scroll-area[data-size="lg"] {
+    --ec-scrollbar-thickness: 12px;
+  }
+  .ec-scroll-area[data-variant="hover"]::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  .ec-scroll-area[data-variant="hover"]:is(
+      :hover,
+      :focus-within
+    )::-webkit-scrollbar-thumb {
+    background: color-mix(
+      in srgb,
+      var(--ec-colors-text-muted, #59635b) 54%,
+      transparent
+    );
+    background-clip: padding-box;
+  }
+  @media (hover: none) {
+    .ec-scroll-area[data-variant="hover"]::-webkit-scrollbar-thumb {
+      background: color-mix(
+        in srgb,
+        var(--ec-colors-text-muted, #59635b) 54%,
+        transparent
+      );
+      background-clip: padding-box;
+    }
+  }
+  @supports (-moz-appearance: none) {
+    .ec-scroll-area[data-variant="hover"] {
+      scrollbar-color: transparent transparent;
+    }
+    .ec-scroll-area[data-variant="hover"]:is(:hover, :focus-within) {
+      scrollbar-color: color-mix(
+          in srgb,
+          var(--ec-colors-text-muted, #59635b) 54%,
+          transparent
+        )
+        transparent;
+    }
+  }
+  @media (min-width: 40rem) {
+    .ec-scroll-area {
+      max-block-size: var(
+        --ec-scroll-area-max-height-sm,
+        var(--ec-scroll-area-max-height-base, 240px)
+      );
+      max-inline-size: var(
+        --ec-scroll-area-max-width-sm,
+        var(--ec-scroll-area-max-width-base, 100%)
+      );
+    }
+  }
+  @media (min-width: 48rem) {
+    .ec-scroll-area {
+      max-block-size: var(
+        --ec-scroll-area-max-height-md,
+        var(
+          --ec-scroll-area-max-height-sm,
+          var(--ec-scroll-area-max-height-base, 240px)
+        )
+      );
+      max-inline-size: var(
+        --ec-scroll-area-max-width-md,
+        var(
+          --ec-scroll-area-max-width-sm,
+          var(--ec-scroll-area-max-width-base, 100%)
+        )
+      );
+    }
+  }
+  @media (min-width: 64rem) {
+    .ec-scroll-area {
+      max-block-size: var(
+        --ec-scroll-area-max-height-lg,
+        var(
+          --ec-scroll-area-max-height-md,
+          var(
+            --ec-scroll-area-max-height-sm,
+            var(--ec-scroll-area-max-height-base, 240px)
+          )
+        )
+      );
+      max-inline-size: var(
+        --ec-scroll-area-max-width-lg,
+        var(
+          --ec-scroll-area-max-width-md,
+          var(
+            --ec-scroll-area-max-width-sm,
+            var(--ec-scroll-area-max-width-base, 100%)
+          )
+        )
+      );
+    }
+  }
+}
+
+@layer ec.utilities {
+  .ec-scroll-area:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-scroll-area {
+      scrollbar-color: ButtonText Canvas;
+    }
+    .ec-scroll-area:focus-visible {
+      outline-color: Highlight;
+    }
+  }
+}

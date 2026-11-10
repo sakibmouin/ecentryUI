@@ -1,0 +1,51 @@
+import { ScrollAreaExample } from "../../src/examples/scroll-area.tsx";
+import scrollAreaSource from "../../src/examples/scroll-area.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Scroll Area
+</div>
+<span className="section-index">LAYOUT COMPONENT</span>
+
+# Scroll Area
+
+Scroll Area gives content a bounded, keyboard-accessible viewport with theme-aware native scrollbars. It works with pointer, touch, keyboard, and RTL scrolling.
+
+## Install
+
+```sh
+ecentry add scroll-area
+```
+
+Import `ScrollArea` from the installed `components/ui/scroll-area/` directory.
+
+## Preview
+
+<ExamplePanel source={scrollAreaSource}>
+  <ScrollAreaExample />
+</ExamplePanel>
+
+## Axes and appearance
+
+`axis` chooses `vertical` (default), `horizontal`, or `both`. `variant="hover"` shows the thumb when the area is hovered or focused; `always` keeps it visible. `size` accepts `xs`, `sm`, `md`, or `lg` for scrollbar thickness where the browser supports styled native scrollbars. The scrollbar follows semantic theme colors.
+
+The area grows with short content and is capped at 240px by default. Set `maxHeight` or `maxWidth` to a CSS length or pixel number. Both accept responsive `base`, `sm`, `md`, and `lg` values at 40rem, 48rem, and 64rem. Use `style` when an exact height or width is required. The forwarded ref points to the scrolling element, so `scrollTo`, `scrollTop`, and `scrollLeft` work directly.
+
+## Accessibility
+
+A named area receives `role="region"` and is keyboard focusable. Give a meaningful `aria-label` or `aria-labelledby` when the region needs a screen reader landmark. Scrollbars use the browser's built-in interaction model. In RTL layouts, set `dir="rtl"` on the area or an ancestor. Focus outlines remain visible in light, dark, and high-contrast modes.
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Scroll Area API" tabIndex={0}>
+
+| Prop                       | Purpose                                  |
+| -------------------------- | ---------------------------------------- |
+| `axis`                     | `vertical`, `horizontal`, or `both`      |
+| `variant`                  | `hover` or `always` scrollbar visibility |
+| `size`                     | `xs`, `sm`, `md`, or `lg` thickness      |
+| `maxHeight`, `maxWidth`    | Responsive viewport bounds               |
+| `as`, `className`, `style` | Semantic host and native styling         |
+| `ref`                      | Programmatic scroll access               |
+
+</div>

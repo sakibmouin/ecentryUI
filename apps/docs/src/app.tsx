@@ -16,6 +16,7 @@ import FloatDocs from "../content/components/float.mdx";
 import FloatingPanelDocs from "../content/components/floating-panel.mdx";
 import GridDocs from "../content/components/grid.mdx";
 import GroupDocs from "../content/components/group.mdx";
+import ScrollAreaDocs from "../content/components/scroll-area.mdx";
 
 export const routes = [
   "/",
@@ -34,6 +35,7 @@ export const routes = [
   "/components/floating-panel/",
   "/components/grid/",
   "/components/group/",
+  "/components/scroll-area/",
 ] as const;
 
 const componentLinks = [
@@ -51,6 +53,7 @@ const componentLinks = [
   { title: "Floating Panel", href: "/components/floating-panel/" },
   { title: "Grid", href: "/components/grid/" },
   { title: "Group", href: "/components/group/" },
+  { title: "Scroll Area", href: "/components/scroll-area/" },
 ];
 
 function Home() {
@@ -273,6 +276,8 @@ export function App({ routePath }: { routePath: string }) {
               <GridDocs />
             ) : route === "/components/group/" ? (
               <GroupDocs />
+            ) : route === "/components/scroll-area/" ? (
+              <ScrollAreaDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

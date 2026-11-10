@@ -26,6 +26,7 @@ import "./components/float/float.css";
 import "./components/floating-panel/floating-panel.css";
 import "./components/grid/grid.css";
 import "./components/group/group.css";
+import "./components/scroll-area/scroll-area.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -39,6 +40,11 @@ export { Flex, Spacer } from "./components/flex/flex.js";
 export { Float } from "./components/float/float.js";
 export { Grid, GridItem } from "./components/grid/grid.js";
 export { Group } from "./components/group/group.js";
+export { ScrollArea } from "./components/scroll-area/scroll-area.js";
+export type {
+  ScrollAreaProps,
+  ScrollAreaResponsiveValue,
+} from "./components/scroll-area/scroll-area.js";
 export type {
   GroupProps,
   GroupResponsiveValue,

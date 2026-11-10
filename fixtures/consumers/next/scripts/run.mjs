@@ -11,7 +11,7 @@ import {
 import { createServer } from "node:http";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { chromium } from "@playwright/test";
+import { chromium, expect } from "@playwright/test";
 import { generateRegistryItem } from "@ecentry/registry-schema";
 
 if (process.argv[2] !== "next")
@@ -114,6 +114,7 @@ try {
     "floating-panel",
     "grid",
     "group",
+    "scroll-area",
   ]) {
     execFileSync(
       process.execPath,
@@ -146,7 +147,8 @@ try {
     !html.includes("Installed float") ||
     !html.includes("Installed floating panel") ||
     !html.includes("Grid first") ||
-    !html.includes("First action")
+    !html.includes("First action") ||
+    !html.includes("Installed scroll area")
   ) {
     throw new Error("Next did not render the component into static HTML");
   }
@@ -313,6 +315,14 @@ try {
       "0px"
     )
       throw new Error("Next Group did not attach controls");
+    const scrollArea = page.getByRole("region", {
+      name: "Installed scroll area",
+    });
+    await scrollArea.focus();
+    await page.keyboard.press("End");
+    await expect
+      .poll(() => scrollArea.evaluate((element) => element.scrollTop))
+      .toBeGreaterThan(0);
     if (errors.length)
       throw new Error(`Next hydration errors: ${errors.join(" | ")}`);
   } finally {

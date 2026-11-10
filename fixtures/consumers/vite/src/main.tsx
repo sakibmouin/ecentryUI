@@ -22,6 +22,7 @@ import { Flex, Spacer } from "./components/ui/flex/index.js";
 import { Float } from "./components/ui/float/index.js";
 import { Grid, GridItem } from "./components/ui/grid/index.js";
 import { Group } from "./components/ui/group/index.js";
+import { ScrollArea } from "./components/ui/scroll-area/index.js";
 import {
   FloatingPanelRoot,
   FloatingPanelTrigger,
@@ -127,5 +128,12 @@ createRoot(document.getElementById("root")!).render(
       <button type="button">First action</button>
       <button type="button">Second action</button>
     </Group>
+    <ScrollArea aria-label="Installed scroll area" maxHeight={80}>
+      {Array.from({ length: 8 }, (_, index) => (
+        <div key={index} style={{ height: 32 }}>
+          Row {index + 1}
+        </div>
+      ))}
+    </ScrollArea>
   </AppearanceProvider>,
 );

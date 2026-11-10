@@ -11,7 +11,7 @@ import {
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { generateRegistryItem } from "@ecentry/registry-schema";
-import { chromium } from "@playwright/test";
+import { chromium, expect } from "@playwright/test";
 
 const fixture = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -112,6 +112,7 @@ try {
     "floating-panel",
     "grid",
     "group",
+    "scroll-area",
   ]) {
     execFileSync(
       process.execPath,
@@ -280,6 +281,14 @@ try {
       "0px"
     )
       throw new Error("Installed Group did not attach controls");
+    const scrollArea = page.getByRole("region", {
+      name: "Installed scroll area",
+    });
+    await scrollArea.focus();
+    await page.keyboard.press("End");
+    await expect
+      .poll(() => scrollArea.evaluate((element) => element.scrollTop))
+      .toBeGreaterThan(0);
   } finally {
     await browser.close();
     await new Promise((resolve, reject) =>
