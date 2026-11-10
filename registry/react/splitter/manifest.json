@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "splitter",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "splitter.css", "splitter.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "4e6ce28efb35d17d8cb4dc0e6880f06f9680e8546007a27ceea70a5d770f5107",
+    "splitter.css": "d41cf78d5761caf545baca63a230a742411d74a24a4cde7542c1884524b06b58",
+    "splitter.tsx": "007e2d2660f7613e1e2948fdd727e016c91bc4b1d8614cb734d73963e25d9276",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.focus"
+  ],
+  "docsUrl": "https://ecentry.dev/components/splitter/",
+  "license": "MIT"
+}

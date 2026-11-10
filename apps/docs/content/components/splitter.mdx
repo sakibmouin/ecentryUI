@@ -1,0 +1,54 @@
+import { SplitterExample } from "../../src/examples/splitter.tsx";
+import splitterSource from "../../src/examples/splitter.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Splitter
+</div>
+<span className="section-index">LAYOUT COMPONENT</span>
+
+# Splitter
+
+Splitter gives people direct control over a multi-panel workspace. Each divider supports dragging and keyboard resizing while respecting the adjacent panels' limits.
+
+## Install
+
+```sh
+ecentry add splitter
+```
+
+Import `SplitterRoot`, `SplitterPanel`, and `SplitterHandle` from the installed `components/ui/splitter/` directory.
+
+## Preview
+
+<ExamplePanel source={splitterSource}>
+  <SplitterExample />
+</ExamplePanel>
+
+## Compose panels
+
+Pass ordered panel definitions to `SplitterRoot`. Each definition needs a unique `id` and can set percentage `minSize` and `maxSize`. Render a `SplitterPanel` for each ID and a `SplitterHandle` between each adjacent pair. The `between` tuple names the panels on either side. Initial `defaultSize` values must total 100; without them, panels share the space equally.
+
+## Control and direction
+
+Use `size` with `onResize` to control panel sizes, or `defaultSize` for internal state. `orientation="vertical"` stacks panels; the default places them side by side. Horizontal arrow behavior follows the inherited `dir` direction. Set `disabled` on the root or an individual handle to prevent resizing. `onResizeStart` and `onResizeEnd` mark committed interactions.
+
+## Keyboard and pointer
+
+Focus a divider with Tab. Arrow keys change the adjacent sizes by `keyboardStep` percentage points (default 5); Shift doubles the step. Home and End reach the allowed limits. Drag a divider with a mouse or touch. Escape or pointer cancellation restores the sizes from the start of a drag. Each divider exposes its current value, limits, and controlled panel to assistive technology.
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Splitter API" tabIndex={0}>
+
+| Part and prop                                             | Purpose                                           |
+| --------------------------------------------------------- | ------------------------------------------------- |
+| `SplitterRoot` `panels`, `size`, `defaultSize`            | Panel definitions and controlled or initial sizes |
+| `SplitterRoot` `orientation`, `keyboardStep`, `disabled`  | Layout and interaction settings                   |
+| `SplitterRoot` `onResizeStart`, `onResize`, `onResizeEnd` | Resize event callbacks                            |
+| `SplitterPanel` `id`                                      | Content linked to a panel definition              |
+| `SplitterHandle` `between`, `disabled`                    | Divider between adjacent panels                   |
+
+</div>
+
+All parts forward native HTML attributes, `className`, `style`, and refs. Override `--ec-splitter-handle-size` to change the divider hit area.

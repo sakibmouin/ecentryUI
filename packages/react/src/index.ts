@@ -29,6 +29,7 @@ import "./components/group/group.css";
 import "./components/scroll-area/scroll-area.css";
 import "./components/separator/separator.css";
 import "./components/simple-grid/simple-grid.css";
+import "./components/splitter/splitter.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -45,6 +46,17 @@ export { Group } from "./components/group/group.js";
 export { ScrollArea } from "./components/scroll-area/scroll-area.js";
 export { Separator } from "./components/separator/separator.js";
 export { SimpleGrid } from "./components/simple-grid/simple-grid.js";
+export {
+  SplitterRoot,
+  SplitterPanel,
+  SplitterHandle,
+} from "./components/splitter/splitter.js";
+export type {
+  SplitterRootProps,
+  SplitterPanelProps,
+  SplitterHandleProps,
+  SplitterPanelDefinition,
+} from "./components/splitter/splitter.js";
 export type {
   SimpleGridProps,
   SimpleGridResponsiveValue,

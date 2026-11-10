@@ -25,7 +25,7 @@ export interface SplitterRootProps extends Omit<
   "onResize" | "onResizeStart" | "onResizeEnd"
 > {
   panels: SplitterPanelDefinition[];
-  size?: number[];
+  size?: number[] | undefined;
   defaultSize?: number[];
   onResize?: (size: number[]) => void;
   onResizeStart?: () => void;
@@ -299,6 +299,7 @@ export const SplitterHandle = forwardRef<HTMLDivElement, SplitterHandleProps>(
         sizes: [...context.size],
         latest: [...context.size],
       };
+      event.currentTarget.focus();
       event.currentTarget.setPointerCapture?.(event.pointerId);
       context.onResizeStart?.();
       event.preventDefault();

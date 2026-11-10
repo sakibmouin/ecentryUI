@@ -117,6 +117,7 @@ try {
     "scroll-area",
     "separator",
     "simple-grid",
+    "splitter",
   ]) {
     execFileSync(
       process.execPath,
@@ -152,7 +153,8 @@ try {
     !html.includes("First action") ||
     !html.includes("Installed scroll area") ||
     !html.includes("Installed divider") ||
-    !html.includes("First card")
+    !html.includes("First card") ||
+    !html.includes("Installed left panel")
   ) {
     throw new Error("Next did not render the component into static HTML");
   }
@@ -341,6 +343,13 @@ try {
       )) !== 2
     )
       throw new Error("Next Simple Grid did not render two tracks");
+    const splitterHandle = page.getByRole("separator", {
+      name: "Resize installed panels",
+    });
+    await splitterHandle.focus();
+    await page.keyboard.press("ArrowRight");
+    if ((await splitterHandle.getAttribute("aria-valuenow")) !== "45")
+      throw new Error("Next Splitter did not resize after hydration");
     if (errors.length)
       throw new Error(`Next hydration errors: ${errors.join(" | ")}`);
   } finally {

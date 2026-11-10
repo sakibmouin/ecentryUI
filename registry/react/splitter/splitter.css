@@ -1,0 +1,88 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-splitter {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+  }
+  .ec-splitter[data-orientation="vertical"] {
+    flex-direction: column;
+  }
+  .ec-splitter-panel {
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 0;
+    overflow: auto;
+  }
+  .ec-splitter-handle {
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 var(--ec-splitter-handle-size, 20px);
+    display: grid;
+    place-items: center;
+    align-self: stretch;
+    min-width: var(--ec-splitter-handle-size, 20px);
+    background: transparent;
+    cursor: col-resize;
+    touch-action: none;
+    outline: none;
+  }
+  .ec-splitter-handle::before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    border-radius: 999px;
+    background: var(--ec-colors-border, #dce0dc);
+    transition: background-color 120ms ease;
+  }
+  .ec-splitter-handle::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 36px;
+    border: 2px solid var(--ec-colors-border, #dce0dc);
+    border-radius: 999px;
+    background: var(--ec-colors-background, #fff);
+    transition: border-color 120ms ease;
+  }
+  .ec-splitter-handle:hover::before,
+  .ec-splitter-handle:focus-visible::before {
+    background: var(--ec-colors-accent, #116e5e);
+  }
+  .ec-splitter-handle:hover::after,
+  .ec-splitter-handle:focus-visible::after {
+    border-color: var(--ec-colors-accent, #116e5e);
+  }
+  .ec-splitter-handle:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, #116e5e);
+    outline-offset: -2px;
+    border-radius: 5px;
+  }
+  .ec-splitter-handle[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.45;
+  }
+  .ec-splitter-handle[data-orientation="vertical"] {
+    min-width: 0;
+    min-height: var(--ec-splitter-handle-size, 20px);
+    cursor: row-resize;
+  }
+  .ec-splitter-handle[data-orientation="vertical"]::before {
+    width: 100%;
+    height: 2px;
+  }
+  .ec-splitter-handle[data-orientation="vertical"]::after {
+    width: 36px;
+    height: 5px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ec-splitter-handle::before,
+    .ec-splitter-handle::after {
+      transition: none;
+    }
+  }
+}

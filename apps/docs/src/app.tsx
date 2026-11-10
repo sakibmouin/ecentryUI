@@ -19,6 +19,7 @@ import GroupDocs from "../content/components/group.mdx";
 import ScrollAreaDocs from "../content/components/scroll-area.mdx";
 import SeparatorDocs from "../content/components/separator.mdx";
 import SimpleGridDocs from "../content/components/simple-grid.mdx";
+import SplitterDocs from "../content/components/splitter.mdx";
 
 export const routes = [
   "/",
@@ -40,6 +41,7 @@ export const routes = [
   "/components/scroll-area/",
   "/components/separator/",
   "/components/simple-grid/",
+  "/components/splitter/",
 ] as const;
 
 const componentLinks = [
@@ -60,6 +62,7 @@ const componentLinks = [
   { title: "Scroll Area", href: "/components/scroll-area/" },
   { title: "Separator", href: "/components/separator/" },
   { title: "Simple Grid", href: "/components/simple-grid/" },
+  { title: "Splitter", href: "/components/splitter/" },
 ];
 
 function Home() {
@@ -288,6 +291,8 @@ export function App({ routePath }: { routePath: string }) {
               <SeparatorDocs />
             ) : route === "/components/simple-grid/" ? (
               <SimpleGridDocs />
+            ) : route === "/components/splitter/" ? (
+              <SplitterDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

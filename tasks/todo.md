@@ -169,7 +169,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/splitter/splitter.tsx`, `splitter.test.tsx`.
   - Acceptance: multi-panel resize, limits and keyboard; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/splitter/splitter.test.tsx`.
-- [ ] **T033 Splitter presentation and docs** (depends on T032).
+- [x] **T033 Splitter presentation and docs** (depends on T032).
   - Files: `packages/react/src/components/splitter/splitter.css`, `index.ts`, `apps/docs/content/components/splitter.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- splitter`.

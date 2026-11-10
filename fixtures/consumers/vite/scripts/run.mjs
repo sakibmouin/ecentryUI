@@ -115,6 +115,7 @@ try {
     "scroll-area",
     "separator",
     "simple-grid",
+    "splitter",
   ]) {
     execFileSync(
       process.execPath,
@@ -307,6 +308,13 @@ try {
       )) !== 2
     )
       throw new Error("Installed Simple Grid did not render two tracks");
+    const splitterHandle = page.getByRole("separator", {
+      name: "Resize installed panels",
+    });
+    await splitterHandle.focus();
+    await page.keyboard.press("ArrowRight");
+    if ((await splitterHandle.getAttribute("aria-valuenow")) !== "45")
+      throw new Error("Installed Splitter did not resize by keyboard");
   } finally {
     await browser.close();
     await new Promise((resolve, reject) =>

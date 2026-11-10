@@ -26,6 +26,11 @@ import { ScrollArea } from "./components/ui/scroll-area/index.js";
 import { Separator } from "./components/ui/separator/index.js";
 import { SimpleGrid } from "./components/ui/simple-grid/index.js";
 import {
+  SplitterRoot,
+  SplitterPanel,
+  SplitterHandle,
+} from "./components/ui/splitter/index.js";
+import {
   FloatingPanelRoot,
   FloatingPanelTrigger,
   FloatingPanelPortal,
@@ -150,5 +155,21 @@ createRoot(document.getElementById("root")!).render(
       <span>First card</span>
       <span>Second card</span>
     </SimpleGrid>
+    <SplitterRoot
+      panels={[
+        { id: "left", minSize: 20 },
+        { id: "right", minSize: 20 },
+      ]}
+      defaultSize={[40, 60]}
+      style={{ width: 300, height: 80 }}
+      data-testid="installed-splitter"
+    >
+      <SplitterPanel id="left">Installed left panel</SplitterPanel>
+      <SplitterHandle
+        between={["left", "right"]}
+        aria-label="Resize installed panels"
+      />
+      <SplitterPanel id="right">Installed right panel</SplitterPanel>
+    </SplitterRoot>
   </AppearanceProvider>,
 );
