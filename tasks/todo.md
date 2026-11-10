@@ -165,7 +165,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 ### Checkpoint after T031
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T032 Splitter behavior** (depends on T016).
+- [x] **T032 Splitter behavior** (depends on T016).
   - Files: `packages/react/src/components/splitter/splitter.tsx`, `splitter.test.tsx`.
   - Acceptance: multi-panel resize, limits and keyboard; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/splitter/splitter.test.tsx`.
