@@ -12,6 +12,7 @@ import { boxRegistryItem } from "../packages/react/dist/components/box/metadata.
 import { centerRegistryItem } from "../packages/react/dist/components/center/metadata.js";
 import { containerRegistryItem } from "../packages/react/dist/components/container/metadata.js";
 import { flexRegistryItem } from "../packages/react/dist/components/flex/metadata.js";
+import { floatRegistryItem } from "../packages/react/dist/components/float/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -24,6 +25,7 @@ for (const item of [
   centerRegistryItem,
   containerRegistryItem,
   flexRegistryItem,
+  floatRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

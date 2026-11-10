@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "float",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["float.css", "float.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "float.css": "f69817189d10c5b301fcaa6f5d858c05967ac201f86f6ce4a1fab5eccf9027e3",
+    "float.tsx": "04a0c19bbbe8bab71b94144681106382ba9e158bd59896b57a403270a8bc0f37",
+    "index.ts": "7dfcdfb926f723e970d88aebfac895801dc6c216fa45bd4add82a9321268ad2d",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/float/",
+  "license": "MIT"
+}

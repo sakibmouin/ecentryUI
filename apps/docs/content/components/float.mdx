@@ -1,0 +1,47 @@
+import { FloatExample } from "../../src/examples/float.tsx";
+import floatSource from "../../src/examples/float.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Float
+</div>
+<span className="section-index">LAYOUT COMPONENT</span>
+
+# Float
+
+Float anchors a badge or other small element to a container edge or center. Give its parent `position: relative` so the anchor stays with that container.
+
+## Install
+
+```sh
+ecentry add float
+```
+
+Import `Float` from the installed `components/ui/float/` directory.
+
+## Preview
+
+<ExamplePanel source={floatSource}>
+  <FloatExample />
+</ExamplePanel>
+
+## Placement and offset
+
+`placement` defaults to `top-end`. Combine `top`, `middle`, or `bottom` with `start`, `center`, or `end` for nine positions. `start` and `end` follow text direction. The badge is centered over its anchor point, so it can extend past the parent edge.
+
+Pass an object with `base`, `sm`, `md`, and `lg` values to change placement at 40rem, 48rem, and 64rem. `offset` moves on both physical axes; `offsetX` and `offsetY` override either axis. Numbers are pixels, while strings accept any CSS length. A positive X offset moves right and a positive Y offset moves down in both text directions.
+
+Use `as` for the rendered element and give meaningful indicators accessible text. Float has no fixed size and forwards refs, native HTML attributes, and ARIA attributes.
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Float API" tabIndex={0}>
+
+| Prop                           | Type                 | Purpose                         |
+| ------------------------------ | -------------------- | ------------------------------- |
+| `as`                           | React element type   | Rendered element                |
+| `placement`                    | Responsive placement | Anchor point; default `top-end` |
+| `offset`, `offsetX`, `offsetY` | CSS length or number | Physical axis adjustments       |
+| `className`, `style`           | Native React props   | Appearance and overrides        |
+
+</div>

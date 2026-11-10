@@ -979,6 +979,93 @@ footer {
   outline: 2px solid var(--ec-colors-focus, Highlight);
   outline-offset: 2px;
 }
+.float-demo {
+  display: grid;
+  gap: 24px;
+  padding: 36px;
+  background: var(--ec-colors-background, #fff);
+  color: var(--ec-colors-text, #19211c);
+}
+.float-demo-controls {
+  display: grid;
+  grid-template-columns: auto minmax(140px, 1fr) auto minmax(140px, 1fr);
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.float-demo-controls select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--ec-colors-border, #dce0dc);
+  border-radius: 7px;
+  background: var(--ec-colors-surface, #f7f9f7);
+  color: var(--ec-colors-text, #19211c);
+  font: inherit;
+}
+.float-demo-controls input {
+  width: 100%;
+  accent-color: var(--ec-colors-accent, #116e5e);
+}
+.float-demo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 44px;
+}
+.float-demo-label {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--ec-colors-accent, #116e5e);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+.float-demo-card {
+  position: relative;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  min-height: 150px;
+  border: 1px dashed var(--ec-colors-border, #dce0dc);
+  border-radius: 12px;
+  background: var(--ec-colors-surface, #f7f9f7);
+  font-size: 13px;
+}
+.float-demo-badge {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--ec-colors-accent, #116e5e);
+  color: var(--ec-colors-background, #fff);
+  font-size: 12px;
+  font-weight: 800;
+}
+.float-demo-responsive {
+  min-height: 95px;
+}
+.float-demo-responsive > span:first-child {
+  max-width: calc(100% - 40px);
+  text-align: center;
+}
+.float-demo > button {
+  justify-self: start;
+  padding: 8px 4px;
+  border: 0;
+  background: transparent;
+  color: var(--ec-colors-accent, #116e5e);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.float-demo > button:focus-visible,
+.float-demo-controls select:focus-visible,
+.float-demo-controls input:focus-visible {
+  outline: 2px solid var(--ec-colors-focus, Highlight);
+  outline-offset: 2px;
+}
 @media (max-width: 620px) {
   .absolute-demo-grid {
     grid-template-columns: 1fr;
@@ -1012,6 +1099,16 @@ footer {
   }
   .flex-demo {
     padding: 24px;
+  }
+  .float-demo {
+    padding: 24px;
+  }
+  .float-demo-controls {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .float-demo-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 }
 @media (max-width: 620px) {

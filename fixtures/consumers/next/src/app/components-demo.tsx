@@ -17,6 +17,7 @@ import { Box } from "../components/ui/box/index";
 import { Center, Circle, Square } from "../components/ui/center/index";
 import { Container } from "../components/ui/container/index";
 import { Flex, Spacer } from "../components/ui/flex/index";
+import { Float } from "../components/ui/float/index";
 
 export function ComponentsDemo() {
   return (
@@ -73,6 +74,14 @@ export function ComponentsDemo() {
         <Spacer data-testid="installed-spacer" />
         <span>Flex end</span>
       </Flex>
+      <div
+        style={{ position: "relative", width: 200, height: 100 }}
+        data-testid="float-parent"
+      >
+        <Float as="span" placement="bottom-start" data-testid="installed-float">
+          Installed float
+        </Float>
+      </div>
     </section>
   );
 }

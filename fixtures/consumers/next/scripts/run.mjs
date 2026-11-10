@@ -110,6 +110,7 @@ try {
     "center",
     "container",
     "flex",
+    "float",
   ]) {
     execFileSync(
       process.execPath,
@@ -138,7 +139,8 @@ try {
     !html.includes("Installed box") ||
     !html.includes("Centered") ||
     !html.includes("Installed container") ||
-    !html.includes("Flex start")
+    !html.includes("Flex start") ||
+    !html.includes("Installed float")
   ) {
     throw new Error("Next did not render the component into static HTML");
   }
@@ -270,6 +272,17 @@ try {
         )) !== "1"
     )
       throw new Error("Next Spacer did not grow");
+    const floatParent = await page.getByTestId("float-parent").boundingBox();
+    const float = await page.getByTestId("installed-float").boundingBox();
+    if (
+      !floatParent ||
+      !float ||
+      Math.abs(float.x + float.width / 2 - floatParent.x) > 1 ||
+      Math.abs(
+        float.y + float.height / 2 - (floatParent.y + floatParent.height),
+      ) > 1
+    )
+      throw new Error("Next Float did not anchor at bottom start");
     if (errors.length)
       throw new Error(`Next hydration errors: ${errors.join(" | ")}`);
   } finally {

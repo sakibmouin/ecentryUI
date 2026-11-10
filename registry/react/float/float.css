@@ -1,0 +1,66 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-float {
+    position: absolute;
+    box-sizing: border-box;
+    width: max-content;
+    max-width: 100%;
+    inset-block-start: var(--ec-float-block-base, 0%);
+    inset-inline-start: var(--ec-float-inline-base, 100%);
+    translate: calc(-50% + var(--ec-float-offset-x, 0px))
+      calc(-50% + var(--ec-float-offset-y, 0px));
+  }
+
+  [dir="rtl"] .ec-float,
+  .ec-float[dir="rtl"] {
+    translate: calc(50% + var(--ec-float-offset-x, 0px))
+      calc(-50% + var(--ec-float-offset-y, 0px));
+  }
+}
+
+@layer ec.variants {
+  @media (min-width: 40rem) {
+    .ec-float {
+      inset-block-start: var(
+        --ec-float-block-sm,
+        var(--ec-float-block-base, 0%)
+      );
+      inset-inline-start: var(
+        --ec-float-inline-sm,
+        var(--ec-float-inline-base, 100%)
+      );
+    }
+  }
+  @media (min-width: 48rem) {
+    .ec-float {
+      inset-block-start: var(
+        --ec-float-block-md,
+        var(--ec-float-block-sm, var(--ec-float-block-base, 0%))
+      );
+      inset-inline-start: var(
+        --ec-float-inline-md,
+        var(--ec-float-inline-sm, var(--ec-float-inline-base, 100%))
+      );
+    }
+  }
+  @media (min-width: 64rem) {
+    .ec-float {
+      inset-block-start: var(
+        --ec-float-block-lg,
+        var(
+          --ec-float-block-md,
+          var(--ec-float-block-sm, var(--ec-float-block-base, 0%))
+        )
+      );
+      inset-inline-start: var(
+        --ec-float-inline-lg,
+        var(
+          --ec-float-inline-md,
+          var(--ec-float-inline-sm, var(--ec-float-inline-base, 100%))
+        )
+      );
+    }
+  }
+}

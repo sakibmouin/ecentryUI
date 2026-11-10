@@ -108,6 +108,7 @@ try {
     "center",
     "container",
     "flex",
+    "float",
   ]) {
     execFileSync(
       process.execPath,
@@ -241,6 +242,17 @@ try {
         )) !== "1"
     )
       throw new Error("Installed Spacer did not grow");
+    const floatParent = await page.getByTestId("float-parent").boundingBox();
+    const float = await page.getByTestId("installed-float").boundingBox();
+    if (
+      !floatParent ||
+      !float ||
+      Math.abs(float.x + float.width / 2 - floatParent.x) > 1 ||
+      Math.abs(
+        float.y + float.height / 2 - (floatParent.y + floatParent.height),
+      ) > 1
+    )
+      throw new Error("Installed Float did not anchor at bottom start");
   } finally {
     await browser.close();
     await new Promise((resolve, reject) =>

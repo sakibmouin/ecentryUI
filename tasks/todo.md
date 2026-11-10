@@ -121,7 +121,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/flex/flex.tsx`, `flex.css`, `flex.test.tsx`, `index.ts`, `apps/docs/content/components/flex.mdx`.
   - Acceptance: responsive layout, intrinsic sizing and RTL; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/flex/flex.test.tsx && npm run test:e2e -- flex`.
-- [ ] **T024 Float component** (depends on T016).
+- [x] **T024 Float component** (depends on T016).
   - Files: `packages/react/src/components/float/float.tsx`, `float.css`, `float.test.tsx`, `index.ts`, `apps/docs/content/components/float.mdx`.
   - Acceptance: responsive layout, intrinsic sizing and RTL; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/float/float.test.tsx && npm run test:e2e -- float`.

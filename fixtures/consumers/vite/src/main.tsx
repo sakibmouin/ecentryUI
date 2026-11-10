@@ -19,6 +19,7 @@ import { Box } from "./components/ui/box/index.js";
 import { Center, Circle, Square } from "./components/ui/center/index.js";
 import { Container } from "./components/ui/container/index.js";
 import { Flex, Spacer } from "./components/ui/flex/index.js";
+import { Float } from "./components/ui/float/index.js";
 
 const theme = createTheme({
   tokens: { "colors.ink": "#142d24" },
@@ -82,5 +83,13 @@ createRoot(document.getElementById("root")!).render(
       <Spacer data-testid="installed-spacer" />
       <span>Flex end</span>
     </Flex>
+    <div
+      style={{ position: "relative", width: 200, height: 100 }}
+      data-testid="float-parent"
+    >
+      <Float as="span" placement="bottom-start" data-testid="installed-float">
+        Installed float
+      </Float>
+    </div>
   </AppearanceProvider>,
 );
