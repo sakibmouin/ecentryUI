@@ -1,0 +1,80 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-stack {
+    box-sizing: border-box;
+    display: flex;
+    min-width: 0;
+    flex-direction: var(--ec-stack-direction-base, column);
+    align-items: var(--ec-stack-align-base);
+    justify-content: var(--ec-stack-justify-base);
+    gap: var(--ec-stack-gap-base, 8px);
+  }
+}
+
+@layer ec.variants {
+  @media (min-width: 40rem) {
+    .ec-stack {
+      flex-direction: var(
+        --ec-stack-direction-sm,
+        var(--ec-stack-direction-base, column)
+      );
+      align-items: var(--ec-stack-align-sm, var(--ec-stack-align-base));
+      justify-content: var(--ec-stack-justify-sm, var(--ec-stack-justify-base));
+      gap: var(--ec-stack-gap-sm, var(--ec-stack-gap-base, 8px));
+    }
+  }
+  @media (min-width: 48rem) {
+    .ec-stack {
+      flex-direction: var(
+        --ec-stack-direction-md,
+        var(--ec-stack-direction-sm, var(--ec-stack-direction-base, column))
+      );
+      align-items: var(
+        --ec-stack-align-md,
+        var(--ec-stack-align-sm, var(--ec-stack-align-base))
+      );
+      justify-content: var(
+        --ec-stack-justify-md,
+        var(--ec-stack-justify-sm, var(--ec-stack-justify-base))
+      );
+      gap: var(
+        --ec-stack-gap-md,
+        var(--ec-stack-gap-sm, var(--ec-stack-gap-base, 8px))
+      );
+    }
+  }
+  @media (min-width: 64rem) {
+    .ec-stack {
+      flex-direction: var(
+        --ec-stack-direction-lg,
+        var(
+          --ec-stack-direction-md,
+          var(--ec-stack-direction-sm, var(--ec-stack-direction-base, column))
+        )
+      );
+      align-items: var(
+        --ec-stack-align-lg,
+        var(
+          --ec-stack-align-md,
+          var(--ec-stack-align-sm, var(--ec-stack-align-base))
+        )
+      );
+      justify-content: var(
+        --ec-stack-justify-lg,
+        var(
+          --ec-stack-justify-md,
+          var(--ec-stack-justify-sm, var(--ec-stack-justify-base))
+        )
+      );
+      gap: var(
+        --ec-stack-gap-lg,
+        var(
+          --ec-stack-gap-md,
+          var(--ec-stack-gap-sm, var(--ec-stack-gap-base, 8px))
+        )
+      );
+    }
+  }
+}

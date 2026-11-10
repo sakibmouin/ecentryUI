@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "stack",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "stack.css", "stack.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "27f4dde2d60b0aae3fc53bcee7cf1e389f11263ad60daee7607cdac9e977a6b7",
+    "stack.css": "5a3697835e062771c5210faf7d520c8252377231cafa2b1c3ddfcaddb12318ca",
+    "stack.tsx": "1ac2925926716c5a3e165efb643a475e512b331159e772a25951ce557d1f3a82",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/stack/",
+  "license": "MIT"
+}

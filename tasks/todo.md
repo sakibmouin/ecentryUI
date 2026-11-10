@@ -173,13 +173,13 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/splitter/splitter.css`, `index.ts`, `apps/docs/content/components/splitter.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- splitter`.
-- [ ] **T034 Stack component** (depends on T016).
+- [x] **T034 Stack component** (depends on T016).
   - Files: `packages/react/src/components/stack/stack.tsx`, `stack.css`, `stack.test.tsx`, `index.ts`, `apps/docs/content/components/stack.mdx`.
   - Acceptance: responsive layout, intrinsic sizing and RTL; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/stack/stack.test.tsx && npm run test:e2e -- stack`.
 
 ### Checkpoint after T034
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T035 Wrap component** (depends on T016).
   - Files: `packages/react/src/components/wrap/wrap.tsx`, `wrap.css`, `wrap.test.tsx`, `index.ts`, `apps/docs/content/components/wrap.mdx`.

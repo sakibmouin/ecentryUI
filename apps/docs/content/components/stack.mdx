@@ -1,0 +1,52 @@
+import { StackExample } from "../../src/examples/stack.tsx";
+import stackSource from "../../src/examples/stack.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Stack
+</div>
+<span className="section-index">LAYOUT COMPONENT</span>
+
+# Stack
+
+Stack arranges related content along one axis with responsive direction,
+alignment, justification, and spacing controls.
+
+## Install
+
+```sh
+ecentry add stack
+```
+
+Import `Stack` from the installed `components/ui/stack/` directory.
+
+## Preview
+
+<ExamplePanel source={stackSource}>
+  <StackExample />
+</ExamplePanel>
+
+## Responsive layout
+
+`direction`, `align`, `justify`, and `gap` accept a single value or an object
+with `base`, `sm`, `md`, and `lg` values. Breakpoints start at 40rem, 48rem,
+and 64rem. Numeric gaps are pixels; strings use any CSS length or token
+variable. Use `as` for a semantic wrapper. RTL changes visual direction while
+preserving DOM order.
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Stack API" tabIndex={0}>
+
+| Prop                 | Type                      | Purpose                            |
+| -------------------- | ------------------------- | ---------------------------------- |
+| `as`                 | element type              | Semantic host element              |
+| `direction`          | responsive flex direction | Main axis                          |
+| `align`, `justify`   | responsive flex values    | Cross-axis and main-axis alignment |
+| `gap`                | responsive CSS length     | Space between children             |
+| `className`, `style` | native React props        | Custom layout and overrides        |
+
+</div>
+
+Stack forwards refs and native HTML and ARIA attributes. Child DOM order is
+unchanged in RTL layouts.

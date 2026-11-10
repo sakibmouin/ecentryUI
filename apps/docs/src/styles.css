@@ -1878,3 +1878,72 @@ footer {
     grid-template-columns: auto minmax(0, 1fr);
   }
 }
+.stack-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px;
+  border: 1px solid #dfe8e1;
+  border-radius: 12px;
+  background: #f8fbf8;
+}
+.stack-demo-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.stack-demo-heading strong {
+  font-family: Manrope, sans-serif;
+  font-size: 19px;
+}
+.stack-demo-heading p {
+  margin: 0;
+  color: #526459;
+  font-size: 13px;
+}
+.stack-demo-label {
+  color: #12715d;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+.stack-demo-items {
+  padding: 16px;
+  border: 1px solid #dfe8e1;
+  border-radius: 8px;
+  background: white;
+}
+.stack-demo-card {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+  flex-direction: column;
+  gap: 5px;
+  padding: 14px;
+  border: 1px solid #dfe8e1;
+  border-radius: 7px;
+  background: #f8fbf8;
+}
+.stack-demo-card span {
+  color: #526459;
+  font-size: 12px;
+}
+.stack-demo-rtl {
+  padding: 12px;
+  border-top: 1px solid #dfe8e1;
+  color: #526459;
+  font-size: 12px;
+}
+.stack-demo > button {
+  align-self: flex-start;
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: #12715d;
+  color: white;
+  cursor: pointer;
+}
+.stack-demo > button:focus-visible {
+  outline: 3px solid #9bd6c3;
+  outline-offset: 2px;
+}

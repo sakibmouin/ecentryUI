@@ -20,6 +20,7 @@ import { scrollAreaRegistryItem } from "../packages/react/dist/components/scroll
 import { separatorRegistryItem } from "../packages/react/dist/components/separator/metadata.js";
 import { simpleGridRegistryItem } from "../packages/react/dist/components/simple-grid/metadata.js";
 import { splitterRegistryItem } from "../packages/react/dist/components/splitter/metadata.js";
+import { stackRegistryItem } from "../packages/react/dist/components/stack/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -40,6 +41,7 @@ for (const item of [
   separatorRegistryItem,
   simpleGridRegistryItem,
   splitterRegistryItem,
+  stackRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

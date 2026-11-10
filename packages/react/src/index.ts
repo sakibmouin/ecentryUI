@@ -30,6 +30,7 @@ import "./components/scroll-area/scroll-area.css";
 import "./components/separator/separator.css";
 import "./components/simple-grid/simple-grid.css";
 import "./components/splitter/splitter.css";
+import "./components/stack/stack.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -51,6 +52,11 @@ export {
   SplitterPanel,
   SplitterHandle,
 } from "./components/splitter/splitter.js";
+export { Stack } from "./components/stack/stack.js";
+export type {
+  StackProps,
+  StackResponsiveValue,
+} from "./components/stack/stack.js";
 export type {
   SplitterRootProps,
   SplitterPanelProps,
