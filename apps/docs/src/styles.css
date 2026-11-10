@@ -2019,3 +2019,21 @@ footer {
   color: white;
   cursor: pointer;
 }
+.code-block-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid #dfe8e1;
+  border-radius: 12px;
+  background: #f8fbf8;
+}
+.code-block-demo > button {
+  align-self: flex-start;
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: #12715d;
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+import { CodeBlockExample } from "../../src/examples/code-block.tsx";
+import codeBlockSource from "../../src/examples/code-block.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Code Block
+</div>
+<span className="section-index">TYPOGRAPHY COMPONENT</span>
+
+# Code Block
+
+Code Block presents safe text snippets with copy and optional collapse controls.
+Long lines wrap or scroll without expanding the surrounding layout.
+
+## Install
+
+```sh
+ecentry add code-block
+```
+
+## Preview
+
+<ExamplePanel source={codeBlockSource}>
+  <CodeBlockExample />
+</ExamplePanel>
+
+## API
+
+<div className="api-scroll" role="region" aria-label="Code Block API" tabIndex={0}>
+
+| Prop                                 | Type      | Purpose                             |
+| ------------------------------------ | --------- | ----------------------------------- |
+| `children`                           | string    | Safe source text to render          |
+| `copyable`                           | boolean   | Show the copy control               |
+| `collapsible`, `open`, `defaultOpen` | boolean   | Configure visibility behavior       |
+| `onCopy`, `onOpenChange`             | callbacks | Observe copy and visibility changes |
+
+</div>
+
+Code Block renders children as text, never as HTML. Copy and collapse controls
+are native buttons and remain keyboard accessible.

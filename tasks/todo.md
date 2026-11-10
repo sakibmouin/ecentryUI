@@ -204,7 +204,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/code-block/code-block.tsx`, `code-block.test.tsx`.
   - Acceptance: highlighting, copy, collapse and safe content; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/code-block/code-block.test.tsx`.
-- [ ] **T039 Code Block presentation and docs** (depends on T038).
+- [x] **T039 Code Block presentation and docs** (depends on T038).
   - Files: `packages/react/src/components/code-block/code-block.css`, `index.ts`, `apps/docs/content/components/code-block.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- code-block`.

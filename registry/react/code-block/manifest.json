@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "code-block",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["code-block.css", "code-block.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "code-block.css": "1f3cac152a09ae35f1250f94ec50071df8d625cf93ed5480a33cf9f00a169591",
+    "code-block.tsx": "a323222e76f59e1482de8b108acb11e3b65cf3ed5df8a5c29dd591329de6f7ff",
+    "index.ts": "da21d6e787622a77a7d4370b444f37df32939d18ccb890c8b07abd8b55b013f3",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/code-block/",
+  "license": "MIT"
+}

@@ -34,6 +34,7 @@ import "./components/stack/stack.css";
 import "./components/wrap/wrap.css";
 import "./components/blockquote/blockquote.css";
 import "./components/code/code.css";
+import "./components/code-block/code-block.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -66,6 +67,8 @@ export { Blockquote } from "./components/blockquote/blockquote.js";
 export type { BlockquoteProps } from "./components/blockquote/blockquote.js";
 export { Code } from "./components/code/code.js";
 export type { CodeProps } from "./components/code/code.js";
+export { CodeBlock } from "./components/code-block/code-block.js";
+export type { CodeBlockProps } from "./components/code-block/code-block.js";
 export type {
   SplitterRootProps,
   SplitterPanelProps,

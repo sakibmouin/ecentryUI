@@ -1,0 +1,53 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-code-block {
+    box-sizing: border-box;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #d5e3d8;
+    border-radius: 0.5rem;
+    background: #f1f7f2;
+    color: #214b3d;
+  }
+
+  .ec-code-block__toolbar {
+    display: flex;
+    min-height: 2.5rem;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-block-end: 1px solid #d5e3d8;
+  }
+
+  .ec-code-block__toolbar button {
+    border: 1px solid #b9d0bf;
+    border-radius: 0.3rem;
+    padding: 0.35rem 0.6rem;
+    background: white;
+    color: #214b3d;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.78rem;
+  }
+
+  .ec-code-block__toolbar button:focus-visible {
+    outline: 3px solid #9bd6c3;
+    outline-offset: 2px;
+  }
+
+  .ec-code-block pre {
+    box-sizing: border-box;
+    margin: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 1rem;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+}
