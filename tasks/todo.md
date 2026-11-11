@@ -343,14 +343,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/checkbox/checkbox.tsx`, `checkbox.css`, `checkbox.test.tsx`, `index.ts`, `apps/docs/content/components/checkbox.mdx`.
   - Acceptance: label, validation, form reset and states; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/checkbox/checkbox.test.tsx && npm run test:e2e -- checkbox`.
-- [ ] **T061 Checkbox Card component** (depends on T016).
+- [x] **T061 Checkbox Card component** (depends on T016).
   - Files: `packages/react/src/components/checkbox-card/checkbox-card.tsx`, `checkbox-card.css`, `checkbox-card.test.tsx`, `index.ts`, `apps/docs/content/components/checkbox-card.mdx`.
   - Acceptance: label, validation, form reset and states; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/checkbox-card/checkbox-card.test.tsx && npm run test:e2e -- checkbox-card`.
 
 ### Checkpoint after T061
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T062 Color Picker behavior** (depends on T016).
   - Files: `packages/react/src/components/color-picker/color-picker.tsx`, `color-picker.test.tsx`.

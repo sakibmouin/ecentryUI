@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "checkbox-card",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": [
+    "checkbox-card.css",
+    "checkbox-card.tsx",
+    "index.ts",
+    "styles.d.ts"
+  ],
+  "hashes": {
+    "checkbox-card.css": "94b414568b2d60d72f64d47512b0e84309c80f6136142f68db3fec9e5221ec34",
+    "checkbox-card.tsx": "5f2e7d3164ca7d77ae1b79032666e884ce4b352792cb8e0c5a8ce3b03009bff9",
+    "index.ts": "51330519858a3ccaa10704cd0d3430032e354ff0934baec6bf8538717cd652bd",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/checkbox-card/",
+  "license": "MIT"
+}

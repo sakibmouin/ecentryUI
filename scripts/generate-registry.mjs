@@ -43,6 +43,7 @@ import { calendarRegistryItem } from "../packages/react/dist/components/calendar
 import { dateInputRegistryItem } from "../packages/react/dist/components/date-input/metadata.js";
 import { datePickerRegistryItem } from "../packages/react/dist/components/date-picker/metadata.js";
 import { checkboxRegistryItem } from "../packages/react/dist/components/checkbox/metadata.js";
+import { checkboxCardRegistryItem } from "../packages/react/dist/components/checkbox-card/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -86,6 +87,7 @@ for (const item of [
   dateInputRegistryItem,
   datePickerRegistryItem,
   checkboxRegistryItem,
+  checkboxCardRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(
