@@ -323,7 +323,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/date-input/date-input.tsx`, `date-input.css`, `date-input.test.tsx`, `index.ts`, `apps/docs/content/components/date-input.mdx`.
   - Acceptance: activation, disabled/loading and date semantics; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/date-input/date-input.test.tsx && npm run test:e2e -- date-input`.
-- [ ] **T058 Date Picker behavior** (depends on T016).
+- [x] **T058 Date Picker behavior** (depends on T016).
   - Files: `packages/react/src/components/date-picker/date-picker.tsx`, `date-picker.test.tsx`.
   - Acceptance: calendar popup, range, locale and validation; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/date-picker/date-picker.test.tsx`.

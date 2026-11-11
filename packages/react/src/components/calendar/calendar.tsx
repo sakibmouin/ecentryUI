@@ -15,11 +15,11 @@ export interface CalendarProps {
   locale?: string;
   weekStartsOn?: number;
   month?: string;
-  defaultMonth?: string;
+  defaultMonth?: string | undefined;
   onMonthChange?: (month: string) => void;
-  minDate?: string;
-  maxDate?: string;
-  isDateUnavailable?: (date: string) => boolean;
+  minDate?: string | undefined;
+  maxDate?: string | undefined;
+  isDateUnavailable?: ((date: string) => boolean) | undefined;
   disabled?: boolean;
   readOnly?: boolean;
   label?: string;
