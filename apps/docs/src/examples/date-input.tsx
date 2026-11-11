@@ -6,7 +6,11 @@ export function DateInputExample() {
   const [dark, setDark] = useState(false);
   return (
     <AppearanceProvider appearance={dark ? "dark" : "light"}>
-      <div className="code-demo" role="region" aria-label="Date input example">
+      <div
+        className="code-demo date-input-demo"
+        role="region"
+        aria-label="Date input example"
+      >
         <form aria-label="Travel dates">
           <DateInput
             label="Departure date"

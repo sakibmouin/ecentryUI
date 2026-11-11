@@ -6,7 +6,11 @@ export function CheckboxExample() {
   const [dark, setDark] = useState(false);
   return (
     <AppearanceProvider appearance={dark ? "dark" : "light"}>
-      <div className="code-demo" role="region" aria-label="Checkbox example">
+      <div
+        className="code-demo checkbox-demo"
+        role="region"
+        aria-label="Checkbox example"
+      >
         <form aria-label="Preferences">
           <Checkbox
             label="Email updates"

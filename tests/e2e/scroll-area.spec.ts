@@ -22,8 +22,15 @@ test("Scroll Area handles vertical, horizontal, two-axis, and RTL scrolling", as
   await vertical.focus();
   await page.keyboard.press("End");
   await expect
-    .poll(() => vertical.evaluate((element) => element.scrollTop))
-    .toBeGreaterThan(0);
+    .poll(() =>
+      vertical.evaluate(
+        (element) =>
+          Math.abs(
+            element.scrollTop - (element.scrollHeight - element.clientHeight),
+          ) < 1,
+      ),
+    )
+    .toBe(true);
   await page.getByRole("button", { name: "Scroll to top" }).click();
   await expect
     .poll(() => vertical.evaluate((element) => element.scrollTop))

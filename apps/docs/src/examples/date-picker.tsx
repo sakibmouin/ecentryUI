@@ -6,7 +6,11 @@ export function DatePickerExample() {
   const [dark, setDark] = useState(false);
   return (
     <AppearanceProvider appearance={dark ? "dark" : "light"}>
-      <div className="code-demo" role="region" aria-label="Date picker example">
+      <div
+        className="code-demo date-picker-demo"
+        role="region"
+        aria-label="Date picker example"
+      >
         <form aria-label="Book trip">
           <DatePicker
             label="Departure"
