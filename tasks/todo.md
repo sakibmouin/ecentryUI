@@ -352,7 +352,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T062 Color Picker behavior** (depends on T016).
+- [x] **T062 Color Picker behavior** (depends on T016).
   - Files: `packages/react/src/components/color-picker/color-picker.tsx`, `color-picker.test.tsx`.
   - Acceptance: color channels, swatches, keyboard and alpha; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/color-picker/color-picker.test.tsx`.
