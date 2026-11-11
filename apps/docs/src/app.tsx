@@ -37,6 +37,7 @@ import ProseDocs from "../content/components/prose.mdx";
 import TextDocs from "../content/components/text.mdx";
 import CloseButtonDocs from "../content/components/close-button.mdx";
 import IconButtonDocs from "../content/components/icon-button.mdx";
+import DownloadTriggerDocs from "../content/components/download-trigger.mdx";
 
 const RichTextEditorDocs = lazy(
   () => import("../content/components/rich-text-editor.mdx"),
@@ -81,6 +82,7 @@ export const routes = [
   "/components/text/",
   "/components/close-button/",
   "/components/icon-button/",
+  "/components/download-trigger/",
 ] as const;
 
 const componentLinks = [
@@ -120,6 +122,7 @@ const componentLinks = [
   { title: "Text", href: "/components/text/" },
   { title: "Close Button", href: "/components/close-button/" },
   { title: "Icon Button", href: "/components/icon-button/" },
+  { title: "Download Trigger", href: "/components/download-trigger/" },
 ];
 
 function Home() {
@@ -388,6 +391,8 @@ export function App({ routePath }: { routePath: string }) {
               <CloseButtonDocs />
             ) : route === "/components/icon-button/" ? (
               <IconButtonDocs />
+            ) : route === "/components/download-trigger/" ? (
+              <DownloadTriggerDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

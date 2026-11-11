@@ -1,0 +1,62 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-download-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.5rem;
+    padding: 0 1rem;
+    border: 1px solid var(--ec-colors-accent, #116e5e);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-accent, #116e5e);
+    color: var(--ec-colors-background, white);
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .ec-download-trigger:hover:not([aria-disabled="true"]) {
+    background: var(--ec-colors-accent-hover, #0d584b);
+  }
+  .ec-download-trigger[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-download-trigger__spinner {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid currentColor;
+    border-inline-end-color: transparent;
+    border-radius: 50%;
+    animation: ec-download-spin 0.8s linear infinite;
+  }
+  @keyframes ec-download-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+@layer ec.utilities {
+  .ec-download-trigger:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ec-download-trigger__spinner {
+      animation: none;
+    }
+  }
+  @media (forced-colors: active) {
+    .ec-download-trigger {
+      border-color: LinkText;
+      color: LinkText;
+      background: Canvas;
+    }
+    .ec-download-trigger[aria-disabled="true"] {
+      color: GrayText;
+      opacity: 1;
+    }
+  }
+}

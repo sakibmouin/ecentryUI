@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "download-trigger",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": [
+    "download-trigger.css",
+    "download-trigger.tsx",
+    "index.ts",
+    "styles.d.ts"
+  ],
+  "hashes": {
+    "download-trigger.css": "ddffc355688098d145acd5483e788c1f569d7cafba1413d134dbb14c54c4f892",
+    "download-trigger.tsx": "5b7808ef8c99f1e5efb84aeb75c694619e241bc57d5dd4f12e1b5375bcf4ccf8",
+    "index.ts": "99d2398b3f1748fabf4d3171c4d421a2cc7d254a98c8a2f63494ba8bd208488e",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.accent.hover",
+    "colors.background",
+    "colors.focus",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/download-trigger/",
+  "license": "MIT"
+}

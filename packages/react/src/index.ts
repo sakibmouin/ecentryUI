@@ -47,6 +47,7 @@ import "./components/prose/prose.css";
 import "./components/text/text.css";
 import "./components/close-button/close-button.css";
 import "./components/icon-button/icon-button.css";
+import "./components/download-trigger/download-trigger.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -111,6 +112,8 @@ export { CloseButton } from "./components/close-button/close-button.js";
 export type { CloseButtonProps } from "./components/close-button/close-button.js";
 export { IconButton } from "./components/icon-button/icon-button.js";
 export type { IconButtonProps } from "./components/icon-button/icon-button.js";
+export { DownloadTrigger } from "./components/download-trigger/download-trigger.js";
+export type { DownloadTriggerProps } from "./components/download-trigger/download-trigger.js";
 export type {
   SplitterRootProps,
   SplitterPanelProps,

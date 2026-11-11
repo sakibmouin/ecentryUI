@@ -1,0 +1,28 @@
+import { DownloadTriggerExample } from "../../src/examples/download-trigger.tsx";
+import downloadSource from "../../src/examples/download-trigger.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Download Trigger
+</div>
+<span className="section-index">ACTION COMPONENT</span>
+
+# Download Trigger
+
+Download Trigger renders a real link with a `download` attribute. Provide a same-origin URL, blob URL, or data URL in `href`, and an optional filename. Browser download behavior for cross-origin URLs depends on the server's response headers.
+
+## Install
+
+```sh
+ecentry add download-trigger
+```
+
+## Preview
+
+<ExamplePanel source={downloadSource}>
+  <DownloadTriggerExample />
+</ExamplePanel>
+
+## API
+
+`href` is required. `filename` sets the `download` attribute. `disabled` and `loading` remove navigation and keyboard focus; loading also sets `aria-busy`. Native link attributes and refs pass through. Enter activates the native link, and Space also activates it.
