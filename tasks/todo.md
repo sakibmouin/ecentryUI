@@ -306,7 +306,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/download-trigger/download-trigger.tsx`, `download-trigger.css`, `download-trigger.test.tsx`, `index.ts`, `apps/docs/content/components/download-trigger.mdx`.
   - Acceptance: activation, disabled/loading and date semantics; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/download-trigger/download-trigger.test.tsx && npm run test:e2e -- download-trigger`.
-- [ ] **T055 Calendar behavior** (depends on T016).
+- [x] **T055 Calendar behavior** (depends on T016).
   - Files: `packages/react/src/components/calendar/calendar.tsx`, `calendar.test.tsx`.
   - Acceptance: date, range and multiple selection; locale and unavailable dates; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/calendar/calendar.test.tsx`.
