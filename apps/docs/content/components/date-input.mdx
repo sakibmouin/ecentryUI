@@ -1,0 +1,28 @@
+import { DateInputExample } from "../../src/examples/date-input.tsx";
+import dateInputSource from "../../src/examples/date-input.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Date Input
+</div>
+<span className="section-index">DATE COMPONENT</span>
+
+# Date Input
+
+Date Input wraps the browser's native date field with a label, help text, and error text. Values use ISO `YYYY-MM-DD` strings. Native `min`, `max`, `required`, form submission, and reset behavior remain available.
+
+## Install
+
+```sh
+ecentry add date-input
+```
+
+## Preview
+
+<ExamplePanel source={dateInputSource}>
+  <DateInputExample />
+</ExamplePanel>
+
+## API
+
+`label` is required. `description` and `error` are connected through `aria-describedby`; an error also sets `aria-invalid`. `disabled`, `readOnly`, and `loading` follow native input behavior, with loading temporarily disabling the field. All other native date input props, including `value`, `defaultValue`, `onChange`, `name`, and refs, pass through.

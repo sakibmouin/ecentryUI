@@ -319,7 +319,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/calendar/calendar.css`, `index.ts`, `apps/docs/content/components/calendar.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- calendar`.
-- [ ] **T057 Date Input component** (depends on T016).
+- [x] **T057 Date Input component** (depends on T016).
   - Files: `packages/react/src/components/date-input/date-input.tsx`, `date-input.css`, `date-input.test.tsx`, `index.ts`, `apps/docs/content/components/date-input.mdx`.
   - Acceptance: activation, disabled/loading and date semantics; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/date-input/date-input.test.tsx && npm run test:e2e -- date-input`.

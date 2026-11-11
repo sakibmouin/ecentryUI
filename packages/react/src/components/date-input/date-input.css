@@ -1,0 +1,61 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-date-input {
+    display: grid;
+    gap: 0.35rem;
+    min-width: 0;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-date-input label {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .ec-date-input input {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 2.5rem;
+    padding: 0 0.75rem;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, white);
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-date-input input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-date-input input:read-only:not(:disabled) {
+    background: var(--ec-colors-surface, #f1f7f2);
+  }
+  .ec-date-input input[aria-invalid="true"] {
+    border-color: var(--ec-colors-danger, #c43843);
+  }
+  .ec-date-input__description {
+    color: var(--ec-colors-text-muted, #59635b);
+    font-size: 0.8rem;
+  }
+  .ec-date-input__error {
+    color: var(--ec-colors-danger, #c43843);
+    font-size: 0.8rem;
+  }
+}
+@layer ec.utilities {
+  .ec-date-input input:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-date-input input {
+      border-color: FieldText;
+      background: Field;
+      color: FieldText;
+    }
+    .ec-date-input input:disabled {
+      color: GrayText;
+      opacity: 1;
+    }
+  }
+}

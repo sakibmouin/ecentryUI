@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "date-input",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["date-input.css", "date-input.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "date-input.css": "658992a309458f7b7b4e4ba5c910da1b9e5248b6858852a82f6eeabd74a687de",
+    "date-input.tsx": "2cbac978d9c39a776492a774bcc4af4e2da30fba98d0ff78f21375c1e165e31a",
+    "index.ts": "a628338041cc7e6e39851582ae2ec0b36a1cfadc83e3c37c2be8fbb8a14738f4",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.surface",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/date-input/",
+  "license": "MIT"
+}

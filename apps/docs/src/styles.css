@@ -2006,9 +2006,17 @@ footer {
   border-radius: 12px;
   background: #f8fbf8;
 }
+[data-ec-theme="dark"] .code-demo {
+  border-color: var(--ec-colors-border, #414a45);
+  background: var(--ec-colors-surface, #19211c);
+  color: var(--ec-colors-text, white);
+}
 .code-demo > p {
   margin: 0;
   color: #29453a;
+}
+[data-ec-theme="dark"] .code-demo > p {
+  color: var(--ec-colors-text, white);
 }
 .code-demo > button {
   align-self: flex-start;
