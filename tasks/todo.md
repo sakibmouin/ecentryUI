@@ -15,6 +15,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/foundations`.
 
 ### Checkpoint after T03
+
 - [x] Unit tests, typecheck and workspace build pass.
 
 - [x] **T04 Implement CSS variables and style layers** (depends on T03).
@@ -28,6 +29,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/foundations && npm run test:e2e -- foundations`.
 
 ### Checkpoint after T06
+
 - [x] Foundations tests, appearance browser flow and accessibility checks pass.
 
 - [x] **T07 Define React component contract and primitive gate** (depends on T05,T06).
@@ -41,6 +43,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/cli && npm run registry:validate`.
 
 ### Checkpoint after T09
+
 - [x] Registry validation and CLI fixture install pass.
 
 - [x] **T10 Build documentation shell and example harness** (depends on T02,T07).
@@ -54,8 +57,8 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm run test:consumer -- next`.
 
 ### Checkpoint after T12
-- [x] Vite and Next.js consumer fixtures build cleanly.
 
+- [x] Vite and Next.js consumer fixtures build cleanly.
 
 ## First complete slices
 
@@ -77,11 +80,11 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm run registry:validate && npm run test:e2e -- dialog`.
 
 ### Checkpoint: first slices
+
 - [x] Button, Input and Dialog install and render in Vite and Next.js; themes, keyboard flow, SSR and docs build pass.
 - [x] Run `npm run build && npm run typecheck && npm run lint && npm test -- --run && npm run registry:validate && npm run build:docs`.
 
 ## Remaining catalog waves
-
 
 ## Layout
 
@@ -99,6 +102,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/bleed/bleed.test.tsx && npm run test:e2e -- bleed`.
 
 ### Checkpoint after T019
+
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [x] **T020 Box component** (depends on T016).
@@ -115,6 +119,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/container/container.test.tsx && npm run test:e2e -- container`.
 
 ### Checkpoint after T022
+
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [x] **T023 Flex component** (depends on T016).
@@ -131,6 +136,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/floating-panel/floating-panel.test.tsx`.
 
 ### Checkpoint after T025
+
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [x] **T026 Floating Panel presentation and docs** (depends on T025).
@@ -147,6 +153,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/group/group.test.tsx && npm run test:e2e -- group`.
 
 ### Checkpoint after T028
+
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [x] **T029 Scroll Area component** (depends on T016).
@@ -163,6 +170,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/simple-grid/simple-grid.test.tsx && npm run test:e2e -- simple-grid`.
 
 ### Checkpoint after T031
+
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [x] **T032 Splitter behavior** (depends on T016).
@@ -179,6 +187,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/stack/stack.test.tsx && npm run test:e2e -- stack`.
 
 ### Checkpoint after T034
+
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [x] **T035 Wrap component** (depends on T016).
@@ -198,6 +207,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/code/code.test.tsx && npm run test:e2e -- code`.
 
 ### Checkpoint after T037
+
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [x] **T038 Code Block behavior** (depends on T016).
@@ -214,6 +224,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/em/em.test.tsx && npm run test:e2e -- em`.
 
 ### Checkpoint after T040
+
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [x] **T041 Heading component** (depends on T016).
@@ -230,6 +241,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/kbd/kbd.test.tsx && npm run test:e2e -- kbd`.
 
 ### Checkpoint after T043
+
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [x] **T044 Link component** (depends on T016).
@@ -246,6 +258,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/list/list.test.tsx && npm run test:e2e -- list`.
 
 ### Checkpoint after T046
+
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [x] **T047 Mark component** (depends on T016).
@@ -256,12 +269,13 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/prose/prose.tsx`, `prose.css`, `prose.test.tsx`, `index.ts`, `apps/docs/content/components/prose.mdx`.
   - Acceptance: semantic text, wrapping and typography; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/prose/prose.test.tsx && npm run test:e2e -- prose`.
-- [ ] **T049 Rich Text Editor behavior** (depends on T016).
+- [x] **T049 Rich Text Editor behavior** (depends on T016).
   - Files: `packages/react/src/components/rich-text-editor/rich-text-editor.tsx`, `rich-text-editor.test.tsx`.
   - Acceptance: toolbar, content safety, formatting and autosave; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/rich-text-editor/rich-text-editor.test.tsx`.
 
 ### Checkpoint after T049
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T050 Rich Text Editor presentation and docs** (depends on T049).
@@ -281,6 +295,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/close-button/close-button.test.tsx && npm run test:e2e -- close-button`.
 
 ### Checkpoint after T052
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T053 Icon Button component** (depends on T016).
@@ -297,6 +312,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/calendar/calendar.test.tsx`.
 
 ### Checkpoint after T055
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T056 Calendar presentation and docs** (depends on T055).
@@ -313,6 +329,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/date-picker/date-picker.test.tsx`.
 
 ### Checkpoint after T058
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T059 Date Picker presentation and docs** (depends on T058).
@@ -332,6 +349,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/checkbox-card/checkbox-card.test.tsx && npm run test:e2e -- checkbox-card`.
 
 ### Checkpoint after T061
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T062 Color Picker behavior** (depends on T016).
@@ -348,6 +366,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/color-swatch/color-swatch.test.tsx && npm run test:e2e -- color-swatch`.
 
 ### Checkpoint after T064
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T065 Editable behavior** (depends on T016).
@@ -364,6 +383,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/field/field.test.tsx && npm run test:e2e -- field`.
 
 ### Checkpoint after T067
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T068 Fieldset component** (depends on T016).
@@ -380,6 +400,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm run registry:validate && npm run test:e2e -- file-upload`.
 
 ### Checkpoint after T070
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T071 Number Input behavior** (depends on T016).
@@ -396,6 +417,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/password-input/password-input.test.tsx && npm run test:e2e -- password-input`.
 
 ### Checkpoint after T073
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T074 Pin Input behavior** (depends on T016).
@@ -412,6 +434,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/radio/radio.test.tsx && npm run test:e2e -- radio`.
 
 ### Checkpoint after T076
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T077 Radio Card component** (depends on T016).
@@ -428,6 +451,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm run registry:validate && npm run test:e2e -- rating`.
 
 ### Checkpoint after T079
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T080 Segmented Control component** (depends on T016).
@@ -444,6 +468,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/slider/slider.test.tsx`.
 
 ### Checkpoint after T082
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T083 Slider presentation and docs** (depends on T082).
@@ -460,6 +485,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/textarea/textarea.test.tsx && npm run test:e2e -- textarea`.
 
 ### Checkpoint after T085
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T086 Tags Input behavior** (depends on T016).
@@ -479,6 +505,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/combobox/combobox.test.tsx`.
 
 ### Checkpoint after T088
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T089 Combobox presentation and docs** (depends on T088).
@@ -495,6 +522,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm run registry:validate && npm run test:e2e -- command`.
 
 ### Checkpoint after T091
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T092 Listbox behavior** (depends on T016).
@@ -511,6 +539,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/select/select.test.tsx`.
 
 ### Checkpoint after T094
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T095 Select presentation and docs** (depends on T094).
@@ -527,6 +556,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm run registry:validate && npm run test:e2e -- tree-view`.
 
 ### Checkpoint after T097
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T098 Action Bar component** (depends on T016).
@@ -543,6 +573,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm run registry:validate && npm run test:e2e -- drawer`.
 
 ### Checkpoint after T100
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T101 Hover Card component** (depends on T016).
@@ -559,6 +590,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm run registry:validate && npm run test:e2e -- menu`.
 
 ### Checkpoint after T103
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T104 Overlay Manager component** (depends on T016).
@@ -575,6 +607,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm run registry:validate && npm run test:e2e -- popover`.
 
 ### Checkpoint after T106
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T107 Toast behavior** (depends on T016).
@@ -591,6 +624,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/toggle-tip/toggle-tip.test.tsx && npm run test:e2e -- toggle-tip`.
 
 ### Checkpoint after T109
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T110 Tooltip component** (depends on T016).
@@ -610,6 +644,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm run registry:validate && npm run test:e2e -- accordion`.
 
 ### Checkpoint after T112
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T113 Alert component** (depends on T016).
@@ -626,6 +661,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/badge/badge.test.tsx && npm run test:e2e -- badge`.
 
 ### Checkpoint after T115
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T116 Breadcrumb component** (depends on T016).
@@ -642,6 +678,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/carousel/carousel.test.tsx`.
 
 ### Checkpoint after T118
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T119 Carousel presentation and docs** (depends on T118).
@@ -658,6 +695,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/collapsible/collapsible.test.tsx && npm run test:e2e -- collapsible`.
 
 ### Checkpoint after T121
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T122 Data List component** (depends on T016).
@@ -674,6 +712,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/icon/icon.test.tsx && npm run test:e2e -- icon`.
 
 ### Checkpoint after T124
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T125 Image component** (depends on T016).
@@ -690,6 +729,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/pagination/pagination.test.tsx`.
 
 ### Checkpoint after T127
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T128 Pagination presentation and docs** (depends on T127).
@@ -706,6 +746,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/progress-circle/progress-circle.test.tsx && npm run test:e2e -- progress-circle`.
 
 ### Checkpoint after T130
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T131 QR Code component** (depends on T016).
@@ -722,6 +763,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/spinner/spinner.test.tsx && npm run test:e2e -- spinner`.
 
 ### Checkpoint after T133
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T134 Stat component** (depends on T016).
@@ -738,6 +780,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/steps/steps.test.tsx`.
 
 ### Checkpoint after T136
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T137 Steps presentation and docs** (depends on T136).
@@ -754,6 +797,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/tabs/tabs.test.tsx`.
 
 ### Checkpoint after T139
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T140 Tabs presentation and docs** (depends on T139).
@@ -770,8 +814,8 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/timeline/timeline.test.tsx && npm run test:e2e -- timeline`.
 
 ### Checkpoint after T142
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
+- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 ## Utilities and internationalization
 
@@ -789,6 +833,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/environment-provider/environment-provider.test.tsx && npm run test:e2e -- environment-provider`.
 
 ### Checkpoint after T145
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T146 For component** (depends on T016).
@@ -805,6 +850,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/format-number/format-number.test.tsx && npm run test:e2e -- format-number`.
 
 ### Checkpoint after T148
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T149 Locale Provider component** (depends on T016).
@@ -821,6 +867,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/presence/presence.test.tsx && npm run test:e2e -- presence`.
 
 ### Checkpoint after T151
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T152 Radiomark component** (depends on T016).
@@ -837,6 +884,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/skip-nav/skip-nav.test.tsx && npm run test:e2e -- skip-nav`.
 
 ### Checkpoint after T154
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T155 Theme component** (depends on T016).
@@ -855,6 +903,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/cli`.
 
 ### Checkpoint after T157
+
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T158 CLI doctor and compatibility** (depends on catalog tasks as applicable).
@@ -874,6 +923,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm run build && npm run typecheck && npm run lint && npm test -- --run && npm run test:e2e && npm run registry:validate && npm run build:docs`.
 
 ## Wave checkpoints
+
 - [ ] After each family: run all focused component tests, docs build, registry validation and both consumer fixture builds.
 - [ ] Review responsive light/dark screenshots and keyboard flows before starting the next family.
 - [ ] Before release: every catalog task and all checks above are complete.
