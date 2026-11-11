@@ -248,7 +248,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 ### Checkpoint after T046
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T047 Mark component** (depends on T016).
+- [x] **T047 Mark component** (depends on T016).
   - Files: `packages/react/src/components/mark/mark.tsx`, `mark.css`, `mark.test.tsx`, `index.ts`, `apps/docs/content/components/mark.mdx`.
   - Acceptance: semantic text, wrapping and typography; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/mark/mark.test.tsx && npm run test:e2e -- mark`.

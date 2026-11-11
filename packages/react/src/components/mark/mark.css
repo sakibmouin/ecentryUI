@@ -1,0 +1,11 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-mark {
+    padding-inline: 0.15em;
+    border-radius: 0.2em;
+    background: #f5e5a3;
+    color: #463719;
+    overflow-wrap: anywhere;
+  }
+}

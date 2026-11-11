@@ -32,6 +32,7 @@ import { kbdRegistryItem } from "../packages/react/dist/components/kbd/metadata.
 import { linkRegistryItem } from "../packages/react/dist/components/link/metadata.js";
 import { linkOverlayRegistryItem } from "../packages/react/dist/components/link-overlay/metadata.js";
 import { listRegistryItem } from "../packages/react/dist/components/list/metadata.js";
+import { markRegistryItem } from "../packages/react/dist/components/mark/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -64,6 +65,7 @@ for (const item of [
   linkRegistryItem,
   linkOverlayRegistryItem,
   listRegistryItem,
+  markRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "mark",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "mark.css", "mark.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "5d905aa9d30f5d3ccdb2276caa7d616d05afd84041b36260f6ca347c08e50452",
+    "mark.css": "53a6bde8ee88621bb8712a5227378d8f39be57e4c1aa1f96a4fde6d1160f130b",
+    "mark.tsx": "0cc43e737cf016d8b74b4912f562ca6422bedfbeb2f7b8ee32f673656648d0df",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/mark/",
+  "license": "MIT"
+}

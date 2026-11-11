@@ -1,0 +1,28 @@
+import { MarkExample } from "../../src/examples/mark.tsx";
+import markSource from "../../src/examples/mark.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Mark
+</div>
+<span className="section-index">TYPOGRAPHY COMPONENT</span>
+
+# Mark
+
+Mark highlights a passage relevant to the current context using native `mark` semantics and readable contrast.
+
+## Install
+
+```sh
+ecentry add mark
+```
+
+## Preview
+
+<ExamplePanel source={markSource}>
+  <MarkExample />
+</ExamplePanel>
+
+## API
+
+Mark forwards native HTML attributes, refs, styles, and `className`.

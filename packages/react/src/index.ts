@@ -42,6 +42,7 @@ import "./components/kbd/kbd.css";
 import "./components/link/link.css";
 import "./components/link-overlay/link-overlay.css";
 import "./components/list/list.css";
+import "./components/mark/mark.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -96,6 +97,8 @@ export type {
 } from "./components/link-overlay/link-overlay.js";
 export { List, ListItem } from "./components/list/list.js";
 export type { ListProps, ListItemProps } from "./components/list/list.js";
+export { Mark } from "./components/mark/mark.js";
+export type { MarkProps } from "./components/mark/mark.js";
 export type {
   SplitterRootProps,
   SplitterPanelProps,
