@@ -48,6 +48,7 @@ import "./components/text/text.css";
 import "./components/close-button/close-button.css";
 import "./components/icon-button/icon-button.css";
 import "./components/download-trigger/download-trigger.css";
+import "./components/calendar/calendar.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -114,6 +115,12 @@ export { IconButton } from "./components/icon-button/icon-button.js";
 export type { IconButtonProps } from "./components/icon-button/icon-button.js";
 export { DownloadTrigger } from "./components/download-trigger/download-trigger.js";
 export type { DownloadTriggerProps } from "./components/download-trigger/download-trigger.js";
+export { Calendar } from "./components/calendar/calendar.js";
+export type {
+  CalendarProps,
+  CalendarValue,
+  DateRange,
+} from "./components/calendar/calendar.js";
 export type {
   SplitterRootProps,
   SplitterPanelProps,

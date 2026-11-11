@@ -1,0 +1,30 @@
+import { CalendarExample } from "../../src/examples/calendar.tsx";
+import calendarSource from "../../src/examples/calendar.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Calendar
+</div>
+<span className="section-index">DATE COMPONENT</span>
+
+# Calendar
+
+Select a single date, a date range, or multiple dates. Values use ISO `YYYY-MM-DD` strings, while the month heading, weekday names, and date labels follow `locale`.
+
+## Install
+
+```sh
+ecentry add calendar
+```
+
+## Preview
+
+<ExamplePanel source={calendarSource}>
+  <CalendarExample />
+</ExamplePanel>
+
+## API
+
+`mode` is `single` (default), `range`, or `multiple`. Use `value` with `onChange` for controlled selection or `defaultValue` for internal selection. A range is `{ start, end? }`; multiple selection is an array of dates. `month`, `defaultMonth`, and `onMonthChange` control the visible `YYYY-MM` month. `minDate`, `maxDate`, and `isDateUnavailable` restrict dates. `disabled` blocks navigation and selection; `readOnly` allows navigation while preserving selection. `label` names the calendar grid. `weekStartsOn` overrides the locale's first weekday, with Sunday as `0`.
+
+Use Arrow keys to move by day or week, Home and End for week edges, and Page Up and Page Down for months. Enter or Space selects the focused date.

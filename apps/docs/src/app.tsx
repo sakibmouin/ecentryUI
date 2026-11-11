@@ -42,6 +42,7 @@ import DownloadTriggerDocs from "../content/components/download-trigger.mdx";
 const RichTextEditorDocs = lazy(
   () => import("../content/components/rich-text-editor.mdx"),
 );
+const CalendarDocs = lazy(() => import("../content/components/calendar.mdx"));
 
 export const routes = [
   "/",
@@ -83,6 +84,7 @@ export const routes = [
   "/components/close-button/",
   "/components/icon-button/",
   "/components/download-trigger/",
+  "/components/calendar/",
 ] as const;
 
 const componentLinks = [
@@ -123,6 +125,7 @@ const componentLinks = [
   { title: "Close Button", href: "/components/close-button/" },
   { title: "Icon Button", href: "/components/icon-button/" },
   { title: "Download Trigger", href: "/components/download-trigger/" },
+  { title: "Calendar", href: "/components/calendar/" },
 ];
 
 function Home() {
@@ -393,6 +396,10 @@ export function App({ routePath }: { routePath: string }) {
               <IconButtonDocs />
             ) : route === "/components/download-trigger/" ? (
               <DownloadTriggerDocs />
+            ) : route === "/components/calendar/" ? (
+              <Suspense fallback={<p>Loading calendar guide...</p>}>
+                <CalendarDocs />
+              </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

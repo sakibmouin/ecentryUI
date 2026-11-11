@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "calendar",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["calendar.css", "calendar.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "calendar.css": "e5ef18879047b6c7cda4811a1a89b919a4a062d98f503eea38aaf0d4f1b70dea",
+    "calendar.tsx": "c6ed183c4a4d4dbb9c983fc905240da3c7cc66a0b2881bf4d5234091e138f948",
+    "index.ts": "f11b9749e39434cf25d26a953fd85032c4106419e7eb10a8edb1c29d1032421f",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.surface",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/calendar/",
+  "license": "MIT"
+}

@@ -152,6 +152,10 @@ export function Calendar({
       !!isDateUnavailable?.(date)
     );
   }
+  const activeDate =
+    focusedDate.slice(0, 7) === currentMonth && !unavailable(focusedDate)
+      ? focusedDate
+      : cells.find((date) => date && !unavailable(date));
   function choose(date: string) {
     if (unavailable(date) || readOnly) return;
     let next: CalendarValue;
@@ -193,6 +197,14 @@ export function Calendar({
     if (event.key === "PageUp") next = shiftMonthDate(date, -1);
     if (!next) return;
     event.preventDefault();
+    const direction = ["ArrowLeft", "ArrowUp", "PageUp", "Home"].includes(
+      event.key,
+    )
+      ? -1
+      : 1;
+    for (let attempt = 0; attempt < 366 && unavailable(next); attempt++)
+      next = addDays(next, direction);
+    if (unavailable(next)) return;
     pendingFocusRef.current = true;
     if (next.slice(0, 7) !== currentMonth) setMonth(next.slice(0, 7));
     setFocusedDate(next);
@@ -222,39 +234,45 @@ export function Calendar({
           ›
         </button>
       </div>
-      <div role="grid" aria-label={label} className="ec-calendar__grid">
+      <div className="ec-calendar__weekdays" aria-hidden="true">
         {Array.from({ length: 7 }, (_, index) => (
-          <span className="ec-calendar__weekday" key={index} aria-hidden="true">
+          <span className="ec-calendar__weekday" key={index}>
             {dayFormatter.format(
               parseDate(addDays("2026-11-01", (firstDay + index) % 7)),
             )}
           </span>
         ))}
-        {cells.map((date, index) => (
-          <span
-            role="gridcell"
-            key={index}
-            className="ec-calendar__cell"
-            aria-selected={
-              date ? selected(currentValue, mode, date) : undefined
-            }
-          >
-            {date && (
-              <button
-                type="button"
-                data-date={date}
-                aria-label={dateFormatter.format(parseDate(date))}
-                aria-pressed={selected(currentValue, mode, date)}
-                disabled={unavailable(date)}
-                tabIndex={date === focusedDate ? 0 : -1}
-                onFocus={() => setFocusedDate(date)}
-                onClick={() => choose(date)}
-                onKeyDown={(event) => onDayKeyDown(event, date)}
+      </div>
+      <div role="grid" aria-label={label} className="ec-calendar__grid">
+        {Array.from({ length: cells.length / 7 }, (_, rowIndex) => (
+          <div role="row" className="ec-calendar__row" key={rowIndex}>
+            {cells.slice(rowIndex * 7, rowIndex * 7 + 7).map((date, index) => (
+              <span
+                role="gridcell"
+                key={index}
+                className="ec-calendar__cell"
+                aria-selected={
+                  date ? selected(currentValue, mode, date) : undefined
+                }
               >
-                {Number(date.slice(8))}
-              </button>
-            )}
-          </span>
+                {date && (
+                  <button
+                    type="button"
+                    data-date={date}
+                    aria-label={dateFormatter.format(parseDate(date))}
+                    aria-pressed={selected(currentValue, mode, date)}
+                    disabled={unavailable(date)}
+                    tabIndex={date === activeDate ? 0 : -1}
+                    onFocus={() => setFocusedDate(date)}
+                    onClick={() => choose(date)}
+                    onKeyDown={(event) => onDayKeyDown(event, date)}
+                  >
+                    {Number(date.slice(8))}
+                  </button>
+                )}
+              </span>
+            ))}
+          </div>
         ))}
       </div>
     </div>

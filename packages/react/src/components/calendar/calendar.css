@@ -1,0 +1,100 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-calendar {
+    box-sizing: border-box;
+    width: min(100%, 22rem);
+    padding: 0.75rem;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, white);
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-calendar__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+  .ec-calendar__header button {
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid transparent;
+    border-radius: var(--ec-radii-md, 8px);
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    font-size: 1.5rem;
+  }
+  .ec-calendar__header button:hover:not(:disabled) {
+    background: var(--ec-colors-surface, #f1f7f2);
+  }
+  .ec-calendar__weekdays,
+  .ec-calendar__grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 0.125rem;
+  }
+  .ec-calendar__weekday {
+    padding-block: 0.4rem;
+    color: var(--ec-colors-text-muted, #59635b);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .ec-calendar__row {
+    display: contents;
+  }
+  .ec-calendar__cell {
+    min-width: 0;
+    aspect-ratio: 1;
+  }
+  .ec-calendar__cell button {
+    width: 100%;
+    height: 100%;
+    min-height: 2rem;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: var(--ec-radii-md, 8px);
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.875rem;
+  }
+  .ec-calendar__cell button:hover:not(:disabled) {
+    background: var(--ec-colors-surface, #f1f7f2);
+  }
+  .ec-calendar__cell button[aria-pressed="true"] {
+    background: var(--ec-colors-accent, #116e5e);
+    color: var(--ec-colors-background, white);
+  }
+  .ec-calendar__cell button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+@layer ec.utilities {
+  .ec-calendar button:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 1px;
+  }
+  @media (forced-colors: active) {
+    .ec-calendar {
+      border-color: CanvasText;
+    }
+    .ec-calendar__cell button[aria-pressed="true"] {
+      border-color: Highlight;
+      color: HighlightText;
+      background: Highlight;
+    }
+    .ec-calendar__cell button:disabled {
+      color: GrayText;
+      opacity: 1;
+    }
+  }
+}

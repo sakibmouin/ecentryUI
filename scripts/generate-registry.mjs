@@ -39,6 +39,7 @@ import { textRegistryItem } from "../packages/react/dist/components/text/metadat
 import { closeButtonRegistryItem } from "../packages/react/dist/components/close-button/metadata.js";
 import { iconButtonRegistryItem } from "../packages/react/dist/components/icon-button/metadata.js";
 import { downloadTriggerRegistryItem } from "../packages/react/dist/components/download-trigger/metadata.js";
+import { calendarRegistryItem } from "../packages/react/dist/components/calendar/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -78,6 +79,7 @@ for (const item of [
   closeButtonRegistryItem,
   iconButtonRegistryItem,
   downloadTriggerRegistryItem,
+  calendarRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

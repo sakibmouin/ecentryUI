@@ -313,9 +313,9 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 ### Checkpoint after T055
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T056 Calendar presentation and docs** (depends on T055).
+- [x] **T056 Calendar presentation and docs** (depends on T055).
   - Files: `packages/react/src/components/calendar/calendar.css`, `index.ts`, `apps/docs/content/components/calendar.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- calendar`.
