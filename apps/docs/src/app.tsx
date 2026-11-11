@@ -44,6 +44,9 @@ const RichTextEditorDocs = lazy(
   () => import("../content/components/rich-text-editor.mdx"),
 );
 const CalendarDocs = lazy(() => import("../content/components/calendar.mdx"));
+const DatePickerDocs = lazy(
+  () => import("../content/components/date-picker.mdx"),
+);
 
 export const routes = [
   "/",
@@ -87,6 +90,7 @@ export const routes = [
   "/components/download-trigger/",
   "/components/calendar/",
   "/components/date-input/",
+  "/components/date-picker/",
 ] as const;
 
 const componentLinks = [
@@ -129,6 +133,7 @@ const componentLinks = [
   { title: "Download Trigger", href: "/components/download-trigger/" },
   { title: "Calendar", href: "/components/calendar/" },
   { title: "Date Input", href: "/components/date-input/" },
+  { title: "Date Picker", href: "/components/date-picker/" },
 ];
 
 function Home() {
@@ -405,6 +410,10 @@ export function App({ routePath }: { routePath: string }) {
               </Suspense>
             ) : route === "/components/date-input/" ? (
               <DateInputDocs />
+            ) : route === "/components/date-picker/" ? (
+              <Suspense fallback={<p>Loading date picker guide...</p>}>
+                <DatePickerDocs />
+              </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

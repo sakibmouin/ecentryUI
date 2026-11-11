@@ -50,6 +50,7 @@ import "./components/icon-button/icon-button.css";
 import "./components/download-trigger/download-trigger.css";
 import "./components/calendar/calendar.css";
 import "./components/date-input/date-input.css";
+import "./components/date-picker/date-picker.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -124,6 +125,11 @@ export type {
 } from "./components/calendar/calendar.js";
 export { DateInput } from "./components/date-input/date-input.js";
 export type { DateInputProps } from "./components/date-input/date-input.js";
+export { DatePicker } from "./components/date-picker/date-picker.js";
+export type {
+  DatePickerProps,
+  DatePickerValue,
+} from "./components/date-picker/date-picker.js";
 export type {
   SplitterRootProps,
   SplitterPanelProps,

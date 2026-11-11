@@ -1,0 +1,30 @@
+import { DatePickerExample } from "../../src/examples/date-picker.tsx";
+import datePickerSource from "../../src/examples/date-picker.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Date Picker
+</div>
+<span className="section-index">DATE COMPONENT</span>
+
+# Date Picker
+
+Date Picker pairs a labeled trigger with the Calendar component. Use it for single dates or ranges when the calendar view helps. Values are ISO `YYYY-MM-DD` strings or `{ start, end? }` ranges.
+
+## Install
+
+```sh
+ecentry add date-picker
+```
+
+The source installer includes Calendar as a dependency.
+
+## Preview
+
+<ExamplePanel source={datePickerSource}>
+  <DatePickerExample />
+</ExamplePanel>
+
+## API
+
+`mode` is `single` (default) or `range`. Use `value` and `onChange` for controlled selection or `defaultValue` for internal state. `name` writes a hidden form value; range mode writes `${name}-start` and `${name}-end`. Native form reset restores the default selection. `locale` formats the visible value and calendar labels. `minDate`, `maxDate`, and `isDateUnavailable` restrict selection. `description`, `error`, `disabled`, and `readOnly` control help, validation, and interaction. Escape closes the popup and returns focus to its trigger.

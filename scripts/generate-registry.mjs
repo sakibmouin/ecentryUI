@@ -41,6 +41,7 @@ import { iconButtonRegistryItem } from "../packages/react/dist/components/icon-b
 import { downloadTriggerRegistryItem } from "../packages/react/dist/components/download-trigger/metadata.js";
 import { calendarRegistryItem } from "../packages/react/dist/components/calendar/metadata.js";
 import { dateInputRegistryItem } from "../packages/react/dist/components/date-input/metadata.js";
+import { datePickerRegistryItem } from "../packages/react/dist/components/date-picker/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -82,6 +83,7 @@ for (const item of [
   downloadTriggerRegistryItem,
   calendarRegistryItem,
   dateInputRegistryItem,
+  datePickerRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

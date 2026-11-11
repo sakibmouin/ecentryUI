@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "date-picker",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["date-picker.css", "date-picker.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "date-picker.css": "6227383d898e31dae6132fda70298724dd80cbb30422966d980bc66a3ccb20f5",
+    "date-picker.tsx": "c1d95102804a87baf48ceb76817fa9448dcb2ccbb973f2470100ef0529466f44",
+    "index.ts": "5a5ffbeab309e08e266ea3b814c1f6033442068681bae189bd32b987be4dcb56",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": ["calendar"],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/date-picker/",
+  "license": "MIT"
+}

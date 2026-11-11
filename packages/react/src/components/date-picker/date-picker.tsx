@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 import { useEffect, useId, useRef, useState } from "react";
 import type { KeyboardEvent } from "react";
-import { Calendar } from "../calendar/calendar.js";
+import { Calendar } from "../calendar/index.js";
 import type { DateRange } from "../calendar/calendar.js";
 
 export type DatePickerValue = string | DateRange | undefined;

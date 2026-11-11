@@ -1,0 +1,80 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-date-picker {
+    position: relative;
+    display: grid;
+    gap: 0.35rem;
+    width: min(100%, 22rem);
+    min-width: 0;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-date-picker__label {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .ec-date-picker__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 2.5rem;
+    padding: 0 0.75rem;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, white);
+    color: var(--ec-colors-text, #19211c);
+    cursor: pointer;
+    font: inherit;
+    text-align: start;
+  }
+  .ec-date-picker__trigger[aria-invalid="true"] {
+    border-color: var(--ec-colors-danger, #c43843);
+  }
+  .ec-date-picker__trigger:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-date-picker__trigger [aria-hidden="true"] {
+    color: var(--ec-colors-text-muted, #59635b);
+    font-size: 1.2rem;
+  }
+  .ec-date-picker__popup {
+    position: absolute;
+    z-index: 20;
+    inset-block-start: calc(100% + 0.4rem);
+    inset-inline-start: 0;
+    width: min(22rem, 90vw);
+    max-width: 100%;
+    border-radius: var(--ec-radii-md, 8px);
+    box-shadow: 0 12px 32px
+      color-mix(in srgb, var(--ec-colors-text, #19211c) 18%, transparent);
+  }
+  .ec-date-picker__popup .ec-calendar {
+    width: 100%;
+  }
+  .ec-date-picker__description {
+    color: var(--ec-colors-text-muted, #59635b);
+    font-size: 0.8rem;
+  }
+  .ec-date-picker__error {
+    color: var(--ec-colors-danger, #c43843);
+    font-size: 0.8rem;
+  }
+}
+@layer ec.utilities {
+  .ec-date-picker__trigger:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-date-picker__trigger {
+      border-color: ButtonText;
+      background: ButtonFace;
+      color: ButtonText;
+    }
+  }
+}
