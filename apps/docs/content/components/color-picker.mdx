@@ -1,0 +1,28 @@
+import { ColorPickerExample } from "../../src/examples/color-picker.tsx";
+import colorPickerSource from "../../src/examples/color-picker.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Color Picker
+</div>
+<span className="section-index">FORM COMPONENT</span>
+
+# Color Picker
+
+Color Picker edits RGB channels, a hex value, and alpha with native inputs. Swatch buttons provide quick selection. Values are canonical uppercase `#RRGGBBAA` strings.
+
+## Install
+
+```sh
+ecentry add color-picker
+```
+
+## Preview
+
+<ExamplePanel source={colorPickerSource}>
+  <ColorPickerExample />
+</ExamplePanel>
+
+## API
+
+`label` names the picker. `value` and `onChange` control it; `defaultValue` enables internal state. Six-digit hex values receive full opacity. `swatches` is an array of six- or eight-digit hex values. `name` writes the selected value to a hidden form input. `description` adds help text. `disabled` and `readOnly` lock editing. Use the native number fields and alpha slider with arrow keys; swatches activate with Enter or Space. Invalid hex text is marked and reverts on blur.

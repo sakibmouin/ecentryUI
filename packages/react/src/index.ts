@@ -53,6 +53,7 @@ import "./components/date-input/date-input.css";
 import "./components/date-picker/date-picker.css";
 import "./components/checkbox/checkbox.css";
 import "./components/checkbox-card/checkbox-card.css";
+import "./components/color-picker/color-picker.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -136,6 +137,8 @@ export { Checkbox } from "./components/checkbox/checkbox.js";
 export type { CheckboxProps } from "./components/checkbox/checkbox.js";
 export { CheckboxCard } from "./components/checkbox-card/checkbox-card.js";
 export type { CheckboxCardProps } from "./components/checkbox-card/checkbox-card.js";
+export { ColorPicker } from "./components/color-picker/color-picker.js";
+export type { ColorPickerProps } from "./components/color-picker/color-picker.js";
 export type {
   SplitterRootProps,
   SplitterPanelProps,

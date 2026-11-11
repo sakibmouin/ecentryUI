@@ -356,7 +356,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/color-picker/color-picker.tsx`, `color-picker.test.tsx`.
   - Acceptance: color channels, swatches, keyboard and alpha; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/color-picker/color-picker.test.tsx`.
-- [ ] **T063 Color Picker presentation and docs** (depends on T062).
+- [x] **T063 Color Picker presentation and docs** (depends on T062).
   - Files: `packages/react/src/components/color-picker/color-picker.css`, `index.ts`, `apps/docs/content/components/color-picker.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- color-picker`.

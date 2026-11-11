@@ -1,0 +1,152 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-color-picker {
+    display: grid;
+    gap: 0.85rem;
+    width: min(100%, 24rem);
+    padding: 1rem;
+    box-sizing: border-box;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, white);
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-color-picker__label {
+    font-weight: 700;
+  }
+  .ec-color-picker__description {
+    color: var(--ec-colors-text-muted, #59635b);
+    font-size: 0.8rem;
+  }
+  .ec-color-picker__top {
+    display: flex;
+    align-items: end;
+    gap: 0.6rem;
+    min-width: 0;
+  }
+  .ec-color-picker__preview {
+    flex: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    background-image:
+      linear-gradient(
+        45deg,
+        #ddd 25%,
+        transparent 25%,
+        transparent 75%,
+        #ddd 75%
+      ),
+      linear-gradient(
+        45deg,
+        #ddd 25%,
+        transparent 25%,
+        transparent 75%,
+        #ddd 75%
+      );
+  }
+  .ec-color-picker__preview-color {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+  .ec-color-picker__top > input[type="color"] {
+    flex: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.15rem;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, white);
+    cursor: pointer;
+  }
+  .ec-color-picker__hex {
+    display: grid;
+    flex: 1;
+    min-width: 0;
+    gap: 0.2rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .ec-color-picker__hex input,
+  .ec-color-picker__channels input {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 2.25rem;
+    padding: 0.35rem 0.5rem;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, white);
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-color-picker__hex input[aria-invalid="true"] {
+    border-color: var(--ec-colors-danger, #c43843);
+  }
+  .ec-color-picker__channels {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+  .ec-color-picker__channels label {
+    display: grid;
+    gap: 0.2rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .ec-color-picker__alpha {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .ec-color-picker__alpha input {
+    width: 100%;
+    accent-color: var(--ec-colors-accent, #116e5e);
+  }
+  .ec-color-picker__alpha output {
+    min-width: 2.4rem;
+    text-align: end;
+  }
+  .ec-color-picker__swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .ec-color-picker__swatches button {
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 2px solid var(--ec-colors-background, white);
+    border-radius: var(--ec-radii-md, 8px);
+    box-shadow: 0 0 0 1px var(--ec-colors-border, #dce0dc);
+    cursor: pointer;
+  }
+  .ec-color-picker__swatches button[aria-pressed="true"] {
+    box-shadow: 0 0 0 2px var(--ec-colors-accent, #116e5e);
+  }
+  .ec-color-picker :disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+@layer ec.utilities {
+  .ec-color-picker :is(input, button):focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-color-picker {
+      border-color: CanvasText;
+    }
+    .ec-color-picker__swatches button {
+      border-color: ButtonText;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "color-picker",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["color-picker.css", "color-picker.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "color-picker.css": "08dd43c9e2f59e6782a80b83890b02f50bcf50c22839efea7b293bdfe119e464",
+    "color-picker.tsx": "d3830abc89c62a24d30e67b7a05a74dd6290b5493a8ab378fc79a7f259911953",
+    "index.ts": "29dc4f3dc97a92109c47d2d0f816aec4b99bc89ed06c4562500dda565fa77dbd",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/color-picker/",
+  "license": "MIT"
+}

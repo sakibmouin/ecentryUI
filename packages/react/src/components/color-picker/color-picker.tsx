@@ -85,8 +85,12 @@ export function ColorPicker({
           className="ec-color-picker__preview"
           role="img"
           aria-label={`Selected color ${current}`}
-          style={{ backgroundColor: current }}
-        />
+        >
+          <span
+            className="ec-color-picker__preview-color"
+            style={{ backgroundColor: current }}
+          />
+        </span>
         <input
           type="color"
           aria-label={`${label} color wheel`}
