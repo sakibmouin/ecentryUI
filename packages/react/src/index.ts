@@ -40,6 +40,7 @@ import "./components/heading/heading.css";
 import "./components/highlight/highlight.css";
 import "./components/kbd/kbd.css";
 import "./components/link/link.css";
+import "./components/link-overlay/link-overlay.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -84,6 +85,14 @@ export { Kbd } from "./components/kbd/kbd.js";
 export type { KbdProps } from "./components/kbd/kbd.js";
 export { Link } from "./components/link/link.js";
 export type { LinkProps } from "./components/link/link.js";
+export {
+  LinkBox,
+  LinkOverlay,
+} from "./components/link-overlay/link-overlay.js";
+export type {
+  LinkBoxProps,
+  LinkOverlayProps,
+} from "./components/link-overlay/link-overlay.js";
 export type {
   SplitterRootProps,
   SplitterPanelProps,

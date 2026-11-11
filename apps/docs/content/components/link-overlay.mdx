@@ -1,0 +1,28 @@
+import { LinkOverlayExample } from "../../src/examples/link-overlay.tsx";
+import linkOverlaySource from "../../src/examples/link-overlay.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Link Overlay
+</div>
+<span className="section-index">TYPOGRAPHY COMPONENT</span>
+
+# Link Overlay
+
+LinkBox positions a semantic LinkOverlay across a card. Other buttons and links inside the card remain independently clickable and keyboard accessible.
+
+## Install
+
+```sh
+ecentry add link-overlay
+```
+
+## Preview
+
+<ExamplePanel source={linkOverlaySource}>
+  <LinkOverlayExample />
+</ExamplePanel>
+
+## API
+
+Use LinkBox as the card wrapper and LinkOverlay as the primary anchor with a meaningful accessible name and `href`. Native anchor and wrapper attributes are forwarded.

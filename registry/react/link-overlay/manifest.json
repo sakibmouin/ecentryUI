@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "link-overlay",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "link-overlay.css", "link-overlay.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "e6070a527ad51265466fe1a14f00566b375aa087271bcc08788ac7c58c086c7f",
+    "link-overlay.css": "10ec7dba32820dd0be17f819763444154e080e7c19f551ffe1e793f22788d866",
+    "link-overlay.tsx": "8ae3ca802a2fbfe26a3f4802d020f54af32d751f68b542f6e6675e96da419594",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/link-overlay/",
+  "license": "MIT"
+}

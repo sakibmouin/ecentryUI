@@ -2019,6 +2019,28 @@ footer {
   color: white;
   cursor: pointer;
 }
+.link-overlay-demo-card {
+  padding: 20px;
+  border: 1px solid #dfe8e1;
+  border-radius: 8px;
+  background: white;
+  color: #29453a;
+}
+.link-overlay-demo-card h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+.link-overlay-demo-card p {
+  margin: 0 0 12px;
+}
+.link-overlay-demo-card button {
+  padding: 7px 12px;
+  border: 1px solid #b9d0bf;
+  border-radius: 5px;
+  background: white;
+  color: #214b3d;
+  cursor: pointer;
+}
 .code-block-demo {
   display: flex;
   flex-direction: column;

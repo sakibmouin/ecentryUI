@@ -1,0 +1,32 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-link-box {
+    position: relative;
+    min-width: 0;
+  }
+  .ec-link-overlay {
+    color: #115f4f;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    overflow-wrap: anywhere;
+  }
+  .ec-link-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+  }
+  .ec-link-overlay:focus-visible {
+    outline: none;
+  }
+  .ec-link-overlay:focus-visible::after {
+    outline: 3px solid #12715d;
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  .ec-link-box :is(a, button):not(.ec-link-overlay) {
+    position: relative;
+    z-index: 1;
+  }
+}

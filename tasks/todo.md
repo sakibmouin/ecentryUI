@@ -236,7 +236,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/link/link.tsx`, `link.css`, `link.test.tsx`, `index.ts`, `apps/docs/content/components/link.mdx`.
   - Acceptance: semantic text, wrapping and typography; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/link/link.test.tsx && npm run test:e2e -- link`.
-- [ ] **T045 Link Overlay component** (depends on T016).
+- [x] **T045 Link Overlay component** (depends on T016).
   - Files: `packages/react/src/components/link-overlay/link-overlay.tsx`, `link-overlay.css`, `link-overlay.test.tsx`, `index.ts`, `apps/docs/content/components/link-overlay.mdx`.
   - Acceptance: semantic text, wrapping and typography; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/link-overlay/link-overlay.test.tsx && npm run test:e2e -- link-overlay`.
