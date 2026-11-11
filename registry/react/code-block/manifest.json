@@ -5,8 +5,8 @@
   "framework": "react",
   "files": ["code-block.css", "code-block.tsx", "index.ts", "styles.d.ts"],
   "hashes": {
-    "code-block.css": "1f3cac152a09ae35f1250f94ec50071df8d625cf93ed5480a33cf9f00a169591",
-    "code-block.tsx": "a323222e76f59e1482de8b108acb11e3b65cf3ed5df8a5c29dd591329de6f7ff",
+    "code-block.css": "b4e2edfc7badd6a4999d9a1d345a8839a214aab5be74d1399f809051423f535c",
+    "code-block.tsx": "e0a7875b721407e779407cff65e010b580db8c10291bec3f6ddd91bdc087fbd8",
     "index.ts": "da21d6e787622a77a7d4370b444f37df32939d18ccb890c8b07abd8b55b013f3",
     "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
   },

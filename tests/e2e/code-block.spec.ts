@@ -9,6 +9,9 @@ test("Code Block copies and collapses safe source text", async ({ page }) => {
   const block = page.getByTestId("code-block-example");
   await expect(block).toBeVisible();
   await expect(block.locator("code")).toContainText("function greet");
+  await expect(block.locator('[data-token="keyword"]').first()).toHaveText(
+    "export",
+  );
   await block.getByRole("button", { name: "Collapse code" }).click();
   await expect(block.locator("pre")).toBeHidden();
   await block.getByRole("button", { name: "Expand code" }).click();

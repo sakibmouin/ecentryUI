@@ -1,0 +1,20 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-kbd {
+    display: inline-block;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0.1em 0.4em;
+    border: 1px solid #b9d0bf;
+    border-bottom-width: 2px;
+    border-radius: 0.3rem;
+    background: #f1f7f2;
+    color: #214b3d;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 0.85em;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+    vertical-align: baseline;
+  }
+}

@@ -1,0 +1,28 @@
+import { KbdExample } from "../../src/examples/kbd.tsx";
+import kbdSource from "../../src/examples/kbd.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Kbd
+</div>
+<span className="section-index">TYPOGRAPHY COMPONENT</span>
+
+# Kbd
+
+Kbd labels a keyboard key or shortcut using the semantic `kbd` element.
+
+## Install
+
+```sh
+ecentry add kbd
+```
+
+## Preview
+
+<ExamplePanel source={kbdSource}>
+  <KbdExample />
+</ExamplePanel>
+
+## API
+
+Use `as` for a different host. Native attributes, refs, `className`, and `style` are forwarded. Combine multiple Kbd elements with a visible separator for shortcuts.

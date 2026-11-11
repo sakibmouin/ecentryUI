@@ -198,9 +198,9 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/code/code.test.tsx && npm run test:e2e -- code`.
 
 ### Checkpoint after T037
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T038 Code Block behavior** (depends on T016).
+- [x] **T038 Code Block behavior** (depends on T016).
   - Files: `packages/react/src/components/code-block/code-block.tsx`, `code-block.test.tsx`.
   - Acceptance: highlighting, copy, collapse and safe content; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/code-block/code-block.test.tsx`.
@@ -214,7 +214,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Verify: `npm test -- --run packages/react/src/components/em/em.test.tsx && npm run test:e2e -- em`.
 
 ### Checkpoint after T040
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [x] **T041 Heading component** (depends on T016).
   - Files: `packages/react/src/components/heading/heading.tsx`, `heading.css`, `heading.test.tsx`, `index.ts`, `apps/docs/content/components/heading.mdx`.
@@ -224,13 +224,13 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/highlight/highlight.tsx`, `highlight.css`, `highlight.test.tsx`, `index.ts`, `apps/docs/content/components/highlight.mdx`.
   - Acceptance: semantic text, wrapping and typography; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/highlight/highlight.test.tsx && npm run test:e2e -- highlight`.
-- [ ] **T043 Kbd component** (depends on T016).
+- [x] **T043 Kbd component** (depends on T016).
   - Files: `packages/react/src/components/kbd/kbd.tsx`, `kbd.css`, `kbd.test.tsx`, `index.ts`, `apps/docs/content/components/kbd.mdx`.
   - Acceptance: semantic text, wrapping and typography; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/kbd/kbd.test.tsx && npm run test:e2e -- kbd`.
 
 ### Checkpoint after T043
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T044 Link component** (depends on T016).
   - Files: `packages/react/src/components/link/link.tsx`, `link.css`, `link.test.tsx`, `index.ts`, `apps/docs/content/components/link.mdx`.

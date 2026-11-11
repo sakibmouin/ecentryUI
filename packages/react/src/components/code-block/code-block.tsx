@@ -2,6 +2,35 @@
 import { forwardRef, useCallback, useId, useState } from "react";
 import type { HTMLAttributes, ReactNode } from "react";
 
+const tokenPattern =
+  /(\/\/[^\n]*|\/\*[\s\S]*?\*\/|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`|\b(?:const|let|var|function|return|export|import|from|async|await|if|else|class|new|true|false|null|undefined)\b|\b\d+(?:\.\d+)?\b)/g;
+
+function highlightedCode(source: string): ReactNode[] {
+  const parts: ReactNode[] = [];
+  let cursor = 0;
+  for (const match of source.matchAll(tokenPattern)) {
+    const position = match.index;
+    if (position > cursor) parts.push(source.slice(cursor, position));
+    const value = match[0];
+    const kind =
+      value.startsWith("//") || value.startsWith("/*")
+        ? "comment"
+        : /^["'`]/.test(value)
+          ? "string"
+          : /^\d/.test(value)
+            ? "number"
+            : "keyword";
+    parts.push(
+      <span data-token={kind} key={position}>
+        {value}
+      </span>,
+    );
+    cursor = position + value.length;
+  }
+  if (cursor < source.length) parts.push(source.slice(cursor));
+  return parts;
+}
+
 export interface CodeBlockProps extends Omit<
   HTMLAttributes<HTMLDivElement>,
   "onCopy"
@@ -11,6 +40,7 @@ export interface CodeBlockProps extends Omit<
   defaultOpen?: boolean;
   collapsible?: boolean;
   copyable?: boolean;
+  language?: "javascript" | "typescript";
   onOpenChange?: (open: boolean) => void;
   onCopy?: (code: string) => void;
   copyLabel?: string;
@@ -26,6 +56,7 @@ export const CodeBlock = forwardRef<HTMLDivElement, CodeBlockProps>(
       defaultOpen = true,
       collapsible = false,
       copyable = true,
+      language,
       onOpenChange,
       onCopy,
       copyLabel = "Copy code",
@@ -50,7 +81,8 @@ export const CodeBlock = forwardRef<HTMLDivElement, CodeBlockProps>(
     );
     const copy = useCallback(async () => {
       try {
-        await navigator.clipboard?.writeText(children);
+        if (!navigator.clipboard?.writeText) return;
+        await navigator.clipboard.writeText(children);
         setCopied(true);
         onCopy?.(children);
         window.setTimeout(() => setCopied(false), 1200);
@@ -84,7 +116,7 @@ export const CodeBlock = forwardRef<HTMLDivElement, CodeBlockProps>(
           ) : null}
         </div>
         <pre id={contentId} hidden={!isOpen}>
-          <code>{children as ReactNode}</code>
+          <code>{language ? highlightedCode(children) : children}</code>
         </pre>
       </div>
     );

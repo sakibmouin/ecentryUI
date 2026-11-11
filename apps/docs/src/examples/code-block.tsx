@@ -12,7 +12,11 @@ export function CodeBlockExample() {
         role="region"
         aria-label="Code block example"
       >
-        <CodeBlock collapsible data-testid="code-block-example">
+        <CodeBlock
+          collapsible
+          language="javascript"
+          data-testid="code-block-example"
+        >
           {"export function greet(name) {\n  return `Hello, ${name}`;\n}"}
         </CodeBlock>
         <button type="button" onClick={() => setDark(!dark)}>

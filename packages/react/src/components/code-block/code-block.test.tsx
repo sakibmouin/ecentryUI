@@ -66,4 +66,47 @@ describe("CodeBlock", () => {
         .getAttribute("aria-expanded"),
     ).toBe("false");
   });
+
+  it("does not claim copy success when clipboard access is unavailable", () => {
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: undefined,
+    });
+    const onCopy = vi.fn();
+    render(<CodeBlock onCopy={onCopy}>source</CodeBlock>);
+    fireEvent.click(screen.getByRole("button", { name: "Copy code" }));
+    expect(onCopy).not.toHaveBeenCalled();
+    expect(screen.queryByRole("button", { name: "Copied" })).toBeNull();
+  });
+
+  it("does not report success when clipboard access is rejected", async () => {
+    const writeText = vi.fn().mockRejectedValue(new Error("Permission denied"));
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: { writeText },
+    });
+    const onCopy = vi.fn();
+    render(<CodeBlock onCopy={onCopy}>source</CodeBlock>);
+    fireEvent.click(screen.getByRole("button", { name: "Copy code" }));
+    await vi.waitFor(() => expect(writeText).toHaveBeenCalledWith("source"));
+    expect(onCopy).not.toHaveBeenCalled();
+    expect(screen.queryByRole("button", { name: "Copied" })).toBeNull();
+  });
+
+  it("highlights JavaScript tokens while preserving the exact source text", () => {
+    const source = 'const answer = "<script>"; // note';
+    render(<CodeBlock language="javascript">{source}</CodeBlock>);
+    const code = screen.getByRole("code");
+    expect(code.textContent).toBe(source);
+    expect(code.querySelector('[data-token="keyword"]')?.textContent).toBe(
+      "const",
+    );
+    expect(code.querySelector('[data-token="string"]')?.textContent).toBe(
+      '"<script>"',
+    );
+    expect(code.querySelector('[data-token="comment"]')?.textContent).toBe(
+      "// note",
+    );
+    expect(code.querySelector("script")).toBeNull();
+  });
 });

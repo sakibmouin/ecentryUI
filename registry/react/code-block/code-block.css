@@ -50,4 +50,17 @@
     white-space: pre-wrap;
     overflow-wrap: anywhere;
   }
+  .ec-code-block [data-token="keyword"] {
+    color: #75439a;
+    font-weight: 600;
+  }
+  .ec-code-block [data-token="string"] {
+    color: #9a4930;
+  }
+  .ec-code-block [data-token="comment"] {
+    color: #526459;
+  }
+  .ec-code-block [data-token="number"] {
+    color: #156578;
+  }
 }

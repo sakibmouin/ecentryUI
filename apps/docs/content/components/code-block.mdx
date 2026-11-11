@@ -28,12 +28,13 @@ ecentry add code-block
 
 <div className="api-scroll" role="region" aria-label="Code Block API" tabIndex={0}>
 
-| Prop                                 | Type      | Purpose                             |
-| ------------------------------------ | --------- | ----------------------------------- |
-| `children`                           | string    | Safe source text to render          |
-| `copyable`                           | boolean   | Show the copy control               |
-| `collapsible`, `open`, `defaultOpen` | boolean   | Configure visibility behavior       |
-| `onCopy`, `onOpenChange`             | callbacks | Observe copy and visibility changes |
+| Prop                                 | Type                         | Purpose                             |
+| ------------------------------------ | ---------------------------- | ----------------------------------- |
+| `children`                           | string                       | Safe source text to render          |
+| `copyable`                           | boolean                      | Show the copy control               |
+| `language`                           | `javascript` or `typescript` | Highlight supported source tokens   |
+| `collapsible`, `open`, `defaultOpen` | boolean                      | Configure visibility behavior       |
+| `onCopy`, `onOpenChange`             | callbacks                    | Observe copy and visibility changes |
 
 </div>
 

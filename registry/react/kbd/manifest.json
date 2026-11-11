@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "kbd",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "kbd.css", "kbd.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "d049aa68f8b616ff4626ae0f91114566c03129b0ec3d37021478d6c70cd6a013",
+    "kbd.css": "d110465989e68e862e91d235d510f9bd01293a5a1345c18c4aa2f0d179cdb9c6",
+    "kbd.tsx": "1510a2689d3c30a9c4f438ffaa8a32a764ef9b17bca9ab9946dc9b62e1fbbcdd",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/kbd/",
+  "license": "MIT"
+}
