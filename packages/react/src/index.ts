@@ -46,6 +46,7 @@ import "./components/mark/mark.css";
 import "./components/prose/prose.css";
 import "./components/text/text.css";
 import "./components/close-button/close-button.css";
+import "./components/icon-button/icon-button.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -108,6 +109,8 @@ export { Text } from "./components/text/text.js";
 export type { TextProps } from "./components/text/text.js";
 export { CloseButton } from "./components/close-button/close-button.js";
 export type { CloseButtonProps } from "./components/close-button/close-button.js";
+export { IconButton } from "./components/icon-button/icon-button.js";
+export type { IconButtonProps } from "./components/icon-button/icon-button.js";
 export type {
   SplitterRootProps,
   SplitterPanelProps,

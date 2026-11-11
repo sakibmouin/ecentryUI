@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "icon-button",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["icon-button.css", "icon-button.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "icon-button.css": "0767c6b0624c85d18d6833a4820e8e065a8dc5c02a5a8e9483878199a3be4ddc",
+    "icon-button.tsx": "41a312511a431d05b091fe22398a33e5ef3fa09dd286ab107ca0fe2257ad09b7",
+    "index.ts": "4947758c1e40d226b30b8b2599fcb3b5400d61e7490888f1f5d33b216449decf",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.accent.hover",
+    "colors.background",
+    "colors.focus",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/icon-button/",
+  "license": "MIT"
+}

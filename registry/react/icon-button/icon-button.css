@@ -1,0 +1,92 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: var(--ec-radii-md, 8px);
+    background: transparent;
+    color: var(--ec-colors-accent, #116e5e);
+    cursor: pointer;
+    font: inherit;
+  }
+  .ec-icon-button[data-ec-size="sm"] {
+    width: 2rem;
+    height: 2rem;
+  }
+  .ec-icon-button[data-ec-size="lg"] {
+    width: 3rem;
+    height: 3rem;
+  }
+  .ec-icon-button[data-ec-variant="solid"] {
+    background: var(--ec-colors-accent, #116e5e);
+    color: var(--ec-colors-background, white);
+  }
+  .ec-icon-button[data-ec-variant="outline"] {
+    border-color: currentColor;
+  }
+  .ec-icon-button:hover:not(:disabled) {
+    background: color-mix(
+      in srgb,
+      var(--ec-colors-accent, #116e5e) 14%,
+      transparent
+    );
+  }
+  .ec-icon-button[data-ec-variant="solid"]:hover:not(:disabled) {
+    background: var(--ec-colors-accent-hover, #0d584b);
+  }
+  .ec-icon-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-icon-button__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .ec-icon-button__icon svg {
+    width: 100%;
+    height: 100%;
+  }
+  .ec-icon-button__spinner {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid currentColor;
+    border-inline-end-color: transparent;
+    border-radius: 50%;
+    animation: ec-icon-spin 0.8s linear infinite;
+  }
+  @keyframes ec-icon-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+@layer ec.utilities {
+  .ec-icon-button:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ec-icon-button__spinner {
+      animation: none;
+    }
+  }
+  @media (forced-colors: active) {
+    .ec-icon-button {
+      border-color: ButtonText;
+    }
+    .ec-icon-button:disabled {
+      color: GrayText;
+      opacity: 1;
+    }
+  }
+}

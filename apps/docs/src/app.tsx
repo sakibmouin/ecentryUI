@@ -36,6 +36,7 @@ import MarkDocs from "../content/components/mark.mdx";
 import ProseDocs from "../content/components/prose.mdx";
 import TextDocs from "../content/components/text.mdx";
 import CloseButtonDocs from "../content/components/close-button.mdx";
+import IconButtonDocs from "../content/components/icon-button.mdx";
 
 const RichTextEditorDocs = lazy(
   () => import("../content/components/rich-text-editor.mdx"),
@@ -79,6 +80,7 @@ export const routes = [
   "/components/rich-text-editor/",
   "/components/text/",
   "/components/close-button/",
+  "/components/icon-button/",
 ] as const;
 
 const componentLinks = [
@@ -117,6 +119,7 @@ const componentLinks = [
   { title: "Rich Text Editor", href: "/components/rich-text-editor/" },
   { title: "Text", href: "/components/text/" },
   { title: "Close Button", href: "/components/close-button/" },
+  { title: "Icon Button", href: "/components/icon-button/" },
 ];
 
 function Home() {
@@ -383,6 +386,8 @@ export function App({ routePath }: { routePath: string }) {
               <TextDocs />
             ) : route === "/components/close-button/" ? (
               <CloseButtonDocs />
+            ) : route === "/components/icon-button/" ? (
+              <IconButtonDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

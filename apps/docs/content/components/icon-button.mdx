@@ -1,0 +1,28 @@
+import { IconButtonExample } from "../../src/examples/icon-button.tsx";
+import iconButtonSource from "../../src/examples/icon-button.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Icon Button
+</div>
+<span className="section-index">ACTION COMPONENT</span>
+
+# Icon Button
+
+Icon Button is a compact action with a required `aria-label`. The icon is decorative to assistive technology because the button's label names the action.
+
+## Install
+
+```sh
+ecentry add icon-button
+```
+
+## Preview
+
+<ExamplePanel source={iconButtonSource}>
+  <IconButtonExample />
+</ExamplePanel>
+
+## API
+
+Pass `icon` as a React node and `aria-label` as the action name. `variant` is `ghost` (default), `outline`, or `solid`; `size` is `sm`, `md`, or `lg`. `disabled` and `loading` prevent activation. Loading sets `aria-busy`. Native button attributes such as `aria-pressed`, refs, and `className` pass through.

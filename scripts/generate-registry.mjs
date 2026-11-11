@@ -37,6 +37,7 @@ import { proseRegistryItem } from "../packages/react/dist/components/prose/metad
 import { richTextEditorRegistryItem } from "../packages/react/dist/components/rich-text-editor/metadata.js";
 import { textRegistryItem } from "../packages/react/dist/components/text/metadata.js";
 import { closeButtonRegistryItem } from "../packages/react/dist/components/close-button/metadata.js";
+import { iconButtonRegistryItem } from "../packages/react/dist/components/icon-button/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -74,6 +75,7 @@ for (const item of [
   richTextEditorRegistryItem,
   textRegistryItem,
   closeButtonRegistryItem,
+  iconButtonRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(
