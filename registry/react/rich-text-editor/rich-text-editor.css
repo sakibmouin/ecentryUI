@@ -1,0 +1,73 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-rich-text-editor {
+    overflow: hidden;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, #fff);
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-rich-text-editor__toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    border-block-end: 1px solid var(--ec-colors-border, #dce0dc);
+    background: var(--ec-colors-surface, #f8f9f8);
+  }
+  .ec-rich-text-editor__toolbar button {
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid transparent;
+    border-radius: 0.35rem;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.875rem;
+  }
+  .ec-rich-text-editor__toolbar button:hover:not(:disabled) {
+    border-color: var(--ec-colors-border, #dce0dc);
+    background: var(--ec-colors-background, #fff);
+  }
+  .ec-rich-text-editor__toolbar button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-rich-text-editor__content {
+    box-sizing: border-box;
+    min-height: 10rem;
+    padding: 0.9rem 1rem;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+  }
+  .ec-rich-text-editor__content p {
+    margin: 0 0 0.75em;
+  }
+  .ec-rich-text-editor__content p:last-child {
+    margin-bottom: 0;
+  }
+  .ec-rich-text-editor__content[contenteditable="false"] {
+    background: var(--ec-colors-surface, #f8f9f8);
+  }
+}
+@layer ec.utilities {
+  .ec-rich-text-editor__content:focus-visible,
+  .ec-rich-text-editor__toolbar button:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: -2px;
+  }
+  @media (forced-colors: active) {
+    .ec-rich-text-editor,
+    .ec-rich-text-editor__toolbar {
+      border-color: ButtonText;
+    }
+    .ec-rich-text-editor__toolbar button:focus-visible,
+    .ec-rich-text-editor__content:focus-visible {
+      outline-color: Highlight;
+    }
+  }
+}

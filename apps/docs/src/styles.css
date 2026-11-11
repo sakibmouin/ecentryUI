@@ -2006,7 +2006,7 @@ footer {
   border-radius: 12px;
   background: #f8fbf8;
 }
-.code-demo p {
+.code-demo > p {
   margin: 0;
   color: #29453a;
 }

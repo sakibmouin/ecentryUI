@@ -34,6 +34,7 @@ import { linkOverlayRegistryItem } from "../packages/react/dist/components/link-
 import { listRegistryItem } from "../packages/react/dist/components/list/metadata.js";
 import { markRegistryItem } from "../packages/react/dist/components/mark/metadata.js";
 import { proseRegistryItem } from "../packages/react/dist/components/prose/metadata.js";
+import { richTextEditorRegistryItem } from "../packages/react/dist/components/rich-text-editor/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -68,6 +69,7 @@ for (const item of [
   listRegistryItem,
   markRegistryItem,
   proseRegistryItem,
+  richTextEditorRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

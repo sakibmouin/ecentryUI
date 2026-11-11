@@ -1,0 +1,41 @@
+import { RichTextEditorExample } from "../../src/examples/rich-text-editor.tsx";
+import editorSource from "../../src/examples/rich-text-editor.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Rich Text Editor
+</div>
+<span className="section-index">CONTENT COMPONENT</span>
+
+# Rich Text Editor
+
+Edit paragraphs with a keyboard accessible formatting toolbar. Changes and saves use Lexical JSON state, so store that value directly and render it through a trusted editor or renderer.
+
+## Install
+
+```sh
+ecentry add rich-text-editor
+```
+
+The source install also requires `lexical`, `@lexical/react`, `@lexical/rich-text`, `@lexical/history`, and `@lexical/clipboard` at the versions in the registry manifest. For the package import, use `@ecentry/react/rich-text-editor` so other components do not load the editor.
+
+## Preview
+
+<ExamplePanel source={editorSource}>
+  <RichTextEditorExample />
+</ExamplePanel>
+
+## API
+
+| Prop                   | Type                      | Purpose                                       |
+| ---------------------- | ------------------------- | --------------------------------------------- |
+| `label`                | `string`                  | Accessible editor name                        |
+| `value`                | `string`                  | Controlled Lexical JSON state                 |
+| `defaultValue`         | `string`                  | Initial Lexical JSON state                    |
+| `initialText`          | `string`                  | Initial plain text when no state is available |
+| `onChange`             | `(value: string) => void` | Serialized state after a change               |
+| `onSave`               | `(value: string) => void` | Debounced save callback                       |
+| `saveDelay`            | `number`                  | Save debounce in milliseconds, default 500    |
+| `disabled`, `readOnly` | `boolean`                 | Lock editing and formatting                   |
+
+Use Tab to reach toolbar buttons and the editor. Escape leaves the editor. The editor treats `initialText` as text, including angle brackets, and never renders it as HTML.

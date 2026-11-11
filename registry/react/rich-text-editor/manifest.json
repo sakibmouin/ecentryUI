@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "rich-text-editor",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": [
+    "index.ts",
+    "rich-text-editor.css",
+    "rich-text-editor.tsx",
+    "styles.d.ts"
+  ],
+  "hashes": {
+    "index.ts": "a7b94a75c06fa46f424186821b5cb657d25ceb4b2ef872c918e687c063c2f470",
+    "rich-text-editor.css": "9b7564494eae5545dec111018d27c3fc0cd0a591d4bd31309cb5c5d67db02189",
+    "rich-text-editor.tsx": "095286157db81ab4d07e836a8970430fc54fea225cac0a8c23208a73d45dea05",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": {
+    "@lexical/clipboard": "^0.53.0",
+    "@lexical/history": "^0.53.0",
+    "@lexical/react": "^0.53.0",
+    "@lexical/rich-text": "^0.53.0",
+    "lexical": "^0.53.0",
+    "react": ">=18"
+  },
+  "tokens": [
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.surface",
+    "colors.text",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/rich-text-editor/",
+  "license": "MIT"
+}

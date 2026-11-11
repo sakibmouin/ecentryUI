@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import { CounterExample } from "./examples/counter.js";
 import { ExamplePanel } from "./example-panel.js";
 import counterSource from "./examples/counter.tsx?raw";
@@ -35,6 +35,10 @@ import ListDocs from "../content/components/list.mdx";
 import MarkDocs from "../content/components/mark.mdx";
 import ProseDocs from "../content/components/prose.mdx";
 
+const RichTextEditorDocs = lazy(
+  () => import("../content/components/rich-text-editor.mdx"),
+);
+
 export const routes = [
   "/",
   "/guides/examples/",
@@ -70,6 +74,7 @@ export const routes = [
   "/components/list/",
   "/components/mark/",
   "/components/prose/",
+  "/components/rich-text-editor/",
 ] as const;
 
 const componentLinks = [
@@ -105,6 +110,7 @@ const componentLinks = [
   { title: "List", href: "/components/list/" },
   { title: "Mark", href: "/components/mark/" },
   { title: "Prose", href: "/components/prose/" },
+  { title: "Rich Text Editor", href: "/components/rich-text-editor/" },
 ];
 
 function Home() {
@@ -363,6 +369,10 @@ export function App({ routePath }: { routePath: string }) {
               <MarkDocs />
             ) : route === "/components/prose/" ? (
               <ProseDocs />
+            ) : route === "/components/rich-text-editor/" ? (
+              <Suspense fallback={<p>Loading editor guide...</p>}>
+                <RichTextEditorDocs />
+              </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

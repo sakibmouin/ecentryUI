@@ -35,6 +35,10 @@
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
+    },
+    "./rich-text-editor": {
+      "types": "./dist/components/rich-text-editor/index.d.ts",
+      "default": "./dist/components/rich-text-editor/index.js"
     }
   },
   "devDependencies": {
