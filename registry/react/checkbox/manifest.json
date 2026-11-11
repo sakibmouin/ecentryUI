@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "checkbox",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["checkbox.css", "checkbox.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "checkbox.css": "ea721bac61af57b22c8d75c672add7f834ae6ca72c9ecd92deff6c84d2e470fd",
+    "checkbox.tsx": "de4f5efbde68b655bef189fabd5754c99b405bca386734c082e1892796d1a0cd",
+    "index.ts": "f5c59644a9290321b3fbdea1fc8505b77ae7d2b10054c0bc186b1f27bdba026d",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.danger",
+    "colors.focus",
+    "colors.text",
+    "colors.text-muted"
+  ],
+  "docsUrl": "https://ecentry.dev/components/checkbox/",
+  "license": "MIT"
+}

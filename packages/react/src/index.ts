@@ -51,6 +51,7 @@ import "./components/download-trigger/download-trigger.css";
 import "./components/calendar/calendar.css";
 import "./components/date-input/date-input.css";
 import "./components/date-picker/date-picker.css";
+import "./components/checkbox/checkbox.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -130,6 +131,8 @@ export type {
   DatePickerProps,
   DatePickerValue,
 } from "./components/date-picker/date-picker.js";
+export { Checkbox } from "./components/checkbox/checkbox.js";
+export type { CheckboxProps } from "./components/checkbox/checkbox.js";
 export type {
   SplitterRootProps,
   SplitterPanelProps,

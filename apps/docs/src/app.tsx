@@ -47,6 +47,7 @@ const CalendarDocs = lazy(() => import("../content/components/calendar.mdx"));
 const DatePickerDocs = lazy(
   () => import("../content/components/date-picker.mdx"),
 );
+const CheckboxDocs = lazy(() => import("../content/components/checkbox.mdx"));
 
 export const routes = [
   "/",
@@ -91,6 +92,7 @@ export const routes = [
   "/components/calendar/",
   "/components/date-input/",
   "/components/date-picker/",
+  "/components/checkbox/",
 ] as const;
 
 const componentLinks = [
@@ -134,6 +136,7 @@ const componentLinks = [
   { title: "Calendar", href: "/components/calendar/" },
   { title: "Date Input", href: "/components/date-input/" },
   { title: "Date Picker", href: "/components/date-picker/" },
+  { title: "Checkbox", href: "/components/checkbox/" },
 ];
 
 function Home() {
@@ -413,6 +416,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/date-picker/" ? (
               <Suspense fallback={<p>Loading date picker guide...</p>}>
                 <DatePickerDocs />
+              </Suspense>
+            ) : route === "/components/checkbox/" ? (
+              <Suspense fallback={<p>Loading checkbox guide...</p>}>
+                <CheckboxDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

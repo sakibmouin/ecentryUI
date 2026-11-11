@@ -1,0 +1,28 @@
+import { CheckboxExample } from "../../src/examples/checkbox.tsx";
+import checkboxSource from "../../src/examples/checkbox.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Checkbox
+</div>
+<span className="section-index">FORM COMPONENT</span>
+
+# Checkbox
+
+Checkbox keeps the native form control, label activation, keyboard behavior, and reset semantics. Description and error text are linked to the input.
+
+## Install
+
+```sh
+ecentry add checkbox
+```
+
+## Preview
+
+<ExamplePanel source={checkboxSource}>
+  <CheckboxExample />
+</ExamplePanel>
+
+## API
+
+`label` is required. `description` provides help and `error` sets `aria-invalid`. `indeterminate` sets the native mixed state. `loading` temporarily disables activation and sets `aria-busy`; `disabled` and `readOnly` prevent changes. All native checkbox attributes, including `name`, `value`, `checked`, `defaultChecked`, `onChange`, `required`, and refs, pass through.

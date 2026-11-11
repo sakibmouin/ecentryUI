@@ -339,7 +339,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 ## Forms
 
-- [ ] **T060 Checkbox component** (depends on T016).
+- [x] **T060 Checkbox component** (depends on T016).
   - Files: `packages/react/src/components/checkbox/checkbox.tsx`, `checkbox.css`, `checkbox.test.tsx`, `index.ts`, `apps/docs/content/components/checkbox.mdx`.
   - Acceptance: label, validation, form reset and states; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/checkbox/checkbox.test.tsx && npm run test:e2e -- checkbox`.
