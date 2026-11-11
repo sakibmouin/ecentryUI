@@ -232,7 +232,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 ### Checkpoint after T043
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T044 Link component** (depends on T016).
+- [x] **T044 Link component** (depends on T016).
   - Files: `packages/react/src/components/link/link.tsx`, `link.css`, `link.test.tsx`, `index.ts`, `apps/docs/content/components/link.mdx`.
   - Acceptance: semantic text, wrapping and typography; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/link/link.test.tsx && npm run test:e2e -- link`.

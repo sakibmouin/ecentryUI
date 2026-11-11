@@ -29,6 +29,7 @@ import EmDocs from "../content/components/em.mdx";
 import HeadingDocs from "../content/components/heading.mdx";
 import HighlightDocs from "../content/components/highlight.mdx";
 import KbdDocs from "../content/components/kbd.mdx";
+import LinkDocs from "../content/components/link.mdx";
 
 export const routes = [
   "/",
@@ -60,6 +61,7 @@ export const routes = [
   "/components/heading/",
   "/components/highlight/",
   "/components/kbd/",
+  "/components/link/",
 ] as const;
 
 const componentLinks = [
@@ -90,6 +92,7 @@ const componentLinks = [
   { title: "Heading", href: "/components/heading/" },
   { title: "Highlight", href: "/components/highlight/" },
   { title: "Kbd", href: "/components/kbd/" },
+  { title: "Link", href: "/components/link/" },
 ];
 
 function Home() {
@@ -338,6 +341,8 @@ export function App({ routePath }: { routePath: string }) {
               <HighlightDocs />
             ) : route === "/components/kbd/" ? (
               <KbdDocs />
+            ) : route === "/components/link/" ? (
+              <LinkDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

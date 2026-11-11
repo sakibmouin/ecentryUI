@@ -1,0 +1,28 @@
+import { LinkExample } from "../../src/examples/link.tsx";
+import linkSource from "../../src/examples/link.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Link
+</div>
+<span className="section-index">TYPOGRAPHY COMPONENT</span>
+
+# Link
+
+Link uses a native anchor for navigation, with focus styling and wrapping for long addresses. Use `external` to indicate a new tab. New tabs receive `noopener noreferrer` automatically.
+
+## Install
+
+```sh
+ecentry add link
+```
+
+## Preview
+
+<ExamplePanel source={linkSource}>
+  <LinkExample />
+</ExamplePanel>
+
+## API
+
+`href`, `target`, `rel`, and other native anchor attributes are forwarded. `external` opens a new tab and adds a visual indicator hidden from assistive technology.

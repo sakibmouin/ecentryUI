@@ -29,6 +29,7 @@ import { emRegistryItem } from "../packages/react/dist/components/em/metadata.js
 import { headingRegistryItem } from "../packages/react/dist/components/heading/metadata.js";
 import { highlightRegistryItem } from "../packages/react/dist/components/highlight/metadata.js";
 import { kbdRegistryItem } from "../packages/react/dist/components/kbd/metadata.js";
+import { linkRegistryItem } from "../packages/react/dist/components/link/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -58,6 +59,7 @@ for (const item of [
   headingRegistryItem,
   highlightRegistryItem,
   kbdRegistryItem,
+  linkRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

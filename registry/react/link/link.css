@@ -1,0 +1,22 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-link {
+    color: #115f4f;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    overflow-wrap: anywhere;
+  }
+  .ec-link:hover {
+    color: #0b463b;
+  }
+  .ec-link:focus-visible {
+    outline: 3px solid #9bd6c3;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  .ec-link__external {
+    margin-inline-start: 0.25em;
+    font-size: 0.8em;
+  }
+}

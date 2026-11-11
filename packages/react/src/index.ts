@@ -39,6 +39,7 @@ import "./components/em/em.css";
 import "./components/heading/heading.css";
 import "./components/highlight/highlight.css";
 import "./components/kbd/kbd.css";
+import "./components/link/link.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -81,6 +82,8 @@ export { Highlight } from "./components/highlight/highlight.js";
 export type { HighlightProps } from "./components/highlight/highlight.js";
 export { Kbd } from "./components/kbd/kbd.js";
 export type { KbdProps } from "./components/kbd/kbd.js";
+export { Link } from "./components/link/link.js";
+export type { LinkProps } from "./components/link/link.js";
 export type {
   SplitterRootProps,
   SplitterPanelProps,

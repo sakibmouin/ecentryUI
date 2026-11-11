@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "link",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "link.css", "link.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "fac34cf607fb2c2cec650963dea92335ebbf7d4e434e4f96a1bb9a45a2b77670",
+    "link.css": "d1e9c32dc8b0d8f36b33524801ba4cc099ed81599d955a51de2e3a604ffc6903",
+    "link.tsx": "38f0f08aa419cc5a346f5130670cc3e4726761474d12c49d649e03550a0663b8",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/link/",
+  "license": "MIT"
+}
