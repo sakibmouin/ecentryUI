@@ -41,6 +41,7 @@ import "./components/highlight/highlight.css";
 import "./components/kbd/kbd.css";
 import "./components/link/link.css";
 import "./components/link-overlay/link-overlay.css";
+import "./components/list/list.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -93,6 +94,8 @@ export type {
   LinkBoxProps,
   LinkOverlayProps,
 } from "./components/link-overlay/link-overlay.js";
+export { List, ListItem } from "./components/list/list.js";
+export type { ListProps, ListItemProps } from "./components/list/list.js";
 export type {
   SplitterRootProps,
   SplitterPanelProps,

@@ -1,0 +1,24 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-list {
+    margin: 0;
+    padding-inline-start: 1.5em;
+    color: #29453a;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+  }
+  .ec-list[data-marker="none"] {
+    list-style: none;
+    padding-inline-start: 0;
+  }
+  .ec-list[data-marker="disc"] {
+    list-style-type: disc;
+  }
+  .ec-list[data-marker="decimal"] {
+    list-style-type: decimal;
+  }
+  .ec-list-item + .ec-list-item {
+    margin-block-start: 0.35em;
+  }
+}

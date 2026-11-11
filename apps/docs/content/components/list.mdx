@@ -1,0 +1,28 @@
+import { ListExample } from "../../src/examples/list.tsx";
+import listSource from "../../src/examples/list.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> List
+</div>
+<span className="section-index">TYPOGRAPHY COMPONENT</span>
+
+# List
+
+List uses native `ul` or `ol` markup, keeping item order and RTL indentation accessible.
+
+## Install
+
+```sh
+ecentry add list
+```
+
+## Preview
+
+<ExamplePanel source={listSource}>
+  <ListExample />
+</ExamplePanel>
+
+## API
+
+Use `ordered` for a numbered list and `marker="none"` for a marker-free variant. Compose children with ListItem. Native attributes, refs, and styles are forwarded.
