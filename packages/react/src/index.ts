@@ -45,6 +45,7 @@ import "./components/list/list.css";
 import "./components/mark/mark.css";
 import "./components/prose/prose.css";
 import "./components/text/text.css";
+import "./components/close-button/close-button.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -105,6 +106,8 @@ export { Prose } from "./components/prose/prose.js";
 export type { ProseProps } from "./components/prose/prose.js";
 export { Text } from "./components/text/text.js";
 export type { TextProps } from "./components/text/text.js";
+export { CloseButton } from "./components/close-button/close-button.js";
+export type { CloseButtonProps } from "./components/close-button/close-button.js";
 export type {
   SplitterRootProps,
   SplitterPanelProps,

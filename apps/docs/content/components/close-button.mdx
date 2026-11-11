@@ -1,0 +1,28 @@
+import { CloseButtonExample } from "../../src/examples/close-button.tsx";
+import closeButtonSource from "../../src/examples/close-button.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Close Button
+</div>
+<span className="section-index">ACTION COMPONENT</span>
+
+# Close Button
+
+Close Button is a native button with a visible close glyph and an accessible name. The default name is "Close"; give it a context-specific `aria-label` when several close actions appear together.
+
+## Install
+
+```sh
+ecentry add close-button
+```
+
+## Preview
+
+<ExamplePanel source={closeButtonSource}>
+  <CloseButtonExample />
+</ExamplePanel>
+
+## API
+
+`size` is `sm`, `md`, or `lg`. `disabled` and `loading` prevent activation. Loading also sets `aria-busy`. Native button attributes, refs, and `className` pass through. The default button type is `button`.

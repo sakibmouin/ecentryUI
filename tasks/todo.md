@@ -289,14 +289,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 ## Actions and dates
 
-- [ ] **T052 Close Button component** (depends on T016).
+- [x] **T052 Close Button component** (depends on T016).
   - Files: `packages/react/src/components/close-button/close-button.tsx`, `close-button.css`, `close-button.test.tsx`, `index.ts`, `apps/docs/content/components/close-button.mdx`.
   - Acceptance: activation, disabled/loading and date semantics; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/close-button/close-button.test.tsx && npm run test:e2e -- close-button`.
 
 ### Checkpoint after T052
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T053 Icon Button component** (depends on T016).
   - Files: `packages/react/src/components/icon-button/icon-button.tsx`, `icon-button.css`, `icon-button.test.tsx`, `index.ts`, `apps/docs/content/components/icon-button.mdx`.

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "close-button",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["close-button.css", "close-button.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "close-button.css": "08bcfd1531d63090aa0a1021cf7ecb30e088268bbaeace08f6410b11a044f09b",
+    "close-button.tsx": "d53cbb03a012ca2818a54736a48d70b1ec40345d7453bf7f7262f83bf400e775",
+    "index.ts": "78d702487755fe09161a5476e0752d4bc3434ae63d60f19cff2a0ac027aac7ca",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": ["colors.focus", "colors.surface", "colors.text", "radii.md"],
+  "docsUrl": "https://ecentry.dev/components/close-button/",
+  "license": "MIT"
+}
