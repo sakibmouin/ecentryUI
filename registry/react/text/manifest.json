@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "text",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "styles.d.ts", "text.css", "text.tsx"],
+  "hashes": {
+    "index.ts": "9110f86e2e124e8c16bc77e1563aefe7acb9cf53c2855e5fe3660f000bf96066",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b",
+    "text.css": "3f704f749580fc3e91397b2b6ea1f075f6d7ad3806bb11ccad8a1a0052f7b2c0",
+    "text.tsx": "919bef6edc40612ca5bc11c9033bf9a10aff39db45636ff63b6952eef4c416e6"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": ["colors.text"],
+  "docsUrl": "https://ecentry.dev/components/text/",
+  "license": "MIT"
+}

@@ -1,0 +1,28 @@
+import { TextExample } from "../../src/examples/text.tsx";
+import textSource from "../../src/examples/text.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Text
+</div>
+<span className="section-index">TYPOGRAPHY COMPONENT</span>
+
+# Text
+
+Text provides token-aware body typography while preserving native semantics. It is a `span` by default; set `as="p"` for a paragraph.
+
+## Install
+
+```sh
+ecentry add text
+```
+
+## Preview
+
+<ExamplePanel source={textSource}>
+  <TextExample />
+</ExamplePanel>
+
+## API
+
+`as` selects the element. `size` is `sm`, `md`, or `lg`; `weight` is `regular`, `medium`, or `bold`. Native attributes, `className`, and refs pass through.

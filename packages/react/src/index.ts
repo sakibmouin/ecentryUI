@@ -44,6 +44,7 @@ import "./components/link-overlay/link-overlay.css";
 import "./components/list/list.css";
 import "./components/mark/mark.css";
 import "./components/prose/prose.css";
+import "./components/text/text.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -102,6 +103,8 @@ export { Mark } from "./components/mark/mark.js";
 export type { MarkProps } from "./components/mark/mark.js";
 export { Prose } from "./components/prose/prose.js";
 export type { ProseProps } from "./components/prose/prose.js";
+export { Text } from "./components/text/text.js";
+export type { TextProps } from "./components/text/text.js";
 export type {
   SplitterRootProps,
   SplitterPanelProps,

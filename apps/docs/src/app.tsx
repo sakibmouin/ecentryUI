@@ -34,6 +34,7 @@ import LinkOverlayDocs from "../content/components/link-overlay.mdx";
 import ListDocs from "../content/components/list.mdx";
 import MarkDocs from "../content/components/mark.mdx";
 import ProseDocs from "../content/components/prose.mdx";
+import TextDocs from "../content/components/text.mdx";
 
 const RichTextEditorDocs = lazy(
   () => import("../content/components/rich-text-editor.mdx"),
@@ -75,6 +76,7 @@ export const routes = [
   "/components/mark/",
   "/components/prose/",
   "/components/rich-text-editor/",
+  "/components/text/",
 ] as const;
 
 const componentLinks = [
@@ -111,6 +113,7 @@ const componentLinks = [
   { title: "Mark", href: "/components/mark/" },
   { title: "Prose", href: "/components/prose/" },
   { title: "Rich Text Editor", href: "/components/rich-text-editor/" },
+  { title: "Text", href: "/components/text/" },
 ];
 
 function Home() {
@@ -373,6 +376,8 @@ export function App({ routePath }: { routePath: string }) {
               <Suspense fallback={<p>Loading editor guide...</p>}>
                 <RichTextEditorDocs />
               </Suspense>
+            ) : route === "/components/text/" ? (
+              <TextDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (

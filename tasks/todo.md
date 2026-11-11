@@ -282,7 +282,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/rich-text-editor/rich-text-editor.css`, `index.ts`, `apps/docs/content/components/rich-text-editor.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- rich-text-editor`.
-- [ ] **T051 Text component** (depends on T016).
+- [x] **T051 Text component** (depends on T016).
   - Files: `packages/react/src/components/text/text.tsx`, `text.css`, `text.test.tsx`, `index.ts`, `apps/docs/content/components/text.mdx`.
   - Acceptance: semantic text, wrapping and typography; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/text/text.test.tsx && npm run test:e2e -- text`.
