@@ -1,0 +1,49 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-prose {
+    max-width: 70ch;
+    min-width: 0;
+    color: #29453a;
+    font-size: 1rem;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+  }
+  .ec-prose :where(h1, h2, h3, h4) {
+    margin-block: 1.5em 0.5em;
+    color: #214b3d;
+    font-family: Manrope, sans-serif;
+    line-height: 1.25;
+  }
+  .ec-prose :where(h1, h2, h3, h4):first-child {
+    margin-block-start: 0;
+  }
+  .ec-prose :where(p, ul, ol, blockquote, pre) {
+    margin-block: 0 1em;
+  }
+  .ec-prose :where(ul, ol) {
+    padding-inline-start: 1.5em;
+  }
+  .ec-prose :where(blockquote) {
+    padding-inline-start: 1em;
+    border-inline-start: 3px solid #12715d;
+  }
+  .ec-prose :where(a) {
+    color: #115f4f;
+    text-underline-offset: 0.15em;
+  }
+  .ec-prose :where(a):focus-visible {
+    outline: 3px solid #9bd6c3;
+    outline-offset: 2px;
+  }
+  .ec-prose :where(pre) {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 1em;
+    background: #f1f7f2;
+  }
+  .ec-prose :where(code) {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 0.9em;
+  }
+}

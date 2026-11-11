@@ -43,6 +43,7 @@ import "./components/link/link.css";
 import "./components/link-overlay/link-overlay.css";
 import "./components/list/list.css";
 import "./components/mark/mark.css";
+import "./components/prose/prose.css";
 
 export { Button, buttonRecipe } from "./components/button/button.js";
 export { Input, inputRecipe } from "./components/input/input.js";
@@ -99,6 +100,8 @@ export { List, ListItem } from "./components/list/list.js";
 export type { ListProps, ListItemProps } from "./components/list/list.js";
 export { Mark } from "./components/mark/mark.js";
 export type { MarkProps } from "./components/mark/mark.js";
+export { Prose } from "./components/prose/prose.js";
+export type { ProseProps } from "./components/prose/prose.js";
 export type {
   SplitterRootProps,
   SplitterPanelProps,

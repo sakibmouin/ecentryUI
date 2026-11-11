@@ -1,0 +1,28 @@
+import { ProseExample } from "../../src/examples/prose.tsx";
+import proseSource from "../../src/examples/prose.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Prose
+</div>
+<span className="section-index">TYPOGRAPHY COMPONENT</span>
+
+# Prose
+
+Prose styles native article content with a readable measure and scoped typography for headings, lists, links, quotes, and code.
+
+## Install
+
+```sh
+ecentry add prose
+```
+
+## Preview
+
+<ExamplePanel source={proseSource}>
+  <ProseExample />
+</ExamplePanel>
+
+## API
+
+Prose forwards native article attributes, refs, and `className`. It styles nested semantic markup without rewriting its structure.

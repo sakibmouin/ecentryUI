@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "prose",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "prose.css", "prose.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "477541f12030c5ecfe4e9debc6c117b790a09c7963ab247b75535a71ec43153e",
+    "prose.css": "ca02b6025c1c4a5879702bdd3475b64910188d2702705ec884d441c756e567c8",
+    "prose.tsx": "7229d6d1240f506573119b5a109f0eadaf166fc1c4b690ae0b9494396c39d867",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/prose/",
+  "license": "MIT"
+}

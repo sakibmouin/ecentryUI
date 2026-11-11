@@ -252,7 +252,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/mark/mark.tsx`, `mark.css`, `mark.test.tsx`, `index.ts`, `apps/docs/content/components/mark.mdx`.
   - Acceptance: semantic text, wrapping and typography; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/mark/mark.test.tsx && npm run test:e2e -- mark`.
-- [ ] **T048 Prose component** (depends on T016).
+- [x] **T048 Prose component** (depends on T016).
   - Files: `packages/react/src/components/prose/prose.tsx`, `prose.css`, `prose.test.tsx`, `index.ts`, `apps/docs/content/components/prose.mdx`.
   - Acceptance: semantic text, wrapping and typography; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/prose/prose.test.tsx && npm run test:e2e -- prose`.

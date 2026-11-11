@@ -33,6 +33,7 @@ import LinkDocs from "../content/components/link.mdx";
 import LinkOverlayDocs from "../content/components/link-overlay.mdx";
 import ListDocs from "../content/components/list.mdx";
 import MarkDocs from "../content/components/mark.mdx";
+import ProseDocs from "../content/components/prose.mdx";
 
 export const routes = [
   "/",
@@ -68,6 +69,7 @@ export const routes = [
   "/components/link-overlay/",
   "/components/list/",
   "/components/mark/",
+  "/components/prose/",
 ] as const;
 
 const componentLinks = [
@@ -102,6 +104,7 @@ const componentLinks = [
   { title: "Link Overlay", href: "/components/link-overlay/" },
   { title: "List", href: "/components/list/" },
   { title: "Mark", href: "/components/mark/" },
+  { title: "Prose", href: "/components/prose/" },
 ];
 
 function Home() {
@@ -358,6 +361,8 @@ export function App({ routePath }: { routePath: string }) {
               <ListDocs />
             ) : route === "/components/mark/" ? (
               <MarkDocs />
+            ) : route === "/components/prose/" ? (
+              <ProseDocs />
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (
