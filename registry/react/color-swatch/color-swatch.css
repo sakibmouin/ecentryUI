@@ -1,0 +1,76 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-color-swatch {
+    position: relative;
+    display: inline-block;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-color-swatch input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  .ec-color-swatch label {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    min-height: 2.75rem;
+    padding: 0.35rem 0.6rem;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, white);
+    cursor: pointer;
+  }
+  .ec-color-swatch input:checked + label {
+    border-color: var(--ec-colors-accent, #116e5e);
+    box-shadow: inset 0 0 0 1px var(--ec-colors-accent, #116e5e);
+  }
+  .ec-color-swatch input:disabled + label {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-color-swatch__chip {
+    flex: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: 0.3rem;
+  }
+  .ec-color-swatch__body {
+    display: grid;
+    gap: 0.15rem;
+  }
+  .ec-color-swatch__label {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .ec-color-swatch__description {
+    color: var(--ec-colors-text-muted, #59635b);
+    font-size: 0.75rem;
+  }
+  .ec-color-swatch__error {
+    color: var(--ec-colors-danger, #c43843);
+    font-size: 0.75rem;
+  }
+}
+@layer ec.utilities {
+  .ec-color-swatch input:focus-visible + label {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-color-swatch label {
+      border-color: CanvasText;
+    }
+    .ec-color-swatch input:checked + label {
+      border-color: Highlight;
+    }
+    .ec-color-swatch input:disabled + label {
+      opacity: 1;
+      color: GrayText;
+    }
+  }
+}

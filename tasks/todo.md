@@ -360,14 +360,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/color-picker/color-picker.css`, `index.ts`, `apps/docs/content/components/color-picker.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- color-picker`.
-- [ ] **T064 Color Swatch component** (depends on T016).
+- [x] **T064 Color Swatch component** (depends on T016).
   - Files: `packages/react/src/components/color-swatch/color-swatch.tsx`, `color-swatch.css`, `color-swatch.test.tsx`, `index.ts`, `apps/docs/content/components/color-swatch.mdx`.
   - Acceptance: label, validation, form reset and states; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/color-swatch/color-swatch.test.tsx && npm run test:e2e -- color-swatch`.
 
 ### Checkpoint after T064
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T065 Editable behavior** (depends on T016).
   - Files: `packages/react/src/components/editable/editable.tsx`, `editable.test.tsx`.

@@ -54,6 +54,9 @@ const CheckboxCardDocs = lazy(
 const ColorPickerDocs = lazy(
   () => import("../content/components/color-picker.mdx"),
 );
+const ColorSwatchDocs = lazy(
+  () => import("../content/components/color-swatch.mdx"),
+);
 
 export const routes = [
   "/",
@@ -101,6 +104,7 @@ export const routes = [
   "/components/checkbox/",
   "/components/checkbox-card/",
   "/components/color-picker/",
+  "/components/color-swatch/",
 ] as const;
 
 const componentLinks = [
@@ -147,6 +151,7 @@ const componentLinks = [
   { title: "Checkbox", href: "/components/checkbox/" },
   { title: "Checkbox Card", href: "/components/checkbox-card/" },
   { title: "Color Picker", href: "/components/color-picker/" },
+  { title: "Color Swatch", href: "/components/color-swatch/" },
 ];
 
 function Home() {
@@ -438,6 +443,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/color-picker/" ? (
               <Suspense fallback={<p>Loading color picker guide...</p>}>
                 <ColorPickerDocs />
+              </Suspense>
+            ) : route === "/components/color-swatch/" ? (
+              <Suspense fallback={<p>Loading color swatch guide...</p>}>
+                <ColorSwatchDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

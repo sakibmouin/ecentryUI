@@ -1,0 +1,28 @@
+import { ColorSwatchExample } from "../../src/examples/color-swatch.tsx";
+import exampleSource from "../../src/examples/color-swatch.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Color Swatch
+</div>
+<span className="section-index">FORM COMPONENT</span>
+
+# Color Swatch
+
+Choose a color from a labeled set of native radio controls. Arrow keys, form submission, and reset follow browser behavior.
+
+## Install
+
+```sh
+ecentry add color-swatch
+```
+
+## Preview
+
+<ExamplePanel source={exampleSource}>
+  <ColorSwatchExample />
+</ExamplePanel>
+
+## API
+
+`color` and `label` are required. `description` and `error` are announced with the choice; an error sets `aria-invalid`. Use a shared `name` within a group. Native radio props including `checked`, `defaultChecked`, `required`, and refs pass through. `loading`, `disabled`, and `readOnly` prevent selection.

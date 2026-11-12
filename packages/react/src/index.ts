@@ -203,3 +203,6 @@ export {
   DialogDescription,
   DialogClose,
 } from "./components/dialog/dialog.js";
+
+export { ColorSwatch } from "./components/color-swatch/color-swatch.js";
+export type { ColorSwatchProps } from "./components/color-swatch/color-swatch.js";

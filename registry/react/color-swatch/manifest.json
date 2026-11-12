@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "color-swatch",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["color-swatch.css", "color-swatch.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "color-swatch.css": "62e86b25fce7aab6628dad9794500ca76558b3356f28f64433201d47310e4792",
+    "color-swatch.tsx": "2628f01f39e0e9e78553213c904d00fac0c5a7cc0637fa68e6378dcf326f3c4c",
+    "index.ts": "be529c6ff3fe30479bc5262962632f22041bf0aac5a71e91ffac54005f5348f2",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/color-swatch/",
+  "license": "MIT"
+}

@@ -45,6 +45,7 @@ import { datePickerRegistryItem } from "../packages/react/dist/components/date-p
 import { checkboxRegistryItem } from "../packages/react/dist/components/checkbox/metadata.js";
 import { checkboxCardRegistryItem } from "../packages/react/dist/components/checkbox-card/metadata.js";
 import { colorPickerRegistryItem } from "../packages/react/dist/components/color-picker/metadata.js";
+import { colorSwatchRegistryItem } from "../packages/react/dist/components/color-swatch/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -90,6 +91,7 @@ for (const item of [
   checkboxRegistryItem,
   checkboxCardRegistryItem,
   colorPickerRegistryItem,
+  colorSwatchRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(
