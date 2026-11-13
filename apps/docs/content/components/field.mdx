@@ -1,0 +1,28 @@
+import { FieldExample } from "../../src/examples/field.tsx";
+import source from "../../src/examples/field.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Field
+</div>
+<span className="section-index">FORM COMPONENT</span>
+
+# Field
+
+Connect a label, help text, and validation message to a native input.
+
+## Install
+
+```sh
+ecentry add field
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <FieldExample />
+</ExamplePanel>
+
+## API
+
+`label` is required. Pass one input as the child. `description` and `error` are linked through `aria-describedby`; an error sets `aria-invalid`. `required`, `disabled`, and `readOnly` are forwarded to the input. The input retains native form submission and reset behavior.

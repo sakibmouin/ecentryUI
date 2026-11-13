@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "field",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["field.css", "field.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "field.css": "4fa2f4e1a5daeac7999f8994edd5671ed8040ba15ace3e7bf343904de3c578ea",
+    "field.tsx": "12c676f4d2d6aa27ee2351fad7261f52d3a64df438d1d050753b50451dcbfae9",
+    "index.ts": "516151e40d8f065ba4fe94b0140410f936ac13590162cce7b9d41c86ef970665",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/field/",
+  "license": "MIT"
+}

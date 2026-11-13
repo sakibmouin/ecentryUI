@@ -1,0 +1,49 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-field {
+    display: grid;
+    gap: 0.4rem;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-field__label {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .ec-field > :is(input, textarea, select) {
+    min-height: 2.75rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, white);
+    color: inherit;
+    font: inherit;
+  }
+  .ec-field > :is(input, textarea, select)[aria-invalid="true"] {
+    border-color: var(--ec-colors-danger, #c43843);
+  }
+  .ec-field > :is(input, textarea, select):disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-field__description {
+    color: var(--ec-colors-text-muted, #59635b);
+    font-size: 0.75rem;
+  }
+  .ec-field__error {
+    color: var(--ec-colors-danger, #c43843);
+    font-size: 0.75rem;
+  }
+}
+@layer ec.utilities {
+  .ec-field > :is(input, textarea, select):focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+}
+@layer ec.variants {
+  [data-ec-theme="dark"] .ec-field__error {
+    color: #ff9ca3;
+  }
+}

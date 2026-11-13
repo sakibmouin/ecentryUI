@@ -59,6 +59,8 @@ const ColorSwatchDocs = lazy(
 );
 const EditableDocs = lazy(() => import("../content/components/editable.mdx"));
 
+const FieldDocs = lazy(() => import("../content/components/field.mdx"));
+
 export const routes = [
   "/",
   "/guides/examples/",
@@ -107,6 +109,7 @@ export const routes = [
   "/components/color-picker/",
   "/components/color-swatch/",
   "/components/editable/",
+  "/components/field/",
 ] as const;
 
 const componentLinks = [
@@ -155,6 +158,7 @@ const componentLinks = [
   { title: "Color Picker", href: "/components/color-picker/" },
   { title: "Color Swatch", href: "/components/color-swatch/" },
   { title: "Editable", href: "/components/editable/" },
+  { title: "Field", href: "/components/field/" },
 ];
 
 function Home() {
@@ -454,6 +458,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/editable/" ? (
               <Suspense fallback={<p>Loading editable guide...</p>}>
                 <EditableDocs />
+              </Suspense>
+            ) : route === "/components/field/" ? (
+              <Suspense fallback={<p>Loading field guide...</p>}>
+                <FieldDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

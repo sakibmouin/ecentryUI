@@ -377,14 +377,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/editable/editable.css`, `index.ts`, `apps/docs/content/components/editable.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- editable`.
-- [ ] **T067 Field component** (depends on T016).
+- [x] **T067 Field component** (depends on T016).
   - Files: `packages/react/src/components/field/field.tsx`, `field.css`, `field.test.tsx`, `index.ts`, `apps/docs/content/components/field.mdx`.
   - Acceptance: label, validation, form reset and states; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/field/field.test.tsx && npm run test:e2e -- field`.
 
 ### Checkpoint after T067
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T068 Fieldset component** (depends on T016).
   - Files: `packages/react/src/components/fieldset/fieldset.tsx`, `fieldset.css`, `fieldset.test.tsx`, `index.ts`, `apps/docs/content/components/fieldset.mdx`.

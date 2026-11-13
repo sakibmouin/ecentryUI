@@ -48,6 +48,8 @@ import { colorPickerRegistryItem } from "../packages/react/dist/components/color
 import { colorSwatchRegistryItem } from "../packages/react/dist/components/color-swatch/metadata.js";
 import { editableRegistryItem } from "../packages/react/dist/components/editable/metadata.js";
 
+import { fieldRegistryItem } from "../packages/react/dist/components/field/metadata.js";
+
 for (const item of [
   buttonRegistryItem,
   inputRegistryItem,
@@ -94,6 +96,7 @@ for (const item of [
   colorPickerRegistryItem,
   colorSwatchRegistryItem,
   editableRegistryItem,
+  fieldRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(
