@@ -7,7 +7,11 @@ export function FieldExample() {
   const [dark, setDark] = useState(false);
   return (
     <AppearanceProvider appearance={dark ? "dark" : "light"}>
-      <div className="code-demo" role="region" aria-label="Field example">
+      <div
+        className="code-demo themed-code-demo"
+        role="region"
+        aria-label="Field example"
+      >
         <form aria-label="Profile">
           <Field
             label="Display name"

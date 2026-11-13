@@ -7,7 +7,11 @@ export function FileUploadExample() {
   const [dark, setDark] = useState(false);
   return (
     <AppearanceProvider appearance={dark ? "dark" : "light"}>
-      <div className="code-demo" role="region" aria-label="File upload example">
+      <div
+        className="code-demo themed-code-demo"
+        role="region"
+        aria-label="File upload example"
+      >
         <form aria-label="Attachments">
           <FileUpload
             label="Attachments"

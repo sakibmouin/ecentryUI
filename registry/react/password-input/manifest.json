@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "password-input",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": [
+    "index.ts",
+    "password-input.css",
+    "password-input.tsx",
+    "styles.d.ts"
+  ],
+  "hashes": {
+    "index.ts": "9cdc7c94019c94c709f95151c58dc90f4bb6a134c9c8853266eaefbe8dd5774e",
+    "password-input.css": "8537a7a6ef0e43e339802c4425f84de0b5e531a80363e84e32815299c1036296",
+    "password-input.tsx": "b06ec463fe7f32f96ab3db9bb1a39371765080a2ac71f5bdaa00561457b7a5cb",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/password-input/",
+  "license": "MIT"
+}

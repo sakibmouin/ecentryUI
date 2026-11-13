@@ -8,7 +8,7 @@ export function NumberInputExample() {
   return (
     <AppearanceProvider appearance={dark ? "dark" : "light"}>
       <div
-        className="code-demo"
+        className="code-demo themed-code-demo"
         role="region"
         aria-label="Number input example"
       >

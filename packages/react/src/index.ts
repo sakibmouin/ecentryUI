@@ -221,3 +221,6 @@ export type { FileUploadProps } from "./components/file-upload/file-upload.js";
 
 export { NumberInput } from "./components/number-input/number-input.js";
 export type { NumberInputProps } from "./components/number-input/number-input.js";
+
+export { PasswordInput } from "./components/password-input/password-input.js";
+export type { PasswordInputProps } from "./components/password-input/password-input.js";
