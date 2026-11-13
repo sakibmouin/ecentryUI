@@ -215,3 +215,6 @@ export type { FieldProps } from "./components/field/field.js";
 
 export { Fieldset } from "./components/fieldset/fieldset.js";
 export type { FieldsetProps } from "./components/fieldset/fieldset.js";
+
+export { FileUpload } from "./components/file-upload/file-upload.js";
+export type { FileUploadProps } from "./components/file-upload/file-upload.js";

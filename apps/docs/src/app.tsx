@@ -66,6 +66,10 @@ const DateInputDocs = lazy(
   () => import("../content/components/date-input.mdx"),
 );
 
+const FileUploadDocs = lazy(
+  () => import("../content/components/file-upload.mdx"),
+);
+
 export const routes = [
   "/",
   "/guides/examples/",
@@ -116,6 +120,7 @@ export const routes = [
   "/components/editable/",
   "/components/field/",
   "/components/fieldset/",
+  "/components/file-upload/",
 ] as const;
 
 const componentLinks = [
@@ -166,6 +171,7 @@ const componentLinks = [
   { title: "Editable", href: "/components/editable/" },
   { title: "Field", href: "/components/field/" },
   { title: "Fieldset", href: "/components/fieldset/" },
+  { title: "File Upload", href: "/components/file-upload/" },
 ];
 
 function Home() {
@@ -475,6 +481,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/fieldset/" ? (
               <Suspense fallback={<p>Loading fieldset guide...</p>}>
                 <FieldsetDocs />
+              </Suspense>
+            ) : route === "/components/file-upload/" ? (
+              <Suspense fallback={<p>Loading file upload guide...</p>}>
+                <FileUploadDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

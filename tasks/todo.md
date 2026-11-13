@@ -390,18 +390,18 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/fieldset/fieldset.tsx`, `fieldset.css`, `fieldset.test.tsx`, `index.ts`, `apps/docs/content/components/fieldset.mdx`.
   - Acceptance: label, validation, form reset and states; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/fieldset/fieldset.test.tsx && npm run test:e2e -- fieldset`.
-- [ ] **T069 File Upload behavior** (depends on T016).
+- [x] **T069 File Upload behavior** (depends on T016).
   - Files: `packages/react/src/components/file-upload/file-upload.tsx`, `file-upload.test.tsx`.
   - Acceptance: picker, dropzone, validation and removal; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/file-upload/file-upload.test.tsx`.
-- [ ] **T070 File Upload presentation and docs** (depends on T069).
+- [x] **T070 File Upload presentation and docs** (depends on T069).
   - Files: `packages/react/src/components/file-upload/file-upload.css`, `index.ts`, `apps/docs/content/components/file-upload.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- file-upload`.
 
 ### Checkpoint after T070
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T071 Number Input behavior** (depends on T016).
   - Files: `packages/react/src/components/number-input/number-input.tsx`, `number-input.test.tsx`.

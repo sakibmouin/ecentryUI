@@ -52,6 +52,8 @@ import { fieldRegistryItem } from "../packages/react/dist/components/field/metad
 
 import { fieldsetRegistryItem } from "../packages/react/dist/components/fieldset/metadata.js";
 
+import { fileUploadRegistryItem } from "../packages/react/dist/components/file-upload/metadata.js";
+
 for (const item of [
   buttonRegistryItem,
   inputRegistryItem,
@@ -100,6 +102,7 @@ for (const item of [
   editableRegistryItem,
   fieldRegistryItem,
   fieldsetRegistryItem,
+  fileUploadRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

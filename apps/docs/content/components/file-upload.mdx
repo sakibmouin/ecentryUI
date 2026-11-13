@@ -1,0 +1,28 @@
+import { FileUploadExample } from "../../src/examples/file-upload.tsx";
+import source from "../../src/examples/file-upload.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> File Upload
+</div>
+<span className="section-index">FORM COMPONENT</span>
+
+# File Upload
+
+Choose files through the native picker or drop them onto the upload area. Selected files can be removed before submission.
+
+## Install
+
+```sh
+ecentry add file-upload
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <FileUploadExample />
+</ExamplePanel>
+
+## API
+
+`label` names the file input. Use `files` and `onFilesChange` for controlled selection or `defaultFiles` for local state. `accept`, `maxFiles`, and `maxSize` validate selections. `multiple`, `disabled`, `required`, and native input props pass through. `maxSize` is in bytes.

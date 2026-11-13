@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "file-upload",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["file-upload.css", "file-upload.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "file-upload.css": "94567157ad92ce0165539895ad13f9c98b043ef78943d72ae104e0d0b74e8869",
+    "file-upload.tsx": "1d62d06f7960abae4a81726ed7f59462e8f19bdf47e74bfb42c0fe05ae8c5d80",
+    "index.ts": "9e6fdc24d1032b474093aba79cf5fb7872aa36ef0099d8383b5c86de82562589",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/file-upload/",
+  "license": "MIT"
+}
