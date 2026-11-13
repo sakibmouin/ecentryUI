@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "editable",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["editable.css", "editable.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "editable.css": "d4bab9b78ee21bab9a33a2e1833260e5e9ae4568b35acda70262c89b48c6453f",
+    "editable.tsx": "fc662f4631e4d3d61ea2c98f28243f6491e01562c2fc08f139255c54c781714d",
+    "index.ts": "c5065eba7ce2ce9aa1ff0671ccffe694c9ab79aa039cfa75f5605e0b4249df78",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/editable/",
+  "license": "MIT"
+}

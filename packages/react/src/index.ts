@@ -206,3 +206,6 @@ export {
 
 export { ColorSwatch } from "./components/color-swatch/color-swatch.js";
 export type { ColorSwatchProps } from "./components/color-swatch/color-swatch.js";
+
+export { Editable } from "./components/editable/editable.js";
+export type { EditableProps } from "./components/editable/editable.js";

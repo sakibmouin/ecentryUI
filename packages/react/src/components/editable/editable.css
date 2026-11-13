@@ -1,0 +1,78 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-editable {
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-editable__trigger {
+    min-height: 2.75rem;
+    min-width: 10rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid transparent;
+    border-radius: var(--ec-radii-md, 8px);
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: start;
+    cursor: text;
+  }
+  .ec-editable__trigger:hover {
+    border-color: var(--ec-colors-border, #dce0dc);
+  }
+  .ec-editable__trigger:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-editable__placeholder {
+    color: var(--ec-colors-text-muted, #59635b);
+  }
+  .ec-editable__editor {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .ec-editable__editor input {
+    min-height: 2.75rem;
+    min-width: 10rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, white);
+    color: inherit;
+    font: inherit;
+  }
+  .ec-editable__editor button {
+    min-height: 2.75rem;
+    padding: 0.4rem 0.75rem;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, white);
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+  .ec-editable__editor button:first-of-type {
+    border-color: var(--ec-colors-accent, #116e5e);
+    background: var(--ec-colors-accent, #116e5e);
+    color: white;
+  }
+  .ec-editable__error {
+    flex-basis: 100%;
+    color: var(--ec-colors-danger, #c43843);
+    font-size: 0.875rem;
+  }
+}
+@layer ec.utilities {
+  .ec-editable :is(button, input):focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-editable__trigger:hover,
+    .ec-editable__editor :is(input, button) {
+      border-color: CanvasText;
+    }
+  }
+}

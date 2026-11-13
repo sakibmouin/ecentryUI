@@ -114,7 +114,7 @@ export function Editable({
           className="ec-editable__trigger"
           onClick={start}
           disabled={disabled || readOnly}
-          aria-label={`Edit ${label}`}
+          aria-label={`Edit ${label}: ${committed || placeholder}`}
         >
           {committed || (
             <span className="ec-editable__placeholder">{placeholder}</span>

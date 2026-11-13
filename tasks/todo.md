@@ -369,11 +369,11 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T065 Editable behavior** (depends on T016).
+- [x] **T065 Editable behavior** (depends on T016).
   - Files: `packages/react/src/components/editable/editable.tsx`, `editable.test.tsx`.
   - Acceptance: edit, submit, cancel and validation; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/editable/editable.test.tsx`.
-- [ ] **T066 Editable presentation and docs** (depends on T065).
+- [x] **T066 Editable presentation and docs** (depends on T065).
   - Files: `packages/react/src/components/editable/editable.css`, `index.ts`, `apps/docs/content/components/editable.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- editable`.

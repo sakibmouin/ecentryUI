@@ -2006,8 +2006,7 @@ footer {
   border-radius: 12px;
   background: #f8fbf8;
 }
-[data-ec-theme="dark"]
-  :is(.date-input-demo, .date-picker-demo, .checkbox-demo) {
+[data-ec-theme="dark"] .code-demo {
   border-color: var(--ec-colors-border, #414a45);
   background: var(--ec-colors-surface, #19211c);
   color: var(--ec-colors-text, white);
