@@ -1,0 +1,28 @@
+import { FieldsetExample } from "../../src/examples/fieldset.tsx";
+import source from "../../src/examples/fieldset.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Fieldset
+</div>
+<span className="section-index">FORM COMPONENT</span>
+
+# Fieldset
+
+Group related controls with a native fieldset and legend.
+
+## Install
+
+```sh
+ecentry add fieldset
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <FieldsetExample />
+</ExamplePanel>
+
+## API
+
+`label` becomes the legend. `description` and `error` are linked to the group. `disabled` and `loading` disable descendant controls through the native fieldset. Form reset remains native.

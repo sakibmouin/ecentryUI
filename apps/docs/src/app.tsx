@@ -38,7 +38,6 @@ import TextDocs from "../content/components/text.mdx";
 import CloseButtonDocs from "../content/components/close-button.mdx";
 import IconButtonDocs from "../content/components/icon-button.mdx";
 import DownloadTriggerDocs from "../content/components/download-trigger.mdx";
-import DateInputDocs from "../content/components/date-input.mdx";
 
 const RichTextEditorDocs = lazy(
   () => import("../content/components/rich-text-editor.mdx"),
@@ -60,6 +59,12 @@ const ColorSwatchDocs = lazy(
 const EditableDocs = lazy(() => import("../content/components/editable.mdx"));
 
 const FieldDocs = lazy(() => import("../content/components/field.mdx"));
+
+const FieldsetDocs = lazy(() => import("../content/components/fieldset.mdx"));
+
+const DateInputDocs = lazy(
+  () => import("../content/components/date-input.mdx"),
+);
 
 export const routes = [
   "/",
@@ -110,6 +115,7 @@ export const routes = [
   "/components/color-swatch/",
   "/components/editable/",
   "/components/field/",
+  "/components/fieldset/",
 ] as const;
 
 const componentLinks = [
@@ -159,6 +165,7 @@ const componentLinks = [
   { title: "Color Swatch", href: "/components/color-swatch/" },
   { title: "Editable", href: "/components/editable/" },
   { title: "Field", href: "/components/field/" },
+  { title: "Fieldset", href: "/components/fieldset/" },
 ];
 
 function Home() {
@@ -434,7 +441,9 @@ export function App({ routePath }: { routePath: string }) {
                 <CalendarDocs />
               </Suspense>
             ) : route === "/components/date-input/" ? (
-              <DateInputDocs />
+              <Suspense fallback={<p>Loading date input guide...</p>}>
+                <DateInputDocs />
+              </Suspense>
             ) : route === "/components/date-picker/" ? (
               <Suspense fallback={<p>Loading date picker guide...</p>}>
                 <DatePickerDocs />
@@ -462,6 +471,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/field/" ? (
               <Suspense fallback={<p>Loading field guide...</p>}>
                 <FieldDocs />
+              </Suspense>
+            ) : route === "/components/fieldset/" ? (
+              <Suspense fallback={<p>Loading fieldset guide...</p>}>
+                <FieldsetDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

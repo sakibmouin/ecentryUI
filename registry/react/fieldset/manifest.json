@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "fieldset",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["fieldset.css", "fieldset.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "fieldset.css": "3ac5c739d05d0bb68488e503943498421d792bdfaad3fe499f053fb5020032e8",
+    "fieldset.tsx": "876b3b7b887f896fc9a99dc977f458c753696d1b4deffc4d25b26858f48772fa",
+    "index.ts": "3b62eebcb8d945024013fc0d6f19f4924056fcb1780f1a68929b04a7a8c8cecb",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.border",
+    "colors.danger",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/fieldset/",
+  "license": "MIT"
+}

@@ -212,3 +212,6 @@ export type { EditableProps } from "./components/editable/editable.js";
 
 export { Field } from "./components/field/field.js";
 export type { FieldProps } from "./components/field/field.js";
+
+export { Fieldset } from "./components/fieldset/fieldset.js";
+export type { FieldsetProps } from "./components/fieldset/fieldset.js";

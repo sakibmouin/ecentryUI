@@ -1,0 +1,49 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-fieldset {
+    display: grid;
+    gap: 0.75rem;
+    min-width: 0;
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-fieldset__legend {
+    padding: 0 0.35rem;
+    font-weight: 600;
+  }
+  .ec-fieldset__description,
+  .ec-fieldset__error {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+  .ec-fieldset__description {
+    color: var(--ec-colors-text-muted, #59635b);
+  }
+  .ec-fieldset__error {
+    color: var(--ec-colors-danger, #c43843);
+  }
+  .ec-fieldset__content {
+    display: grid;
+    gap: 0.5rem;
+  }
+  .ec-fieldset:disabled {
+    opacity: 0.6;
+  }
+}
+@layer ec.variants {
+  [data-ec-theme="dark"] .ec-fieldset__error {
+    color: #ff9ca3;
+  }
+}
+@layer ec.utilities {
+  @media (forced-colors: active) {
+    .ec-fieldset {
+      border-color: CanvasText;
+    }
+  }
+}
