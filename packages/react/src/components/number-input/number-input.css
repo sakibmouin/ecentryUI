@@ -1,0 +1,75 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-number-input {
+    display: grid;
+    gap: 0.4rem;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-number-input > label {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .ec-number-input__controls {
+    display: flex;
+    align-items: stretch;
+    width: fit-content;
+    min-height: 2.75rem;
+    overflow: hidden;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, white);
+  }
+  .ec-number-input__controls input {
+    width: 5rem;
+    min-width: 0;
+    padding: 0.5rem;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: center;
+  }
+  .ec-number-input__controls input::-webkit-inner-spin-button,
+  .ec-number-input__controls input::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+  .ec-number-input__controls button {
+    min-width: 2.5rem;
+    padding: 0.4rem;
+    border: 0;
+    border-inline-start: 1px solid var(--ec-colors-border, #dce0dc);
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+  .ec-number-input__controls button:first-child {
+    border-inline-start: 0;
+    border-inline-end: 1px solid var(--ec-colors-border, #dce0dc);
+    cursor: ew-resize;
+    touch-action: none;
+  }
+  .ec-number-input__controls button:hover:not(:disabled) {
+    background: var(--ec-colors-surface, #f4f7f4);
+  }
+  .ec-number-input__controls button:disabled,
+  .ec-number-input__controls input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+@layer ec.utilities {
+  .ec-number-input :is(input, button):focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: -2px;
+  }
+  @media (forced-colors: active) {
+    .ec-number-input__controls,
+    .ec-number-input__controls button {
+      border-color: CanvasText;
+    }
+  }
+}

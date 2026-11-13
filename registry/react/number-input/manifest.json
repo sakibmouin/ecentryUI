@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "number-input",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "number-input.css", "number-input.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "f6e1ebe59b68da0a094dccb2a4349906a1c11bd9226973df9f73af5d99b3076a",
+    "number-input.css": "8e6279d3300bf93909ce1ca58c0358485b5077fc4844882215c773513d16dc1f",
+    "number-input.tsx": "82e3d6c6726d254f945d06c276c28c2dc89ea92efd479c1e3ad7c37ba6e5ce18",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.surface",
+    "colors.text",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/number-input/",
+  "license": "MIT"
+}

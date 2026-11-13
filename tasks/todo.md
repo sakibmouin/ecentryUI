@@ -403,11 +403,11 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T071 Number Input behavior** (depends on T016).
+- [x] **T071 Number Input behavior** (depends on T016).
   - Files: `packages/react/src/components/number-input/number-input.tsx`, `number-input.test.tsx`.
   - Acceptance: step, bounds, scrubber and form state; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/number-input/number-input.test.tsx`.
-- [ ] **T072 Number Input presentation and docs** (depends on T071).
+- [x] **T072 Number Input presentation and docs** (depends on T071).
   - Files: `packages/react/src/components/number-input/number-input.css`, `index.ts`, `apps/docs/content/components/number-input.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- number-input`.

@@ -70,6 +70,10 @@ const FileUploadDocs = lazy(
   () => import("../content/components/file-upload.mdx"),
 );
 
+const NumberInputDocs = lazy(
+  () => import("../content/components/number-input.mdx"),
+);
+
 export const routes = [
   "/",
   "/guides/examples/",
@@ -121,6 +125,7 @@ export const routes = [
   "/components/field/",
   "/components/fieldset/",
   "/components/file-upload/",
+  "/components/number-input/",
 ] as const;
 
 const componentLinks = [
@@ -172,6 +177,7 @@ const componentLinks = [
   { title: "Field", href: "/components/field/" },
   { title: "Fieldset", href: "/components/fieldset/" },
   { title: "File Upload", href: "/components/file-upload/" },
+  { title: "Number Input", href: "/components/number-input/" },
 ];
 
 function Home() {
@@ -485,6 +491,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/file-upload/" ? (
               <Suspense fallback={<p>Loading file upload guide...</p>}>
                 <FileUploadDocs />
+              </Suspense>
+            ) : route === "/components/number-input/" ? (
+              <Suspense fallback={<p>Loading number input guide...</p>}>
+                <NumberInputDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

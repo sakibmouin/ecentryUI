@@ -54,6 +54,8 @@ import { fieldsetRegistryItem } from "../packages/react/dist/components/fieldset
 
 import { fileUploadRegistryItem } from "../packages/react/dist/components/file-upload/metadata.js";
 
+import { numberInputRegistryItem } from "../packages/react/dist/components/number-input/metadata.js";
+
 for (const item of [
   buttonRegistryItem,
   inputRegistryItem,
@@ -103,6 +105,7 @@ for (const item of [
   fieldRegistryItem,
   fieldsetRegistryItem,
   fileUploadRegistryItem,
+  numberInputRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

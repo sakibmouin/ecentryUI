@@ -218,3 +218,6 @@ export type { FieldsetProps } from "./components/fieldset/fieldset.js";
 
 export { FileUpload } from "./components/file-upload/file-upload.js";
 export type { FileUploadProps } from "./components/file-upload/file-upload.js";
+
+export { NumberInput } from "./components/number-input/number-input.js";
+export type { NumberInputProps } from "./components/number-input/number-input.js";

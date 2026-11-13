@@ -1,0 +1,28 @@
+import { NumberInputExample } from "../../src/examples/number-input.tsx";
+import source from "../../src/examples/number-input.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Number Input
+</div>
+<span className="section-index">FORM COMPONENT</span>
+
+# Number Input
+
+Enter a number, use the step buttons, or drag the scrub handle. Bounds apply to button and scrub changes.
+
+## Install
+
+```sh
+ecentry add number-input
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <NumberInputExample />
+</ExamplePanel>
+
+## API
+
+`label` is required. `value` and `onValueChange` control the value; `defaultValue` enables local state. `min`, `max`, and `step` configure bounds and stepping. The native number input supports keyboard entry and form submission. The scrub handle supports pointer dragging and arrow keys.
