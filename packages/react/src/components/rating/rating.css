@@ -1,0 +1,59 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-rating {
+    display: grid;
+    justify-items: start;
+    gap: 0.35rem;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-rating__label {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .ec-rating__stars {
+    display: inline-flex;
+    gap: 0.1rem;
+    padding: 0.25rem;
+    border-radius: var(--ec-radii-md, 8px);
+    cursor: pointer;
+    touch-action: none;
+    user-select: none;
+  }
+  .ec-rating__stars[aria-readonly="true"] {
+    cursor: default;
+  }
+  .ec-rating__stars[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-rating__star {
+    position: relative;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    color: var(--ec-colors-text-muted, #59635b);
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .ec-rating__fill {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    overflow: hidden;
+    color: var(--ec-colors-accent, #116e5e);
+    white-space: nowrap;
+  }
+}
+@layer ec.utilities {
+  .ec-rating__stars:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-rating__fill {
+      color: Highlight;
+    }
+  }
+}

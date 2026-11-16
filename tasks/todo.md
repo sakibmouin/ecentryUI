@@ -445,14 +445,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/rating/rating.tsx`, `rating.test.tsx`.
   - Acceptance: fractional/readonly selection and keyboard value; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/rating/rating.test.tsx`.
-- [ ] **T079 Rating presentation and docs** (depends on T078).
+- [x] **T079 Rating presentation and docs** (depends on T078).
   - Files: `packages/react/src/components/rating/rating.css`, `index.ts`, `apps/docs/content/components/rating.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- rating`.
 
 ### Checkpoint after T079
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T080 Segmented Control component** (depends on T016).
   - Files: `packages/react/src/components/segmented-control/segmented-control.tsx`, `segmented-control.css`, `segmented-control.test.tsx`, `index.ts`, `apps/docs/content/components/segmented-control.mdx`.

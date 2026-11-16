@@ -233,3 +233,6 @@ export type { RadioProps } from "./components/radio/radio.js";
 
 export { RadioCard } from "./components/radio-card/radio-card.js";
 export type { RadioCardProps } from "./components/radio-card/radio-card.js";
+
+export { Rating } from "./components/rating/rating.js";
+export type { RatingProps } from "./components/rating/rating.js";

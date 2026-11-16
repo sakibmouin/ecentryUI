@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "rating",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "rating.css", "rating.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "2c99e67955bbdd0cce069c975a9dd2edf9f5f963fb140fcf65547e739b3cb847",
+    "rating.css": "03a10a1b4886c18346d95f176b7146d31a67f4ab0bafd27fcffe073cd74eceaf",
+    "rating.tsx": "60b16bc5824a9188eb0ad631b0329c02f9399d3089ec895b6e6bb523796c1350",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.focus",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/rating/",
+  "license": "MIT"
+}

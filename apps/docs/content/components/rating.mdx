@@ -1,0 +1,28 @@
+import { RatingExample } from "../../src/examples/rating.tsx";
+import source from "../../src/examples/rating.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Rating
+</div>
+<span className="section-index">FORM COMPONENT</span>
+
+# Rating
+
+Choose a fractional star rating by pointer or keyboard. The value is announced as a slider and submitted with the form.
+
+## Install
+
+```sh
+ecentry add rating
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <RatingExample />
+</ExamplePanel>
+
+## API
+
+`label` is required. `max` defaults to five and `step` to a half star. Use `value` and `onValueChange` for controlled state or `defaultValue` for local state. `name` submits the numeric value. `readOnly` preserves selection; `disabled` prevents interaction and submission. Arrow keys, Home, End, and pointer drag are supported.
