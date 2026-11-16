@@ -458,7 +458,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/segmented-control/segmented-control.tsx`, `segmented-control.css`, `segmented-control.test.tsx`, `index.ts`, `apps/docs/content/components/segmented-control.mdx`.
   - Acceptance: label, validation, form reset and states; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/segmented-control/segmented-control.test.tsx && npm run test:e2e -- segmented-control`.
-- [ ] **T081 Select Native component** (depends on T016).
+- [x] **T081 Select Native component** (depends on T016).
   - Files: `packages/react/src/components/native-select/native-select.tsx`, `native-select.css`, `native-select.test.tsx`, `index.ts`, `apps/docs/content/components/native-select.mdx`.
   - Acceptance: label, validation, form reset and states; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/native-select/native-select.test.tsx && npm run test:e2e -- native-select`.

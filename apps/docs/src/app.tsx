@@ -92,6 +92,10 @@ const SegmentedControlDocs = lazy(
   () => import("../content/components/segmented-control.mdx"),
 );
 
+const NativeSelectDocs = lazy(
+  () => import("../content/components/native-select.mdx"),
+);
+
 export const routes = [
   "/",
   "/guides/examples/",
@@ -150,6 +154,7 @@ export const routes = [
   "/components/radio-card/",
   "/components/rating/",
   "/components/segmented-control/",
+  "/components/native-select/",
 ] as const;
 
 const componentLinks = [
@@ -208,6 +213,7 @@ const componentLinks = [
   { title: "Radio Card", href: "/components/radio-card/" },
   { title: "Rating", href: "/components/rating/" },
   { title: "Segmented Control", href: "/components/segmented-control/" },
+  { title: "Native Select", href: "/components/native-select/" },
 ];
 
 function Home() {
@@ -549,6 +555,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/segmented-control/" ? (
               <Suspense fallback={<p>Loading segmented control guide...</p>}>
                 <SegmentedControlDocs />
+              </Suspense>
+            ) : route === "/components/native-select/" ? (
+              <Suspense fallback={<p>Loading native select guide...</p>}>
+                <NativeSelectDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

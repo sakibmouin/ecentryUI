@@ -242,3 +242,6 @@ export type {
   SegmentedControlProps,
   SegmentedControlOption,
 } from "./components/segmented-control/segmented-control.js";
+
+export { NativeSelect } from "./components/native-select/native-select.js";
+export type { NativeSelectProps } from "./components/native-select/native-select.js";

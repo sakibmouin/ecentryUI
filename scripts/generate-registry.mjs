@@ -68,6 +68,8 @@ import { ratingRegistryItem } from "../packages/react/dist/components/rating/met
 
 import { segmentedControlRegistryItem } from "../packages/react/dist/components/segmented-control/metadata.js";
 
+import { nativeSelectRegistryItem } from "../packages/react/dist/components/native-select/metadata.js";
+
 for (const item of [
   buttonRegistryItem,
   inputRegistryItem,
@@ -124,6 +126,7 @@ for (const item of [
   radioCardRegistryItem,
   ratingRegistryItem,
   segmentedControlRegistryItem,
+  nativeSelectRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

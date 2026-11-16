@@ -1,0 +1,28 @@
+import { NativeSelectExample } from "../../src/examples/native-select.tsx";
+import source from "../../src/examples/native-select.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Native Select
+</div>
+<span className="section-index">FORM COMPONENT</span>
+
+# Native Select
+
+A labeled browser select with native options, typeahead, keyboard navigation, submission, and reset.
+
+## Install
+
+```sh
+ecentry add native-select
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <NativeSelectExample />
+</ExamplePanel>
+
+## API
+
+`label` is required and `option` children supply choices. `description` and `error` are linked to the select. `loading` and `disabled` block selection; `readOnly` preserves the current choice. Native select props including `name`, `value`, `defaultValue`, `required`, `onChange`, and refs pass through.

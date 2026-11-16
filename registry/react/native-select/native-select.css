@@ -1,0 +1,56 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-native-select {
+    display: grid;
+    gap: 0.4rem;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-native-select label {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .ec-native-select select {
+    min-width: 12rem;
+    min-height: 2.75rem;
+    padding: 0.5rem 2rem 0.5rem 0.75rem;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, white);
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+  .ec-native-select select[aria-invalid="true"] {
+    border-color: var(--ec-colors-danger, #c43843);
+  }
+  .ec-native-select select:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-native-select__description {
+    color: var(--ec-colors-text-muted, #59635b);
+    font-size: 0.75rem;
+  }
+  .ec-native-select__error {
+    color: var(--ec-colors-danger, #c43843);
+    font-size: 0.75rem;
+  }
+}
+@layer ec.variants {
+  [data-ec-theme="dark"] .ec-native-select__error {
+    color: #ff9ca3;
+  }
+}
+@layer ec.utilities {
+  .ec-native-select select:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-native-select select {
+      border-color: CanvasText;
+    }
+  }
+}

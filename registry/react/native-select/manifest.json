@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "native-select",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": [
+    "index.ts",
+    "native-select.css",
+    "native-select.tsx",
+    "styles.d.ts"
+  ],
+  "hashes": {
+    "index.ts": "30b5817d84fd49cd9cc19b3f5685ba81c379e80a6e1ba6e0cf19ffcb37e2fdee",
+    "native-select.css": "e173567f3600979377642c575b0f5428f901c84fdedbaa5ad7c75fa473568920",
+    "native-select.tsx": "9c70735420d4f5503bd5c9fe99f85fae40fb928be197a1ebfb06d203f8dd1e73",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/native-select/",
+  "license": "MIT"
+}
