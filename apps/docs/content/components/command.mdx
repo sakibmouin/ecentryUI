@@ -1,0 +1,28 @@
+import { CommandExample } from "../../src/examples/command.tsx";
+import source from "../../src/examples/command.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Command
+</div>
+<span className="section-index">COLLECTION COMPONENT</span>
+
+# Command
+
+A grouped command list with search, keyboard selection and visible shortcuts.
+
+## Install
+
+```sh
+ecentry add command
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <CommandExample />
+</ExamplePanel>
+
+## API
+
+`label` and `groups` are required. Each group has a label and `items`; each item has `value`, `label`, optional `shortcut` and optional `disabled`. `value` and `onValueChange` control selection, while `defaultValue` sets the initial uncontrolled selection. `onSelect` receives the chosen item. Search filters labels and shortcuts. Arrows and Home/End move the active result, Enter selects, and Escape clears search.

@@ -259,3 +259,9 @@ export type {
   ComboboxOption,
   ComboboxProps,
 } from "./components/combobox/combobox.js";
+export { Command } from "./components/command/command.js";
+export type {
+  CommandGroup,
+  CommandItem,
+  CommandProps,
+} from "./components/command/command.js";

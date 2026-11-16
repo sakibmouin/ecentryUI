@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "command",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["command.css", "command.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "command.css": "203b670bebdc014c446330d61606bfc0b98a8d4eee08a853c628e2397f7f7671",
+    "command.tsx": "7e762444a6961e922d1d788e370f49805f929269f47d365f33f514605c25c6bf",
+    "index.ts": "e713651c390cd3b7a346f5696e1f2a87f94ba26f1044b3d30a0d36e3d6c8d87a",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.surface",
+    "colors.text",
+    "colors.text.muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/command/",
+  "license": "MIT"
+}

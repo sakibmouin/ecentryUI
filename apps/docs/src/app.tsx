@@ -103,6 +103,7 @@ const TagsInputDocs = lazy(
   () => import("../content/components/tags-input.mdx"),
 );
 const ComboboxDocs = lazy(() => import("../content/components/combobox.mdx"));
+const CommandDocs = lazy(() => import("../content/components/command.mdx"));
 
 export const routes = [
   "/",
@@ -168,6 +169,7 @@ export const routes = [
   "/components/textarea/",
   "/components/tags-input/",
   "/components/combobox/",
+  "/components/command/",
 ] as const;
 
 const componentLinks = [
@@ -232,6 +234,7 @@ const componentLinks = [
   { title: "Textarea", href: "/components/textarea/" },
   { title: "Tags Input", href: "/components/tags-input/" },
   { title: "Combobox", href: "/components/combobox/" },
+  { title: "Command", href: "/components/command/" },
 ];
 
 function Home() {
@@ -597,6 +600,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/combobox/" ? (
               <Suspense fallback={<p>Loading combobox guide...</p>}>
                 <ComboboxDocs />
+              </Suspense>
+            ) : route === "/components/command/" ? (
+              <Suspense fallback={<p>Loading command guide...</p>}>
+                <CommandDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

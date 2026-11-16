@@ -2028,7 +2028,7 @@ footer {
 }
 .code-demo > p {
   margin: 0;
-  color: #29453a;
+  color: var(--ec-colors-text, #29453a);
 }
 [data-ec-theme="dark"] .date-input-demo > p {
   color: var(--ec-colors-text, white);

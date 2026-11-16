@@ -516,14 +516,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/command/command.tsx`, `command.test.tsx`.
   - Acceptance: search, groups, shortcuts and keyboard selection; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/command/command.test.tsx`.
-- [ ] **T091 Command presentation and docs** (depends on T090).
+- [x] **T091 Command presentation and docs** (depends on T090).
   - Files: `packages/react/src/components/command/command.css`, `index.ts`, `apps/docs/content/components/command.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- command`.
 
 ### Checkpoint after T091
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T092 Listbox behavior** (depends on T016).
   - Files: `packages/react/src/components/listbox/listbox.tsx`, `listbox.test.tsx`.
