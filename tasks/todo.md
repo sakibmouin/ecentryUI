@@ -420,7 +420,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T074 Pin Input behavior** (depends on T016).
+- [x] **T074 Pin Input behavior** (depends on T016).
   - Files: `packages/react/src/components/pin-input/pin-input.tsx`, `pin-input.test.tsx`.
   - Acceptance: per-cell focus, paste, masking and form value; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/pin-input/pin-input.test.tsx`.
