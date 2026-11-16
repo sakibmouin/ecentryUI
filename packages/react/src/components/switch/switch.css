@@ -1,0 +1,104 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+
+@layer ec.components {
+  .ec-switch {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-switch input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  .ec-switch label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+  }
+  .ec-switch__track {
+    box-sizing: border-box;
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    width: 42px;
+    height: 26px;
+    padding: 3px;
+    border: 1px solid var(--ec-colors-border, #a9bcb0);
+    border-radius: 99px;
+    background: var(--ec-colors-surface, #f8f9f8);
+  }
+  .ec-switch__track::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--ec-colors-text-muted, #59635b);
+    transition: transform var(--ec-motion-duration-fast, 120ms);
+  }
+  .ec-switch input:checked + label .ec-switch__track {
+    border-color: var(--ec-colors-accent, #116e5e);
+    background: var(--ec-colors-accent, #116e5e);
+  }
+  .ec-switch input:checked + label .ec-switch__track::before {
+    transform: translateX(16px);
+    background: var(--ec-colors-background, #fff);
+  }
+  .ec-switch__copy {
+    display: grid;
+    gap: 2px;
+  }
+  .ec-switch__label {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .ec-switch__description {
+    color: var(--ec-colors-text-muted, #59635b);
+    font-size: 12px;
+  }
+  .ec-switch__error {
+    color: var(--ec-colors-danger, #c43843);
+    font-size: 12px;
+  }
+  .ec-switch input:disabled + label {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-switch input:read-only + label {
+    cursor: default;
+  }
+}
+@layer ec.variants {
+  [data-ec-theme="dark"] .ec-switch__error {
+    color: #ff9ca3;
+  }
+}
+@layer ec.utilities {
+  .ec-switch input:focus-visible + label .ec-switch__track {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-switch__track {
+      border-color: ButtonText;
+    }
+    .ec-switch input:checked + label .ec-switch__track {
+      background: Highlight;
+      border-color: Highlight;
+    }
+    .ec-switch__track::before {
+      background: ButtonText;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ec-switch__track::before {
+      transition: none;
+    }
+  }
+}

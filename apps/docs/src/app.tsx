@@ -97,6 +97,7 @@ const NativeSelectDocs = lazy(
 );
 
 const SliderDocs = lazy(() => import("../content/components/slider.mdx"));
+const SwitchDocs = lazy(() => import("../content/components/switch.mdx"));
 
 export const routes = [
   "/",
@@ -158,6 +159,7 @@ export const routes = [
   "/components/segmented-control/",
   "/components/native-select/",
   "/components/slider/",
+  "/components/switch/",
 ] as const;
 
 const componentLinks = [
@@ -218,6 +220,7 @@ const componentLinks = [
   { title: "Segmented Control", href: "/components/segmented-control/" },
   { title: "Native Select", href: "/components/native-select/" },
   { title: "Slider", href: "/components/slider/" },
+  { title: "Switch", href: "/components/switch/" },
 ];
 
 function Home() {
@@ -567,6 +570,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/slider/" ? (
               <Suspense fallback={<p>Loading slider guide...</p>}>
                 <SliderDocs />
+              </Suspense>
+            ) : route === "/components/switch/" ? (
+              <Suspense fallback={<p>Loading switch guide...</p>}>
+                <SwitchDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

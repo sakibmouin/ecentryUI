@@ -1,0 +1,28 @@
+import { SwitchExample } from "../../src/examples/switch.tsx";
+import source from "../../src/examples/switch.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Switch
+</div>
+<span className="section-index">FORM COMPONENT</span>
+
+# Switch
+
+A labeled on/off control built on a native checkbox. It supports keyboard activation, form submission, validation and reset.
+
+## Install
+
+```sh
+ecentry add switch
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <SwitchExample />
+</ExamplePanel>
+
+## API
+
+`label` is required. `description` and `error` are linked to the control. Native checkbox props including `name`, `value`, `checked`, `defaultChecked`, `required`, `onChange` and refs pass through. `loading` and `disabled` block interaction. `readOnly` preserves the current value.

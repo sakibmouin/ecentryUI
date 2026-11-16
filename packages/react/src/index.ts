@@ -248,3 +248,5 @@ export type { NativeSelectProps } from "./components/native-select/native-select
 
 export { Slider } from "./components/slider/slider.js";
 export type { SliderProps, SliderValue } from "./components/slider/slider.js";
+export { Switch } from "./components/switch/switch.js";
+export type { SwitchProps } from "./components/switch/switch.js";

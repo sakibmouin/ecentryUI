@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "switch",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "styles.d.ts", "switch.css", "switch.tsx"],
+  "hashes": {
+    "index.ts": "c59ec98cad8ae488918cd57acb877e447cf2f70999660e006e3cee9ae268d611",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa",
+    "switch.css": "272231534270e73cb403d34ffb7ce17483866d5def38aa0f838749883a00fb3c",
+    "switch.tsx": "49eb512e8f627dde1a5a8309e291be28fc3725c7fe8d8ec5ba8c3e829956eb6a"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.surface",
+    "colors.text",
+    "colors.text.muted",
+    "motion.duration.fast"
+  ],
+  "docsUrl": "https://ecentry.dev/components/switch/",
+  "license": "MIT"
+}
