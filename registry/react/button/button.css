@@ -25,10 +25,7 @@
     white-space: nowrap;
     cursor: pointer;
     user-select: none;
-    transition:
-      background-color var(--ec-motion-duration-fast, 120ms),
-      border-color var(--ec-motion-duration-fast, 120ms),
-      box-shadow var(--ec-motion-duration-fast, 120ms);
+    transition: box-shadow var(--ec-motion-duration-fast, 120ms);
   }
 
   .ec-button[data-ec-color="neutral"] {

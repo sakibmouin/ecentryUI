@@ -32,6 +32,7 @@ test("Input docs cover form interaction, states, themes and accessibility", asyn
   ).toEqual([]);
   await preview.getByRole("button", { name: "Dark mode" }).click();
   await expect(preview).toHaveCSS("background-color", "rgb(25, 33, 28)");
+  await preview.getByRole("button", { name: "Submit" }).hover();
   const darkAudit = await new AxeBuilder({ page }).analyze();
   expect(
     darkAudit.violations.filter(

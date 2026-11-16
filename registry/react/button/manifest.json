@@ -5,7 +5,7 @@
   "framework": "react",
   "files": ["button.css", "button.tsx", "index.ts", "styles.d.ts"],
   "hashes": {
-    "button.css": "37ca5ffb5dfbefd6374bd8320511e73a4f6304e619b0e4a651868b6b95dc921a",
+    "button.css": "606c65c8f0b862d422d329697e714578a72b632f3466f33c19fcf09693e6d98e",
     "button.tsx": "5eb61d6a7d346e93c04adabd0119602fbfc1fab0e20c293453f70cfd51b5bd87",
     "index.ts": "aef73a49f147abfe6785626aaa8386651e492a8ba8d471e122163b5d22dbf999",
     "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
