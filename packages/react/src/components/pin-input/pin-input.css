@@ -1,0 +1,64 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-pin-input {
+    display: grid;
+    gap: 0.5rem;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-pin-input__label {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .ec-pin-input__description {
+    margin: 0;
+    color: var(--ec-colors-text-muted, #59635b);
+    font-size: 0.75rem;
+  }
+  .ec-pin-input__cells {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .ec-pin-input__cells input {
+    box-sizing: border-box;
+    width: 2.75rem;
+    height: 3rem;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, white);
+    color: inherit;
+    font: inherit;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .ec-pin-input__cells input[aria-invalid="true"] {
+    border-color: var(--ec-colors-danger, #c43843);
+  }
+  .ec-pin-input__cells input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-pin-input__error {
+    margin: 0;
+    color: var(--ec-colors-danger, #c43843);
+    font-size: 0.75rem;
+  }
+}
+@layer ec.variants {
+  [data-ec-theme="dark"] .ec-pin-input__error {
+    color: #ff9ca3;
+  }
+}
+@layer ec.utilities {
+  .ec-pin-input__cells input:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-pin-input__cells input {
+      border-color: CanvasText;
+    }
+  }
+}

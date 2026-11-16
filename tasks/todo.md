@@ -424,7 +424,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/pin-input/pin-input.tsx`, `pin-input.test.tsx`.
   - Acceptance: per-cell focus, paste, masking and form value; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/pin-input/pin-input.test.tsx`.
-- [ ] **T075 Pin Input presentation and docs** (depends on T074).
+- [x] **T075 Pin Input presentation and docs** (depends on T074).
   - Files: `packages/react/src/components/pin-input/pin-input.css`, `index.ts`, `apps/docs/content/components/pin-input.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- pin-input`.

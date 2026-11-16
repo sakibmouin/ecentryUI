@@ -58,6 +58,8 @@ import { numberInputRegistryItem } from "../packages/react/dist/components/numbe
 
 import { passwordInputRegistryItem } from "../packages/react/dist/components/password-input/metadata.js";
 
+import { pinInputRegistryItem } from "../packages/react/dist/components/pin-input/metadata.js";
+
 for (const item of [
   buttonRegistryItem,
   inputRegistryItem,
@@ -109,6 +111,7 @@ for (const item of [
   fileUploadRegistryItem,
   numberInputRegistryItem,
   passwordInputRegistryItem,
+  pinInputRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

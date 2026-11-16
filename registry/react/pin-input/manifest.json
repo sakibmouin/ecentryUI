@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "pin-input",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "pin-input.css", "pin-input.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "b07e62ec7994315ceda50eed4d3a8e02259719e0532e09a3983cc3519365be38",
+    "pin-input.css": "9e3bc3676bc8854cf6f83912930272be0973bb8198b402b058a1165de1226066",
+    "pin-input.tsx": "d8b453fbf0890903c1e3e66eed47ffc8beec0b1c155283817a9ea276d4bc95dc",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/pin-input/",
+  "license": "MIT"
+}

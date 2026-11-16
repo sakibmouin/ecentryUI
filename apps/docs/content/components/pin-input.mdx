@@ -1,0 +1,28 @@
+import { PinInputExample } from "../../src/examples/pin-input.tsx";
+import source from "../../src/examples/pin-input.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Pin Input
+</div>
+<span className="section-index">FORM COMPONENT</span>
+
+# Pin Input
+
+Enter a one time code into individual digit cells. Typing advances focus; paste fills the remaining cells.
+
+## Install
+
+```sh
+ecentry add pin-input
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <PinInputExample />
+</ExamplePanel>
+
+## API
+
+`label` names the group and each digit. `length` defaults to six. Use `value` and `onValueChange` for controlled state or `defaultValue` for local state. `name` submits the combined value. `mask` hides digits. `description` and `error` are announced; `required`, `disabled`, and `readOnly` apply to the cells. Arrow keys, Home, End, Backspace, Delete, and paste are supported.

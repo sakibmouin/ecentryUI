@@ -224,3 +224,6 @@ export type { NumberInputProps } from "./components/number-input/number-input.js
 
 export { PasswordInput } from "./components/password-input/password-input.js";
 export type { PasswordInputProps } from "./components/password-input/password-input.js";
+
+export { PinInput } from "./components/pin-input/pin-input.js";
+export type { PinInputProps } from "./components/pin-input/pin-input.js";
