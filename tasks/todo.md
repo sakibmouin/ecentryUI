@@ -512,7 +512,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/combobox/combobox.css`, `index.ts`, `apps/docs/content/components/combobox.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- combobox`.
-- [ ] **T090 Command behavior** (depends on T016).
+- [x] **T090 Command behavior** (depends on T016).
   - Files: `packages/react/src/components/command/command.tsx`, `command.test.tsx`.
   - Acceptance: search, groups, shortcuts and keyboard selection; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/command/command.test.tsx`.
