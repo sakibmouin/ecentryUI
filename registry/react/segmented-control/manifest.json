@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "segmented-control",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": [
+    "index.ts",
+    "segmented-control.css",
+    "segmented-control.tsx",
+    "styles.d.ts"
+  ],
+  "hashes": {
+    "index.ts": "9a1f0557913f55047807a9b15c1cf2798ea9d4fae8c8c58c7b4122877d7c241c",
+    "segmented-control.css": "1e03563ce1e8151e1f8fc6f3d031605297ecfb100a0d520004d39be3179fb2c3",
+    "segmented-control.tsx": "569da08ace24d42db5aac07e822063a5f4122027bfec5a07b0eeb814989b920d",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/segmented-control/",
+  "license": "MIT"
+}

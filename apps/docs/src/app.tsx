@@ -88,6 +88,10 @@ const RadioCardDocs = lazy(
 
 const RatingDocs = lazy(() => import("../content/components/rating.mdx"));
 
+const SegmentedControlDocs = lazy(
+  () => import("../content/components/segmented-control.mdx"),
+);
+
 export const routes = [
   "/",
   "/guides/examples/",
@@ -145,6 +149,7 @@ export const routes = [
   "/components/radio/",
   "/components/radio-card/",
   "/components/rating/",
+  "/components/segmented-control/",
 ] as const;
 
 const componentLinks = [
@@ -202,6 +207,7 @@ const componentLinks = [
   { title: "Radio", href: "/components/radio/" },
   { title: "Radio Card", href: "/components/radio-card/" },
   { title: "Rating", href: "/components/rating/" },
+  { title: "Segmented Control", href: "/components/segmented-control/" },
 ];
 
 function Home() {
@@ -539,6 +545,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/rating/" ? (
               <Suspense fallback={<p>Loading rating guide...</p>}>
                 <RatingDocs />
+              </Suspense>
+            ) : route === "/components/segmented-control/" ? (
+              <Suspense fallback={<p>Loading segmented control guide...</p>}>
+                <SegmentedControlDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

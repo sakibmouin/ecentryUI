@@ -236,3 +236,9 @@ export type { RadioCardProps } from "./components/radio-card/radio-card.js";
 
 export { Rating } from "./components/rating/rating.js";
 export type { RatingProps } from "./components/rating/rating.js";
+
+export { SegmentedControl } from "./components/segmented-control/segmented-control.js";
+export type {
+  SegmentedControlProps,
+  SegmentedControlOption,
+} from "./components/segmented-control/segmented-control.js";

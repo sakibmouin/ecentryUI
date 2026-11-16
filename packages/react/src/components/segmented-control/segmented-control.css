@@ -1,0 +1,86 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-segmented-control {
+    display: grid;
+    gap: 0.5rem;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-segmented-control legend {
+    padding: 0;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .ec-segmented-control__description,
+  .ec-segmented-control__error {
+    margin: 0;
+    font-size: 0.75rem;
+  }
+  .ec-segmented-control__description {
+    color: var(--ec-colors-text-muted, #59635b);
+  }
+  .ec-segmented-control__error {
+    color: var(--ec-colors-danger, #c43843);
+  }
+  .ec-segmented-control__segments {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    width: fit-content;
+    padding: 0.25rem;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, white);
+  }
+  .ec-segmented-control__option {
+    position: relative;
+  }
+  .ec-segmented-control__option input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  .ec-segmented-control__option label {
+    display: block;
+    min-width: 4rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.35rem;
+    font-size: 0.875rem;
+    text-align: center;
+    cursor: pointer;
+  }
+  .ec-segmented-control__option input:checked + label {
+    background: var(--ec-colors-accent, #116e5e);
+    color: var(--ec-colors-background, white);
+  }
+  .ec-segmented-control__option input:disabled + label {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+@layer ec.variants {
+  [data-ec-theme="dark"] .ec-segmented-control__error {
+    color: #ff9ca3;
+  }
+}
+@layer ec.utilities {
+  .ec-segmented-control__option input:focus-visible + label {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-segmented-control__segments {
+      border-color: CanvasText;
+    }
+    .ec-segmented-control__option input:checked + label {
+      background: Highlight;
+      color: HighlightText;
+    }
+  }
+}

@@ -66,6 +66,8 @@ import { radioCardRegistryItem } from "../packages/react/dist/components/radio-c
 
 import { ratingRegistryItem } from "../packages/react/dist/components/rating/metadata.js";
 
+import { segmentedControlRegistryItem } from "../packages/react/dist/components/segmented-control/metadata.js";
+
 for (const item of [
   buttonRegistryItem,
   inputRegistryItem,
@@ -121,6 +123,7 @@ for (const item of [
   radioRegistryItem,
   radioCardRegistryItem,
   ratingRegistryItem,
+  segmentedControlRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

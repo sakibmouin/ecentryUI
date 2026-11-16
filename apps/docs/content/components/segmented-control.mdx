@@ -1,0 +1,28 @@
+import { SegmentedControlExample } from "../../src/examples/segmented-control.tsx";
+import source from "../../src/examples/segmented-control.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Segmented Control
+</div>
+<span className="section-index">FORM COMPONENT</span>
+
+# Segmented Control
+
+Choose one option from a compact native radio group. Labels, arrow keys, form submission, and reset retain browser behavior.
+
+## Install
+
+```sh
+ecentry add segmented-control
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <SegmentedControlExample />
+</ExamplePanel>
+
+## API
+
+`label`, `name`, and `options` are required. Each option has a `label`, `value`, and optional `disabled`. Use `value` and `onValueChange` for controlled selection or `defaultValue` for local state. `description` and `error` describe the group; `required`, `disabled`, and `readOnly` affect selection.
