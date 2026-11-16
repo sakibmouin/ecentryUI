@@ -1,0 +1,28 @@
+import { RadioExample } from "../../src/examples/radio.tsx";
+import source from "../../src/examples/radio.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Radio
+</div>
+<span className="section-index">FORM COMPONENT</span>
+
+# Radio
+
+A labeled native radio choice. Group related choices in a fieldset with the same `name`.
+
+## Install
+
+```sh
+ecentry add radio
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <RadioExample />
+</ExamplePanel>
+
+## API
+
+`label` is required. `description` and `error` are linked to the radio, and errors set `aria-invalid`. Native radio props, including `name`, `value`, `checked`, `defaultChecked`, `required`, `onChange`, and refs pass through. `loading`, `disabled`, and `readOnly` prevent changes.

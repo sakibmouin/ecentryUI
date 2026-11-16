@@ -428,14 +428,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/pin-input/pin-input.css`, `index.ts`, `apps/docs/content/components/pin-input.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- pin-input`.
-- [ ] **T076 Radio component** (depends on T016).
+- [x] **T076 Radio component** (depends on T016).
   - Files: `packages/react/src/components/radio/radio.tsx`, `radio.css`, `radio.test.tsx`, `index.ts`, `apps/docs/content/components/radio.mdx`.
   - Acceptance: label, validation, form reset and states; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/radio/radio.test.tsx && npm run test:e2e -- radio`.
 
 ### Checkpoint after T076
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T077 Radio Card component** (depends on T016).
   - Files: `packages/react/src/components/radio-card/radio-card.tsx`, `radio-card.css`, `radio-card.test.tsx`, `index.ts`, `apps/docs/content/components/radio-card.mdx`.

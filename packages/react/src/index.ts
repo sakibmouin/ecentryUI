@@ -227,3 +227,6 @@ export type { PasswordInputProps } from "./components/password-input/password-in
 
 export { PinInput } from "./components/pin-input/pin-input.js";
 export type { PinInputProps } from "./components/pin-input/pin-input.js";
+
+export { Radio } from "./components/radio/radio.js";
+export type { RadioProps } from "./components/radio/radio.js";

@@ -1,0 +1,52 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-radio {
+    display: inline-flex;
+    align-items: start;
+    gap: 0.55rem;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-radio input {
+    flex: none;
+    width: 1.15rem;
+    height: 1.15rem;
+    margin: 0.15rem 0 0;
+    accent-color: var(--ec-colors-accent, #116e5e);
+    cursor: pointer;
+  }
+  .ec-radio label {
+    display: grid;
+    gap: 0.15rem;
+    cursor: pointer;
+  }
+  .ec-radio__label {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .ec-radio__description {
+    color: var(--ec-colors-text-muted, #59635b);
+    font-size: 0.75rem;
+  }
+  .ec-radio__error {
+    color: var(--ec-colors-danger, #c43843);
+    font-size: 0.75rem;
+  }
+  .ec-radio input:disabled,
+  .ec-radio input:disabled + label {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+@layer ec.variants {
+  [data-ec-theme="dark"] .ec-radio__error {
+    color: #ff9ca3;
+  }
+}
+@layer ec.utilities {
+  .ec-radio input:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+}

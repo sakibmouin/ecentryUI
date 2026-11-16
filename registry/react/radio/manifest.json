@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "radio",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "radio.css", "radio.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "348f514420c8c0d36947190a6c6ce78a331ff0855d136ee5f6a3b0346f13934b",
+    "radio.css": "73e2f67b2c0c81e2daa6d75771dc0683730a58d3fe562e63563e3f57c5ce36f0",
+    "radio.tsx": "e42eceec431bdd0ff4bd6ae79f9a1c8c8f9294f6d7866677deb9beedf6777a31",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.danger",
+    "colors.focus",
+    "colors.text",
+    "colors.text-muted"
+  ],
+  "docsUrl": "https://ecentry.dev/components/radio/",
+  "license": "MIT"
+}
