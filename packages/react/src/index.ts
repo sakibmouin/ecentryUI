@@ -254,3 +254,8 @@ export { Textarea } from "./components/textarea/textarea.js";
 export type { TextareaProps } from "./components/textarea/textarea.js";
 export { TagsInput } from "./components/tags-input/tags-input.js";
 export type { TagsInputProps } from "./components/tags-input/tags-input.js";
+export { Combobox } from "./components/combobox/combobox.js";
+export type {
+  ComboboxOption,
+  ComboboxProps,
+} from "./components/combobox/combobox.js";

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "combobox",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["combobox.css", "combobox.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "combobox.css": "f4d9c554c97e92ae113bdc6f8d748970a55f5d7b57508d483fd015ae66e073e0",
+    "combobox.tsx": "03fb151cebc33ca47d51d6b1148ad50fe88e52b19950c37d6acf98274ec834c7",
+    "index.ts": "d0fb1f336ae14ec841a7930f88fcf1ed3d09f7bddfa1ead7bbe77c95d0c667ba",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.surface",
+    "colors.text",
+    "colors.text.muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/combobox/",
+  "license": "MIT"
+}

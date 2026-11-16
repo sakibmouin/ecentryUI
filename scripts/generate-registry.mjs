@@ -74,6 +74,7 @@ import { sliderRegistryItem } from "../packages/react/dist/components/slider/met
 import { switchRegistryItem } from "../packages/react/dist/components/switch/metadata.js";
 import { textareaRegistryItem } from "../packages/react/dist/components/textarea/metadata.js";
 import { tagsInputRegistryItem } from "../packages/react/dist/components/tags-input/metadata.js";
+import { comboboxRegistryItem } from "../packages/react/dist/components/combobox/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -136,6 +137,7 @@ for (const item of [
   switchRegistryItem,
   textareaRegistryItem,
   tagsInputRegistryItem,
+  comboboxRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

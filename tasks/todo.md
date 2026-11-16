@@ -506,9 +506,9 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 ### Checkpoint after T088
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T089 Combobox presentation and docs** (depends on T088).
+- [x] **T089 Combobox presentation and docs** (depends on T088).
   - Files: `packages/react/src/components/combobox/combobox.css`, `index.ts`, `apps/docs/content/components/combobox.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- combobox`.

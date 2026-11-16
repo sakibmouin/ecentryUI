@@ -1,0 +1,28 @@
+import { ComboboxExample } from "../../src/examples/combobox.tsx";
+import source from "../../src/examples/combobox.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Combobox
+</div>
+<span className="section-index">COLLECTION COMPONENT</span>
+
+# Combobox
+
+Search a list of choices and select one by pointer or keyboard.
+
+## Install
+
+```sh
+ecentry add combobox
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <ComboboxExample />
+</ExamplePanel>
+
+## API
+
+`label` and `options` are required. Each option has `value`, `label` and optional `disabled`. Use `value` and `onValueChange` for controlled selection or `defaultValue` for uncontrolled selection. `name` submits the selected value. `description`, `error`, `required`, `disabled`, `readOnly`, `placeholder` and `emptyMessage` customize the field. Type to filter; arrows move the active option, Enter selects, Escape closes, and Home/End jump to the first or last enabled match. Form reset restores `defaultValue`.
