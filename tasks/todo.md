@@ -479,14 +479,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/switch/switch.tsx`, `switch.css`, `switch.test.tsx`, `index.ts`, `apps/docs/content/components/switch.mdx`.
   - Acceptance: label, validation, form reset and states; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/switch/switch.test.tsx && npm run test:e2e -- switch`.
-- [ ] **T085 Textarea component** (depends on T016).
+- [x] **T085 Textarea component** (depends on T016).
   - Files: `packages/react/src/components/textarea/textarea.tsx`, `textarea.css`, `textarea.test.tsx`, `index.ts`, `apps/docs/content/components/textarea.mdx`.
   - Acceptance: label, validation, form reset and states; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/textarea/textarea.test.tsx && npm run test:e2e -- textarea`.
 
 ### Checkpoint after T085
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T086 Tags Input behavior** (depends on T016).
   - Files: `packages/react/src/components/tags-input/tags-input.tsx`, `tags-input.test.tsx`.

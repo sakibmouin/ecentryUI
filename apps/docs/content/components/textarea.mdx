@@ -1,0 +1,28 @@
+import { TextareaExample } from "../../src/examples/textarea.tsx";
+import source from "../../src/examples/textarea.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Textarea
+</div>
+<span className="section-index">FORM COMPONENT</span>
+
+# Textarea
+
+A labeled multiline text field with native submission, validation and reset.
+
+## Install
+
+```sh
+ecentry add textarea
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <TextareaExample />
+</ExamplePanel>
+
+## API
+
+`label` is required. `description` and `error` are linked to the field. `variant` accepts `outline`, `filled` or `flushed`; `size` accepts `sm`, `md` or `lg`. Native textarea props including `name`, `value`, `defaultValue`, `required`, `readOnly` and refs pass through. `onValueChange` receives the new string and change event. `loading` and `disabled` block input.

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "textarea",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "styles.d.ts", "textarea.css", "textarea.tsx"],
+  "hashes": {
+    "index.ts": "b573d606a944baeac7242094b99616b93b801ff5bbe0fdbb24c1b7296f4343fe",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa",
+    "textarea.css": "a9b0ce211dac88cb729679c39b1e6dd465141dab74b58cef5afdff25d9746a88",
+    "textarea.tsx": "b4f7114345d7603736edb97b6c0025f23433974079d9e32cce28e1eec7b0edb5"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.surface",
+    "colors.text",
+    "colors.text.muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/textarea/",
+  "license": "MIT"
+}

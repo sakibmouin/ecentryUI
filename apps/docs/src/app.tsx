@@ -98,6 +98,7 @@ const NativeSelectDocs = lazy(
 
 const SliderDocs = lazy(() => import("../content/components/slider.mdx"));
 const SwitchDocs = lazy(() => import("../content/components/switch.mdx"));
+const TextareaDocs = lazy(() => import("../content/components/textarea.mdx"));
 
 export const routes = [
   "/",
@@ -160,6 +161,7 @@ export const routes = [
   "/components/native-select/",
   "/components/slider/",
   "/components/switch/",
+  "/components/textarea/",
 ] as const;
 
 const componentLinks = [
@@ -221,6 +223,7 @@ const componentLinks = [
   { title: "Native Select", href: "/components/native-select/" },
   { title: "Slider", href: "/components/slider/" },
   { title: "Switch", href: "/components/switch/" },
+  { title: "Textarea", href: "/components/textarea/" },
 ];
 
 function Home() {
@@ -574,6 +577,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/switch/" ? (
               <Suspense fallback={<p>Loading switch guide...</p>}>
                 <SwitchDocs />
+              </Suspense>
+            ) : route === "/components/textarea/" ? (
+              <Suspense fallback={<p>Loading textarea guide...</p>}>
+                <TextareaDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />
