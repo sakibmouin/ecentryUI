@@ -462,14 +462,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/native-select/native-select.tsx`, `native-select.css`, `native-select.test.tsx`, `index.ts`, `apps/docs/content/components/native-select.mdx`.
   - Acceptance: label, validation, form reset and states; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/native-select/native-select.test.tsx && npm run test:e2e -- native-select`.
-- [ ] **T082 Slider behavior** (depends on T016).
+- [x] **T082 Slider behavior** (depends on T016).
   - Files: `packages/react/src/components/slider/slider.tsx`, `slider.test.tsx`.
   - Acceptance: step, range, orientation and RTL keys; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/slider/slider.test.tsx`.
 
 ### Checkpoint after T082
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T083 Slider presentation and docs** (depends on T082).
   - Files: `packages/react/src/components/slider/slider.css`, `index.ts`, `apps/docs/content/components/slider.mdx`.
