@@ -73,6 +73,7 @@ import { nativeSelectRegistryItem } from "../packages/react/dist/components/nati
 import { sliderRegistryItem } from "../packages/react/dist/components/slider/metadata.js";
 import { switchRegistryItem } from "../packages/react/dist/components/switch/metadata.js";
 import { textareaRegistryItem } from "../packages/react/dist/components/textarea/metadata.js";
+import { tagsInputRegistryItem } from "../packages/react/dist/components/tags-input/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -134,6 +135,7 @@ for (const item of [
   sliderRegistryItem,
   switchRegistryItem,
   textareaRegistryItem,
+  tagsInputRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

@@ -1,0 +1,28 @@
+import { TagsInputExample } from "../../src/examples/tags-input.tsx";
+import source from "../../src/examples/tags-input.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Tags Input
+</div>
+<span className="section-index">FORM COMPONENT</span>
+
+# Tags Input
+
+Add, edit and remove short text values. Paste comma or newline separated values to add several tags.
+
+## Install
+
+```sh
+ecentry add tags-input
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <TagsInputExample />
+</ExamplePanel>
+
+## API
+
+`label` is required. Use `value` and `onValueChange` for a controlled array, or `defaultValue` for an uncontrolled one. `maxTags` limits additions; duplicate values are ignored without regard to case. `name` submits one form value per tag. `required` requires at least one value. `disabled` and `readOnly` block edits. On a focused tag, press F2 to edit. In the text field, Enter or comma adds a tag and Backspace removes the last tag when empty. Form reset restores `defaultValue`.

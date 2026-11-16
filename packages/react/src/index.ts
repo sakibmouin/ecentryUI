@@ -252,3 +252,5 @@ export { Switch } from "./components/switch/switch.js";
 export type { SwitchProps } from "./components/switch/switch.js";
 export { Textarea } from "./components/textarea/textarea.js";
 export type { TextareaProps } from "./components/textarea/textarea.js";
+export { TagsInput } from "./components/tags-input/tags-input.js";
+export type { TagsInputProps } from "./components/tags-input/tags-input.js";

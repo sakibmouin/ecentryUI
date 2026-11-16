@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "tags-input",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "styles.d.ts", "tags-input.css", "tags-input.tsx"],
+  "hashes": {
+    "index.ts": "a074798cb1bfe7d6a0adf5f1cf36e8ac38a0867e9d4f8c5bf2dd33adea23f971",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa",
+    "tags-input.css": "10eb24e2c58529848337e67914cfb8951a0fdecc1871c2fd335c88ccaf6711d5",
+    "tags-input.tsx": "726b2fab85c68df80ad32a0d2c7fa9c9fab4afc2f87ca990e999358c6fde73e1"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.surface",
+    "colors.text",
+    "colors.text.muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/tags-input/",
+  "license": "MIT"
+}

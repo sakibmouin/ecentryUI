@@ -492,7 +492,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/tags-input/tags-input.tsx`, `tags-input.test.tsx`.
   - Acceptance: add, remove, edit, paste and limits; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/tags-input/tags-input.test.tsx`.
-- [ ] **T087 Tags Input presentation and docs** (depends on T086).
+- [x] **T087 Tags Input presentation and docs** (depends on T086).
   - Files: `packages/react/src/components/tags-input/tags-input.css`, `index.ts`, `apps/docs/content/components/tags-input.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- tags-input`.
