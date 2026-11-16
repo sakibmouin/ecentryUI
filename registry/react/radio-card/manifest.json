@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "radio-card",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "radio-card.css", "radio-card.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "ea1872eda35e90031929bc7460dba897331f9ce6b0deb3e18614b55df734edfb",
+    "radio-card.css": "2c058b2aa1def93472250c2fdb7804926cbe917f1489498ce64cc27a55168846",
+    "radio-card.tsx": "6d0af7b9bd801b8f834679f1043f0d0f491784ecc805b9fb50c97af5cc6d61d1",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/radio-card/",
+  "license": "MIT"
+}

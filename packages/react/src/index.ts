@@ -230,3 +230,6 @@ export type { PinInputProps } from "./components/pin-input/pin-input.js";
 
 export { Radio } from "./components/radio/radio.js";
 export type { RadioProps } from "./components/radio/radio.js";
+
+export { RadioCard } from "./components/radio-card/radio-card.js";
+export type { RadioCardProps } from "./components/radio-card/radio-card.js";

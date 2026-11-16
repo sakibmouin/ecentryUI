@@ -1,0 +1,28 @@
+import { RadioCardExample } from "../../src/examples/radio-card.tsx";
+import source from "../../src/examples/radio-card.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Radio Card
+</div>
+<span className="section-index">FORM COMPONENT</span>
+
+# Radio Card
+
+A native radio choice with a larger clickable card. Group choices in a fieldset with a shared `name`.
+
+## Install
+
+```sh
+ecentry add radio-card
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <RadioCardExample />
+</ExamplePanel>
+
+## API
+
+`label` is required. `description` and `error` are linked to the radio. `loading`, `disabled`, and `readOnly` prevent changes. Native radio props including `value`, `checked`, `defaultChecked`, `required`, and refs pass through.

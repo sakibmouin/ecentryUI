@@ -82,6 +82,10 @@ const PinInputDocs = lazy(() => import("../content/components/pin-input.mdx"));
 
 const RadioDocs = lazy(() => import("../content/components/radio.mdx"));
 
+const RadioCardDocs = lazy(
+  () => import("../content/components/radio-card.mdx"),
+);
+
 export const routes = [
   "/",
   "/guides/examples/",
@@ -137,6 +141,7 @@ export const routes = [
   "/components/password-input/",
   "/components/pin-input/",
   "/components/radio/",
+  "/components/radio-card/",
 ] as const;
 
 const componentLinks = [
@@ -192,6 +197,7 @@ const componentLinks = [
   { title: "Password Input", href: "/components/password-input/" },
   { title: "Pin Input", href: "/components/pin-input/" },
   { title: "Radio", href: "/components/radio/" },
+  { title: "Radio Card", href: "/components/radio-card/" },
 ];
 
 function Home() {
@@ -521,6 +527,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/radio/" ? (
               <Suspense fallback={<p>Loading radio guide...</p>}>
                 <RadioDocs />
+              </Suspense>
+            ) : route === "/components/radio-card/" ? (
+              <Suspense fallback={<p>Loading radio card guide...</p>}>
+                <RadioCardDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

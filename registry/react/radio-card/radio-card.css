@@ -1,0 +1,90 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-radio-card {
+    position: relative;
+    display: inline-block;
+    min-width: 12rem;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-radio-card input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  .ec-radio-card__body {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    min-height: 3.25rem;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, white);
+    cursor: pointer;
+  }
+  .ec-radio-card input:checked + .ec-radio-card__body {
+    border-color: var(--ec-colors-accent, #116e5e);
+    box-shadow: inset 0 0 0 1px var(--ec-colors-accent, #116e5e);
+  }
+  .ec-radio-card input:disabled + .ec-radio-card__body {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-radio-card__indicator {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 1.15rem;
+    height: 1.15rem;
+    border: 1.5px solid currentColor;
+    border-radius: 50%;
+  }
+  .ec-radio-card
+    input:checked
+    + .ec-radio-card__body
+    .ec-radio-card__indicator::after {
+    content: "";
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: var(--ec-colors-accent, #116e5e);
+  }
+  .ec-radio-card__content {
+    display: grid;
+    gap: 0.15rem;
+  }
+  .ec-radio-card__label {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .ec-radio-card__description {
+    color: var(--ec-colors-text-muted, #59635b);
+    font-size: 0.75rem;
+  }
+  .ec-radio-card__error {
+    color: var(--ec-colors-danger, #c43843);
+    font-size: 0.75rem;
+  }
+}
+@layer ec.variants {
+  [data-ec-theme="dark"] .ec-radio-card__error {
+    color: #ff9ca3;
+  }
+}
+@layer ec.utilities {
+  .ec-radio-card input:focus-visible + .ec-radio-card__body {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-radio-card__body {
+      border-color: CanvasText;
+    }
+    .ec-radio-card input:checked + .ec-radio-card__body {
+      border-color: Highlight;
+    }
+  }
+}

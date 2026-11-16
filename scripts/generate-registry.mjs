@@ -62,6 +62,8 @@ import { pinInputRegistryItem } from "../packages/react/dist/components/pin-inpu
 
 import { radioRegistryItem } from "../packages/react/dist/components/radio/metadata.js";
 
+import { radioCardRegistryItem } from "../packages/react/dist/components/radio-card/metadata.js";
+
 for (const item of [
   buttonRegistryItem,
   inputRegistryItem,
@@ -115,6 +117,7 @@ for (const item of [
   passwordInputRegistryItem,
   pinInputRegistryItem,
   radioRegistryItem,
+  radioCardRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(
