@@ -471,7 +471,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T083 Slider presentation and docs** (depends on T082).
+- [x] **T083 Slider presentation and docs** (depends on T082).
   - Files: `packages/react/src/components/slider/slider.css`, `index.ts`, `apps/docs/content/components/slider.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- slider`.

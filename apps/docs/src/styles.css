@@ -2012,6 +2012,20 @@ footer {
   background: var(--ec-colors-surface, #19211c);
   color: var(--ec-colors-text, white);
 }
+.code-demo form > button[type="reset"] {
+  min-height: 2.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--ec-colors-border, #a9bcb0);
+  border-radius: 6px;
+  background: var(--ec-colors-background, white);
+  color: var(--ec-colors-text, #29453a);
+  font: inherit;
+  cursor: pointer;
+}
+.code-demo form > button[type="reset"]:focus-visible {
+  outline: 2px solid var(--ec-colors-focus, Highlight);
+  outline-offset: 2px;
+}
 .code-demo > p {
   margin: 0;
   color: #29453a;

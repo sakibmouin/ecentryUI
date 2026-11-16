@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "slider",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "slider.css", "slider.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "85dc7280a70b6aca1a0da388fe5cf57115f199f6be46a09470e605a9866bf372",
+    "slider.css": "3d8474983c96ecc97b5fb5dc6cfaae107b0c3b746d991e016db1614d198beeb0",
+    "slider.tsx": "19bf2d4b7312550fa5e7d271daee4917b80689c11c32dcf9beb05ba64c416fec",
+    "styles.d.ts": "0890ba105f89eb3184d950e5fc60d84613d66628992a7ceedd856013f456f96b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.text"
+  ],
+  "docsUrl": "https://ecentry.dev/components/slider/",
+  "license": "MIT"
+}

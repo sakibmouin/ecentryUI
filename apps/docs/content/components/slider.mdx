@@ -1,0 +1,28 @@
+import { SliderExample } from "../../src/examples/slider.tsx";
+import source from "../../src/examples/slider.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Slider
+</div>
+<span className="section-index">FORM COMPONENT</span>
+
+# Slider
+
+Choose a single value or a bounded range by pointer or keyboard. Horizontal, vertical, and RTL layouts share the same value contract.
+
+## Install
+
+```sh
+ecentry add slider
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <SliderExample />
+</ExamplePanel>
+
+## API
+
+`label` is required. `value` and `onValueChange` control the value; `defaultValue` enables local state. Set `range` and pass a pair for two thumbs. `min`, `max`, and `step` bound values. `orientation` can be `horizontal` or `vertical`; `dir` controls horizontal arrow direction. `name` submits one value, or two values for a range. Arrow keys, Page Up/Down, Home, End, pointer dragging, and Escape cancellation are supported.

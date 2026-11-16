@@ -96,6 +96,8 @@ const NativeSelectDocs = lazy(
   () => import("../content/components/native-select.mdx"),
 );
 
+const SliderDocs = lazy(() => import("../content/components/slider.mdx"));
+
 export const routes = [
   "/",
   "/guides/examples/",
@@ -155,6 +157,7 @@ export const routes = [
   "/components/rating/",
   "/components/segmented-control/",
   "/components/native-select/",
+  "/components/slider/",
 ] as const;
 
 const componentLinks = [
@@ -214,6 +217,7 @@ const componentLinks = [
   { title: "Rating", href: "/components/rating/" },
   { title: "Segmented Control", href: "/components/segmented-control/" },
   { title: "Native Select", href: "/components/native-select/" },
+  { title: "Slider", href: "/components/slider/" },
 ];
 
 function Home() {
@@ -559,6 +563,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/native-select/" ? (
               <Suspense fallback={<p>Loading native select guide...</p>}>
                 <NativeSelectDocs />
+              </Suspense>
+            ) : route === "/components/slider/" ? (
+              <Suspense fallback={<p>Loading slider guide...</p>}>
+                <SliderDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

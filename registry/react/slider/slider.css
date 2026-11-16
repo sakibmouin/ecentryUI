@@ -1,0 +1,90 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-slider {
+    display: grid;
+    justify-items: start;
+    gap: 0.6rem;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-slider__label {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .ec-slider__track {
+    position: relative;
+    width: 16rem;
+    max-width: calc(100vw - 4rem);
+    height: 0.5rem;
+    margin: 0.75rem 0.65rem;
+    border-radius: 999px;
+    background: var(--ec-colors-border, #dce0dc);
+    cursor: pointer;
+    touch-action: none;
+  }
+  .ec-slider__fill {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--ec-colors-accent, #116e5e);
+    pointer-events: none;
+  }
+  .ec-slider__thumb {
+    position: absolute;
+    top: 50%;
+    width: 1.4rem;
+    height: 1.4rem;
+    border: 2px solid var(--ec-colors-accent, #116e5e);
+    border-radius: 50%;
+    background: var(--ec-colors-background, white);
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.15);
+    transform: translate(-50%, -50%);
+    cursor: grab;
+  }
+  .ec-slider:dir(rtl) .ec-slider__thumb {
+    transform: translate(50%, -50%);
+  }
+  .ec-slider__thumb[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-slider__thumb[aria-readonly="true"] {
+    cursor: default;
+  }
+  .ec-slider--vertical .ec-slider__track {
+    width: 0.5rem;
+    height: 12rem;
+    margin: 0.65rem 0.75rem;
+  }
+  .ec-slider--vertical .ec-slider__fill {
+    top: auto;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+  .ec-slider--vertical .ec-slider__thumb,
+  .ec-slider--vertical:dir(rtl) .ec-slider__thumb {
+    top: auto;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+}
+@layer ec.utilities {
+  .ec-slider__thumb:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 3px;
+  }
+  @media (forced-colors: active) {
+    .ec-slider__track {
+      background: CanvasText;
+    }
+    .ec-slider__fill {
+      background: Highlight;
+    }
+    .ec-slider__thumb {
+      border-color: Highlight;
+    }
+  }
+}

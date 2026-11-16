@@ -189,8 +189,8 @@ export function Slider({
           style={
             orientation === "vertical"
               ? {
-                  bottom: `${percent(values[0])}%`,
-                  height: `${percent(values[1]) - percent(values[0])}%`,
+                  bottom: `${isRange ? percent(values[0]) : 0}%`,
+                  height: `${isRange ? percent(values[1]) - percent(values[0]) : percent(values[0])}%`,
                 }
               : {
                   insetInlineStart: `${isRange ? percent(values[0]) : 0}%`,
