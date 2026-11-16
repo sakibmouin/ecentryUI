@@ -441,7 +441,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/radio-card/radio-card.tsx`, `radio-card.css`, `radio-card.test.tsx`, `index.ts`, `apps/docs/content/components/radio-card.mdx`.
   - Acceptance: label, validation, form reset and states; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/radio-card/radio-card.test.tsx && npm run test:e2e -- radio-card`.
-- [ ] **T078 Rating behavior** (depends on T016).
+- [x] **T078 Rating behavior** (depends on T016).
   - Files: `packages/react/src/components/rating/rating.tsx`, `rating.test.tsx`.
   - Acceptance: fractional/readonly selection and keyboard value; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/rating/rating.test.tsx`.
