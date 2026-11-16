@@ -1,0 +1,28 @@
+import { ListboxExample } from "../../src/examples/listbox.tsx";
+import source from "../../src/examples/listbox.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Listbox
+</div>
+<span className="section-index">COLLECTION COMPONENT</span>
+
+# Listbox
+
+Choose one or several items from a grouped list with pointer, keyboard and typeahead.
+
+## Install
+
+```sh
+ecentry add listbox
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <ListboxExample />
+</ExamplePanel>
+
+## API
+
+`label` and `groups` are required. Each group has a label and `options`; each option has `value`, `label` and optional `disabled`. Use `multiple` for array selection. `value` and `onValueChange` control selection, while `defaultValue` sets the initial uncontrolled selection. `name` submits one value per selected option. Arrows and Home/End move the active option, Enter or Space selects, and typing moves to the next matching label. Form reset restores `defaultValue`.

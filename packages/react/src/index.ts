@@ -265,3 +265,9 @@ export type {
   CommandItem,
   CommandProps,
 } from "./components/command/command.js";
+export { Listbox } from "./components/listbox/listbox.js";
+export type {
+  ListboxGroup,
+  ListboxOption,
+  ListboxProps,
+} from "./components/listbox/listbox.js";

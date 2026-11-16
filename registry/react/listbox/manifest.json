@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "listbox",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "listbox.css", "listbox.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "cc4aa786e3b33539050c29df6139dd2a6b2feaaf44189ccac8b6c886071f62c1",
+    "listbox.css": "44170eeb60b1e715d062044c3512ee24a1e653e24867d3884973101dce892dfd",
+    "listbox.tsx": "0860479b6090a12812f36aea2c628a11a01a1a046a8cecbe60210bde65abcaa5",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.surface",
+    "colors.text",
+    "colors.text.muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/listbox/",
+  "license": "MIT"
+}
