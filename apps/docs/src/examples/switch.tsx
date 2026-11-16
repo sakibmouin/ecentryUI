@@ -8,7 +8,7 @@ export function SwitchExample() {
   return (
     <AppearanceProvider appearance={dark ? "dark" : "light"}>
       <div
-        className="code-demo themed-code-demo"
+        className="code-demo themed-code-demo switch-demo"
         role="region"
         aria-label="Switch example"
       >
