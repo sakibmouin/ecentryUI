@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 import type { FocusEvent, KeyboardEvent, ReactNode } from "react";
 
 export interface PopoverProps {
@@ -47,7 +47,7 @@ export function Popover({
     restoreFocus.current = restore;
     change(false);
   }
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!open) return;
     function update() {
       const trigger = triggerRef.current?.getBoundingClientRect();

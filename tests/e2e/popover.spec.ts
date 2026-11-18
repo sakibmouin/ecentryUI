@@ -12,6 +12,9 @@ test("Popover anchors, flips, closes outside and restores focus", async ({
   await expect(panel).toBeVisible();
   const triggerBox = await trigger.boundingBox();
   const panelBox = await panel.boundingBox();
+  expect(triggerBox).not.toBeNull();
+  expect(panelBox).not.toBeNull();
+  expect(Math.abs(panelBox!.x - triggerBox!.x)).toBeLessThan(2);
   expect(
     triggerBox &&
       panelBox &&
