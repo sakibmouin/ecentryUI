@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "tree-view",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "styles.d.ts", "tree-view.css", "tree-view.tsx"],
+  "hashes": {
+    "index.ts": "1af13f614bc79316bf5dd1a898ae549b4152aa1471878ef0c74a429eae0b2d5c",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa",
+    "tree-view.css": "c9e46ca89191755d29e360b1947b29aca687dac1f0b31660a89fcf4f57f5a175",
+    "tree-view.tsx": "70ffb6d66805ccb23e9125900635dd6bd5ddc662c97578209737e54fa074d80b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.surface",
+    "colors.text",
+    "colors.text.muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/tree-view/",
+  "license": "MIT"
+}

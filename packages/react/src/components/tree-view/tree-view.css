@@ -1,0 +1,102 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-tree-view {
+    display: grid;
+    gap: 6px;
+    width: 100%;
+    min-width: 0;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-tree-view__label {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .ec-tree-view__tree {
+    box-sizing: border-box;
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+    padding: 6px;
+    border: 1px solid var(--ec-colors-border, #a9bcb0);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, #fff);
+  }
+  .ec-tree-view__item {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    min-height: 34px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .ec-tree-view__item[data-active],
+  .ec-tree-view__item:hover {
+    background: var(--ec-colors-surface, #f0f5f1);
+  }
+  .ec-tree-view__item[aria-selected="true"] {
+    color: var(--ec-colors-accent, #116e5e);
+    font-weight: 700;
+  }
+  .ec-tree-view__item[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-tree-view__item > button,
+  .ec-tree-view__spacer {
+    box-sizing: border-box;
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: 19px;
+    cursor: pointer;
+  }
+  .ec-tree-view__item > button:hover {
+    background: color-mix(
+      in srgb,
+      var(--ec-colors-text, #19211c) 10%,
+      transparent
+    );
+  }
+  .ec-tree-view__item > button:disabled {
+    cursor: not-allowed;
+  }
+  .ec-tree-view__tree[aria-disabled="true"] {
+    opacity: 0.55;
+  }
+}
+@layer ec.variants {
+  [data-ec-theme="dark"] .ec-tree-view__item[aria-selected="true"] {
+    color: var(--ec-colors-text, white);
+  }
+}
+@layer ec.utilities {
+  .ec-tree-view__tree:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-tree-view__tree {
+      border-color: FieldText;
+      background: Field;
+      color: FieldText;
+    }
+    .ec-tree-view__item[data-active] {
+      outline: 1px solid Highlight;
+    }
+    .ec-tree-view__item[aria-selected="true"] {
+      color: Highlight;
+    }
+  }
+}

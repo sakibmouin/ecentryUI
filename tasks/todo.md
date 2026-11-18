@@ -550,14 +550,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/tree-view/tree-view.tsx`, `tree-view.test.tsx`.
   - Acceptance: hierarchy, expansion, selection and typeahead; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/tree-view/tree-view.test.tsx`.
-- [ ] **T097 Tree View presentation and docs** (depends on T096).
+- [x] **T097 Tree View presentation and docs** (depends on T096).
   - Files: `packages/react/src/components/tree-view/tree-view.css`, `index.ts`, `apps/docs/content/components/tree-view.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- tree-view`.
 
 ### Checkpoint after T097
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T098 Action Bar component** (depends on T016).
   - Files: `packages/react/src/components/action-bar/action-bar.tsx`, `action-bar.css`, `action-bar.test.tsx`, `index.ts`, `apps/docs/content/components/action-bar.mdx`.

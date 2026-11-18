@@ -277,3 +277,8 @@ export type {
   SelectOption,
   SelectProps,
 } from "./components/select/select.js";
+export { TreeView } from "./components/tree-view/tree-view.js";
+export type {
+  TreeNode,
+  TreeViewProps,
+} from "./components/tree-view/tree-view.js";

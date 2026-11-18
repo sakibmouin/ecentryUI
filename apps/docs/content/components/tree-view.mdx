@@ -1,0 +1,28 @@
+import { TreeViewExample } from "../../src/examples/tree-view.tsx";
+import source from "../../src/examples/tree-view.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Tree View
+</div>
+<span className="section-index">COLLECTION COMPONENT</span>
+
+# Tree View
+
+Browse nested items with expansion, selection and typeahead.
+
+## Install
+
+```sh
+ecentry add tree-view
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <TreeViewExample />
+</ExamplePanel>
+
+## API
+
+`label` and `nodes` are required. Each node has `id`, `label`, optional `children`, and optional `disabled`. Use `value` and `onValueChange` for controlled selection, or `defaultValue` for uncontrolled selection. Use `expanded` and `onExpandedChange` for controlled expansion, or `defaultExpanded` for initial open branches. Arrow keys navigate and expand/collapse, Home/End jump to endpoints, typing finds a visible node, and Enter/Space selects.
