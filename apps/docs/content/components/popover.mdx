@@ -1,0 +1,28 @@
+import { PopoverExample } from "../../src/examples/popover.tsx";
+import source from "../../src/examples/popover.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Popover
+</div>
+<span className="section-index">OVERLAY COMPONENT</span>
+
+# Popover
+
+Show interactive supporting content next to a trigger without blocking the page.
+
+## Install
+
+```sh
+ecentry add popover
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <PopoverExample />
+</ExamplePanel>
+
+## API
+
+`triggerLabel`, `title`, and `children` are required. Set `placement` to `top` or `bottom`, and `align` to `start` or `end`; the panel flips and stays within the viewport. Use `open` with `onOpenChange` to control visibility, or `defaultOpen` for initial state. Opening moves focus into the panel. Escape and the close button restore trigger focus; outside interaction and tabbing away close it.

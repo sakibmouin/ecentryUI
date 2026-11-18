@@ -84,6 +84,7 @@ import { drawerRegistryItem } from "../packages/react/dist/components/drawer/met
 import { hoverCardRegistryItem } from "../packages/react/dist/components/hover-card/metadata.js";
 import { menuRegistryItem } from "../packages/react/dist/components/menu/metadata.js";
 import { overlayManagerRegistryItem } from "../packages/react/dist/components/overlay-manager/metadata.js";
+import { popoverRegistryItem } from "../packages/react/dist/components/popover/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -156,6 +157,7 @@ for (const item of [
   hoverCardRegistryItem,
   menuRegistryItem,
   overlayManagerRegistryItem,
+  popoverRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

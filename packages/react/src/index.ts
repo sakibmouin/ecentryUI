@@ -301,3 +301,5 @@ export type {
   ManagedOverlay,
   OverlayManagerProps,
 } from "./components/overlay-manager/overlay-manager.js";
+export { Popover } from "./components/popover/popover.js";
+export type { PopoverProps } from "./components/popover/popover.js";
