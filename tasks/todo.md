@@ -672,7 +672,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/card/card.tsx`, `card.css`, `card.test.tsx`, `index.ts`, `apps/docs/content/components/card.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/card/card.test.tsx && npm run test:e2e -- card`.
-- [ ] **T118 Carousel behavior** (depends on T016).
+- [x] **T118 Carousel behavior** (depends on T016).
   - Files: `packages/react/src/components/carousel/carousel.tsx`, `carousel.test.tsx`.
   - Acceptance: navigation, indicators, autoplay and reduced motion; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/carousel/carousel.test.tsx`.
