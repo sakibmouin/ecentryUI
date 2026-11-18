@@ -322,3 +322,5 @@ export type {
   CarouselProps,
   CarouselSlide,
 } from "./components/carousel/carousel.js";
+export { Avatar } from "./components/avatar/avatar.js";
+export type { AvatarProps } from "./components/avatar/avatar.js";

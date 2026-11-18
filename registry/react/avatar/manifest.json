@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "avatar",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["avatar.css", "avatar.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "avatar.css": "27e3c8f0dc72f4854fab5aa7e7681cfb108942d281f2b08378ef69545ee679f1",
+    "avatar.tsx": "ba6762d350f9a8066866869eb7dd7df8c71178e1e734b5f5c78cbaffa87d22c2",
+    "index.ts": "052446c7dca1a200c369de179c55c38f0b2be3ee04ddd503d3a8699ae7194aa7",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": ["colors.text"],
+  "docsUrl": "https://ecentry.dev/components/avatar/",
+  "license": "MIT"
+}

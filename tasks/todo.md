@@ -651,7 +651,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/alert/alert.tsx`, `alert.css`, `alert.test.tsx`, `index.ts`, `apps/docs/content/components/alert.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/alert/alert.test.tsx && npm run test:e2e -- alert`.
-- [ ] **T114 Avatar component** (depends on T016).
+- [x] **T114 Avatar component** (depends on T016).
   - Files: `packages/react/src/components/avatar/avatar.tsx`, `avatar.css`, `avatar.test.tsx`, `index.ts`, `apps/docs/content/components/avatar.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/avatar/avatar.test.tsx && npm run test:e2e -- avatar`.

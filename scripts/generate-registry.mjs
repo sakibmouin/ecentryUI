@@ -91,6 +91,7 @@ import { tooltipRegistryItem } from "../packages/react/dist/components/tooltip/m
 
 import { accordionRegistryItem } from "../packages/react/dist/components/accordion/metadata.js";
 
+import { avatarRegistryItem } from "../packages/react/dist/components/avatar/metadata.js";
 import { alertRegistryItem } from "../packages/react/dist/components/alert/metadata.js";
 import { carouselRegistryItem } from "../packages/react/dist/components/carousel/metadata.js";
 
@@ -172,6 +173,7 @@ for (const item of [
   accordionRegistryItem,
   alertRegistryItem,
   carouselRegistryItem,
+  avatarRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

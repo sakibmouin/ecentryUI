@@ -1,0 +1,28 @@
+import { AvatarExample } from "../../src/examples/avatar.tsx";
+import source from "../../src/examples/avatar.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Avatar
+</div>
+<span className="section-index">FEEDBACK COMPONENT</span>
+
+# Avatar
+
+Show a profile image with a readable fallback.
+
+## Install
+
+```sh
+ecentry add avatar
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <AvatarExample />
+</ExamplePanel>
+
+## API
+
+`name` supplies the accessible image name. `src` displays an image; loading failure falls back to initials from `name`. `fallback` overrides the initials, and `size` accepts `sm`, `md` (default), or `lg`. `loading` displays a busy placeholder. Native span attributes, refs, and `className` are supported. The root and `ec-avatar__image` and `ec-avatar__fallback` classes can be styled. The image is decorative inside the named avatar, so its `alt` defaults to empty.
