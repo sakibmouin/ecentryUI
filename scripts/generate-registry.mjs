@@ -91,6 +91,7 @@ import { tooltipRegistryItem } from "../packages/react/dist/components/tooltip/m
 
 import { accordionRegistryItem } from "../packages/react/dist/components/accordion/metadata.js";
 
+import { cardRegistryItem } from "../packages/react/dist/components/card/metadata.js";
 import { breadcrumbRegistryItem } from "../packages/react/dist/components/breadcrumb/metadata.js";
 import { badgeRegistryItem } from "../packages/react/dist/components/badge/metadata.js";
 import { avatarRegistryItem } from "../packages/react/dist/components/avatar/metadata.js";
@@ -190,6 +191,7 @@ for (const item of [
   collapsibleRegistryItem,
   dataListRegistryItem,
   emptyStateRegistryItem,
+  cardRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

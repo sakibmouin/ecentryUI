@@ -385,10 +385,11 @@ h3 {
   font-size: 12px;
   line-height: 1.6;
 }
-.content-inner a:not(.primary-link, .secondary-link, .ec-breadcrumb__link) {
+.content-inner
+  a:not(.primary-link, .secondary-link, .ec-breadcrumb__link, .ec-card__link) {
   color: #116e58;
 }
-footer {
+.site-footer {
   border-top: 1px solid #e7ebe7;
   padding: 22px 70px;
   display: flex;

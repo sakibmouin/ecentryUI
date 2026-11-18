@@ -127,6 +127,7 @@ const TooltipDocs = lazy(() => import("../content/components/tooltip.mdx"));
 
 const AccordionDocs = lazy(() => import("../content/components/accordion.mdx"));
 
+const CardDocs = lazy(() => import("../content/components/card.mdx"));
 const BreadcrumbDocs = lazy(
   () => import("../content/components/breadcrumb.mdx"),
 );
@@ -235,6 +236,7 @@ export const routes = [
   "/components/collapsible/",
   "/components/data-list/",
   "/components/empty-state/",
+  "/components/card/",
 ] as const;
 
 const componentLinks = [
@@ -322,6 +324,7 @@ const componentLinks = [
   { title: "Collapsible", href: "/components/collapsible/" },
   { title: "Data List", href: "/components/data-list/" },
   { title: "Empty State", href: "/components/empty-state/" },
+  { title: "Card", href: "/components/card/" },
 ];
 
 function Home() {
@@ -780,6 +783,10 @@ export function App({ routePath }: { routePath: string }) {
               <Suspense fallback={<p>Loading empty state guide...</p>}>
                 <EmptyStateDocs />
               </Suspense>
+            ) : route === "/components/card/" ? (
+              <Suspense fallback={<p>Loading card guide...</p>}>
+                <CardDocs />
+              </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />
             ) : (
@@ -791,7 +798,7 @@ export function App({ routePath }: { routePath: string }) {
               </>
             )}
           </div>
-          <footer>
+          <footer className="site-footer">
             <span>ecentryUI</span>
             <span>Designed for the details.</span>
           </footer>

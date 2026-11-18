@@ -1,0 +1,28 @@
+import { CardExample } from "../../src/examples/card.tsx";
+import source from "../../src/examples/card.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Card
+</div>
+<span className="section-index">FEEDBACK COMPONENT</span>
+
+# Card
+
+Group related content and an optional action in a clear surface.
+
+## Install
+
+```sh
+ecentry add card
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <CardExample />
+</ExamplePanel>
+
+## API
+
+`heading` names the article and renders an `h3`; use this default when a level-three heading fits your page structure. `description`, children, and `footer` fill the named regions. For custom heading levels, omit `heading`, render your own heading as children, and pass `aria-labelledby` on Card. `variant` accepts `outline` (default) or `elevated`. `loading` sets `aria-busy`. Native article props, refs, and `className` are supported. `ec-card__header`, `ec-card__heading`, `ec-card__description`, `ec-card__body`, and `ec-card__footer` are style hooks. Interactive children retain native keyboard behavior.

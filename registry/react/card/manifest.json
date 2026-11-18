@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "card",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["card.css", "card.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "card.css": "5c86e763fc6102ec63a7ebe8689aa3ffc38125920207a41964d552112afb88af",
+    "card.tsx": "9f8418b6d814255cbfb605017e1eb688e41190478f3979519e6e246f4b8fbd9b",
+    "index.ts": "de97f42cc4147a95599572c0f0f9ed4e8196853e6b9451b1d5f94e731ba5e6ae",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": ["colors.surface", "colors.text", "radii.md"],
+  "docsUrl": "https://ecentry.dev/components/card/",
+  "license": "MIT"
+}

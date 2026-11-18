@@ -668,7 +668,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/breadcrumb/breadcrumb.tsx`, `breadcrumb.css`, `breadcrumb.test.tsx`, `index.ts`, `apps/docs/content/components/breadcrumb.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/breadcrumb/breadcrumb.test.tsx && npm run test:e2e -- breadcrumb`.
-- [ ] **T117 Card component** (depends on T016).
+- [x] **T117 Card component** (depends on T016).
   - Files: `packages/react/src/components/card/card.tsx`, `card.css`, `card.test.tsx`, `index.ts`, `apps/docs/content/components/card.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/card/card.test.tsx && npm run test:e2e -- card`.
