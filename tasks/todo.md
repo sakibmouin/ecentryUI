@@ -563,7 +563,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/action-bar/action-bar.tsx`, `action-bar.css`, `action-bar.test.tsx`, `index.ts`, `apps/docs/content/components/action-bar.mdx`.
   - Acceptance: keyboard navigation, focus and overlay lifecycle; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/action-bar/action-bar.test.tsx && npm run test:e2e -- action-bar`.
-- [ ] **T099 Drawer behavior** (depends on T016).
+- [x] **T099 Drawer behavior** (depends on T016).
   - Files: `packages/react/src/components/drawer/drawer.tsx`, `drawer.test.tsx`.
   - Acceptance: placement, scroll locking and focus restoration; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/drawer/drawer.test.tsx`.
