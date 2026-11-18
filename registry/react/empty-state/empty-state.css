@@ -1,0 +1,54 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 2.5rem 1.5rem;
+    border: 1px dashed var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    color: var(--ec-colors-text, #19211c);
+    background: var(--ec-colors-surface, #fff);
+    text-align: center;
+  }
+  .ec-empty-state[data-size="compact"] {
+    padding: 1.25rem;
+    gap: 0.4rem;
+  }
+  .ec-empty-state__icon {
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    color: var(--ec-colors-text-muted, #5c665f);
+    background: var(--ec-colors-background, #f5f7f5);
+    font-size: 1.5rem;
+  }
+  .ec-empty-state__title {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.35;
+  }
+  .ec-empty-state__description {
+    max-width: 36ch;
+    margin: 0;
+    color: var(--ec-colors-text-muted, #5c665f);
+    line-height: 1.5;
+  }
+  .ec-empty-state__action {
+    margin-top: 0.35rem;
+  }
+  .ec-empty-state__loading {
+    color: var(--ec-colors-text-muted, #5c665f);
+  }
+}
+@layer ec.utilities {
+  @media (forced-colors: active) {
+    .ec-empty-state {
+      border-color: CanvasText;
+    }
+  }
+}

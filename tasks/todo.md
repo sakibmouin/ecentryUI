@@ -702,7 +702,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/data-list/data-list.tsx`, `data-list.css`, `data-list.test.tsx`, `index.ts`, `apps/docs/content/components/data-list.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/data-list/data-list.test.tsx && npm run test:e2e -- data-list`.
-- [ ] **T123 Empty State component** (depends on T016).
+- [x] **T123 Empty State component** (depends on T016).
   - Files: `packages/react/src/components/empty-state/empty-state.tsx`, `empty-state.css`, `empty-state.test.tsx`, `index.ts`, `apps/docs/content/components/empty-state.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/empty-state/empty-state.test.tsx && npm run test:e2e -- empty-state`.

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "empty-state",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["empty-state.css", "empty-state.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "empty-state.css": "25d82af34f6ffde38bdb9b95f8f01b67938b6b160590f616cdf1bc7b93fdb49f",
+    "empty-state.tsx": "5635b1be9c70a92924675c2c4e1e01bb04e4ae07878fd198400728f7b56e2888",
+    "index.ts": "6809a2be36e617241315ce13271868ebbb58188635d04c4941f8a08197eaaab7",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.background",
+    "colors.border",
+    "colors.surface",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/empty-state/",
+  "license": "MIT"
+}

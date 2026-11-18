@@ -1,0 +1,28 @@
+import { EmptyStateExample } from "../../src/examples/empty-state.tsx";
+import source from "../../src/examples/empty-state.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Empty State
+</div>
+<span className="section-index">FEEDBACK COMPONENT</span>
+
+# Empty State
+
+Explain why a view has no content and offer a clear next action.
+
+## Install
+
+```sh
+ecentry add empty-state
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <EmptyStateExample />
+</ExamplePanel>
+
+## API and accessibility
+
+`title` is a heading; `description` adds context, `icon` is decorative, and `action` accepts an interactive control. `size` is `default` or `compact`. `loading` marks the group busy, announces loading politely, and hides the action until content is ready. The static empty message does not use a live region, avoiding repeated announcements; use an action with native button or link semantics. Native div props, `className`, and `ec-empty-state__*` classes customize the component. The demo covers actionable, compact, loading, and light/dark states.

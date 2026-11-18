@@ -345,3 +345,6 @@ export type {
   DataListItem,
   DataListProps,
 } from "./components/data-list/data-list.js";
+
+export { EmptyState } from "./components/empty-state/empty-state.js";
+export type { EmptyStateProps } from "./components/empty-state/empty-state.js";
