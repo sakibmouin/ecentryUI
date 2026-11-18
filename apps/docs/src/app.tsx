@@ -114,6 +114,7 @@ const DrawerDocs = lazy(() => import("../content/components/drawer.mdx"));
 const HoverCardDocs = lazy(
   () => import("../content/components/hover-card.mdx"),
 );
+const MenuDocs = lazy(() => import("../content/components/menu.mdx"));
 
 export const routes = [
   "/",
@@ -186,6 +187,7 @@ export const routes = [
   "/components/action-bar/",
   "/components/drawer/",
   "/components/hover-card/",
+  "/components/menu/",
 ] as const;
 
 const componentLinks = [
@@ -257,6 +259,7 @@ const componentLinks = [
   { title: "Action Bar", href: "/components/action-bar/" },
   { title: "Drawer", href: "/components/drawer/" },
   { title: "Hover Card", href: "/components/hover-card/" },
+  { title: "Menu", href: "/components/menu/" },
 ];
 
 function Home() {
@@ -650,6 +653,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/hover-card/" ? (
               <Suspense fallback={<p>Loading hover card guide...</p>}>
                 <HoverCardDocs />
+              </Suspense>
+            ) : route === "/components/menu/" ? (
+              <Suspense fallback={<p>Loading menu guide...</p>}>
+                <MenuDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

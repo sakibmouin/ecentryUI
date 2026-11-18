@@ -294,3 +294,5 @@ export type {
 } from "./components/drawer/drawer.js";
 export { HoverCard } from "./components/hover-card/hover-card.js";
 export type { HoverCardProps } from "./components/hover-card/hover-card.js";
+export { Menu } from "./components/menu/menu.js";
+export type { MenuItem, MenuProps } from "./components/menu/menu.js";

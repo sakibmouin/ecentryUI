@@ -151,7 +151,10 @@ export function Menu({
   }
   function handleContextMenu(event: MouseEvent<HTMLButtonElement>) {
     event.preventDefault();
-    setContextPoint({ x: event.clientX, y: event.clientY });
+    setContextPoint({
+      x: Math.max(8, Math.min(event.clientX, window.innerWidth - 248)),
+      y: Math.max(8, Math.min(event.clientY, window.innerHeight - 280)),
+    });
     change(true);
   }
   function renderItems(levelItems: MenuItem[], depth: number): React.ReactNode {
@@ -168,6 +171,7 @@ export function Menu({
           }
           onMouseEnter={() => {
             if (item.children?.length) openChild(item, depth);
+            else setPath((current) => current.slice(0, depth));
           }}
           onClick={() => {
             if (item.disabled) return;

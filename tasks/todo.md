@@ -584,14 +584,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/menu/menu.tsx`, `menu.test.tsx`.
   - Acceptance: nested items, typeahead, keyboard and context trigger; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/menu/menu.test.tsx`.
-- [ ] **T103 Menu presentation and docs** (depends on T102).
+- [x] **T103 Menu presentation and docs** (depends on T102).
   - Files: `packages/react/src/components/menu/menu.css`, `index.ts`, `apps/docs/content/components/menu.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- menu`.
 
 ### Checkpoint after T103
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T104 Overlay Manager component** (depends on T016).
   - Files: `packages/react/src/components/overlay-manager/overlay-manager.tsx`, `overlay-manager.css`, `overlay-manager.test.tsx`, `index.ts`, `apps/docs/content/components/overlay-manager.mdx`.

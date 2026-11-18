@@ -1,0 +1,105 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-menu-root {
+    position: relative;
+    display: inline-block;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-menu-root > button {
+    min-height: 40px;
+    padding: 8px 14px;
+    border: 1px solid var(--ec-colors-border, #a9bcb0);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, #fff);
+    color: inherit;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .ec-menu,
+  .ec-menu__sub {
+    box-sizing: border-box;
+    min-width: 220px;
+    padding: 5px;
+    border: 1px solid var(--ec-colors-border, #a9bcb0);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, #fff);
+    color: var(--ec-colors-text, #19211c);
+    box-shadow: 0 10px 28px rgb(0 0 0 / 0.16);
+  }
+  .ec-menu {
+    position: absolute;
+    z-index: 40;
+    top: calc(100% + 5px);
+    inset-inline-start: 0;
+  }
+  .ec-menu[data-context] {
+    position: fixed;
+    inset-inline-start: auto;
+  }
+  .ec-menu__entry {
+    position: relative;
+  }
+  .ec-menu__entry > [role="menuitem"] {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    min-height: 36px;
+    padding: 7px 9px;
+    border: 0;
+    border-radius: 5px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: 14px;
+    text-align: start;
+    cursor: pointer;
+  }
+  .ec-menu__entry > [role="menuitem"]:hover,
+  .ec-menu__entry > [role="menuitem"]:focus-visible {
+    background: var(--ec-colors-surface, #f0f5f1);
+  }
+  .ec-menu__entry > [role="menuitem"][aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-menu__entry > [role="menuitem"] span {
+    font-size: 18px;
+  }
+  .ec-menu__sub {
+    position: absolute;
+    z-index: 41;
+    top: -5px;
+    inset-inline-start: calc(100% + 4px);
+  }
+}
+@layer ec.utilities {
+  .ec-menu-root > button:focus-visible,
+  .ec-menu__entry > [role="menuitem"]:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (max-width: 640px) {
+    .ec-menu__sub {
+      top: 100%;
+      inset-inline-start: 0;
+    }
+  }
+  @media (forced-colors: active) {
+    .ec-menu-root > button,
+    .ec-menu,
+    .ec-menu__sub {
+      border-color: ButtonText;
+      background: Canvas;
+      color: CanvasText;
+    }
+    .ec-menu__entry > [role="menuitem"]:focus-visible {
+      outline-color: Highlight;
+    }
+  }
+}
