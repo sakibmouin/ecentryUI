@@ -559,7 +559,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T098 Action Bar component** (depends on T016).
+- [x] **T098 Action Bar component** (depends on T016).
   - Files: `packages/react/src/components/action-bar/action-bar.tsx`, `action-bar.css`, `action-bar.test.tsx`, `index.ts`, `apps/docs/content/components/action-bar.mdx`.
   - Acceptance: keyboard navigation, focus and overlay lifecycle; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/action-bar/action-bar.test.tsx && npm run test:e2e -- action-bar`.

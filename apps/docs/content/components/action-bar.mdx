@@ -1,0 +1,28 @@
+import { ActionBarExample } from "../../src/examples/action-bar.tsx";
+import source from "../../src/examples/action-bar.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Action Bar
+</div>
+<span className="section-index">OVERLAY COMPONENT</span>
+
+# Action Bar
+
+A contextual toolbar for actions on selected items. Opening it places focus on the first available action.
+
+## Install
+
+```sh
+ecentry add action-bar
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <ActionBarExample />
+</ExamplePanel>
+
+## API
+
+`label`, `triggerLabel`, and `actions` are required. Each action has `id`, `label`, `onSelect`, and optional `disabled`. Use `open` and `onOpenChange` for controlled state or `defaultOpen` for uncontrolled initial state. Left and right arrows move between enabled actions; Home/End jump to the ends. Escape or the dismiss button closes the bar and restores focus to its trigger.

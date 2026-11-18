@@ -282,3 +282,8 @@ export type {
   TreeNode,
   TreeViewProps,
 } from "./components/tree-view/tree-view.js";
+export { ActionBar } from "./components/action-bar/action-bar.js";
+export type {
+  ActionBarAction,
+  ActionBarProps,
+} from "./components/action-bar/action-bar.js";

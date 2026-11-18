@@ -79,6 +79,7 @@ import { commandRegistryItem } from "../packages/react/dist/components/command/m
 import { listboxRegistryItem } from "../packages/react/dist/components/listbox/metadata.js";
 import { selectRegistryItem } from "../packages/react/dist/components/select/metadata.js";
 import { treeViewRegistryItem } from "../packages/react/dist/components/tree-view/metadata.js";
+import { actionBarRegistryItem } from "../packages/react/dist/components/action-bar/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -146,6 +147,7 @@ for (const item of [
   listboxRegistryItem,
   selectRegistryItem,
   treeViewRegistryItem,
+  actionBarRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

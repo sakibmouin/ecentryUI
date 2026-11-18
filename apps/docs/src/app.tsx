@@ -107,6 +107,9 @@ const CommandDocs = lazy(() => import("../content/components/command.mdx"));
 const ListboxDocs = lazy(() => import("../content/components/listbox.mdx"));
 const SelectDocs = lazy(() => import("../content/components/select.mdx"));
 const TreeViewDocs = lazy(() => import("../content/components/tree-view.mdx"));
+const ActionBarDocs = lazy(
+  () => import("../content/components/action-bar.mdx"),
+);
 
 export const routes = [
   "/",
@@ -176,6 +179,7 @@ export const routes = [
   "/components/listbox/",
   "/components/select/",
   "/components/tree-view/",
+  "/components/action-bar/",
 ] as const;
 
 const componentLinks = [
@@ -244,6 +248,7 @@ const componentLinks = [
   { title: "Listbox", href: "/components/listbox/" },
   { title: "Select", href: "/components/select/" },
   { title: "Tree View", href: "/components/tree-view/" },
+  { title: "Action Bar", href: "/components/action-bar/" },
 ];
 
 function Home() {
@@ -625,6 +630,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/tree-view/" ? (
               <Suspense fallback={<p>Loading tree view guide...</p>}>
                 <TreeViewDocs />
+              </Suspense>
+            ) : route === "/components/action-bar/" ? (
+              <Suspense fallback={<p>Loading action bar guide...</p>}>
+                <ActionBarDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

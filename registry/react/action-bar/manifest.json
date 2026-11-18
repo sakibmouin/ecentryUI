@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "action-bar",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["action-bar.css", "action-bar.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "action-bar.css": "3981b1532956bda2659768dae4f1ac98d90787ded5a9e618c8051f73c243adfe",
+    "action-bar.tsx": "65135d4df5992ab8827cdea37eb425b3e52a2de42d39db40e38094beaf06354f",
+    "index.ts": "ca9e13f9ee1fefb7882b6a4a923eb80e1e8e5b9ae86cf5c4fad50f74419f7f3f",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.surface",
+    "colors.text",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/action-bar/",
+  "license": "MIT"
+}

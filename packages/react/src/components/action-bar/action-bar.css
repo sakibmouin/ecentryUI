@@ -1,0 +1,84 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-action-bar-root > button {
+    min-height: 40px;
+    padding: 8px 14px;
+    border: 1px solid var(--ec-colors-border, #a9bcb0);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, #fff);
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .ec-action-bar {
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 50;
+    bottom: max(20px, env(safe-area-inset-bottom));
+    left: 50%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: min(92vw, 660px);
+    padding: 12px;
+    border: 1px solid var(--ec-colors-border, #a9bcb0);
+    border-radius: 12px;
+    background: var(--ec-colors-background, #fff);
+    color: var(--ec-colors-text, #19211c);
+    box-shadow: 0 14px 40px rgb(0 0 0 / 0.2);
+    transform: translateX(-50%);
+  }
+  .ec-action-bar__label {
+    flex: 1 0 auto;
+    padding-inline: 6px;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .ec-action-bar > button {
+    min-height: 36px;
+    padding: 6px 10px;
+    border: 1px solid var(--ec-colors-border, #a9bcb0);
+    border-radius: 6px;
+    background: var(--ec-colors-surface, #f8f9f8);
+    color: inherit;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .ec-action-bar > button:hover {
+    background: color-mix(
+      in srgb,
+      var(--ec-colors-text, #19211c) 10%,
+      var(--ec-colors-surface, #f8f9f8)
+    );
+  }
+  .ec-action-bar > button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ec-action-bar > .ec-action-bar__dismiss {
+    width: 36px;
+    padding: 0;
+    font-size: 20px;
+  }
+}
+@layer ec.utilities {
+  .ec-action-bar-root > button:focus-visible,
+  .ec-action-bar > button:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-action-bar,
+    .ec-action-bar > button,
+    .ec-action-bar-root > button {
+      border-color: ButtonText;
+      background: Canvas;
+      color: CanvasText;
+    }
+  }
+}
