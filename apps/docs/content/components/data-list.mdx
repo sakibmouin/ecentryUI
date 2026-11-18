@@ -1,0 +1,28 @@
+import { DataListExample } from "../../src/examples/data-list.tsx";
+import source from "../../src/examples/data-list.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Data List
+</div>
+<span className="section-index">DATA COMPONENT</span>
+
+# Data List
+
+Present labeled values as a semantic description list.
+
+## Install
+
+```sh
+ecentry add data-list
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <DataListExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Pass `items` as ordered `{ label, value }` pairs. The component renders native `dl`, `dt`, and `dd` elements. `orientation` selects `vertical` (default) or `horizontal`, which stacks at narrow widths. `loading` marks the list busy and shows a polite loading message when empty; `emptyMessage` customizes the empty status. Native `dl` props and `className` customize the list, and `ec-data-list__*` classes customize parts. The demo covers both layouts, empty and loading states, and light/dark appearances. No keyboard interaction is needed for static data; interactive values keep their own native behavior.

@@ -101,6 +101,8 @@ import { clipboardRegistryItem } from "../packages/react/dist/components/clipboa
 
 import { collapsibleRegistryItem } from "../packages/react/dist/components/collapsible/metadata.js";
 
+import { dataListRegistryItem } from "../packages/react/dist/components/data-list/metadata.js";
+
 for (const item of [
   buttonRegistryItem,
   inputRegistryItem,
@@ -184,6 +186,7 @@ for (const item of [
   breadcrumbRegistryItem,
   clipboardRegistryItem,
   collapsibleRegistryItem,
+  dataListRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

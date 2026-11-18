@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "data-list",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["data-list.css", "data-list.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "data-list.css": "3fe9d83c66f8774fc1e8647e849a89cc42819a765facb4abd1c683fa856ce20b",
+    "data-list.tsx": "1a1015299062d7eb51baaa1f4b4d13f3acef225cf5d3bc293abb07e94092c742",
+    "index.ts": "6e48c3507f25cd5af40a44b38a65456ed1992ada66713c0d07fc48b37113d68a",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": ["colors.border", "colors.text", "colors.text-muted"],
+  "docsUrl": "https://ecentry.dev/components/data-list/",
+  "license": "MIT"
+}

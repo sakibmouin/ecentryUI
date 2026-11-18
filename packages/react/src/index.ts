@@ -339,3 +339,9 @@ export type { ClipboardProps } from "./components/clipboard/clipboard.js";
 
 export { Collapsible } from "./components/collapsible/collapsible.js";
 export type { CollapsibleProps } from "./components/collapsible/collapsible.js";
+
+export { DataList } from "./components/data-list/data-list.js";
+export type {
+  DataListItem,
+  DataListProps,
+} from "./components/data-list/data-list.js";

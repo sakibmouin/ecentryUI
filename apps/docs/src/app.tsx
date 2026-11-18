@@ -142,6 +142,8 @@ const CollapsibleDocs = lazy(
   () => import("../content/components/collapsible.mdx"),
 );
 
+const DataListDocs = lazy(() => import("../content/components/data-list.mdx"));
+
 export const routes = [
   "/",
   "/guides/examples/",
@@ -227,6 +229,7 @@ export const routes = [
   "/components/breadcrumb/",
   "/components/clipboard/",
   "/components/collapsible/",
+  "/components/data-list/",
 ] as const;
 
 const componentLinks = [
@@ -312,6 +315,7 @@ const componentLinks = [
   { title: "Breadcrumb", href: "/components/breadcrumb/" },
   { title: "Clipboard", href: "/components/clipboard/" },
   { title: "Collapsible", href: "/components/collapsible/" },
+  { title: "Data List", href: "/components/data-list/" },
 ];
 
 function Home() {
@@ -761,6 +765,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/collapsible/" ? (
               <Suspense fallback={<p>Loading collapsible guide...</p>}>
                 <CollapsibleDocs />
+              </Suspense>
+            ) : route === "/components/data-list/" ? (
+              <Suspense fallback={<p>Loading data list guide...</p>}>
+                <DataListDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />
