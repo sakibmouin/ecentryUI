@@ -334,3 +334,5 @@ export type {
   BreadcrumbProps,
   BreadcrumbItem,
 } from "./components/breadcrumb/breadcrumb.js";
+export { Clipboard } from "./components/clipboard/clipboard.js";
+export type { ClipboardProps } from "./components/clipboard/clipboard.js";

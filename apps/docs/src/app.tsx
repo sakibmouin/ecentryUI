@@ -136,6 +136,8 @@ const AvatarDocs = lazy(() => import("../content/components/avatar.mdx"));
 const AlertDocs = lazy(() => import("../content/components/alert.mdx"));
 const CarouselDocs = lazy(() => import("../content/components/carousel.mdx"));
 
+const ClipboardDocs = lazy(() => import("../content/components/clipboard.mdx"));
+
 export const routes = [
   "/",
   "/guides/examples/",
@@ -219,6 +221,7 @@ export const routes = [
   "/components/avatar/",
   "/components/badge/",
   "/components/breadcrumb/",
+  "/components/clipboard/",
 ] as const;
 
 const componentLinks = [
@@ -302,6 +305,7 @@ const componentLinks = [
   { title: "Avatar", href: "/components/avatar/" },
   { title: "Badge", href: "/components/badge/" },
   { title: "Breadcrumb", href: "/components/breadcrumb/" },
+  { title: "Clipboard", href: "/components/clipboard/" },
 ];
 
 function Home() {
@@ -743,6 +747,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/breadcrumb/" ? (
               <Suspense fallback={<p>Loading breadcrumb guide...</p>}>
                 <BreadcrumbDocs />
+              </Suspense>
+            ) : route === "/components/clipboard/" ? (
+              <Suspense fallback={<p>Loading clipboard guide...</p>}>
+                <ClipboardDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

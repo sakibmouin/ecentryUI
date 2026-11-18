@@ -97,6 +97,8 @@ import { avatarRegistryItem } from "../packages/react/dist/components/avatar/met
 import { alertRegistryItem } from "../packages/react/dist/components/alert/metadata.js";
 import { carouselRegistryItem } from "../packages/react/dist/components/carousel/metadata.js";
 
+import { clipboardRegistryItem } from "../packages/react/dist/components/clipboard/metadata.js";
+
 for (const item of [
   buttonRegistryItem,
   inputRegistryItem,
@@ -178,6 +180,7 @@ for (const item of [
   avatarRegistryItem,
   badgeRegistryItem,
   breadcrumbRegistryItem,
+  clipboardRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

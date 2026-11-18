@@ -1,0 +1,28 @@
+import { ClipboardExample } from "../../src/examples/clipboard.tsx";
+import source from "../../src/examples/clipboard.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Clipboard
+</div>
+<span className="section-index">FEEDBACK COMPONENT</span>
+
+# Clipboard
+
+Display a text value and let people copy it with clear success or error feedback.
+
+## Install
+
+```sh
+ecentry add clipboard
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <ClipboardExample />
+</ExamplePanel>
+
+## API and accessibility
+
+`value` is copied exactly and rendered as text. `label` names the copy button. `disabled` and `loading` prevent copying. `onCopy(value)` reports success; `onError(error)` reports unavailable or denied clipboard access. A polite status announces success or failure, then clears. The native button supports pointer, Enter, and Space. `className`, native div props, and `ec-clipboard__*` classes provide customization. Clipboard access requires a secure context. The demo shows default, disabled, loading, and light/dark states.
