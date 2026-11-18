@@ -533,7 +533,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/listbox/listbox.css`, `index.ts`, `apps/docs/content/components/listbox.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- listbox`.
-- [ ] **T094 Select behavior** (depends on T016).
+- [x] **T094 Select behavior** (depends on T016).
   - Files: `packages/react/src/components/select/select.tsx`, `select.test.tsx`.
   - Acceptance: single/multiple selection, groups and form state; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/select/select.test.tsx`.
