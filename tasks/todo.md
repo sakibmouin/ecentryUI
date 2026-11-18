@@ -576,7 +576,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T101 Hover Card component** (depends on T016).
+- [x] **T101 Hover Card component** (depends on T016).
   - Files: `packages/react/src/components/hover-card/hover-card.tsx`, `hover-card.css`, `hover-card.test.tsx`, `index.ts`, `apps/docs/content/components/hover-card.mdx`.
   - Acceptance: keyboard navigation, focus and overlay lifecycle; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/hover-card/hover-card.test.tsx && npm run test:e2e -- hover-card`.

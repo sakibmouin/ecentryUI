@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "hover-card",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["hover-card.css", "hover-card.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "hover-card.css": "3bf979504c67d307c4eaff2687657f186618cb82b40670f74e1b9546f0a8e6e4",
+    "hover-card.tsx": "e646145d7bfa95aa7c560e1c2444bbd83e7974e0a859988bb699be27e3d16c5b",
+    "index.ts": "fd7586189f1b0414b9fa26a413ff642e7e785287ad504780945a98fd91298cd2",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.text",
+    "colors.text.muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/hover-card/",
+  "license": "MIT"
+}

@@ -1,0 +1,76 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-hover-card-root {
+    position: relative;
+    display: inline-block;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-hover-card-root > button {
+    min-height: 40px;
+    padding: 8px 14px;
+    border: 1px solid var(--ec-colors-border, #a9bcb0);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, #fff);
+    color: inherit;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .ec-hover-card {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 30;
+    top: calc(100% + 8px);
+    inset-inline-start: 0;
+    width: min(320px, 90vw);
+    padding: 18px;
+    border: 1px solid var(--ec-colors-border, #a9bcb0);
+    border-radius: 10px;
+    background: var(--ec-colors-background, #fff);
+    color: var(--ec-colors-text, #19211c);
+    box-shadow: 0 12px 30px rgb(0 0 0 / 0.16);
+  }
+  .ec-hover-card h2 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  .ec-hover-card__body {
+    color: var(--ec-colors-text-muted, #59635b);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .ec-hover-card__body p {
+    margin: 0 0 10px;
+  }
+  .ec-hover-card__body a {
+    color: var(--ec-colors-accent, #116e5e);
+    font-weight: 600;
+  }
+}
+@layer ec.variants {
+  [data-ec-theme="dark"] .ec-hover-card__body a {
+    color: var(--ec-colors-text, white);
+  }
+}
+@layer ec.utilities {
+  .ec-hover-card-root > button:focus-visible,
+  .ec-hover-card a:focus-visible,
+  .ec-hover-card button:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-hover-card-root > button,
+    .ec-hover-card {
+      border-color: ButtonText;
+      background: Canvas;
+      color: CanvasText;
+    }
+    .ec-hover-card__body a {
+      color: LinkText;
+    }
+  }
+}

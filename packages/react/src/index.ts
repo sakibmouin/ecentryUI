@@ -292,3 +292,5 @@ export type {
   DrawerPlacement,
   DrawerProps,
 } from "./components/drawer/drawer.js";
+export { HoverCard } from "./components/hover-card/hover-card.js";
+export type { HoverCardProps } from "./components/hover-card/hover-card.js";

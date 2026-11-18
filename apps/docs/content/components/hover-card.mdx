@@ -1,0 +1,28 @@
+import { HoverCardExample } from "../../src/examples/hover-card.tsx";
+import source from "../../src/examples/hover-card.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Hover Card
+</div>
+<span className="section-index">OVERLAY COMPONENT</span>
+
+# Hover Card
+
+Show supporting information on hover, focus or click without blocking the page.
+
+## Install
+
+```sh
+ecentry add hover-card
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <HoverCardExample />
+</ExamplePanel>
+
+## API
+
+`triggerLabel`, `title`, and `children` are required. `open` and `onOpenChange` control visibility; `defaultOpen` sets the uncontrolled initial state. `openDelay` and `closeDelay` set hover timing in milliseconds. Focus opens the card, ArrowDown moves to its first link or button, Escape closes and restores trigger focus, and outside interaction closes it.

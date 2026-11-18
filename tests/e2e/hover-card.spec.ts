@@ -1,0 +1,28 @@
+import { expect, test } from "@playwright/test";
+import AxeBuilder from "@axe-core/playwright";
+
+test("Hover Card opens by pointer and keyboard and closes on Escape", async ({
+  page,
+}) => {
+  await page.goto("http://127.0.0.1:4177/components/hover-card/");
+  const region = page.getByRole("region", { name: "Hover card example" });
+  const trigger = region.getByRole("button", { name: "Meet the team" });
+  await trigger.hover();
+  const card = region.getByRole("dialog", { name: "Design team" });
+  await expect(card).toBeVisible();
+  await trigger.focus();
+  await trigger.press("ArrowDown");
+  await expect(
+    card.getByRole("link", { name: "Read team details" }),
+  ).toBeFocused();
+  await card.press("Escape");
+  await expect(card).toHaveCount(0);
+  await expect(trigger).toBeFocused();
+  await region.getByRole("button", { name: "Dark mode" }).click();
+  const audit = await new AxeBuilder({ page }).analyze();
+  expect(
+    audit.violations.filter(
+      (item) => item.impact === "critical" || item.impact === "serious",
+    ),
+  ).toEqual([]);
+});

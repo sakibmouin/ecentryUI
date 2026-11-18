@@ -81,6 +81,7 @@ import { selectRegistryItem } from "../packages/react/dist/components/select/met
 import { treeViewRegistryItem } from "../packages/react/dist/components/tree-view/metadata.js";
 import { actionBarRegistryItem } from "../packages/react/dist/components/action-bar/metadata.js";
 import { drawerRegistryItem } from "../packages/react/dist/components/drawer/metadata.js";
+import { hoverCardRegistryItem } from "../packages/react/dist/components/hover-card/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -150,6 +151,7 @@ for (const item of [
   treeViewRegistryItem,
   actionBarRegistryItem,
   drawerRegistryItem,
+  hoverCardRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(
