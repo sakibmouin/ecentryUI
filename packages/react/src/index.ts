@@ -309,3 +309,8 @@ export { ToggleTip } from "./components/toggle-tip/toggle-tip.js";
 export type { ToggleTipProps } from "./components/toggle-tip/toggle-tip.js";
 export { Tooltip } from "./components/tooltip/tooltip.js";
 export type { TooltipProps } from "./components/tooltip/tooltip.js";
+export { Accordion } from "./components/accordion/accordion.js";
+export type {
+  AccordionItem,
+  AccordionProps,
+} from "./components/accordion/accordion.js";

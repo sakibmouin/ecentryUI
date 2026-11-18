@@ -1,0 +1,28 @@
+import { AccordionExample } from "../../src/examples/accordion.tsx";
+import source from "../../src/examples/accordion.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Accordion
+</div>
+<span className="section-index">FEEDBACK COMPONENT</span>
+
+# Accordion
+
+Reveal sections of related content with keyboard accessible headings.
+
+## Install
+
+```sh
+ecentry add accordion
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <AccordionExample />
+</ExamplePanel>
+
+## API
+
+`items` supplies unique `value`, `title`, `content`, and optional `disabled` for each section. `type` selects `single` (default) or `multiple` expansion. Use `defaultValue` for uncontrolled state, or pair `value` with `onValueChange` for controlled state. The callback receives a string in single mode or an array in multiple mode. Empty string or array closes all sections. `className` customizes the root; named `ec-accordion__*` classes and theme tokens customize parts. Enter and Space toggle a heading; Up, Down, Home, and End move focus among enabled headings.

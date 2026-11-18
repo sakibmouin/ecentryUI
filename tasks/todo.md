@@ -638,14 +638,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/accordion/accordion.tsx`, `accordion.test.tsx`.
   - Acceptance: single/multiple expansion, disabled items and focus; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/accordion/accordion.test.tsx`.
-- [ ] **T112 Accordion presentation and docs** (depends on T111).
+- [x] **T112 Accordion presentation and docs** (depends on T111).
   - Files: `packages/react/src/components/accordion/accordion.css`, `index.ts`, `apps/docs/content/components/accordion.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- accordion`.
 
 ### Checkpoint after T112
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T113 Alert component** (depends on T016).
   - Files: `packages/react/src/components/alert/alert.tsx`, `alert.css`, `alert.test.tsx`, `index.ts`, `apps/docs/content/components/alert.mdx`.

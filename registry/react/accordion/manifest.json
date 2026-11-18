@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "accordion",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["accordion.css", "accordion.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "accordion.css": "cdfdb398884e66fc90933e27fe38c7204adae64dd0dc65b27501ac0320e655e6",
+    "accordion.tsx": "4275054b1f877dfe420425542735b291d51989be2ce2f90cf8af1555afde7179",
+    "index.ts": "76bf968718119f97722d7d5f161af54528d6285f165d774b7c828f9cc187de27",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.surface",
+    "colors.text",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/accordion/",
+  "license": "MIT"
+}

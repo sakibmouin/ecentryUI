@@ -89,6 +89,8 @@ import { toastRegistryItem } from "../packages/react/dist/components/toast/metad
 import { toggleTipRegistryItem } from "../packages/react/dist/components/toggle-tip/metadata.js";
 import { tooltipRegistryItem } from "../packages/react/dist/components/tooltip/metadata.js";
 
+import { accordionRegistryItem } from "../packages/react/dist/components/accordion/metadata.js";
+
 for (const item of [
   buttonRegistryItem,
   inputRegistryItem,
@@ -164,6 +166,7 @@ for (const item of [
   toastRegistryItem,
   toggleTipRegistryItem,
   tooltipRegistryItem,
+  accordionRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(
