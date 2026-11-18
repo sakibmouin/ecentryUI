@@ -597,7 +597,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/overlay-manager/overlay-manager.tsx`, `overlay-manager.css`, `overlay-manager.test.tsx`, `index.ts`, `apps/docs/content/components/overlay-manager.mdx`.
   - Acceptance: keyboard navigation, focus and overlay lifecycle; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/overlay-manager/overlay-manager.test.tsx && npm run test:e2e -- overlay-manager`.
-- [ ] **T105 Popover behavior** (depends on T016).
+- [x] **T105 Popover behavior** (depends on T016).
   - Files: `packages/react/src/components/popover/popover.tsx`, `popover.test.tsx`.
   - Acceptance: anchor positioning, outside close and focus; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/popover/popover.test.tsx`.
