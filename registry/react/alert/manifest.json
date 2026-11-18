@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "alert",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["alert.css", "alert.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "alert.css": "0de0b678fe7d9568c66d217b2f3a83f6fb0c30aaa2b649e08afafc990666d109",
+    "alert.tsx": "9b51b124bcb48aa535c759e9caf52db0f873a9df6a52d071cbb38c07482a1778",
+    "index.ts": "4e316d0df5a306edb02ee4115f2f57a86ff17c3825171466e6e9478775ef247d",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": ["colors.focus", "colors.surface", "colors.text", "radii.md"],
+  "docsUrl": "https://ecentry.dev/components/alert/",
+  "license": "MIT"
+}

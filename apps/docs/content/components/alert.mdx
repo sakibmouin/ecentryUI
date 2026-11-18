@@ -1,0 +1,28 @@
+import { AlertExample } from "../../src/examples/alert.tsx";
+import source from "../../src/examples/alert.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Alert
+</div>
+<span className="section-index">FEEDBACK COMPONENT</span>
+
+# Alert
+
+Show a concise, accessible message with optional action and dismissal.
+
+## Install
+
+```sh
+ecentry add alert
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <AlertExample />
+</ExamplePanel>
+
+## API
+
+`variant` is `info` (default), `success`, `warning`, or `error`. Info and success use a polite status; warning and error use an assertive alert. `title` and children provide content. `loading` marks the message busy and shows a progress symbol. `action` accepts an interactive control. Set `dismissible` and use `onDismiss` to track dismissal. The component also accepts native div attributes and `className`; `ec-alert__*` classes and theme tokens customize its parts. Avoid repeatedly mounting identical messages, since that can repeat screen reader announcements.

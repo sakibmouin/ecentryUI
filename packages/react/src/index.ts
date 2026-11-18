@@ -314,3 +314,6 @@ export type {
   AccordionItem,
   AccordionProps,
 } from "./components/accordion/accordion.js";
+
+export { Alert } from "./components/alert/alert.js";
+export type { AlertProps } from "./components/alert/alert.js";

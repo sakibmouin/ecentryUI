@@ -645,9 +645,9 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 ### Checkpoint after T112
 
-- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows. T111-T112 checks passed; T110 remains unimplemented.
 
-- [ ] **T113 Alert component** (depends on T016).
+- [x] **T113 Alert component** (depends on T016).
   - Files: `packages/react/src/components/alert/alert.tsx`, `alert.css`, `alert.test.tsx`, `index.ts`, `apps/docs/content/components/alert.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/alert/alert.test.tsx && npm run test:e2e -- alert`.

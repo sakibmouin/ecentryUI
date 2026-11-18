@@ -127,6 +127,8 @@ const TooltipDocs = lazy(() => import("../content/components/tooltip.mdx"));
 
 const AccordionDocs = lazy(() => import("../content/components/accordion.mdx"));
 
+const AlertDocs = lazy(() => import("../content/components/alert.mdx"));
+
 export const routes = [
   "/",
   "/guides/examples/",
@@ -205,6 +207,7 @@ export const routes = [
   "/components/toggle-tip/",
   "/components/tooltip/",
   "/components/accordion/",
+  "/components/alert/",
 ] as const;
 
 const componentLinks = [
@@ -283,6 +286,7 @@ const componentLinks = [
   { title: "Toggle Tip", href: "/components/toggle-tip/" },
   { title: "Tooltip", href: "/components/tooltip/" },
   { title: "Accordion", href: "/components/accordion/" },
+  { title: "Alert", href: "/components/alert/" },
 ];
 
 function Home() {
@@ -704,6 +708,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/accordion/" ? (
               <Suspense fallback={<p>Loading accordion guide...</p>}>
                 <AccordionDocs />
+              </Suspense>
+            ) : route === "/components/alert/" ? (
+              <Suspense fallback={<p>Loading alert guide...</p>}>
+                <AlertDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />
