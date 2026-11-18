@@ -2035,6 +2035,25 @@ footer {
   outline: 2px solid var(--ec-colors-focus, Highlight);
   outline-offset: 2px;
 }
+.toast-demo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.toast-demo-actions button {
+  min-height: 40px;
+  padding: 8px 14px;
+  border: 1px solid var(--ec-colors-border, #a9bcb0);
+  border-radius: var(--ec-radii-md, 8px);
+  background: var(--ec-colors-background, white);
+  color: var(--ec-colors-text, #19211c);
+  font: inherit;
+  cursor: pointer;
+}
+.toast-demo-actions button:focus-visible {
+  outline: 2px solid var(--ec-colors-focus, Highlight);
+  outline-offset: 2px;
+}
 [data-ec-theme="dark"]
   :is(.date-input-demo, .date-picker-demo, .checkbox-demo, .themed-code-demo) {
   border-color: var(--ec-colors-border, #414a45);
