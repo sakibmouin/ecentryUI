@@ -580,7 +580,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/hover-card/hover-card.tsx`, `hover-card.css`, `hover-card.test.tsx`, `index.ts`, `apps/docs/content/components/hover-card.mdx`.
   - Acceptance: keyboard navigation, focus and overlay lifecycle; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/hover-card/hover-card.test.tsx && npm run test:e2e -- hover-card`.
-- [ ] **T102 Menu behavior** (depends on T016).
+- [x] **T102 Menu behavior** (depends on T016).
   - Files: `packages/react/src/components/menu/menu.tsx`, `menu.test.tsx`.
   - Acceptance: nested items, typeahead, keyboard and context trigger; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/menu/menu.test.tsx`.
