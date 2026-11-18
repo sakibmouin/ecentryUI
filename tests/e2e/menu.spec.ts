@@ -22,7 +22,12 @@ test("Menu navigates nested items and supports context opening", async ({
   await expect(menu).toHaveAttribute("data-context", "true");
   await menu.getByRole("menuitem", { name: "Open" }).press("Escape");
   await expect(menu).toHaveCount(0);
-  await region.getByRole("button", { name: "Dark mode" }).click();
+  await trigger.click();
+  await menu.getByRole("menuitem", { name: "Open" }).press("Tab");
+  await expect(menu).toHaveCount(0);
+  const darkMode = region.getByRole("button", { name: "Dark mode" });
+  await expect(darkMode).toBeFocused();
+  await darkMode.click();
   const audit = await new AxeBuilder({ page }).analyze();
   expect(
     audit.violations.filter(

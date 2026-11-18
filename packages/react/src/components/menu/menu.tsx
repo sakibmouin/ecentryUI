@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 import { useEffect, useId, useRef, useState } from "react";
-import type { KeyboardEvent, MouseEvent } from "react";
+import type { FocusEvent, KeyboardEvent, MouseEvent } from "react";
 
 export interface MenuItem {
   id: string;
@@ -163,6 +163,7 @@ export function Menu({
         <button
           type="button"
           role="menuitem"
+          tabIndex={-1}
           data-item-id={item.id}
           aria-disabled={item.disabled || undefined}
           aria-haspopup={item.children?.length ? "menu" : undefined}
@@ -171,7 +172,6 @@ export function Menu({
           }
           onMouseEnter={() => {
             if (item.children?.length) openChild(item, depth);
-            else setPath((current) => current.slice(0, depth));
           }}
           onClick={() => {
             if (item.disabled) return;
@@ -203,6 +203,16 @@ export function Menu({
       ref={rootRef}
       className={`ec-menu-root${className ? ` ${className}` : ""}`}
       onKeyDown={handleKeyDown}
+      onBlur={(event: FocusEvent<HTMLDivElement>) => {
+        if (
+          open &&
+          !event.currentTarget.contains(event.relatedTarget as Node)
+        ) {
+          change(false);
+          setPath([]);
+          setContextPoint(null);
+        }
+      }}
     >
       <button
         ref={triggerRef}

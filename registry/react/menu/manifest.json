@@ -7,7 +7,7 @@
   "hashes": {
     "index.ts": "e34a67aa2eb9dfef64a673aca664cbe077dfb7fc1115d3268dad089a91d05a7d",
     "menu.css": "b687388b025e82ef677a4d887bc30efb0a1a43c07c1058c424220aceeecec475",
-    "menu.tsx": "bd893a6e1011c6d29e4a43090fefa87ae727dd672eba2a136ba67a08657a2412",
+    "menu.tsx": "88404c7f9e23f7438a550fa41ce3ec9d38069326e9a97a0b286cf11d5da522db",
     "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
   },
   "dependencies": [],
