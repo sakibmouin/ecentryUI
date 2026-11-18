@@ -618,14 +618,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/toast/toast.css`, `index.ts`, `apps/docs/content/components/toast.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- toast`.
-- [ ] **T109 Toggle Tip component** (depends on T016).
+- [x] **T109 Toggle Tip component** (depends on T016).
   - Files: `packages/react/src/components/toggle-tip/toggle-tip.tsx`, `toggle-tip.css`, `toggle-tip.test.tsx`, `index.ts`, `apps/docs/content/components/toggle-tip.mdx`.
   - Acceptance: keyboard navigation, focus and overlay lifecycle; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/toggle-tip/toggle-tip.test.tsx && npm run test:e2e -- toggle-tip`.
 
 ### Checkpoint after T109
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T110 Tooltip component** (depends on T016).
   - Files: `packages/react/src/components/tooltip/tooltip.tsx`, `tooltip.css`, `tooltip.test.tsx`, `index.ts`, `apps/docs/content/components/tooltip.mdx`.

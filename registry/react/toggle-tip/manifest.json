@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "toggle-tip",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "styles.d.ts", "toggle-tip.css", "toggle-tip.tsx"],
+  "hashes": {
+    "index.ts": "c6c9f33004eb4674448bfdb89a5cf933c20e47ff5773bc179c26cc28064b3e2a",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa",
+    "toggle-tip.css": "824af5a8919846cd90d7ce0520753a175213fbb96ff985a89ff9ed4fc49038b3",
+    "toggle-tip.tsx": "2f824199a47b5aa0c6dfe51d9cae5790c1fc8c4f1b7d1fc2f604b6bddb580a4b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.text",
+    "colors.text.muted"
+  ],
+  "docsUrl": "https://ecentry.dev/components/toggle-tip/",
+  "license": "MIT"
+}

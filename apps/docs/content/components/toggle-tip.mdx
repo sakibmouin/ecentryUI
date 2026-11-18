@@ -1,0 +1,28 @@
+import { ToggleTipExample } from "../../src/examples/toggle-tip.tsx";
+import source from "../../src/examples/toggle-tip.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Toggle Tip
+</div>
+<span className="section-index">OVERLAY COMPONENT</span>
+
+# Toggle Tip
+
+Reveal additional help on activation while keeping the rest of the page available.
+
+## Install
+
+```sh
+ecentry add toggle-tip
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <ToggleTipExample />
+</ExamplePanel>
+
+## API
+
+`label`, `title`, and `children` are required. The trigger is a button with expanded state and an associated nonmodal dialog. Use `open` and `onOpenChange` for controlled visibility, or `defaultOpen` for the initial state. Escape and the close button restore trigger focus; outside interaction and tabbing away dismiss the tip.

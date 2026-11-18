@@ -1,0 +1,81 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-toggle-tip-root {
+    position: relative;
+    display: inline-block;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-toggle-tip-root > button,
+  .ec-toggle-tip__header > button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    min-height: 36px;
+    padding: 0;
+    border: 1px solid var(--ec-colors-border, #a9bcb0);
+    border-radius: 50%;
+    background: var(--ec-colors-background, #fff);
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+    cursor: pointer;
+  }
+  .ec-toggle-tip {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 40;
+    top: calc(100% + 8px);
+    inset-inline-start: 0;
+    width: min(300px, calc(100vw - 32px));
+    padding: 16px;
+    border: 1px solid var(--ec-colors-border, #a9bcb0);
+    border-radius: 10px;
+    background: var(--ec-colors-background, #fff);
+    color: var(--ec-colors-text, #19211c);
+    box-shadow: 0 12px 30px rgb(0 0 0 / 0.17);
+  }
+  .ec-toggle-tip__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .ec-toggle-tip__header h2 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .ec-toggle-tip__header > button {
+    flex: none;
+    width: 30px;
+    min-height: 30px;
+  }
+  .ec-toggle-tip__body {
+    margin-top: 10px;
+    color: var(--ec-colors-text-muted, #59635b);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .ec-toggle-tip__body p {
+    margin: 0;
+  }
+}
+@layer ec.utilities {
+  .ec-toggle-tip-root button:focus-visible,
+  .ec-toggle-tip:focus-visible,
+  .ec-toggle-tip a:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-toggle-tip,
+    .ec-toggle-tip-root > button,
+    .ec-toggle-tip__header > button {
+      border-color: ButtonText;
+      background: Canvas;
+      color: CanvasText;
+    }
+  }
+}
