@@ -1,0 +1,28 @@
+import { SelectExample } from "../../src/examples/select.tsx";
+import source from "../../src/examples/select.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Select
+</div>
+<span className="section-index">COLLECTION COMPONENT</span>
+
+# Select
+
+Choose one or several items from a grouped popup list.
+
+## Install
+
+```sh
+ecentry add select
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <SelectExample />
+</ExamplePanel>
+
+## API
+
+`label` and `groups` are required. Each group has a label and `options` with `value`, `label`, and optional `disabled`. Set `multiple` for array selection. `value` and `onValueChange` control selection; `defaultValue` sets the uncontrolled initial selection. `name` submits one form value per choice. `description`, `error`, `required`, `disabled`, and `placeholder` customize the field. Arrow keys, Home/End, typeahead, Enter/Space, and Escape work in the popup. Form reset restores `defaultValue`.

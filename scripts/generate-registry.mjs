@@ -77,6 +77,7 @@ import { tagsInputRegistryItem } from "../packages/react/dist/components/tags-in
 import { comboboxRegistryItem } from "../packages/react/dist/components/combobox/metadata.js";
 import { commandRegistryItem } from "../packages/react/dist/components/command/metadata.js";
 import { listboxRegistryItem } from "../packages/react/dist/components/listbox/metadata.js";
+import { selectRegistryItem } from "../packages/react/dist/components/select/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -142,6 +143,7 @@ for (const item of [
   comboboxRegistryItem,
   commandRegistryItem,
   listboxRegistryItem,
+  selectRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

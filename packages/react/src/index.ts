@@ -271,3 +271,9 @@ export type {
   ListboxOption,
   ListboxProps,
 } from "./components/listbox/listbox.js";
+export { Select } from "./components/select/select.js";
+export type {
+  SelectGroup,
+  SelectOption,
+  SelectProps,
+} from "./components/select/select.js";

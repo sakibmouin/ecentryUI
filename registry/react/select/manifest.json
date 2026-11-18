@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "select",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "select.css", "select.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "6e4fc20ea6658729a82bcf6d6c4ba70bb752e3acc7144deda44690847da3d957",
+    "select.css": "d0038e75d7c91ebf5b69812a9ad8ca9059dc10914c3aba1661b998899b6aa5ac",
+    "select.tsx": "03fe08bd40ecff919347bfe3a021fda41a82212c0526f2002a900eeab1fdec8e",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.background",
+    "colors.border",
+    "colors.danger",
+    "colors.focus",
+    "colors.surface",
+    "colors.text",
+    "colors.text.muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/select/",
+  "license": "MIT"
+}

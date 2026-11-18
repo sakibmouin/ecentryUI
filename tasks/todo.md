@@ -540,9 +540,9 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 ### Checkpoint after T094
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T095 Select presentation and docs** (depends on T094).
+- [x] **T095 Select presentation and docs** (depends on T094).
   - Files: `packages/react/src/components/select/select.css`, `index.ts`, `apps/docs/content/components/select.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- select`.
