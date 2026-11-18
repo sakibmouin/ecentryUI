@@ -689,14 +689,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/clipboard/clipboard.tsx`, `clipboard.css`, `clipboard.test.tsx`, `index.ts`, `apps/docs/content/components/clipboard.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/clipboard/clipboard.test.tsx && npm run test:e2e -- clipboard`.
-- [ ] **T121 Collapsible component** (depends on T016).
+- [x] **T121 Collapsible component** (depends on T016).
   - Files: `packages/react/src/components/collapsible/collapsible.tsx`, `collapsible.css`, `collapsible.test.tsx`, `index.ts`, `apps/docs/content/components/collapsible.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/collapsible/collapsible.test.tsx && npm run test:e2e -- collapsible`.
 
 ### Checkpoint after T121
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for T120-T121, registry validation, docs build and relevant browser flows. T119 remains pending on this branch.
 
 - [ ] **T122 Data List component** (depends on T016).
   - Files: `packages/react/src/components/data-list/data-list.tsx`, `data-list.css`, `data-list.test.tsx`, `index.ts`, `apps/docs/content/components/data-list.mdx`.

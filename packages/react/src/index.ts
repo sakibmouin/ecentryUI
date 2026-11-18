@@ -336,3 +336,6 @@ export type {
 } from "./components/breadcrumb/breadcrumb.js";
 export { Clipboard } from "./components/clipboard/clipboard.js";
 export type { ClipboardProps } from "./components/clipboard/clipboard.js";
+
+export { Collapsible } from "./components/collapsible/collapsible.js";
+export type { CollapsibleProps } from "./components/collapsible/collapsible.js";

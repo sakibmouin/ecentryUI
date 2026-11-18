@@ -99,6 +99,8 @@ import { carouselRegistryItem } from "../packages/react/dist/components/carousel
 
 import { clipboardRegistryItem } from "../packages/react/dist/components/clipboard/metadata.js";
 
+import { collapsibleRegistryItem } from "../packages/react/dist/components/collapsible/metadata.js";
+
 for (const item of [
   buttonRegistryItem,
   inputRegistryItem,
@@ -181,6 +183,7 @@ for (const item of [
   badgeRegistryItem,
   breadcrumbRegistryItem,
   clipboardRegistryItem,
+  collapsibleRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "collapsible",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["collapsible.css", "collapsible.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "collapsible.css": "d46bfd77db0811376e23a9a463fec65a83d4c895ebce46288d9b22f4d0269d21",
+    "collapsible.tsx": "5477e5f202d18075822f8d59ff4f2f199b03dd52324d6b0906a31835e6b75030",
+    "index.ts": "524b4d15761e827ca2881891411b6487def644ea97d9c2f2e2c30a95cc5da166",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.surface",
+    "colors.text",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/collapsible/",
+  "license": "MIT"
+}

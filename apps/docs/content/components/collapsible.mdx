@@ -1,0 +1,28 @@
+import { CollapsibleExample } from "../../src/examples/collapsible.tsx";
+import source from "../../src/examples/collapsible.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Collapsible
+</div>
+<span className="section-index">DISCLOSURE COMPONENT</span>
+
+# Collapsible
+
+Reveal optional content with a single disclosure trigger.
+
+## Install
+
+```sh
+ecentry add collapsible
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <CollapsibleExample />
+</ExamplePanel>
+
+## API and accessibility
+
+`title` labels the native trigger. Children form the associated region while open. Use `open` and `onOpenChange` for controlled state, or `defaultOpen` for initial uncontrolled state. `disabled` and `loading` prevent toggling; an open loading panel reports `aria-busy`. Enter, Space, touch, and pointer activate the trigger. `className`, native div props, and `ec-collapsible__*` classes provide styling hooks. The demo covers default, controlled, disabled, and both appearances. No animation is required, so reduced motion has no effect on panel visibility.

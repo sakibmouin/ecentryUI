@@ -1,0 +1,64 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-collapsible {
+    border: 1px solid var(--ec-colors-border, #dce0dc);
+    border-radius: var(--ec-radii-md, 8px);
+    color: var(--ec-colors-text, #19211c);
+    background: var(--ec-colors-surface, #fff);
+    overflow: hidden;
+  }
+  .ec-collapsible__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    border: 0;
+    padding: 0.85rem 1rem;
+    color: inherit;
+    background: transparent;
+    font: inherit;
+    font-weight: 600;
+    text-align: start;
+    cursor: pointer;
+  }
+  .ec-collapsible__trigger:hover:not(:disabled) {
+    background: var(--ec-colors-background, #f5f7f5);
+  }
+  .ec-collapsible__trigger:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, #2769d1);
+    outline-offset: -3px;
+  }
+  .ec-collapsible__trigger:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  .ec-collapsible__indicator {
+    flex: none;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1;
+  }
+  .ec-collapsible[data-state="open"] .ec-collapsible__indicator {
+    transform: rotate(45deg);
+  }
+  .ec-collapsible__panel {
+    border-top: 1px solid var(--ec-colors-border, #dce0dc);
+    padding: 0.85rem 1rem;
+    line-height: 1.5;
+  }
+}
+@layer ec.utilities {
+  @media (prefers-reduced-motion: no-preference) {
+    .ec-collapsible__indicator {
+      transition: transform 150ms ease;
+    }
+  }
+  @media (forced-colors: active) {
+    .ec-collapsible,
+    .ec-collapsible__panel {
+      border-color: CanvasText;
+    }
+  }
+}
