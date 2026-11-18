@@ -610,7 +610,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T107 Toast behavior** (depends on T016).
+- [x] **T107 Toast behavior** (depends on T016).
   - Files: `packages/react/src/components/toast/toast.tsx`, `toast.test.tsx`.
   - Acceptance: queue, timers, actions and announcements; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/toast/toast.test.tsx`.
