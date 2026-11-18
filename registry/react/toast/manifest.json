@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "toast",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "styles.d.ts", "toast.css", "toast.tsx"],
+  "hashes": {
+    "index.ts": "ea1a3c6069453b994c0f247d19d8c6f46c0f484caae69881ae95aff266e5f7e7",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa",
+    "toast.css": "4131068b8411dbe065696ba82ba95f913ed7a4c71a2370bb40bf828d967c9190",
+    "toast.tsx": "be47fc9a4213eea785a1f559c6bc30c7a3b6881e87026545c04b1b2d40972bbd"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.text",
+    "colors.text.muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/toast/",
+  "license": "MIT"
+}

@@ -1,0 +1,90 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-toast-root {
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-toast-viewport {
+    position: fixed;
+    z-index: 100;
+    right: max(16px, env(safe-area-inset-right));
+    bottom: max(16px, env(safe-area-inset-bottom));
+    width: min(380px, calc(100vw - 32px));
+  }
+  .ec-toast {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px;
+    border: 1px solid var(--ec-colors-border, #a9bcb0);
+    border-inline-start: 4px solid var(--ec-colors-accent, #116e5e);
+    border-radius: 10px;
+    background: var(--ec-colors-background, #fff);
+    color: var(--ec-colors-text, #19211c);
+    box-shadow: 0 10px 30px rgb(0 0 0 / 0.18);
+    font: inherit;
+  }
+  .ec-toast__content {
+    flex: 1;
+    min-width: 0;
+  }
+  .ec-toast__content strong {
+    display: block;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .ec-toast__content p {
+    margin: 4px 0 0;
+    color: var(--ec-colors-text-muted, #59635b);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .ec-toast button {
+    flex: none;
+    min-height: 32px;
+    padding: 4px 8px;
+    border: 1px solid var(--ec-colors-border, #a9bcb0);
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .ec-toast__dismiss {
+    width: 32px;
+    padding: 0 !important;
+  }
+}
+@layer ec.variants {
+  .ec-toast[data-tone="success"] {
+    border-inline-start-color: var(--ec-colors-accent, #116e5e);
+  }
+  .ec-toast[data-tone="error"] {
+    border-inline-start-color: var(--ec-colors-danger, #b42318);
+  }
+}
+@layer ec.utilities {
+  .ec-toast button:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-toast,
+    .ec-toast button {
+      border-color: ButtonText;
+      background: Canvas;
+      color: CanvasText;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ec-toast {
+      animation: none;
+      transition: none;
+    }
+  }
+}

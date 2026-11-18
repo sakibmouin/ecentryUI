@@ -119,6 +119,7 @@ const OverlayManagerDocs = lazy(
   () => import("../content/components/overlay-manager.mdx"),
 );
 const PopoverDocs = lazy(() => import("../content/components/popover.mdx"));
+const ToastDocs = lazy(() => import("../content/components/toast.mdx"));
 
 export const routes = [
   "/",
@@ -194,6 +195,7 @@ export const routes = [
   "/components/menu/",
   "/components/overlay-manager/",
   "/components/popover/",
+  "/components/toast/",
 ] as const;
 
 const componentLinks = [
@@ -268,6 +270,7 @@ const componentLinks = [
   { title: "Menu", href: "/components/menu/" },
   { title: "Overlay Manager", href: "/components/overlay-manager/" },
   { title: "Popover", href: "/components/popover/" },
+  { title: "Toast", href: "/components/toast/" },
 ];
 
 function Home() {
@@ -673,6 +676,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/popover/" ? (
               <Suspense fallback={<p>Loading popover guide...</p>}>
                 <PopoverDocs />
+              </Suspense>
+            ) : route === "/components/toast/" ? (
+              <Suspense fallback={<p>Loading toast guide...</p>}>
+                <ToastDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

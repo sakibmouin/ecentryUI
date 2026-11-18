@@ -614,7 +614,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/toast/toast.tsx`, `toast.test.tsx`.
   - Acceptance: queue, timers, actions and announcements; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/toast/toast.test.tsx`.
-- [ ] **T108 Toast presentation and docs** (depends on T107).
+- [x] **T108 Toast presentation and docs** (depends on T107).
   - Files: `packages/react/src/components/toast/toast.css`, `index.ts`, `apps/docs/content/components/toast.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- toast`.

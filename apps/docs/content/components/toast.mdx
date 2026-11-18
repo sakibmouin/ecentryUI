@@ -1,0 +1,28 @@
+import { ToastExample } from "../../src/examples/toast.tsx";
+import source from "../../src/examples/toast.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Toast
+</div>
+<span className="section-index">FEEDBACK COMPONENT</span>
+
+# Toast
+
+Announce transient results in a non-blocking queue with optional actions.
+
+## Install
+
+```sh
+ecentry add toast
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <ToastExample />
+</ExamplePanel>
+
+## API
+
+`children` is a render function receiving `enqueue(item)`. Each item needs a unique `id` and `title`, and may set `description`, `tone`, `duration`, or `action`. Messages appear in queue order. A `duration` of `0` keeps an item until dismissed; the default is 5000 ms. Timers pause on hover and focus. Use `items` with `onItemsChange` to control the queue, or `defaultItems` for initial messages. Error messages use an assertive alert; other tones use polite status announcements.

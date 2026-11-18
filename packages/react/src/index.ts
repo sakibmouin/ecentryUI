@@ -303,3 +303,5 @@ export type {
 } from "./components/overlay-manager/overlay-manager.js";
 export { Popover } from "./components/popover/popover.js";
 export type { PopoverProps } from "./components/popover/popover.js";
+export { Toast } from "./components/toast/toast.js";
+export type { ToastItem, ToastProps } from "./components/toast/toast.js";
