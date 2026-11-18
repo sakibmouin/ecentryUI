@@ -58,25 +58,10 @@ export function Clipboard({
       <button
         type="button"
         className="ec-clipboard__button"
-        aria-label={
-          status === "success"
-            ? "Copied"
-            : status === "error"
-              ? "Retry"
-              : loading || status === "copying"
-                ? "Copying"
-                : label
-        }
         disabled={disabled || loading || status === "copying"}
         onClick={copy}
       >
-        {status === "success"
-          ? "Copied"
-          : status === "error"
-            ? "Retry"
-            : loading || status === "copying"
-              ? "Copying"
-              : label}
+        {label}
       </button>
       <span className="ec-clipboard__status" role="status" aria-live="polite">
         {status === "success"

@@ -10,6 +10,9 @@ test("Clipboard copies, reports failures, and supports appearance", async ({
   const region = page.getByRole("region", { name: "Clipboard example" });
   await region.getByRole("button", { name: "Copy" }).first().click();
   await expect(region.getByRole("status").first()).toHaveText("Copied");
+  await expect(
+    region.getByRole("button", { name: "Copy" }).first(),
+  ).toBeVisible();
   expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(
     "https://ecentry.dev",
   );

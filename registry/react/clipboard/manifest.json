@@ -6,7 +6,7 @@
   "files": ["clipboard.css", "clipboard.tsx", "index.ts", "styles.d.ts"],
   "hashes": {
     "clipboard.css": "2e2b9c7efc3dd020c6b568ebf846bf8ba2cec117e8c6aa93ed01c7145b91a24d",
-    "clipboard.tsx": "76b40b1fee6220b7ee055fb21bb4212506d4f2f453648997c42cb3ed638d4b35",
+    "clipboard.tsx": "a42615b3628e3e8765cd33d95be0289c3577f35dc4fc3ff3c84b5c7556de3b64",
     "index.ts": "a49aaf95e6218b2e65a071fe39903dd0b4dd0933723697d2cca923b651fb73c3",
     "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
   },

@@ -25,6 +25,7 @@ describe("Clipboard", () => {
       expect(screen.getByRole("status").textContent).toBe("Copied"),
     );
     expect(onCopy).toHaveBeenCalledWith("<safe>");
+    expect(screen.getByRole("button", { name: "Copy" })).toBeTruthy();
     expect(screen.getByText("<safe>").innerHTML).toBe("&lt;safe&gt;");
   });
   it("announces permission failure and permits retry", async () => {
@@ -43,7 +44,7 @@ describe("Clipboard", () => {
       expect(screen.getByRole("status").textContent).toBe("Copy failed"),
     );
     expect(onError).toHaveBeenCalledOnce();
-    fireEvent.click(screen.getByRole("button", { name: "Retry" }));
+    fireEvent.click(screen.getByRole("button", { name: "Copy" }));
     await waitFor(() =>
       expect(screen.getByRole("status").textContent).toBe("Copied"),
     );
