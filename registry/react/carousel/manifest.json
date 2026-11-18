@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "carousel",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["carousel.css", "carousel.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "carousel.css": "b6f90e6e20801c330bd26cc2645765b44b6af052652c9e0b2f9397d194cabb49",
+    "carousel.tsx": "31ad8eb0558decafaaf8b17d9e2176b3f0522c4d919dec4a3c05a80d92221da9",
+    "index.ts": "22e91cce8288e4a448344197924ac0aa3c2f525824ec9eef7f0e994e8742b4a7",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.text",
+    "colors.text.muted"
+  ],
+  "docsUrl": "https://ecentry.dev/components/carousel/",
+  "license": "MIT"
+}

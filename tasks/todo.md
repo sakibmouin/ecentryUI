@@ -681,7 +681,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 - [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T119 Carousel presentation and docs** (depends on T118).
+- [x] **T119 Carousel presentation and docs** (depends on T118).
   - Files: `packages/react/src/components/carousel/carousel.css`, `index.ts`, `apps/docs/content/components/carousel.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- carousel`.

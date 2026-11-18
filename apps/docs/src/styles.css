@@ -2054,6 +2054,19 @@ footer {
   outline: 2px solid var(--ec-colors-focus, Highlight);
   outline-offset: 2px;
 }
+.carousel-demo-kicker {
+  color: var(--ec-colors-accent, #116e5e);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.carousel-demo-title {
+  margin: 10px 0;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
 [data-ec-theme="dark"]
   :is(.date-input-demo, .date-picker-demo, .checkbox-demo, .themed-code-demo) {
   border-color: var(--ec-colors-border, #414a45);

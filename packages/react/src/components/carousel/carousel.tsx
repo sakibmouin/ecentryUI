@@ -172,7 +172,7 @@ export function Carousel({
               aria-label={userPaused ? "Resume autoplay" : "Pause autoplay"}
               onClick={() => setUserPaused(!userPaused)}
             >
-              {userPaused ? "Play" : "Pause"}
+              {userPaused ? "Resume" : "Pause"}
             </button>
           )}
         </div>

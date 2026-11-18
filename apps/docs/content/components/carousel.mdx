@@ -1,0 +1,28 @@
+import { CarouselExample } from "../../src/examples/carousel.tsx";
+import source from "../../src/examples/carousel.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Carousel
+</div>
+<span className="section-index">MEDIA COMPONENT</span>
+
+# Carousel
+
+Present a sequence of slides with accessible navigation and optional autoplay.
+
+## Install
+
+```sh
+ecentry add carousel
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <CarouselExample />
+</ExamplePanel>
+
+## API
+
+Pass a `label` and `slides` with unique IDs, labels, and content. `index` with `onIndexChange` controls the active slide; `defaultIndex` sets the uncontrolled start. `loop` wraps navigation. `autoplay` advances after `interval` milliseconds (minimum 1000, default 5000), pauses on hover or focus, and stops when reduced motion is requested. The pause button lets users stop and resume autoplay. Arrow keys follow text direction; Home and End jump to the first and last slides. Previous and next buttons, plus numbered indicators, are always available when more than one slide exists.

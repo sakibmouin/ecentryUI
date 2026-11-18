@@ -317,3 +317,8 @@ export type {
 
 export { Alert } from "./components/alert/alert.js";
 export type { AlertProps } from "./components/alert/alert.js";
+export { Carousel } from "./components/carousel/carousel.js";
+export type {
+  CarouselProps,
+  CarouselSlide,
+} from "./components/carousel/carousel.js";

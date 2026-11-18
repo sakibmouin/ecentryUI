@@ -92,6 +92,7 @@ import { tooltipRegistryItem } from "../packages/react/dist/components/tooltip/m
 import { accordionRegistryItem } from "../packages/react/dist/components/accordion/metadata.js";
 
 import { alertRegistryItem } from "../packages/react/dist/components/alert/metadata.js";
+import { carouselRegistryItem } from "../packages/react/dist/components/carousel/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -170,6 +171,7 @@ for (const item of [
   tooltipRegistryItem,
   accordionRegistryItem,
   alertRegistryItem,
+  carouselRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

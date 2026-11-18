@@ -1,0 +1,97 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-carousel {
+    box-sizing: border-box;
+    width: min(100%, 480px);
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-carousel__viewport {
+    min-height: 210px;
+  }
+  .ec-carousel__slide {
+    box-sizing: border-box;
+    min-height: 210px;
+    padding: 26px;
+    border: 1px solid var(--ec-colors-border, #a9bcb0);
+    border-radius: 12px;
+    background: var(--ec-colors-background, #fff);
+    color: var(--ec-colors-text, #19211c);
+  }
+  .ec-carousel__slide h2,
+  .ec-carousel__slide h3 {
+    margin: 8px 0 10px;
+    font-size: 22px;
+    line-height: 1.25;
+  }
+  .ec-carousel__slide p {
+    margin: 0;
+    color: var(--ec-colors-text-muted, #59635b);
+    line-height: 1.55;
+  }
+  .ec-carousel__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .ec-carousel__controls button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    min-height: 36px;
+    padding: 4px 10px;
+    border: 1px solid var(--ec-colors-border, #a9bcb0);
+    border-radius: 7px;
+    background: var(--ec-colors-background, #fff);
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .ec-carousel__controls button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+  .ec-carousel__indicators {
+    display: flex;
+    gap: 6px;
+  }
+  .ec-carousel__indicators button[aria-current="true"] {
+    border-color: var(--ec-colors-accent, #116e5e);
+    background: var(--ec-colors-accent, #116e5e);
+    color: var(--ec-colors-background, #fff);
+  }
+  .ec-carousel__controls .ec-carousel__play {
+    min-width: 58px;
+  }
+}
+@layer ec.utilities {
+  .ec-carousel button:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-carousel__slide,
+    .ec-carousel__controls button {
+      border-color: ButtonText;
+      background: Canvas;
+      color: CanvasText;
+    }
+    .ec-carousel__indicators button[aria-current="true"] {
+      border-color: Highlight;
+      background: Highlight;
+      color: HighlightText;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ec-carousel * {
+      animation: none;
+      transition: none;
+    }
+  }
+}
