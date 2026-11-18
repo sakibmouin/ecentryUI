@@ -287,3 +287,8 @@ export type {
   ActionBarAction,
   ActionBarProps,
 } from "./components/action-bar/action-bar.js";
+export { Drawer } from "./components/drawer/drawer.js";
+export type {
+  DrawerPlacement,
+  DrawerProps,
+} from "./components/drawer/drawer.js";

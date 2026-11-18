@@ -1,0 +1,28 @@
+import { DrawerExample } from "../../src/examples/drawer.tsx";
+import source from "../../src/examples/drawer.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Drawer
+</div>
+<span className="section-index">OVERLAY COMPONENT</span>
+
+# Drawer
+
+A modal panel that slides in from any edge. Opening it locks page scrolling and places focus inside; closing restores trigger focus.
+
+## Install
+
+```sh
+ecentry add drawer
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <DrawerExample />
+</ExamplePanel>
+
+## API
+
+`title`, `triggerLabel`, and `children` are required. `placement` accepts `left`, `right`, `top`, or `bottom`. `description` labels the dialog context. Use `open` and `onOpenChange` for controlled state or `defaultOpen` for uncontrolled initial state. Escape, the close button, and backdrop clicks dismiss the panel.

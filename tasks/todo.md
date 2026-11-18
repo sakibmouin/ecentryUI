@@ -567,14 +567,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/drawer/drawer.tsx`, `drawer.test.tsx`.
   - Acceptance: placement, scroll locking and focus restoration; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/drawer/drawer.test.tsx`.
-- [ ] **T100 Drawer presentation and docs** (depends on T099).
+- [x] **T100 Drawer presentation and docs** (depends on T099).
   - Files: `packages/react/src/components/drawer/drawer.css`, `index.ts`, `apps/docs/content/components/drawer.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- drawer`.
 
 ### Checkpoint after T100
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T101 Hover Card component** (depends on T016).
   - Files: `packages/react/src/components/hover-card/hover-card.tsx`, `hover-card.css`, `hover-card.test.tsx`, `index.ts`, `apps/docs/content/components/hover-card.mdx`.

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "drawer",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["drawer.css", "drawer.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "drawer.css": "cc82001ec1d97349ab0a0006b2baa633d051290ec175ec63d5418b7bc37f18c2",
+    "drawer.tsx": "9da8f2841aa46b5d5bd6e30436ed8cda31ce0fbf8b73c8d113b2bd909164b025",
+    "index.ts": "1043ef1ca492a768cd170f9bdd2c515b553a6f45fa8348934cc9226fb48134a1",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.surface",
+    "colors.text",
+    "colors.text.muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/drawer/",
+  "license": "MIT"
+}
