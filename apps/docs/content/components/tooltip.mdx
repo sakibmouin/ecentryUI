@@ -1,0 +1,28 @@
+import { TooltipExample } from "../../src/examples/tooltip.tsx";
+import source from "../../src/examples/tooltip.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Tooltip
+</div>
+<span className="section-index">OVERLAY COMPONENT</span>
+
+# Tooltip
+
+Show a short description when a trigger receives hover or keyboard focus.
+
+## Install
+
+```sh
+ecentry add tooltip
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <TooltipExample />
+</ExamplePanel>
+
+## API
+
+`triggerLabel` and `content` are required. Focus shows the tooltip immediately; hover uses `openDelay` (default 300 ms), and leaving uses `closeDelay` (default 100 ms). Escape dismisses without moving focus. `open` and `onOpenChange` control visibility, or `defaultOpen` sets the initial state. Use Toggle Tip when content contains interactive controls.

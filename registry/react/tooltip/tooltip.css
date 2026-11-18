@@ -1,0 +1,58 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-tooltip-root {
+    position: relative;
+    display: inline-block;
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+  }
+  .ec-tooltip-root > button {
+    min-height: 40px;
+    padding: 8px 14px;
+    border: 1px solid var(--ec-colors-border, #a9bcb0);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-background, #fff);
+    color: var(--ec-colors-text, #19211c);
+    font: inherit;
+    cursor: help;
+  }
+  .ec-tooltip {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 40;
+    bottom: calc(100% + 8px);
+    inset-inline-start: 50%;
+    width: max-content;
+    max-width: min(260px, calc(100vw - 32px));
+    padding: 8px 10px;
+    border-radius: 6px;
+    background: var(--ec-colors-text, #19211c);
+    color: var(--ec-colors-background, #fff);
+    box-shadow: 0 5px 18px rgb(0 0 0 / 0.2);
+    font-size: 13px;
+    line-height: 1.4;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+}
+@layer ec.utilities {
+  .ec-tooltip-root > button:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, Highlight);
+    outline-offset: 2px;
+  }
+  @media (forced-colors: active) {
+    .ec-tooltip-root > button,
+    .ec-tooltip {
+      border: 1px solid ButtonText;
+      background: Canvas;
+      color: CanvasText;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ec-tooltip {
+      animation: none;
+      transition: none;
+    }
+  }
+}

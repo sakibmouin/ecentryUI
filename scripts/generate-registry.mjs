@@ -87,6 +87,7 @@ import { overlayManagerRegistryItem } from "../packages/react/dist/components/ov
 import { popoverRegistryItem } from "../packages/react/dist/components/popover/metadata.js";
 import { toastRegistryItem } from "../packages/react/dist/components/toast/metadata.js";
 import { toggleTipRegistryItem } from "../packages/react/dist/components/toggle-tip/metadata.js";
+import { tooltipRegistryItem } from "../packages/react/dist/components/tooltip/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -162,6 +163,7 @@ for (const item of [
   popoverRegistryItem,
   toastRegistryItem,
   toggleTipRegistryItem,
+  tooltipRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "tooltip",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "styles.d.ts", "tooltip.css", "tooltip.tsx"],
+  "hashes": {
+    "index.ts": "91341fcefac683cb8d9ce80d9d4ae6cd368401c9f46666168d5f0325686e716b",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa",
+    "tooltip.css": "6604e7acc8d626f876093a88659742b084ed3c25c3bbbad901d77b05f59eb214",
+    "tooltip.tsx": "147a94b3a492ac4a3a13c5af9364f87a4dc6dccd9bbb49c8c97715f4ffbd46a0"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.text",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/tooltip/",
+  "license": "MIT"
+}

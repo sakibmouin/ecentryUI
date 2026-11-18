@@ -307,3 +307,5 @@ export { Toast } from "./components/toast/toast.js";
 export type { ToastItem, ToastProps } from "./components/toast/toast.js";
 export { ToggleTip } from "./components/toggle-tip/toggle-tip.js";
 export type { ToggleTipProps } from "./components/toggle-tip/toggle-tip.js";
+export { Tooltip } from "./components/tooltip/tooltip.js";
+export type { TooltipProps } from "./components/tooltip/tooltip.js";
