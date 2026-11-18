@@ -634,7 +634,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 ## Feedback, data, media
 
-- [ ] **T111 Accordion behavior** (depends on T016).
+- [x] **T111 Accordion behavior** (depends on T016).
   - Files: `packages/react/src/components/accordion/accordion.tsx`, `accordion.test.tsx`.
   - Acceptance: single/multiple expansion, disabled items and focus; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/accordion/accordion.test.tsx`.
