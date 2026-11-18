@@ -1,0 +1,28 @@
+import { BadgeExample } from "../../src/examples/badge.tsx";
+import source from "../../src/examples/badge.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Badge
+</div>
+<span className="section-index">FEEDBACK COMPONENT</span>
+
+# Badge
+
+Label a state or category with compact text.
+
+## Install
+
+```sh
+ecentry add badge
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <BadgeExample />
+</ExamplePanel>
+
+## API
+
+`variant` accepts `neutral` (default), `info`, `success`, `warning`, or `error`. `size` accepts `sm` or `md` (default). `loading` adds a spinner and sets `aria-busy`. Provide visible text so meaning is not conveyed by color alone. Badges are plain text by default and do not announce themselves as live status. Native span props, refs, and `className` are supported; the `ec-badge__spinner` class can be styled.

@@ -1,0 +1,102 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    max-width: 100%;
+    padding: 0.2em 0.65em;
+    border: 1px solid var(--ec-badge-border);
+    border-radius: 999px;
+    color: var(--ec-badge-text);
+    background: var(--ec-badge-bg);
+    font-size: 0.75rem;
+    font-weight: 650;
+    line-height: 1.3;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+  .ec-badge__spinner {
+    width: 0.8em;
+    height: 0.8em;
+    border: 1.5px solid currentColor;
+    border-inline-end-color: transparent;
+    border-radius: 50%;
+    animation: ec-badge-spin 0.8s linear infinite;
+  }
+  @keyframes ec-badge-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+@layer ec.variants {
+  .ec-badge--sm {
+    font-size: 0.6875rem;
+  }
+  .ec-badge--neutral {
+    --ec-badge-text: #26382c;
+    --ec-badge-bg: #edf1ed;
+    --ec-badge-border: #b8c5ba;
+  }
+  .ec-badge--info {
+    --ec-badge-text: #235aa3;
+    --ec-badge-bg: #eaf3ff;
+    --ec-badge-border: #9abce9;
+  }
+  .ec-badge--success {
+    --ec-badge-text: #206f43;
+    --ec-badge-bg: #e9f7ee;
+    --ec-badge-border: #92d0a6;
+  }
+  .ec-badge--warning {
+    --ec-badge-text: #875600;
+    --ec-badge-bg: #fff5df;
+    --ec-badge-border: #e4bf75;
+  }
+  .ec-badge--error {
+    --ec-badge-text: #a72d38;
+    --ec-badge-bg: #fff0f1;
+    --ec-badge-border: #e2a0a6;
+  }
+  [data-ec-theme="dark"] .ec-badge--neutral {
+    --ec-badge-text: #e4eee6;
+    --ec-badge-bg: #34483a;
+    --ec-badge-border: #6d866f;
+  }
+  [data-ec-theme="dark"] .ec-badge--info {
+    --ec-badge-text: #b8d7ff;
+    --ec-badge-bg: #17304e;
+    --ec-badge-border: #416187;
+  }
+  [data-ec-theme="dark"] .ec-badge--success {
+    --ec-badge-text: #b7eac6;
+    --ec-badge-bg: #193d2a;
+    --ec-badge-border: #477b56;
+  }
+  [data-ec-theme="dark"] .ec-badge--warning {
+    --ec-badge-text: #ffe1a3;
+    --ec-badge-bg: #463719;
+    --ec-badge-border: #856c3b;
+  }
+  [data-ec-theme="dark"] .ec-badge--error {
+    --ec-badge-text: #ffc2c7;
+    --ec-badge-bg: #491f27;
+    --ec-badge-border: #8a4850;
+  }
+}
+@layer ec.utilities {
+  @media (prefers-reduced-motion: reduce) {
+    .ec-badge__spinner {
+      animation: none;
+    }
+  }
+  @media (forced-colors: active) {
+    .ec-badge {
+      border-color: CanvasText;
+      color: CanvasText;
+      background: Canvas;
+    }
+  }
+}

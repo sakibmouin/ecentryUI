@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "badge",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["badge.css", "badge.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "badge.css": "fe05cb5b937e8bda75a02367888c0d8088b2464b2f4b8e9b5b4b45d897aa1e33",
+    "badge.tsx": "29dbd0dc2aa1eacb3e4ebbc3b227c949e591a36751551dfe4d2fd3802d9b2e7d",
+    "index.ts": "8bc6f8872fa81ad23c36174a5824c84d1d6a9f42c313357105a1722165a3eb38",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": ["colors.text"],
+  "docsUrl": "https://ecentry.dev/components/badge/",
+  "license": "MIT"
+}
