@@ -296,3 +296,8 @@ export { HoverCard } from "./components/hover-card/hover-card.js";
 export type { HoverCardProps } from "./components/hover-card/hover-card.js";
 export { Menu } from "./components/menu/menu.js";
 export type { MenuItem, MenuProps } from "./components/menu/menu.js";
+export { OverlayManager } from "./components/overlay-manager/overlay-manager.js";
+export type {
+  ManagedOverlay,
+  OverlayManagerProps,
+} from "./components/overlay-manager/overlay-manager.js";

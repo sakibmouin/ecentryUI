@@ -593,7 +593,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T104 Overlay Manager component** (depends on T016).
+- [x] **T104 Overlay Manager component** (depends on T016).
   - Files: `packages/react/src/components/overlay-manager/overlay-manager.tsx`, `overlay-manager.css`, `overlay-manager.test.tsx`, `index.ts`, `apps/docs/content/components/overlay-manager.mdx`.
   - Acceptance: keyboard navigation, focus and overlay lifecycle; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/overlay-manager/overlay-manager.test.tsx && npm run test:e2e -- overlay-manager`.

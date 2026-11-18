@@ -115,6 +115,9 @@ const HoverCardDocs = lazy(
   () => import("../content/components/hover-card.mdx"),
 );
 const MenuDocs = lazy(() => import("../content/components/menu.mdx"));
+const OverlayManagerDocs = lazy(
+  () => import("../content/components/overlay-manager.mdx"),
+);
 
 export const routes = [
   "/",
@@ -188,6 +191,7 @@ export const routes = [
   "/components/drawer/",
   "/components/hover-card/",
   "/components/menu/",
+  "/components/overlay-manager/",
 ] as const;
 
 const componentLinks = [
@@ -260,6 +264,7 @@ const componentLinks = [
   { title: "Drawer", href: "/components/drawer/" },
   { title: "Hover Card", href: "/components/hover-card/" },
   { title: "Menu", href: "/components/menu/" },
+  { title: "Overlay Manager", href: "/components/overlay-manager/" },
 ];
 
 function Home() {
@@ -657,6 +662,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/menu/" ? (
               <Suspense fallback={<p>Loading menu guide...</p>}>
                 <MenuDocs />
+              </Suspense>
+            ) : route === "/components/overlay-manager/" ? (
+              <Suspense fallback={<p>Loading overlay manager guide...</p>}>
+                <OverlayManagerDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

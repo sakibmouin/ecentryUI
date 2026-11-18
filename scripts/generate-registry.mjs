@@ -83,6 +83,7 @@ import { actionBarRegistryItem } from "../packages/react/dist/components/action-
 import { drawerRegistryItem } from "../packages/react/dist/components/drawer/metadata.js";
 import { hoverCardRegistryItem } from "../packages/react/dist/components/hover-card/metadata.js";
 import { menuRegistryItem } from "../packages/react/dist/components/menu/metadata.js";
+import { overlayManagerRegistryItem } from "../packages/react/dist/components/overlay-manager/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -154,6 +155,7 @@ for (const item of [
   drawerRegistryItem,
   hoverCardRegistryItem,
   menuRegistryItem,
+  overlayManagerRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

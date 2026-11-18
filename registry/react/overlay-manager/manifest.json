@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "overlay-manager",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": [
+    "index.ts",
+    "overlay-manager.css",
+    "overlay-manager.tsx",
+    "styles.d.ts"
+  ],
+  "hashes": {
+    "index.ts": "ebeed98dbf6162fa19b3be33be3c6eafca1f497e42d26938bc2ecf17aa704b69",
+    "overlay-manager.css": "8c5a0bad9ea36bf8a3325c08799e21cb8da9d30314410d24e9bcabf851f7f1e3",
+    "overlay-manager.tsx": "689691e5261a37e8e2164fd0c76a2e2c6f58a60494ccd7726cf5ad2ff9a4a585",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.background",
+    "colors.border",
+    "colors.focus",
+    "colors.text",
+    "colors.text.muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/overlay-manager/",
+  "license": "MIT"
+}

@@ -1,0 +1,28 @@
+import { OverlayManagerExample } from "../../src/examples/overlay-manager.tsx";
+import source from "../../src/examples/overlay-manager.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Overlay Manager
+</div>
+<span className="section-index">OVERLAY COMPONENT</span>
+
+# Overlay Manager
+
+Coordinate a stack of modal overlays. Child overlays open from their parent and Escape dismisses the topmost dialog.
+
+## Install
+
+```sh
+ecentry add overlay-manager
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <OverlayManagerExample />
+</ExamplePanel>
+
+## API
+
+Pass `overlays` with unique `id`, `title`, `triggerLabel`, and `children`. Set `parentId` to place a trigger inside another overlay. Use `openIds` with `onOpenIdsChange` for controlled stacks, or `defaultOpenIds` for an initial stack. Dialogs use native modal focus handling, and closing restores focus to the opener.
