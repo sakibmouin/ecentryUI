@@ -546,7 +546,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/select/select.css`, `index.ts`, `apps/docs/content/components/select.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- select`.
-- [ ] **T096 Tree View behavior** (depends on T016).
+- [x] **T096 Tree View behavior** (depends on T016).
   - Files: `packages/react/src/components/tree-view/tree-view.tsx`, `tree-view.test.tsx`.
   - Acceptance: hierarchy, expansion, selection and typeahead; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/tree-view/tree-view.test.tsx`.
