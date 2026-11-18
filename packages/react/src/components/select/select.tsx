@@ -191,75 +191,77 @@ export function Select({
       <span id={`${selectId}-label`} className="ec-select__label">
         {label}
       </span>
-      <button
-        ref={triggerRef}
-        id={selectId}
-        type="button"
-        className="ec-select__trigger"
-        aria-labelledby={`${selectId}-label ${selectId}-value`}
-        aria-haspopup="listbox"
-        aria-expanded={open}
-        aria-controls={listId}
-        aria-activedescendant={
-          open && active >= 0 ? `${selectId}-option-${active}` : undefined
-        }
-        aria-describedby={describedBy}
-        aria-invalid={error ? true : undefined}
-        aria-required={required || undefined}
-        disabled={disabled}
-        onClick={() => {
-          if (open) setOpen(false);
-          else show();
-        }}
-        onKeyDown={handleKeyDown}
-      >
-        <span
-          id={`${selectId}-value`}
-          data-placeholder={!selectedLabels.length || undefined}
+      <div className="ec-select__anchor">
+        <button
+          ref={triggerRef}
+          id={selectId}
+          type="button"
+          className="ec-select__trigger"
+          aria-labelledby={`${selectId}-label ${selectId}-value`}
+          aria-haspopup="listbox"
+          aria-expanded={open}
+          aria-controls={listId}
+          aria-activedescendant={
+            open && active >= 0 ? `${selectId}-option-${active}` : undefined
+          }
+          aria-describedby={describedBy}
+          aria-invalid={error ? true : undefined}
+          aria-required={required || undefined}
+          disabled={disabled}
+          onClick={() => {
+            if (open) setOpen(false);
+            else show();
+          }}
+          onKeyDown={handleKeyDown}
         >
-          {selectedLabels.length ? selectedLabels.join(", ") : placeholder}
-        </span>
-        <span aria-hidden="true">⌄</span>
-      </button>
-      {open && (
-        <div
-          id={listId}
-          role="listbox"
-          aria-label={`${label} options`}
-          aria-multiselectable={multiple || undefined}
-          className="ec-select__list"
-        >
-          {groups.map((group) => (
-            <div
-              key={group.label}
-              role="group"
-              aria-label={group.label}
-              className="ec-select__group"
-            >
-              <div className="ec-select__heading" aria-hidden="true">
-                {group.label}
+          <span
+            id={`${selectId}-value`}
+            data-placeholder={!selectedLabels.length || undefined}
+          >
+            {selectedLabels.length ? selectedLabels.join(", ") : placeholder}
+          </span>
+          <span aria-hidden="true">⌄</span>
+        </button>
+        {open && (
+          <div
+            id={listId}
+            role="listbox"
+            aria-label={`${label} options`}
+            aria-multiselectable={multiple || undefined}
+            className="ec-select__list"
+          >
+            {groups.map((group) => (
+              <div
+                key={group.label}
+                role="group"
+                aria-label={group.label}
+                className="ec-select__group"
+              >
+                <div className="ec-select__heading" aria-hidden="true">
+                  {group.label}
+                </div>
+                {group.options.map((option) => {
+                  const index = position++;
+                  return (
+                    <div
+                      key={option.value}
+                      id={`${selectId}-option-${index}`}
+                      role="option"
+                      aria-selected={selectedValues.includes(option.value)}
+                      aria-disabled={option.disabled || undefined}
+                      data-active={index === active || undefined}
+                      onMouseDown={(event) => event.preventDefault()}
+                      onClick={() => choose(index)}
+                    >
+                      {option.label}
+                    </div>
+                  );
+                })}
               </div>
-              {group.options.map((option) => {
-                const index = position++;
-                return (
-                  <div
-                    key={option.value}
-                    id={`${selectId}-option-${index}`}
-                    role="option"
-                    aria-selected={selectedValues.includes(option.value)}
-                    aria-disabled={option.disabled || undefined}
-                    data-active={index === active || undefined}
-                    onMouseDown={(event) => event.preventDefault()}
-                    onClick={() => choose(index)}
-                  >
-                    {option.label}
-                  </div>
-                );
-              })}
-            </div>
-          ))}
-        </div>
-      )}
+            ))}
+          </div>
+        )}
+      </div>
       {name &&
         selectedValues.map((item) => (
           <input

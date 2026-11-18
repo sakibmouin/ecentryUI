@@ -19,7 +19,7 @@ export function DrawerExample() {
           placement="right"
         >
           <p>Changes here affect everyone in the project.</p>
-          <label>
+          <label className="drawer-demo-field">
             Project name <input defaultValue="Atlas" />
           </label>
         </Drawer>

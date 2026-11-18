@@ -14,6 +14,10 @@
     font-size: 14px;
     font-weight: 600;
   }
+  .ec-select__anchor {
+    position: relative;
+    min-width: 0;
+  }
   .ec-select__trigger {
     box-sizing: border-box;
     display: flex;

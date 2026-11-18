@@ -6,8 +6,8 @@
   "files": ["index.ts", "select.css", "select.tsx", "styles.d.ts"],
   "hashes": {
     "index.ts": "6e4fc20ea6658729a82bcf6d6c4ba70bb752e3acc7144deda44690847da3d957",
-    "select.css": "d0038e75d7c91ebf5b69812a9ad8ca9059dc10914c3aba1661b998899b6aa5ac",
-    "select.tsx": "03fe08bd40ecff919347bfe3a021fda41a82212c0526f2002a900eeab1fdec8e",
+    "select.css": "605fae05066da4c713ab083b07ebe6519e2a9c8b5bb3a752879b079fb9d71428",
+    "select.tsx": "2d96320dafb41f54e46dba76279dc53fd8f937b5488ddfc80ba4b353b8b966aa",
     "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
   },
   "dependencies": [],
