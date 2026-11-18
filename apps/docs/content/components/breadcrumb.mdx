@@ -1,0 +1,28 @@
+import { BreadcrumbExample } from "../../src/examples/breadcrumb.tsx";
+import source from "../../src/examples/breadcrumb.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Breadcrumb
+</div>
+<span className="section-index">FEEDBACK COMPONENT</span>
+
+# Breadcrumb
+
+Show the current page's place in a hierarchy.
+
+## Install
+
+```sh
+ecentry add breadcrumb
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <BreadcrumbExample />
+</ExamplePanel>
+
+## API
+
+`items` is an ordered list of `{ label, href? }`. Earlier items with `href` are links; the final item is text marked `aria-current="page"`, even if it has an `href`. `separator` defaults to `/` and is hidden from assistive technology. The navigation label defaults to `Breadcrumb` and can be changed with `aria-label`. `loading` sets `aria-busy`. Native nav props, refs, and `className` are supported. The named `ec-breadcrumb__*` classes customize its parts. Links use native keyboard behavior; logical spacing supports RTL.

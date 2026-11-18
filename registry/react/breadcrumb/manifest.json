@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "breadcrumb",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["breadcrumb.css", "breadcrumb.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "breadcrumb.css": "f4a1b0cb54d6f184b2db9831f2c32cf472af9e5ade52f9be4c13ded79a1b4a97",
+    "breadcrumb.tsx": "b2eb2073756d02422346c0cf5ea559f6db58eec4e80d2be62a01c5f1070b068f",
+    "index.ts": "3a1bf024675c6e596eef960a007ef2ea28f862e73a50024dc8160c866c5de1ee",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": ["colors.focus", "colors.text"],
+  "docsUrl": "https://ecentry.dev/components/breadcrumb/",
+  "license": "MIT"
+}

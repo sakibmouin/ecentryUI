@@ -1,0 +1,50 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-breadcrumb {
+    color: var(--ec-colors-text-muted, #58675d);
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  .ec-breadcrumb__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .ec-breadcrumb__item {
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+  }
+  .ec-breadcrumb__separator {
+    margin-inline: 0.65rem;
+    color: var(--ec-colors-text-muted, #58675d);
+  }
+  .ec-breadcrumb__link {
+    color: var(--ec-colors-text, #19211c);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+  .ec-breadcrumb__link:hover {
+    text-decoration-thickness: 2px;
+  }
+  .ec-breadcrumb__link:focus-visible {
+    outline: 2px solid var(--ec-colors-focus, #2769d1);
+    outline-offset: 3px;
+  }
+  .ec-breadcrumb__current {
+    color: var(--ec-colors-text, #19211c);
+    font-weight: 600;
+  }
+}
+@layer ec.utilities {
+  @media (forced-colors: active) {
+    .ec-breadcrumb__link:focus-visible {
+      outline-color: Highlight;
+    }
+  }
+}

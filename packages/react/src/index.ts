@@ -328,3 +328,9 @@ export type { AvatarProps } from "./components/avatar/avatar.js";
 import "./components/badge/badge.css";
 export { Badge } from "./components/badge/badge.js";
 export type { BadgeProps } from "./components/badge/badge.js";
+
+export { Breadcrumb } from "./components/breadcrumb/breadcrumb.js";
+export type {
+  BreadcrumbProps,
+  BreadcrumbItem,
+} from "./components/breadcrumb/breadcrumb.js";
