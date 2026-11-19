@@ -1,4 +1,6 @@
 import { createRoot, hydrateRoot } from "react-dom/client";
+import "@fontsource-variable/dm-sans";
+import "@fontsource-variable/manrope";
 import { App } from "./app.js";
 import "./styles.css";
 

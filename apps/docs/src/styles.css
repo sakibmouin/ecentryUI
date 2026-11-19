@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
-
 :root {
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans Variable", sans-serif;
   color: #1b2924;
   background: #fafbf9;
   font-synthesis: none;
@@ -59,7 +57,7 @@ a {
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  font-family: Manrope, sans-serif;
+  font-family: "Manrope Variable", sans-serif;
   font-size: 18px;
   font-weight: 800;
   letter-spacing: -0.055em;
@@ -197,7 +195,7 @@ a {
 h1,
 h2,
 h3 {
-  font-family: Manrope, sans-serif;
+  font-family: "Manrope Variable", sans-serif;
   letter-spacing: -0.06em;
 }
 h1 {
@@ -481,7 +479,7 @@ h3 {
   color: var(--ec-colors-text, #19211c);
 }
 .button-showcase .ec-button {
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans Variable", sans-serif;
 }
 .content-inner .example-panel {
   margin-bottom: 46px;
@@ -556,7 +554,7 @@ h3 {
 }
 .input-showcase .ec-input,
 .input-showcase .ec-button {
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans Variable", sans-serif;
 }
 .input-showcase .input-help,
 .input-showcase .input-error {
@@ -602,7 +600,7 @@ h3 {
 .dialog-showcase .ec-dialog-close,
 .dialog-showcase .ec-dialog,
 .dialog-theme-toggle {
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans Variable", sans-serif;
 }
 .dialog-theme-toggle {
   padding: 8px 4px;
@@ -1894,7 +1892,7 @@ h3 {
   gap: 6px;
 }
 .stack-demo-heading strong {
-  font-family: Manrope, sans-serif;
+  font-family: "Manrope Variable", sans-serif;
   font-size: 19px;
 }
 .stack-demo-heading p {

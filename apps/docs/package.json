@@ -9,6 +9,8 @@
     "preview": "vite preview --host 127.0.0.1"
   },
   "devDependencies": {
+    "@fontsource-variable/dm-sans": "^5.3.0",
+    "@fontsource-variable/manrope": "^5.3.0",
     "@mdx-js/esbuild": "^3.1.1",
     "@mdx-js/rollup": "^3.1.1",
     "@vitejs/plugin-react": "^6.3.0",
