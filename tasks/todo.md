@@ -679,7 +679,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 ### Checkpoint after T118
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [x] **T119 Carousel presentation and docs** (depends on T118).
   - Files: `packages/react/src/components/carousel/carousel.css`, `index.ts`, `apps/docs/content/components/carousel.mdx`.
@@ -696,7 +696,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 ### Checkpoint after T121
 
-- [x] Run focused tests for T120-T121, registry validation, docs build and relevant browser flows. T119 remains pending on this branch.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [x] **T122 Data List component** (depends on T016).
   - Files: `packages/react/src/components/data-list/data-list.tsx`, `data-list.css`, `data-list.test.tsx`, `index.ts`, `apps/docs/content/components/data-list.mdx`.

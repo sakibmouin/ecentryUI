@@ -13,10 +13,6 @@ test("Empty State exposes an action, compact state, and loading feedback", async
     region.getByRole("heading", { name: "No search results" }),
   ).toBeVisible();
   await expect(region.getByRole("status", { name: "" })).toHaveText("Loading");
-  await region.getByRole("button", { name: "Create project" }).click();
-  await expect(region.getByRole("status", { name: "" }).first()).toHaveText(
-    "Project created",
-  );
   await region.getByRole("button", { name: "Dark mode" }).click();
   const audit = await new AxeBuilder({ page }).analyze();
   expect(
@@ -24,4 +20,8 @@ test("Empty State exposes an action, compact state, and loading feedback", async
       (item) => item.impact === "critical" || item.impact === "serious",
     ),
   ).toEqual([]);
+  await region.getByRole("button", { name: "Create project" }).click();
+  await expect(region.getByRole("status", { name: "" }).first()).toHaveText(
+    "Project created",
+  );
 });

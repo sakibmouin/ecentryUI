@@ -325,7 +325,6 @@ export type {
 export { Avatar } from "./components/avatar/avatar.js";
 export type { AvatarProps } from "./components/avatar/avatar.js";
 
-import "./components/badge/badge.css";
 export { Badge } from "./components/badge/badge.js";
 export type { BadgeProps } from "./components/badge/badge.js";
 

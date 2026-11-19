@@ -13,6 +13,7 @@ export function CardExample() {
         aria-label="Card example"
       >
         <Card
+          className="card-demo"
           heading="Release notes"
           description="November update"
           footer={
@@ -23,7 +24,12 @@ export function CardExample() {
         >
           <p>New component guidance is ready for review.</p>
         </Card>
-        <Card heading="Activity" variant="elevated" loading>
+        <Card
+          className="card-demo"
+          heading="Activity"
+          variant="elevated"
+          loading
+        >
           Preparing the latest activity.
         </Card>
         <button type="button" onClick={() => setDark(!dark)}>

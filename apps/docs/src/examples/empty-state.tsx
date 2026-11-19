@@ -17,6 +17,7 @@ export function EmptyStateExample() {
           <p role="status">Project created</p>
         ) : (
           <EmptyState
+            className="empty-state-demo"
             title="No projects yet"
             description="Create a project to organize your work."
             icon="◇"
@@ -28,11 +29,16 @@ export function EmptyStateExample() {
           />
         )}
         <EmptyState
+          className="empty-state-demo"
           title="No search results"
           description="Try a different query."
           size="compact"
         />
-        <EmptyState title="Loading projects" loading />
+        <EmptyState
+          className="empty-state-demo"
+          title="Loading projects"
+          loading
+        />
         <button type="button" onClick={() => setDark(!dark)}>
           {dark ? "Light mode" : "Dark mode"}
         </button>

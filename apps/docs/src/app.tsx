@@ -228,15 +228,15 @@ export const routes = [
   "/components/tooltip/",
   "/components/accordion/",
   "/components/alert/",
-  "/components/carousel/",
   "/components/avatar/",
   "/components/badge/",
   "/components/breadcrumb/",
+  "/components/card/",
+  "/components/carousel/",
   "/components/clipboard/",
   "/components/collapsible/",
   "/components/data-list/",
   "/components/empty-state/",
-  "/components/card/",
 ] as const;
 
 const componentLinks = [
@@ -316,15 +316,15 @@ const componentLinks = [
   { title: "Tooltip", href: "/components/tooltip/" },
   { title: "Accordion", href: "/components/accordion/" },
   { title: "Alert", href: "/components/alert/" },
-  { title: "Carousel", href: "/components/carousel/" },
   { title: "Avatar", href: "/components/avatar/" },
   { title: "Badge", href: "/components/badge/" },
   { title: "Breadcrumb", href: "/components/breadcrumb/" },
+  { title: "Card", href: "/components/card/" },
+  { title: "Carousel", href: "/components/carousel/" },
   { title: "Clipboard", href: "/components/clipboard/" },
   { title: "Collapsible", href: "/components/collapsible/" },
   { title: "Data List", href: "/components/data-list/" },
   { title: "Empty State", href: "/components/empty-state/" },
-  { title: "Card", href: "/components/card/" },
 ];
 
 function Home() {
