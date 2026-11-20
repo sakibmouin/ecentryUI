@@ -1,0 +1,28 @@
+import { IconExample } from "../../src/examples/icon.tsx";
+import source from "../../src/examples/icon.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Icon
+</div>
+<span className="section-index">FEEDBACK COMPONENT</span>
+
+# Icon
+
+Size and color an SVG or glyph while keeping its meaning clear to assistive technology.
+
+## Install
+
+```sh
+ecentry add icon
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <IconExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Pass an SVG or glyph as `children`. Icons are decorative and hidden from assistive technology by default. Set `label` only when the icon itself conveys information; this exposes it as a named image. Use `size` (`sm`, `md`, or `lg`) and `tone` (`inherit`, `accent`, or `muted`) for presentation. `loading` replaces the glyph with a spinner and exposes a named status. Prefer text beside decorative icons, and use an interactive control such as Icon Button when the icon performs an action. Native span attributes, `className`, and refs are supported.

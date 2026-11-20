@@ -105,6 +105,7 @@ import { collapsibleRegistryItem } from "../packages/react/dist/components/colla
 import { dataListRegistryItem } from "../packages/react/dist/components/data-list/metadata.js";
 
 import { emptyStateRegistryItem } from "../packages/react/dist/components/empty-state/metadata.js";
+import { iconRegistryItem } from "../packages/react/dist/components/icon/metadata.js";
 
 for (const item of [
   buttonRegistryItem,
@@ -191,6 +192,7 @@ for (const item of [
   collapsibleRegistryItem,
   dataListRegistryItem,
   emptyStateRegistryItem,
+  iconRegistryItem,
   cardRegistryItem,
 ]) {
   const sources = Object.fromEntries(

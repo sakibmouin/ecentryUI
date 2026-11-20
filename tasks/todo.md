@@ -706,14 +706,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/empty-state/empty-state.tsx`, `empty-state.css`, `empty-state.test.tsx`, `index.ts`, `apps/docs/content/components/empty-state.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/empty-state/empty-state.test.tsx && npm run test:e2e -- empty-state`.
-- [ ] **T124 Icon component** (depends on T016).
+- [x] **T124 Icon component** (depends on T016).
   - Files: `packages/react/src/components/icon/icon.tsx`, `icon.css`, `icon.test.tsx`, `index.ts`, `apps/docs/content/components/icon.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/icon/icon.test.tsx && npm run test:e2e -- icon`.
 
 ### Checkpoint after T124
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T125 Image component** (depends on T016).
   - Files: `packages/react/src/components/image/image.tsx`, `image.css`, `image.test.tsx`, `index.ts`, `apps/docs/content/components/image.mdx`.

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "icon",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["icon.css", "icon.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "icon.css": "a735f727631d7cabfe3583dcf662043818bc26919cff7a5b125bf5bb7c89d6e8",
+    "icon.tsx": "48b18d37c04fea984579b9fd86146552a26de00b2fadd0ec98b2a0691dd0fdf5",
+    "index.ts": "aa228e69f62dbf6974d29ca48936f33a3172ed8f313c9c5f459cc79aec262802",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": ["colors.accent", "colors.text-muted"],
+  "docsUrl": "https://ecentry.dev/components/icon/",
+  "license": "MIT"
+}

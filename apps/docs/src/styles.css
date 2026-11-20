@@ -2091,6 +2091,62 @@ h3 {
   outline: 2px solid var(--ec-colors-focus, Highlight);
   outline-offset: 2px;
 }
+.icon-demo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.icon-demo-card {
+  display: flex;
+  min-height: 180px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 14px;
+  padding: 20px;
+  border: 1px solid var(--ec-colors-border, #dfe8e1);
+  border-radius: 10px;
+  background: var(--ec-colors-background, white);
+  color: var(--ec-colors-text, #19211c);
+}
+.icon-demo-card p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 650;
+}
+.icon-demo-card > span:last-child:not(.ec-icon) {
+  color: var(--ec-colors-text-muted, #5c665f);
+  font-size: 13px;
+  line-height: 1.45;
+}
+.icon-demo-caption {
+  color: var(--ec-colors-accent, #116e5e);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.icon-demo-card button {
+  padding: 8px 10px;
+  border: 1px solid var(--ec-colors-border, #a9bcb0);
+  border-radius: 6px;
+  background: var(--ec-colors-surface, #f8fbf8);
+  color: var(--ec-colors-text, #19211c);
+  font: inherit;
+  cursor: pointer;
+}
+.icon-demo-card button:focus-visible {
+  outline: 2px solid var(--ec-colors-focus, Highlight);
+  outline-offset: 2px;
+}
+@media (max-width: 700px) {
+  .icon-demo-grid {
+    grid-template-columns: 1fr;
+  }
+}
 [data-ec-theme="dark"]
   :is(.date-input-demo, .date-picker-demo, .checkbox-demo, .themed-code-demo) {
   border-color: var(--ec-colors-border, #414a45);

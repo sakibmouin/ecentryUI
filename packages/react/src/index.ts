@@ -347,5 +347,7 @@ export type {
 
 export { EmptyState } from "./components/empty-state/empty-state.js";
 export type { EmptyStateProps } from "./components/empty-state/empty-state.js";
+export { Icon } from "./components/icon/icon.js";
+export type { IconProps } from "./components/icon/icon.js";
 export { Card } from "./components/card/card.js";
 export type { CardProps } from "./components/card/card.js";

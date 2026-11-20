@@ -1,0 +1,62 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    flex: none;
+    font-size: 1.25rem;
+    line-height: 1;
+    vertical-align: -0.125em;
+  }
+  .ec-icon__content,
+  .ec-icon__content svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .ec-icon__spinner {
+    box-sizing: border-box;
+    width: 0.8em;
+    height: 0.8em;
+    border: 0.1em solid currentColor;
+    border-inline-end-color: transparent;
+    border-radius: 50%;
+    animation: ec-icon-spin 0.8s linear infinite;
+  }
+  @keyframes ec-icon-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+@layer ec.variants {
+  .ec-icon[data-size="sm"] {
+    font-size: 1rem;
+  }
+  .ec-icon[data-size="lg"] {
+    font-size: 1.75rem;
+  }
+  .ec-icon[data-tone="accent"] {
+    color: var(--ec-colors-accent, #116e5e);
+  }
+  .ec-icon[data-tone="muted"] {
+    color: var(--ec-colors-text-muted, #5c665f);
+  }
+}
+@layer ec.utilities {
+  @media (prefers-reduced-motion: reduce) {
+    .ec-icon__spinner {
+      animation: none;
+    }
+  }
+  @media (forced-colors: active) {
+    .ec-icon__spinner {
+      border-color: CanvasText;
+      border-inline-end-color: transparent;
+    }
+  }
+}
