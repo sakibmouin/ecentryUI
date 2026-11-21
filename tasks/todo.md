@@ -740,14 +740,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/progress/progress.tsx`, `progress.css`, `progress.test.tsx`, `index.ts`, `apps/docs/content/components/progress.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/progress/progress.test.tsx && npm run test:e2e -- progress`.
-- [ ] **T130 Progress Circle component** (depends on T016).
+- [x] **T130 Progress Circle component** (depends on T016).
   - Files: `packages/react/src/components/progress-circle/progress-circle.tsx`, `progress-circle.css`, `progress-circle.test.tsx`, `index.ts`, `apps/docs/content/components/progress-circle.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/progress-circle/progress-circle.test.tsx && npm run test:e2e -- progress-circle`.
 
 ### Checkpoint after T130
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T131 QR Code component** (depends on T016).
   - Files: `packages/react/src/components/qr-code/qr-code.tsx`, `qr-code.css`, `qr-code.test.tsx`, `index.ts`, `apps/docs/content/components/qr-code.mdx`.

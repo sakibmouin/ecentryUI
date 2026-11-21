@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "progress-circle",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": [
+    "index.ts",
+    "progress-circle.css",
+    "progress-circle.tsx",
+    "styles.d.ts"
+  ],
+  "hashes": {
+    "index.ts": "95553708cdbac5e661d22fe7211aeb7f03407a3d24db100e6c2a3aa83fb612bc",
+    "progress-circle.css": "3d25bf0454faf9c2645564dcc4c32ecf9406318f1b016aa474ae15c3dbae4093",
+    "progress-circle.tsx": "c3b461f89b2df0cb4d68bdf1b62db72654a324514d01b6c2ae4ea7d3d73ee290",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.border",
+    "colors.surface",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/progress-circle/",
+  "license": "MIT"
+}

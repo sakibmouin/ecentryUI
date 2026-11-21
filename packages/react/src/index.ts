@@ -367,3 +367,7 @@ import "./components/pagination/pagination.css";
 export { Progress } from "./components/progress/progress.js";
 export type { ProgressProps } from "./components/progress/progress.js";
 import "./components/progress/progress.css";
+
+export { ProgressCircle } from "./components/progress-circle/progress-circle.js";
+export type { ProgressCircleProps } from "./components/progress-circle/progress-circle.js";
+import "./components/progress-circle/progress-circle.css";

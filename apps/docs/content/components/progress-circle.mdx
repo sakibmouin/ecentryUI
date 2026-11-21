@@ -1,0 +1,28 @@
+import { ProgressCircleExample } from "../../src/examples/progress-circle.tsx";
+import source from "../../src/examples/progress-circle.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Progress Circle
+</div>
+<span className="section-index">FEEDBACK COMPONENT</span>
+
+# Progress Circle
+
+Show progress as a compact circular indicator.
+
+## Install
+
+```sh
+ecentry add progress-circle
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <ProgressCircleExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Set `value` and `max` for determinate progress or omit `value` to show an indeterminate ring. `label` names the progressbar; `size` controls its diameter.
