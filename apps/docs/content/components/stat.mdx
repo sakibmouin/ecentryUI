@@ -1,0 +1,28 @@
+import { StatExample } from "../../src/examples/stat.tsx";
+import source from "../../src/examples/stat.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Stat
+</div>
+<span className="section-index">FEEDBACK COMPONENT</span>
+
+# Stat
+
+Present a key metric with its label and context.
+
+## Install
+
+```sh
+ecentry add stat
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <StatExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Set `label` and `value` for the metric. `helpText` and `trend` add context; `trendTone` colors the trend. `loading` marks the metric busy. The semantic `dl`, `dt`, and `dd` structure keeps the label and value associated.

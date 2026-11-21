@@ -1,0 +1,60 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-width: 0;
+    margin: 0;
+    padding: 1.25rem;
+    border: 1px solid var(--ec-colors-border, #c8d3ca);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-surface, #fff);
+    color: var(--ec-colors-text, #19211c);
+  }
+  .ec-stat__label {
+    color: var(--ec-colors-text-muted, #58675d);
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .ec-stat__value {
+    margin: 0;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    font-variant-numeric: tabular-nums;
+  }
+  .ec-stat__context {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: baseline;
+    margin: 0.2rem 0 0;
+    font-size: 0.875rem;
+  }
+  .ec-stat__help {
+    color: var(--ec-colors-text-muted, #58675d);
+  }
+}
+@layer ec.variants {
+  .ec-stat__trend[data-tone="positive"] {
+    color: var(--ec-colors-accent, #116e5e);
+  }
+  .ec-stat__trend[data-tone="negative"] {
+    color: #a12d2d;
+  }
+  [data-ec-theme="dark"] .ec-stat__trend[data-tone="negative"] {
+    color: #ff9aa3;
+  }
+}
+@layer ec.utilities {
+  @media (forced-colors: active) {
+    .ec-stat {
+      border-color: CanvasText;
+    }
+    .ec-stat__trend {
+      color: CanvasText !important;
+    }
+  }
+}

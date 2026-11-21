@@ -383,3 +383,7 @@ import "./components/skeleton/skeleton.css";
 export { Spinner } from "./components/spinner/spinner.js";
 export type { SpinnerProps } from "./components/spinner/spinner.js";
 import "./components/spinner/spinner.css";
+
+export { Stat } from "./components/stat/stat.js";
+export type { StatProps } from "./components/stat/stat.js";
+import "./components/stat/stat.css";

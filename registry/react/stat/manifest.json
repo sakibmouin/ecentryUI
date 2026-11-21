@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "stat",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "stat.css", "stat.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "372dc220fcad168b3306e36a658b3e6ebd26a52ae86f800100dccff1bc5dff0f",
+    "stat.css": "a40194c08267b185b582ee848343e8cd05c9e19f053d04f19eb9ebf4ee5d3fbc",
+    "stat.tsx": "896566319cf080454a145ab580eaf710249562b4b293b2d9ea5a11ccff02a820",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.border",
+    "colors.surface",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/stat/",
+  "license": "MIT"
+}
