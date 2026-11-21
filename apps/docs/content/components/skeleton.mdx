@@ -1,0 +1,28 @@
+import { SkeletonExample } from "../../src/examples/skeleton.tsx";
+import source from "../../src/examples/skeleton.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Skeleton
+</div>
+<span className="section-index">FEEDBACK COMPONENT</span>
+
+# Skeleton
+
+Show a placeholder while content loads.
+
+## Install
+
+```sh
+ecentry add skeleton
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <SkeletonExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Set `loading` to false to reveal children. Use `label` only when the placeholder needs its own announced loading status; otherwise it is decorative. `width`, `height`, and `circle` shape the placeholder.

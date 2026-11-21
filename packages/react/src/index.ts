@@ -375,3 +375,7 @@ import "./components/progress-circle/progress-circle.css";
 export { QRCode } from "./components/qr-code/qr-code.js";
 export type { QRCodeProps } from "./components/qr-code/qr-code.js";
 import "./components/qr-code/qr-code.css";
+
+export { Skeleton } from "./components/skeleton/skeleton.js";
+export type { SkeletonProps } from "./components/skeleton/skeleton.js";
+import "./components/skeleton/skeleton.css";

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "skeleton",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "skeleton.css", "skeleton.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "fe871890033a575d6944b021745f0828a3f49febd40e7d2b5c72fc7c280ec82f",
+    "skeleton.css": "d3a71e3b5bef956a74f0bcbb5ea7edfc358b76a3828ce1f70e893d6fc6dbf35d",
+    "skeleton.tsx": "ad10cf62e1be7552c17b1bca986d74de60a8c4b69398ffe8e5a14f685fea991d",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.border",
+    "colors.surface",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/skeleton/",
+  "license": "MIT"
+}
