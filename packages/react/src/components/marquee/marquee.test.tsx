@@ -17,6 +17,11 @@ describe("Marquee", () => {
         ?.parentElement?.getAttribute("aria-hidden"),
     ).toBe("true");
     expect(
+      screen
+        .getAllByText("New releases")[1]
+        ?.parentElement?.hasAttribute("inert"),
+    ).toBe(true);
+    expect(
       document.querySelector(".ec-marquee__track")?.getAttribute("style"),
     ).toContain("12s");
   });

@@ -22,7 +22,7 @@ export const Marquee = forwardRef<HTMLDivElement, MarqueeProps>(
             style={{ animationDuration: `${Math.max(1, duration)}s` }}
           >
             <div className="ec-marquee__group">{children}</div>
-            <div className="ec-marquee__group" aria-hidden="true">
+            <div className="ec-marquee__group" aria-hidden="true" inert>
               {children}
             </div>
           </div>
