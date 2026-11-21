@@ -1,0 +1,50 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-spinner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--ec-colors-accent, #116e5e);
+    vertical-align: middle;
+  }
+  .ec-spinner__ring {
+    display: block;
+    box-sizing: border-box;
+    width: 80%;
+    height: 80%;
+    border: 0.15em solid currentColor;
+    border-inline-end-color: transparent;
+    border-radius: 50%;
+    animation: ec-spinner-spin 0.8s linear infinite;
+  }
+  @keyframes ec-spinner-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+@layer ec.variants {
+  .ec-spinner[data-size="sm"] {
+    width: 1rem;
+    height: 1rem;
+  }
+  .ec-spinner[data-size="lg"] {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@layer ec.utilities {
+  @media (prefers-reduced-motion: reduce) {
+    .ec-spinner__ring {
+      animation: none;
+    }
+  }
+  @media (forced-colors: active) {
+    .ec-spinner {
+      color: CanvasText;
+    }
+  }
+}

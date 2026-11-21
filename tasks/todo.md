@@ -757,14 +757,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/skeleton/skeleton.tsx`, `skeleton.css`, `skeleton.test.tsx`, `index.ts`, `apps/docs/content/components/skeleton.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/skeleton/skeleton.test.tsx && npm run test:e2e -- skeleton`.
-- [ ] **T133 Spinner component** (depends on T016).
+- [x] **T133 Spinner component** (depends on T016).
   - Files: `packages/react/src/components/spinner/spinner.tsx`, `spinner.css`, `spinner.test.tsx`, `index.ts`, `apps/docs/content/components/spinner.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/spinner/spinner.test.tsx && npm run test:e2e -- spinner`.
 
 ### Checkpoint after T133
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T134 Stat component** (depends on T016).
   - Files: `packages/react/src/components/stat/stat.tsx`, `stat.css`, `stat.test.tsx`, `index.ts`, `apps/docs/content/components/stat.mdx`.

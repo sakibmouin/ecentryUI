@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "spinner",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "spinner.css", "spinner.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "dc26d03826762833fa04679c6b9000ee0b83e27522fc182221ddec3aff9c3ac7",
+    "spinner.css": "9e5f5ad4feb81604779a86571adbf5d3b91ce59e55ed296708b5b0d01239fe3a",
+    "spinner.tsx": "ac3b84b20bff944eebf9005df99c9e6d042a659cd9c620735b938c0e380a1350",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.border",
+    "colors.surface",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/spinner/",
+  "license": "MIT"
+}

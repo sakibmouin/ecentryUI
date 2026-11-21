@@ -379,3 +379,7 @@ import "./components/qr-code/qr-code.css";
 export { Skeleton } from "./components/skeleton/skeleton.js";
 export type { SkeletonProps } from "./components/skeleton/skeleton.js";
 import "./components/skeleton/skeleton.css";
+
+export { Spinner } from "./components/spinner/spinner.js";
+export type { SpinnerProps } from "./components/spinner/spinner.js";
+import "./components/spinner/spinner.css";

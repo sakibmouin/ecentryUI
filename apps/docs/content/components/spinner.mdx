@@ -1,0 +1,28 @@
+import { SpinnerExample } from "../../src/examples/spinner.tsx";
+import source from "../../src/examples/spinner.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Spinner
+</div>
+<span className="section-index">FEEDBACK COMPONENT</span>
+
+# Spinner
+
+Show a compact loading status.
+
+## Install
+
+```sh
+ecentry add spinner
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <SpinnerExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Set `label` to describe the operation. `size` accepts `sm`, `md`, or `lg`. The spinner animation stops under reduced-motion preferences.

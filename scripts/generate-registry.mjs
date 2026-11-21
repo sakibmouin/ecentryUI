@@ -121,6 +121,8 @@ import { qrCodeRegistryItem } from "../packages/react/dist/components/qr-code/me
 
 import { skeletonRegistryItem } from "../packages/react/dist/components/skeleton/metadata.js";
 
+import { spinnerRegistryItem } from "../packages/react/dist/components/spinner/metadata.js";
+
 for (const item of [
   buttonRegistryItem,
   inputRegistryItem,
@@ -215,6 +217,7 @@ for (const item of [
   progressCircleRegistryItem,
   qrCodeRegistryItem,
   skeletonRegistryItem,
+  spinnerRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(
