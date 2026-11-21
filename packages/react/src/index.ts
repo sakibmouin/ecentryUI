@@ -355,3 +355,7 @@ export type { CardProps } from "./components/card/card.js";
 export { Image } from "./components/image/image.js";
 export type { ImageProps } from "./components/image/image.js";
 import "./components/image/image.css";
+
+export { Marquee } from "./components/marquee/marquee.js";
+export type { MarqueeProps } from "./components/marquee/marquee.js";
+import "./components/marquee/marquee.css";

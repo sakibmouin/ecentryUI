@@ -719,7 +719,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/image/image.tsx`, `image.css`, `image.test.tsx`, `index.ts`, `apps/docs/content/components/image.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/image/image.test.tsx && npm run test:e2e -- image`.
-- [ ] **T126 Marquee component** (depends on T016).
+- [x] **T126 Marquee component** (depends on T016).
   - Files: `packages/react/src/components/marquee/marquee.tsx`, `marquee.css`, `marquee.test.tsx`, `index.ts`, `apps/docs/content/components/marquee.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/marquee/marquee.test.tsx && npm run test:e2e -- marquee`.

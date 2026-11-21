@@ -1,0 +1,28 @@
+import { MarqueeExample } from "../../src/examples/marquee.tsx";
+import source from "../../src/examples/marquee.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Marquee
+</div>
+<span className="section-index">FEEDBACK COMPONENT</span>
+
+# Marquee
+
+Scroll repeated content with a pause control and reduced-motion support.
+
+## Install
+
+```sh
+ecentry add marquee
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <MarqueeExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Provide `children` as short repeated content. Set `duration` in seconds to control speed. The pause button lets users stop motion; reduced-motion preferences stop animation automatically.
