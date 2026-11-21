@@ -715,7 +715,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T125 Image component** (depends on T016).
+- [x] **T125 Image component** (depends on T016).
   - Files: `packages/react/src/components/image/image.tsx`, `image.css`, `image.test.tsx`, `index.ts`, `apps/docs/content/components/image.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/image/image.test.tsx && npm run test:e2e -- image`.

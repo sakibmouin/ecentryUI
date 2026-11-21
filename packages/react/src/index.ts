@@ -351,3 +351,7 @@ export { Icon } from "./components/icon/icon.js";
 export type { IconProps } from "./components/icon/icon.js";
 export { Card } from "./components/card/card.js";
 export type { CardProps } from "./components/card/card.js";
+
+export { Image } from "./components/image/image.js";
+export type { ImageProps } from "./components/image/image.js";
+import "./components/image/image.css";

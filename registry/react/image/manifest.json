@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "image",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["image.css", "image.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "image.css": "69da0be278f4eb84defc7653b443d2d2e56906ff8e13159e546ac71b4d3081d7",
+    "image.tsx": "3b3a0bb1a6b48a27a7aa25ddc5b837679c526d7e4787b993b02591501473dfdd",
+    "index.ts": "6da19b3e93274a1a1c055568846796c01526c3b24ec5b0966585f1995b2867c5",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.border",
+    "colors.surface",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/image/",
+  "license": "MIT"
+}

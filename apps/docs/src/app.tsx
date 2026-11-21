@@ -150,6 +150,8 @@ const EmptyStateDocs = lazy(
 );
 const IconDocs = lazy(() => import("../content/components/icon.mdx"));
 
+const ImageDocs = lazy(() => import("../content/components/image.mdx"));
+
 export const routes = [
   "/",
   "/guides/examples/",
@@ -239,6 +241,7 @@ export const routes = [
   "/components/data-list/",
   "/components/empty-state/",
   "/components/icon/",
+  "/components/image/",
 ] as const;
 
 const componentLinks = [
@@ -328,6 +331,7 @@ const componentLinks = [
   { title: "Data List", href: "/components/data-list/" },
   { title: "Empty State", href: "/components/empty-state/" },
   { title: "Icon", href: "/components/icon/" },
+  { title: "Image", href: "/components/image/" },
 ];
 
 function Home() {
@@ -793,6 +797,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/card/" ? (
               <Suspense fallback={<p>Loading card guide...</p>}>
                 <CardDocs />
+              </Suspense>
+            ) : route === "/components/image/" ? (
+              <Suspense fallback={<p>Loading image guide...</p>}>
+                <ImageDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

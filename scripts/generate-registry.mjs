@@ -107,6 +107,8 @@ import { dataListRegistryItem } from "../packages/react/dist/components/data-lis
 import { emptyStateRegistryItem } from "../packages/react/dist/components/empty-state/metadata.js";
 import { iconRegistryItem } from "../packages/react/dist/components/icon/metadata.js";
 
+import { imageRegistryItem } from "../packages/react/dist/components/image/metadata.js";
+
 for (const item of [
   buttonRegistryItem,
   inputRegistryItem,
@@ -194,6 +196,7 @@ for (const item of [
   emptyStateRegistryItem,
   iconRegistryItem,
   cardRegistryItem,
+  imageRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

@@ -1,0 +1,28 @@
+import { ImageExample } from "../../src/examples/image.tsx";
+import source from "../../src/examples/image.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Image
+</div>
+<span className="section-index">FEEDBACK COMPONENT</span>
+
+# Image
+
+Show an image with an accessible fallback when loading fails.
+
+## Install
+
+```sh
+ecentry add image
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <ImageExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Use `alt` to describe informative images or an empty string for decoration. `fallback` appears after a load error. `fit` controls cropping. Native image attributes and refs are forwarded.
