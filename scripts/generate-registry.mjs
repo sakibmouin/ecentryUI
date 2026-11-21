@@ -111,6 +111,8 @@ import { imageRegistryItem } from "../packages/react/dist/components/image/metad
 
 import { marqueeRegistryItem } from "../packages/react/dist/components/marquee/metadata.js";
 
+import { paginationRegistryItem } from "../packages/react/dist/components/pagination/metadata.js";
+
 for (const item of [
   buttonRegistryItem,
   inputRegistryItem,
@@ -200,6 +202,7 @@ for (const item of [
   cardRegistryItem,
   imageRegistryItem,
   marqueeRegistryItem,
+  paginationRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

@@ -732,7 +732,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T128 Pagination presentation and docs** (depends on T127).
+- [x] **T128 Pagination presentation and docs** (depends on T127).
   - Files: `packages/react/src/components/pagination/pagination.css`, `index.ts`, `apps/docs/content/components/pagination.mdx`.
   - Acceptance: default and applicable variants/states render in both appearances; docs preview and installable source work.
   - Verify: `npm run registry:validate && npm run test:e2e -- pagination`.

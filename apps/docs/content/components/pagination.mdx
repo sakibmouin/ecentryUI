@@ -1,0 +1,28 @@
+import { PaginationExample } from "../../src/examples/pagination.tsx";
+import source from "../../src/examples/pagination.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+<div className="breadcrumb">
+  Components <span>/</span> Pagination
+</div>
+<span className="section-index">FEEDBACK COMPONENT</span>
+
+# Pagination
+
+Navigate a paged result set with clear current-page and boundary states.
+
+## Install
+
+```sh
+ecentry add pagination
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <PaginationExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Set `count` to the total number of pages. Use `defaultPage` for local state or `page` with `onPageChange` for controlled state. `siblingCount` sets the number of pages around the current one. Navigation uses native buttons and announces the current page with `aria-current`.

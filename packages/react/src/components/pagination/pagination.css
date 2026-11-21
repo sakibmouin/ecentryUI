@@ -1,0 +1,54 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--ec-colors-text, #19211c);
+  }
+  .ec-pagination__page,
+  .ec-pagination__control {
+    min-width: 2.35rem;
+    min-height: 2.35rem;
+    border: 1px solid transparent;
+    border-radius: var(--ec-radii-md, 8px);
+    padding: 0.4rem 0.6rem;
+    color: inherit;
+    background: transparent;
+    cursor: pointer;
+    font: inherit;
+  }
+  .ec-pagination__page:hover:not(:disabled),
+  .ec-pagination__control:hover:not(:disabled) {
+    background: var(--ec-colors-surface, #f2f5f2);
+    border-color: var(--ec-colors-border, #c8d3ca);
+  }
+  .ec-pagination__page[aria-current="page"] {
+    background: var(--ec-colors-accent, #116e5e);
+    color: #fff;
+    font-weight: 700;
+  }
+  .ec-pagination__control:disabled {
+    opacity: 0.45;
+    cursor: default;
+  }
+  .ec-pagination__page:focus-visible,
+  .ec-pagination__control:focus-visible {
+    outline: 2px solid var(--ec-colors-accent, #116e5e);
+    outline-offset: 2px;
+  }
+  .ec-pagination__gap {
+    padding-inline: 0.35rem;
+  }
+}
+@layer ec.utilities {
+  @media (forced-colors: active) {
+    .ec-pagination__page[aria-current="page"] {
+      border-color: Highlight;
+      color: HighlightText;
+      background: Highlight;
+    }
+  }
+}

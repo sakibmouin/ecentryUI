@@ -359,3 +359,7 @@ import "./components/image/image.css";
 export { Marquee } from "./components/marquee/marquee.js";
 export type { MarqueeProps } from "./components/marquee/marquee.js";
 import "./components/marquee/marquee.css";
+
+export { Pagination } from "./components/pagination/pagination.js";
+export type { PaginationProps } from "./components/pagination/pagination.js";
+import "./components/pagination/pagination.css";

@@ -154,6 +154,10 @@ const ImageDocs = lazy(() => import("../content/components/image.mdx"));
 
 const MarqueeDocs = lazy(() => import("../content/components/marquee.mdx"));
 
+const PaginationDocs = lazy(
+  () => import("../content/components/pagination.mdx"),
+);
+
 export const routes = [
   "/",
   "/guides/examples/",
@@ -333,6 +337,7 @@ const componentLinks = [
   { title: "Data List", href: "/components/data-list/" },
   { title: "Empty State", href: "/components/empty-state/" },
   { title: "Icon", href: "/components/icon/" },
+  { title: "Pagination", href: "/components/pagination/" },
   { title: "Marquee", href: "/components/marquee/" },
   { title: "Image", href: "/components/image/" },
 ];
@@ -808,6 +813,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/marquee/" ? (
               <Suspense fallback={<p>Loading marquee guide...</p>}>
                 <MarqueeDocs />
+              </Suspense>
+            ) : route === "/components/pagination/" ? (
+              <Suspense fallback={<p>Loading pagination guide...</p>}>
+                <PaginationDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

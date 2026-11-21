@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pagination",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "pagination.css", "pagination.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "e9e4356639d932425aa738b0d3868529bee9d7c83e94823d0f8ed4d6a26df86a",
+    "pagination.css": "61e6c21fc49ae754be9093cacd3a98524a813e98b2dae81cb9e1e47f0ebf0819",
+    "pagination.tsx": "6e88b15724a5485858b7e8bd69024bc9783d878da5564ba905371c9ce1868c01",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.border",
+    "colors.surface",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/pagination/",
+  "license": "MIT"
+}
