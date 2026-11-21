@@ -363,3 +363,7 @@ import "./components/marquee/marquee.css";
 export { Pagination } from "./components/pagination/pagination.js";
 export type { PaginationProps } from "./components/pagination/pagination.js";
 import "./components/pagination/pagination.css";
+
+export { Progress } from "./components/progress/progress.js";
+export type { ProgressProps } from "./components/progress/progress.js";
+import "./components/progress/progress.css";

@@ -113,6 +113,8 @@ import { marqueeRegistryItem } from "../packages/react/dist/components/marquee/m
 
 import { paginationRegistryItem } from "../packages/react/dist/components/pagination/metadata.js";
 
+import { progressRegistryItem } from "../packages/react/dist/components/progress/metadata.js";
+
 for (const item of [
   buttonRegistryItem,
   inputRegistryItem,
@@ -203,6 +205,7 @@ for (const item of [
   imageRegistryItem,
   marqueeRegistryItem,
   paginationRegistryItem,
+  progressRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

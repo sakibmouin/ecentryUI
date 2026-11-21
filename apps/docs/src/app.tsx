@@ -158,6 +158,8 @@ const PaginationDocs = lazy(
   () => import("../content/components/pagination.mdx"),
 );
 
+const ProgressDocs = lazy(() => import("../content/components/progress.mdx"));
+
 export const routes = [
   "/",
   "/guides/examples/",
@@ -337,6 +339,7 @@ const componentLinks = [
   { title: "Data List", href: "/components/data-list/" },
   { title: "Empty State", href: "/components/empty-state/" },
   { title: "Icon", href: "/components/icon/" },
+  { title: "Progress", href: "/components/progress/" },
   { title: "Pagination", href: "/components/pagination/" },
   { title: "Marquee", href: "/components/marquee/" },
   { title: "Image", href: "/components/image/" },
@@ -817,6 +820,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/pagination/" ? (
               <Suspense fallback={<p>Loading pagination guide...</p>}>
                 <PaginationDocs />
+              </Suspense>
+            ) : route === "/components/progress/" ? (
+              <Suspense fallback={<p>Loading progress guide...</p>}>
+                <ProgressDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

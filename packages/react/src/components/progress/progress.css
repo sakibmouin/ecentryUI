@@ -1,0 +1,52 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-progress {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 0.5rem;
+    border-radius: 999px;
+    background: var(--ec-colors-border, #c8d3ca);
+  }
+  .ec-progress__fill {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--ec-colors-accent, #116e5e);
+    transition: width 0.25s ease;
+  }
+  .ec-progress[data-indeterminate="true"] .ec-progress__fill {
+    width: 35%;
+    animation: ec-progress-slide 1.4s ease-in-out infinite alternate;
+  }
+  @keyframes ec-progress-slide {
+    to {
+      transform: translateX(185%);
+    }
+  }
+}
+@layer ec.variants {
+  .ec-progress[data-size="sm"] {
+    height: 0.25rem;
+  }
+  .ec-progress[data-size="lg"] {
+    height: 0.75rem;
+  }
+}
+@layer ec.utilities {
+  @media (prefers-reduced-motion: reduce) {
+    .ec-progress__fill {
+      transition: none;
+      animation: none !important;
+    }
+  }
+  @media (forced-colors: active) {
+    .ec-progress {
+      border: 1px solid CanvasText;
+    }
+    .ec-progress__fill {
+      background: Highlight;
+    }
+  }
+}

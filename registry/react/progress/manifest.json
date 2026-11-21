@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "progress",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "progress.css", "progress.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "5c7da960dc83b9201bb83d14cf7510da9e6cae42290912b5599de0d58af3721d",
+    "progress.css": "aef18ee2dad52f45aae8eb35a8eb648d2e784f20729e4370007cf4e243c98e04",
+    "progress.tsx": "1ed779a34c42d5501eae3dbac22160e8c1c9065d6f8817c9e322c3c3a7e8c845",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.border",
+    "colors.surface",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/progress/",
+  "license": "MIT"
+}
