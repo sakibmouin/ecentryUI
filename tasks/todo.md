@@ -723,14 +723,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/marquee/marquee.tsx`, `marquee.css`, `marquee.test.tsx`, `index.ts`, `apps/docs/content/components/marquee.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/marquee/marquee.test.tsx && npm run test:e2e -- marquee`.
-- [ ] **T127 Pagination behavior** (depends on T016).
+- [x] **T127 Pagination behavior** (depends on T016).
   - Files: `packages/react/src/components/pagination/pagination.tsx`, `pagination.test.tsx`.
   - Acceptance: current page, bounds and navigation; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/pagination/pagination.test.tsx`.
 
 ### Checkpoint after T127
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T128 Pagination presentation and docs** (depends on T127).
   - Files: `packages/react/src/components/pagination/pagination.css`, `index.ts`, `apps/docs/content/components/pagination.mdx`.
