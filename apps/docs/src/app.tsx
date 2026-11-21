@@ -164,6 +164,8 @@ const ProgressCircleDocs = lazy(
   () => import("../content/components/progress-circle.mdx"),
 );
 
+const QRCodeDocs = lazy(() => import("../content/components/qr-code.mdx"));
+
 export const routes = [
   "/",
   "/guides/examples/",
@@ -343,6 +345,7 @@ const componentLinks = [
   { title: "Data List", href: "/components/data-list/" },
   { title: "Empty State", href: "/components/empty-state/" },
   { title: "Icon", href: "/components/icon/" },
+  { title: "QR Code", href: "/components/qr-code/" },
   { title: "Progress Circle", href: "/components/progress-circle/" },
   { title: "Progress", href: "/components/progress/" },
   { title: "Pagination", href: "/components/pagination/" },
@@ -833,6 +836,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/progress-circle/" ? (
               <Suspense fallback={<p>Loading progress circle guide...</p>}>
                 <ProgressCircleDocs />
+              </Suspense>
+            ) : route === "/components/qr-code/" ? (
+              <Suspense fallback={<p>Loading qr code guide...</p>}>
+                <QRCodeDocs />
               </Suspense>
             ) : active ? (
               <ComponentPage name={active.title} />

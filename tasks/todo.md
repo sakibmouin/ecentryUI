@@ -749,7 +749,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T131 QR Code component** (depends on T016).
+- [x] **T131 QR Code component** (depends on T016).
   - Files: `packages/react/src/components/qr-code/qr-code.tsx`, `qr-code.css`, `qr-code.test.tsx`, `index.ts`, `apps/docs/content/components/qr-code.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/qr-code/qr-code.test.tsx && npm run test:e2e -- qr-code`.

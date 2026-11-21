@@ -371,3 +371,7 @@ import "./components/progress/progress.css";
 export { ProgressCircle } from "./components/progress-circle/progress-circle.js";
 export type { ProgressCircleProps } from "./components/progress-circle/progress-circle.js";
 import "./components/progress-circle/progress-circle.css";
+
+export { QRCode } from "./components/qr-code/qr-code.js";
+export type { QRCodeProps } from "./components/qr-code/qr-code.js";
+import "./components/qr-code/qr-code.css";

@@ -1,0 +1,18 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-qr-code {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--ec-colors-border, #c8d3ca);
+    border-radius: var(--ec-radii-md, 8px);
+  }
+}
+@layer ec.utilities {
+  @media (forced-colors: active) {
+    .ec-qr-code {
+      forced-color-adjust: none;
+    }
+  }
+}

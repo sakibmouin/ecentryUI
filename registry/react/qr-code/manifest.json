@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "qr-code",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "qr-code.css", "qr-code.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "a1602cfb8a063f45945c696322c1ad4b30b22fe1f17348b5dc97460ec295f5f2",
+    "qr-code.css": "58937200c757e6106220e8cfd362e236302dbe047fdc1eb743b8085d40a79281",
+    "qr-code.tsx": "62e16e3f24e048e092c3d92f4f156fc1a9f851f26e6df0123e74ab3dcddf389f",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "npmDependencies": { "qrcode": "^1.5.4" },
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.border",
+    "colors.surface",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/qr-code/",
+  "license": "MIT"
+}
