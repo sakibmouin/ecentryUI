@@ -791,14 +791,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/table/table.tsx`, `table.css`, `table.test.tsx`, `index.ts`, `apps/docs/content/components/table.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/table/table.test.tsx && npm run test:e2e -- table`.
-- [ ] **T139 Tabs behavior** (depends on T016).
+- [x] **T139 Tabs behavior** (depends on T016).
   - Files: `packages/react/src/components/tabs/tabs.tsx`, `tabs.test.tsx`.
   - Acceptance: manual/automatic activation, orientation and focus; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/tabs/tabs.test.tsx`.
 
 ### Checkpoint after T139
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T140 Tabs presentation and docs** (depends on T139).
   - Files: `packages/react/src/components/tabs/tabs.css`, `index.ts`, `apps/docs/content/components/tabs.mdx`.
