@@ -130,6 +130,7 @@ import { tabsRegistryItem } from "../packages/react/dist/components/tabs/metadat
 import { tagRegistryItem } from "../packages/react/dist/components/tag/metadata.js";
 import { timelineRegistryItem } from "../packages/react/dist/components/timeline/metadata.js";
 import { checkmarkRegistryItem } from "../packages/react/dist/components/checkmark/metadata.js";
+import { clientOnlyRegistryItem } from "../packages/react/dist/components/client-only/metadata.js";
 import { statRegistryItem } from "../packages/react/dist/components/stat/metadata.js";
 
 for (const item of [
@@ -228,6 +229,7 @@ for (const item of [
   skeletonRegistryItem,
   spinnerRegistryItem,
   statRegistryItem,
+  clientOnlyRegistryItem,
   checkmarkRegistryItem,
   timelineRegistryItem,
   tagRegistryItem,

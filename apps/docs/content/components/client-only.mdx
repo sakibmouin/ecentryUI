@@ -1,0 +1,23 @@
+import { ClientOnlyExample } from "../../src/examples/client-only.tsx";
+import source from "../../src/examples/client-only.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Client Only
+
+Render browser-dependent content safely after hydration.
+
+## Install
+
+```sh
+ecentry add client-only
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <ClientOnlyExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Set `fallback` to content that can render on the server and during hydration. Pass a render function as children if it reads browser globals. Client Only renders the result after hydration without adding a wrapper.

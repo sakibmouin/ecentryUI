@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "client-only",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["client-only.tsx", "index.ts"],
+  "hashes": {
+    "client-only.tsx": "83bbdbb7c78fddb0d4360df8add3ad6937715f81974a82f52a9f59170f0da423",
+    "index.ts": "0fea756a4cac348894b111f08143e13442bdf8cfaa73ff29d786e0c27bc9a3b8"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/client-only/",
+  "license": "MIT"
+}

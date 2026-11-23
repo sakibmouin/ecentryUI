@@ -823,7 +823,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/checkmark/checkmark.tsx`, `checkmark.css`, `checkmark.test.tsx`, `index.ts`, `apps/docs/content/components/checkmark.mdx`.
   - Acceptance: locale, portals, visibility and SSR; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/checkmark/checkmark.test.tsx && npm run test:e2e -- checkmark`.
-- [ ] **T144 Client Only component** (depends on T016).
+- [x] **T144 Client Only component** (depends on T016).
   - Files: `packages/react/src/components/client-only/client-only.tsx`, `client-only.css`, `client-only.test.tsx`, `index.ts`, `apps/docs/content/components/client-only.mdx`.
   - Acceptance: locale, portals, visibility and SSR; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/client-only/client-only.test.tsx && npm run test:e2e -- client-only`.

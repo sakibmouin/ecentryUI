@@ -418,3 +418,6 @@ import "./components/timeline/timeline.css";
 export { Checkmark } from "./components/checkmark/checkmark.js";
 export type { CheckmarkProps } from "./components/checkmark/checkmark.js";
 import "./components/checkmark/checkmark.css";
+
+export { ClientOnly } from "./components/client-only/client-only.js";
+export type { ClientOnlyProps } from "./components/client-only/client-only.js";
