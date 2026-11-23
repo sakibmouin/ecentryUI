@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "format-number",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["format-number.tsx", "index.ts"],
+  "hashes": {
+    "format-number.tsx": "df17117405e35b727eb43844c235fef1434714d987fc0bdd0ed8a8ef3e3a9701",
+    "index.ts": "2af1afc494c5006b3b9020871429e6b4d5b7ef03024a0c42a9ed99b1106a34b0"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/format-number/",
+  "license": "MIT"
+}

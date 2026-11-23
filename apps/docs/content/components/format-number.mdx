@@ -1,0 +1,23 @@
+import { FormatNumberExample } from "../../src/examples/format-number.tsx";
+import source from "../../src/examples/format-number.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Format Number
+
+Display localized numbers, currency, and percentages.
+
+## Install
+
+```sh
+ecentry add format-number
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <FormatNumberExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Pass a number or bigint as `value`. Set `locale` to control grouping, digits, and separators. Pass `Intl.NumberFormat` options through `options`, including `style: "currency"` with a currency code or `style: "percent"` for ratios.

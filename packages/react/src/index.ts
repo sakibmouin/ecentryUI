@@ -437,3 +437,6 @@ export type { ForProps } from "./components/for/for.js";
 
 export { FormatByte } from "./components/format-byte/format-byte.js";
 export type { FormatByteProps } from "./components/format-byte/format-byte.js";
+
+export { FormatNumber } from "./components/format-number/format-number.js";
+export type { FormatNumberProps } from "./components/format-number/format-number.js";

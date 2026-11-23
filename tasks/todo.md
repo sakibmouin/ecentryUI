@@ -844,7 +844,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/format-byte/format-byte.tsx`, `format-byte.css`, `format-byte.test.tsx`, `index.ts`, `apps/docs/content/components/format-byte.mdx`.
   - Acceptance: locale, portals, visibility and SSR; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/format-byte/format-byte.test.tsx && npm run test:e2e -- format-byte`.
-- [ ] **T148 Format Number component** (depends on T016).
+- [x] **T148 Format Number component** (depends on T016).
   - Files: `packages/react/src/components/format-number/format-number.tsx`, `format-number.css`, `format-number.test.tsx`, `index.ts`, `apps/docs/content/components/format-number.mdx`.
   - Acceptance: locale, portals, visibility and SSR; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/format-number/format-number.test.tsx && npm run test:e2e -- format-number`.
