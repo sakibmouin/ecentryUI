@@ -449,3 +449,6 @@ export type {
   LocaleContextValue,
   LocaleProviderProps,
 } from "./components/locale-provider/locale-provider.js";
+
+export { Portal } from "./components/portal/portal.js";
+export type { PortalProps } from "./components/portal/portal.js";

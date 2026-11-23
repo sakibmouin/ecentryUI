@@ -193,6 +193,7 @@ const FormatNumberDocs = lazy(
 const LocaleProviderDocs = lazy(
   () => import("../content/components/locale-provider.mdx"),
 );
+const PortalDocs = lazy(() => import("../content/components/portal.mdx"));
 const StatDocs = lazy(() => import("../content/components/stat.mdx"));
 
 export const routes = [
@@ -286,6 +287,7 @@ export const routes = [
   "/components/icon/",
   "/components/image/",
   "/components/status/",
+  "/components/portal/",
   "/components/locale-provider/",
   "/components/format-number/",
   "/components/format-byte/",
@@ -389,6 +391,7 @@ const componentLinks = [
   { title: "Icon", href: "/components/icon/" },
   { title: "Stat", href: "/components/stat/" },
   { title: "Status", href: "/components/status/" },
+  { title: "Portal", href: "/components/portal/" },
   { title: "Locale Provider", href: "/components/locale-provider/" },
   { title: "Format Number", href: "/components/format-number/" },
   { title: "Format Byte", href: "/components/format-byte/" },
@@ -958,6 +961,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/locale-provider/" ? (
               <Suspense fallback={<p>Loading locale provider guide...</p>}>
                 <LocaleProviderDocs />
+              </Suspense>
+            ) : route === "/components/portal/" ? (
+              <Suspense fallback={<p>Loading portal guide...</p>}>
+                <PortalDocs />
               </Suspense>
             ) : route === "/components/stat/" ? (
               <Suspense fallback={<p>Loading stat guide...</p>}>

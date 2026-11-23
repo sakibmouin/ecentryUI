@@ -1,0 +1,23 @@
+import { PortalExample } from "../../src/examples/portal.tsx";
+import source from "../../src/examples/portal.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Portal
+
+Render content in another DOM container while preserving React context.
+
+## Install
+
+```sh
+ecentry add portal
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <PortalExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Omit `container` to mount under the environment's document body or shadow root. Pass an element or document fragment for a specific destination. Pass `null` while an explicit destination is unavailable. The portal mounts after hydration. Set `disabled` to render children inline.

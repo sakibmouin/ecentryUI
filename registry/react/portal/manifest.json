@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "portal",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "portal.tsx"],
+  "hashes": {
+    "index.ts": "81ac001b49bdb9c66228a91b488631c7ff6ba4f034bb27317d8200249099ff18",
+    "portal.tsx": "864447eba3c3bd2f128f6dca6dfb48d184c94ff441c5338b0cb46e3ae80f95a8"
+  },
+  "dependencies": ["environment-provider"],
+  "peerDependencies": { "react": ">=18", "react-dom": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/portal/",
+  "license": "MIT"
+}

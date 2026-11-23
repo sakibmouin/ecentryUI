@@ -136,6 +136,7 @@ import { forRegistryItem } from "../packages/react/dist/components/for/metadata.
 import { formatByteRegistryItem } from "../packages/react/dist/components/format-byte/metadata.js";
 import { formatNumberRegistryItem } from "../packages/react/dist/components/format-number/metadata.js";
 import { localeProviderRegistryItem } from "../packages/react/dist/components/locale-provider/metadata.js";
+import { portalRegistryItem } from "../packages/react/dist/components/portal/metadata.js";
 import { statRegistryItem } from "../packages/react/dist/components/stat/metadata.js";
 
 for (const item of [
@@ -234,6 +235,7 @@ for (const item of [
   skeletonRegistryItem,
   spinnerRegistryItem,
   statRegistryItem,
+  portalRegistryItem,
   localeProviderRegistryItem,
   formatNumberRegistryItem,
   formatByteRegistryItem,
