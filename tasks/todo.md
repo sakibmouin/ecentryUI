@@ -874,7 +874,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/radiomark/radiomark.tsx`, `radiomark.css`, `radiomark.test.tsx`, `index.ts`, `apps/docs/content/components/radiomark.mdx`.
   - Acceptance: locale, portals, visibility and SSR; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/radiomark/radiomark.test.tsx && npm run test:e2e -- radiomark`.
-- [ ] **T153 Show component** (depends on T016).
+- [x] **T153 Show component** (depends on T016).
   - Files: `packages/react/src/components/show/show.tsx`, `show.css`, `show.test.tsx`, `index.ts`, `apps/docs/content/components/show.mdx`.
   - Acceptance: locale, portals, visibility and SSR; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/show/show.test.tsx && npm run test:e2e -- show`.

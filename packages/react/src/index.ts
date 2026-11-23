@@ -460,3 +460,6 @@ import "./components/presence/presence.css";
 export { Radiomark } from "./components/radiomark/radiomark.js";
 export type { RadiomarkProps } from "./components/radiomark/radiomark.js";
 import "./components/radiomark/radiomark.css";
+
+export { Show } from "./components/show/show.js";
+export type { ShowProps } from "./components/show/show.js";

@@ -139,6 +139,7 @@ import { localeProviderRegistryItem } from "../packages/react/dist/components/lo
 import { portalRegistryItem } from "../packages/react/dist/components/portal/metadata.js";
 import { presenceRegistryItem } from "../packages/react/dist/components/presence/metadata.js";
 import { radiomarkRegistryItem } from "../packages/react/dist/components/radiomark/metadata.js";
+import { showRegistryItem } from "../packages/react/dist/components/show/metadata.js";
 import { statRegistryItem } from "../packages/react/dist/components/stat/metadata.js";
 
 for (const item of [
@@ -237,6 +238,7 @@ for (const item of [
   skeletonRegistryItem,
   spinnerRegistryItem,
   statRegistryItem,
+  showRegistryItem,
   radiomarkRegistryItem,
   presenceRegistryItem,
   portalRegistryItem,

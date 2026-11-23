@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "show",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "show.tsx"],
+  "hashes": {
+    "index.ts": "2798eed18fad8f12c8f9bc18b95c6341569fd36bea7550eaa26f26da2da873c6",
+    "show.tsx": "4f71ab5c8f8ec0769d629ca75b9569c4d581dc20718f277bd24d8e6a7cf54857"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/show/",
+  "license": "MIT"
+}

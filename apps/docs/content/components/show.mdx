@@ -1,0 +1,23 @@
+import { ShowExample } from "../../src/examples/show.tsx";
+import source from "../../src/examples/show.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Show
+
+Render different content depending on a condition or available value.
+
+## Install
+
+```sh
+ecentry add show
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <ShowExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Pass the condition as `when`. If it is truthy, Show renders its children or passes the value to a child render function. Otherwise it renders `fallback`, which defaults to nothing. To display a valid zero or empty string, pass a separate boolean condition.
