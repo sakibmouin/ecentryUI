@@ -1,0 +1,29 @@
+import { StepsExample } from "../../src/examples/steps.tsx";
+import source from "../../src/examples/steps.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Steps
+
+Guide people through a multi-step task and show where they are along the way.
+
+## Install
+
+```sh
+ecentry add steps
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <StepsExample />
+</ExamplePanel>
+
+## API
+
+Pass a group `label` and `items` with unique `id` values, a short `label`, optional `content`, and optional `disabled` state. Pass `defaultValue` to start at a specific step or use `value` with `onValueChange` to manage selection externally. The first enabled step is the fallback.
+
+Linear navigation allows reaching earlier steps and the next available step. Set `linear={false}` to allow any enabled step. Progress reflects the current position among enabled steps. Set `orientation="vertical"` for a stacked list. Use `previousLabel` and `nextLabel` to localize the controls.
+
+## Keyboard and screen readers
+
+The current step exposes `aria-current="step"`. Use arrow keys or Home and End to move focus between available step buttons. Enter and Space select the focused step. Left and Right follow text direction and vertical lists use Up and Down. Previous and Next retain focus at the ends of the list.

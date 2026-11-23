@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "steps",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "steps.css", "steps.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "e076b44394a21f115cd2b67d054f55ed649fb4cbe7d0846d7ae14da8736cbf31",
+    "steps.css": "5d6b3c916f246b71cedb014cc3bf455b8902c0e791396a76b829a530e05890e2",
+    "steps.tsx": "431cef960af094db72f5741780573e100dc8c942790872855e98740582eacba2",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.border",
+    "colors.surface",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/steps/",
+  "license": "MIT"
+}

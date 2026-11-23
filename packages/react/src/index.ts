@@ -391,3 +391,7 @@ import "./components/stat/stat.css";
 import "./components/status/status.css";
 export { Status } from "./components/status/status.js";
 export type { StatusProps } from "./components/status/status.js";
+
+export { Steps } from "./components/steps/steps.js";
+export type { StepItem, StepsProps } from "./components/steps/steps.js";
+import "./components/steps/steps.css";
