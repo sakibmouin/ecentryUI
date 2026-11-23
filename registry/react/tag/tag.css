@@ -1,0 +1,53 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    max-inline-size: 100%;
+    padding-inline: 0.45rem;
+    min-block-size: 1.75rem;
+    border: 1px solid var(--ec-colors-border, #c8d3ca);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-surface, #fff);
+    color: var(--ec-colors-text, #19211c);
+    font-size: 0.875rem;
+    vertical-align: middle;
+  }
+
+  .ec-tag__label {
+    overflow-wrap: anywhere;
+  }
+  .ec-tag[data-variant="accent"] {
+    border-color: var(--ec-colors-accent, #116e5e);
+  }
+  .ec-tag[data-size="sm"] {
+    font-size: 0.75rem;
+  }
+
+  .ec-tag__remove {
+    display: grid;
+    place-items: center;
+    flex: none;
+    min-inline-size: 1.5rem;
+    min-block-size: 1.5rem;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .ec-tag__remove:not(:disabled):hover {
+    background: var(--ec-colors-border, #c8d3ca);
+  }
+  .ec-tag__remove:focus-visible {
+    outline: 2px solid var(--ec-colors-accent, #116e5e);
+  }
+  .ec-tag__remove:disabled {
+    color: var(--ec-colors-text-muted, #58675d);
+    cursor: default;
+  }
+}

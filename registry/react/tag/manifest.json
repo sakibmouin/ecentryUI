@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "tag",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "styles.d.ts", "tag.css", "tag.tsx"],
+  "hashes": {
+    "index.ts": "b55f42023eb9893aaad33fa7136e7bcad9321fac8ec2358c7c05209af4b40dab",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa",
+    "tag.css": "a5d428bbf4706a1497b8d5659c8a9e7a5e70b2e9b5f6be20bf785c8953e357e1",
+    "tag.tsx": "1db4d3fd70914d11be36b7354a8e80dfcf9ed8114dbbc19fad0e278470e07a1d"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.border",
+    "colors.surface",
+    "colors.text",
+    "colors.text-muted",
+    "radii.md"
+  ],
+  "docsUrl": "https://ecentry.dev/components/tag/",
+  "license": "MIT"
+}

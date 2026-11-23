@@ -403,3 +403,7 @@ import "./components/table/table.css";
 export { Tabs } from "./components/tabs/tabs.js";
 export type { TabItem, TabsProps } from "./components/tabs/tabs.js";
 import "./components/tabs/tabs.css";
+
+export { Tag } from "./components/tag/tag.js";
+export type { TagProps } from "./components/tag/tag.js";
+import "./components/tag/tag.css";

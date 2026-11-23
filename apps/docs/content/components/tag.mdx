@@ -1,0 +1,25 @@
+import { TagExample } from "../../src/examples/tag.tsx";
+import source from "../../src/examples/tag.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Tag
+
+Label an item or show a filter that people can remove.
+
+## Install
+
+```sh
+ecentry add tag
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <TagExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Pass the label as children. Tags are neutral and medium by default. Use `variant="accent"` for emphasis or `size="sm"` for compact layouts.
+
+Provide `onRemove` and a `removeLabel` that identifies the item to create a native remove button. Set `disabled` to disable removal. When removing the tag from the page, move focus to the next valid tag or the control that adds tags.
