@@ -1,0 +1,23 @@
+import { RadiomarkExample } from "../../src/examples/radiomark.tsx";
+import source from "../../src/examples/radiomark.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Radiomark
+
+Show the visual state of a radio option.
+
+## Install
+
+```sh
+ecentry add radiomark
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <RadiomarkExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Set `checked` to display the selected mark. The mark is unchecked by default and inherits its size and color. Use it as decoration inside a radio interface that already exposes its selection state. Pass a `label` when the mark is used on its own.

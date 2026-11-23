@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "radiomark",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "radiomark.css", "radiomark.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "e446f839eded35d6cf84460b9a7e2ec35822c0559e4445a39bc3ad8167e11cec",
+    "radiomark.css": "41d840eb1fef154d600155fcbe0e7a77f73c6b84a210ee9847c5a427b4a34765",
+    "radiomark.tsx": "7ca95ebd48ea7f2619bdec73c5815db4361ac17fe36e831f625c77aa86b32bce",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/radiomark/",
+  "license": "MIT"
+}

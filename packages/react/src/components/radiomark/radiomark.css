@@ -1,0 +1,20 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-radiomark {
+    display: inline-grid;
+    place-items: center;
+    box-sizing: border-box;
+    inline-size: 1em;
+    block-size: 1em;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    vertical-align: -0.1em;
+  }
+
+  .ec-radiomark[data-state="checked"]::before {
+    content: "";
+    border: 0.24em solid currentColor;
+    border-radius: 50%;
+  }
+}
