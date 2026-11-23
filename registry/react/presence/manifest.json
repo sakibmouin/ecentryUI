@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "presence",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "presence.css", "presence.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "7bf5a27e77b17834ed1f28cacd417011b18285eaa4691f420f58083b7946a573",
+    "presence.css": "5473550d4667441ba3f095a237ab2b616797909f1a4400675011fc727508b866",
+    "presence.tsx": "f42f4951552ff41da6ed6e3e8bb1ef43e6e7ee4891a275ca5b2bccf412971a0a",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/presence/",
+  "license": "MIT"
+}

@@ -1,0 +1,23 @@
+import { PresenceExample } from "../../src/examples/presence.tsx";
+import source from "../../src/examples/presence.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Presence
+
+Keep departing content mounted briefly for an exit animation.
+
+## Install
+
+```sh
+ecentry add presence
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <PresenceExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Set `present` to show the content. When it becomes false, the wrapper becomes inert and the content fades out over `exitDuration` milliseconds. The default is 150 ms. Returning to present cancels the exit. Reduced-motion preferences and a duration of zero remove the content immediately.

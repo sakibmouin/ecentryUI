@@ -1,0 +1,15 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  @media (prefers-reduced-motion: no-preference) {
+    .ec-presence[data-state="exiting"] {
+      animation: ec-presence-exit var(--ec-presence-duration, 150ms) ease-out
+        both;
+    }
+  }
+  @keyframes ec-presence-exit {
+    to {
+      opacity: 0;
+    }
+  }
+}

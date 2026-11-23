@@ -452,3 +452,7 @@ export type {
 
 export { Portal } from "./components/portal/portal.js";
 export type { PortalProps } from "./components/portal/portal.js";
+
+export { Presence } from "./components/presence/presence.js";
+export type { PresenceProps } from "./components/presence/presence.js";
+import "./components/presence/presence.css";
