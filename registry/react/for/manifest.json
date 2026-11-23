@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "for",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["for.tsx", "index.ts"],
+  "hashes": {
+    "for.tsx": "804d4685a76af402aeecec682d7c03faaffc8c55d959616694e21d36ccabf483",
+    "index.ts": "ddeca9898c2972d4d7422ab7675c7c654f34e90270778c750389712426b4ef74"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/for/",
+  "license": "MIT"
+}

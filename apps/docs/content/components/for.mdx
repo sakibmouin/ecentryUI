@@ -1,0 +1,23 @@
+import { ForExample } from "../../src/examples/for.tsx";
+import source from "../../src/examples/for.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# For
+
+Render collections with an explicit empty state.
+
+## Install
+
+```sh
+ecentry add for
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <ForExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Pass the array as `each` and a function as children. The function receives the item and its index. Supply `getKey` with a stable identity if items can move or be removed. Set `fallback` for an empty, null, or undefined collection. The utility adds no DOM wrapper.

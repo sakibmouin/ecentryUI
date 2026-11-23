@@ -183,6 +183,7 @@ const ClientOnlyDocs = lazy(
 const EnvironmentProviderDocs = lazy(
   () => import("../content/components/environment-provider.mdx"),
 );
+const ForDocs = lazy(() => import("../content/components/for.mdx"));
 const StatDocs = lazy(() => import("../content/components/stat.mdx"));
 
 export const routes = [
@@ -276,6 +277,7 @@ export const routes = [
   "/components/icon/",
   "/components/image/",
   "/components/status/",
+  "/components/for/",
   "/components/environment-provider/",
   "/components/client-only/",
   "/components/checkmark/",
@@ -375,6 +377,7 @@ const componentLinks = [
   { title: "Icon", href: "/components/icon/" },
   { title: "Stat", href: "/components/stat/" },
   { title: "Status", href: "/components/status/" },
+  { title: "For", href: "/components/for/" },
   { title: "Environment Provider", href: "/components/environment-provider/" },
   { title: "Client Only", href: "/components/client-only/" },
   { title: "Checkmark", href: "/components/checkmark/" },
@@ -924,6 +927,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/environment-provider/" ? (
               <Suspense fallback={<p>Loading environment provider guide...</p>}>
                 <EnvironmentProviderDocs />
+              </Suspense>
+            ) : route === "/components/for/" ? (
+              <Suspense fallback={<p>Loading for guide...</p>}>
+                <ForDocs />
               </Suspense>
             ) : route === "/components/stat/" ? (
               <Suspense fallback={<p>Loading stat guide...</p>}>

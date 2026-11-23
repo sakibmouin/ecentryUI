@@ -431,3 +431,6 @@ export type {
   EnvironmentRoot,
   EnvironmentProviderProps,
 } from "./components/environment-provider/environment-provider.js";
+
+export { For } from "./components/for/for.js";
+export type { ForProps } from "./components/for/for.js";
