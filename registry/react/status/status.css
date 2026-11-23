@@ -1,0 +1,63 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-status {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.5em;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: var(--ec-colors-text, #19211c);
+  }
+
+  .ec-status__indicator {
+    flex: none;
+    inline-size: 0.55em;
+    block-size: 0.55em;
+    border: 0.275em solid var(--ec-status-indicator, #65776a);
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+}
+
+@layer ec.variants {
+  .ec-status[data-size="sm"] {
+    font-size: 0.75rem;
+  }
+
+  .ec-status[data-variant="info"] {
+    --ec-status-indicator: #3470bd;
+  }
+
+  .ec-status[data-variant="success"] {
+    --ec-status-indicator: #248250;
+  }
+
+  .ec-status[data-variant="warning"] {
+    --ec-status-indicator: #a66b05;
+  }
+
+  .ec-status[data-variant="error"] {
+    --ec-status-indicator: #b93542;
+  }
+
+  [data-ec-theme="dark"] .ec-status {
+    --ec-status-indicator: #9ab0a1;
+  }
+
+  [data-ec-theme="dark"] .ec-status[data-variant="info"] {
+    --ec-status-indicator: #80bbff;
+  }
+
+  [data-ec-theme="dark"] .ec-status[data-variant="success"] {
+    --ec-status-indicator: #76d79a;
+  }
+
+  [data-ec-theme="dark"] .ec-status[data-variant="warning"] {
+    --ec-status-indicator: #ffc46b;
+  }
+
+  [data-ec-theme="dark"] .ec-status[data-variant="error"] {
+    --ec-status-indicator: #ff8d99;
+  }
+}

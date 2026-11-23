@@ -123,6 +123,7 @@ import { skeletonRegistryItem } from "../packages/react/dist/components/skeleton
 
 import { spinnerRegistryItem } from "../packages/react/dist/components/spinner/metadata.js";
 
+import { statusRegistryItem } from "../packages/react/dist/components/status/metadata.js";
 import { statRegistryItem } from "../packages/react/dist/components/stat/metadata.js";
 
 for (const item of [
@@ -221,6 +222,7 @@ for (const item of [
   skeletonRegistryItem,
   spinnerRegistryItem,
   statRegistryItem,
+  statusRegistryItem,
 ]) {
   const sources = Object.fromEntries(
     await Promise.all(

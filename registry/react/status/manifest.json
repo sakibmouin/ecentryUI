@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "status",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "status.css", "status.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "b3a83cf9cb12db4f3855751db9846f54a774e7e22289c2f6da0bd0eaf0a17603",
+    "status.css": "daedaee49653adcb34760060d55138f281f48bdc5e77db7c128f69e4290763c2",
+    "status.tsx": "4da371085adce6eadf738a5bbac0ec70ca608e60f38510602b22a98fd5bdf1e0",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": ["colors.text"],
+  "docsUrl": "https://ecentry.dev/components/status/",
+  "license": "MIT"
+}

@@ -1,0 +1,25 @@
+import { StatusExample } from "../../src/examples/status.tsx";
+import source from "../../src/examples/status.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Status
+
+Show the current state of a service, process, or connection with a text label and colored indicator.
+
+## Install
+
+```sh
+ecentry add status
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <StatusExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Pass the state as children so it can be understood without color. Use `variant` to choose `neutral` (the default), `info`, `success`, `warning`, or `error`. Set `size="sm"` for compact layouts.
+
+The root uses `role="status"` to announce text changes politely. Set `live={false}` for labels that stay static. The indicator is decorative. Set `--ec-status-indicator` on the root to customize its color.

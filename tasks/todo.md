@@ -770,7 +770,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/stat/stat.tsx`, `stat.css`, `stat.test.tsx`, `index.ts`, `apps/docs/content/components/stat.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/stat/stat.test.tsx && npm run test:e2e -- stat`.
-- [ ] **T135 Status component** (depends on T016).
+- [x] **T135 Status component** (depends on T016).
   - Files: `packages/react/src/components/status/status.tsx`, `status.css`, `status.test.tsx`, `index.ts`, `apps/docs/content/components/status.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/status/status.test.tsx && npm run test:e2e -- status`.

@@ -387,3 +387,7 @@ import "./components/spinner/spinner.css";
 export { Stat } from "./components/stat/stat.js";
 export type { StatProps } from "./components/stat/stat.js";
 import "./components/stat/stat.css";
+
+import "./components/status/status.css";
+export { Status } from "./components/status/status.js";
+export type { StatusProps } from "./components/status/status.js";
