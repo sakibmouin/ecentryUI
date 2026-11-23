@@ -1,0 +1,27 @@
+import { TabsExample } from "../../src/examples/tabs.tsx";
+import source from "../../src/examples/tabs.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Tabs
+
+Group related content into panels people can switch between.
+
+## Install
+
+```sh
+ecentry add tabs
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <TabsExample />
+</ExamplePanel>
+
+## API and keyboard behavior
+
+Supply a tab list `label` and `items` with unique `id` values, a `label`, and `content`. Set `disabled` on unavailable tabs. Use `defaultValue` to choose the initial tab or control selection with `value` and `onValueChange`.
+
+Arrow keys move focus and wrap at the ends. Horizontal arrows follow text direction. Set `orientation="vertical"` to use Up and Down. Home and End focus the first and last enabled tabs. Focus activates tabs by default. With `activation="manual"`, press Enter or Space to activate the focused tab.
+
+Each tab names its panel. Panels stay mounted to preserve local state. If a panel starts with a focusable control, set its item's `panelTabIndex` to `-1` so Tab can reach that control directly.

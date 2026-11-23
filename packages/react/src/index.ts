@@ -399,3 +399,7 @@ import "./components/steps/steps.css";
 export { Table } from "./components/table/table.js";
 export type { TableProps } from "./components/table/table.js";
 import "./components/table/table.css";
+
+export { Tabs } from "./components/tabs/tabs.js";
+export type { TabItem, TabsProps } from "./components/tabs/tabs.js";
+import "./components/tabs/tabs.css";

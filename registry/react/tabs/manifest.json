@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "tabs",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "styles.d.ts", "tabs.css", "tabs.tsx"],
+  "hashes": {
+    "index.ts": "934ba81bf606ee202b992cce510e8ff439573fed8e3adb0c3de6334ee03593bd",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa",
+    "tabs.css": "1e933a6b86198e42ead37160fcc09a14787b7f44d809b1af340072e6a7a82b91",
+    "tabs.tsx": "4dd8e5de288e23f987888353735e07e68936196175933b516c896b99d7341ac0"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.border",
+    "colors.text",
+    "colors.text-muted"
+  ],
+  "docsUrl": "https://ecentry.dev/components/tabs/",
+  "license": "MIT"
+}

@@ -126,6 +126,7 @@ import { spinnerRegistryItem } from "../packages/react/dist/components/spinner/m
 import { tableRegistryItem } from "../packages/react/dist/components/table/metadata.js";
 import { stepsRegistryItem } from "../packages/react/dist/components/steps/metadata.js";
 import { statusRegistryItem } from "../packages/react/dist/components/status/metadata.js";
+import { tabsRegistryItem } from "../packages/react/dist/components/tabs/metadata.js";
 import { statRegistryItem } from "../packages/react/dist/components/stat/metadata.js";
 
 for (const item of [
@@ -224,6 +225,7 @@ for (const item of [
   skeletonRegistryItem,
   spinnerRegistryItem,
   statRegistryItem,
+  tabsRegistryItem,
   statusRegistryItem,
   stepsRegistryItem,
   tableRegistryItem,
