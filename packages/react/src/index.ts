@@ -414,3 +414,7 @@ export type {
   TimelineProps,
 } from "./components/timeline/timeline.js";
 import "./components/timeline/timeline.css";
+
+export { Checkmark } from "./components/checkmark/checkmark.js";
+export type { CheckmarkProps } from "./components/checkmark/checkmark.js";
+import "./components/checkmark/checkmark.css";

@@ -1,0 +1,25 @@
+import { CheckmarkExample } from "../../src/examples/checkmark.tsx";
+import source from "../../src/examples/checkmark.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Checkmark
+
+Display the visual state of a checkbox or selection.
+
+## Install
+
+```sh
+ecentry add checkmark
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <CheckmarkExample />
+</ExamplePanel>
+
+## API and accessibility
+
+The mark defaults to checked. Pass `checked={false}` for an empty box or `checked="mixed"` for a partial selection. The mark inherits its color and size from the surrounding text.
+
+The mark is decorative by default. The parent checkbox should expose the state and handle interaction. For a standalone illustration, pass a `label` that describes its state.

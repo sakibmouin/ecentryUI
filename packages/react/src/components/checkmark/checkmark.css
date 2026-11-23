@@ -1,0 +1,29 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-checkmark {
+    display: inline-grid;
+    place-items: center;
+    box-sizing: border-box;
+    inline-size: 1em;
+    block-size: 1em;
+    border: 1px solid currentColor;
+    border-radius: 0.2em;
+    vertical-align: -0.1em;
+  }
+
+  .ec-checkmark[data-state="checked"]::before {
+    content: "";
+    inline-size: 0.3em;
+    block-size: 0.52em;
+    border: solid currentColor;
+    border-width: 0 0.12em 0.12em 0;
+    transform: translateY(-0.06em) rotate(45deg);
+  }
+
+  .ec-checkmark[data-state="mixed"]::before {
+    content: "";
+    inline-size: 0.52em;
+    border-block-start: 0.12em solid currentColor;
+  }
+}

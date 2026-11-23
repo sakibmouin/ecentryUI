@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "checkmark",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["checkmark.css", "checkmark.tsx", "index.ts", "styles.d.ts"],
+  "hashes": {
+    "checkmark.css": "f470e04e42ef327832fca53a81a38d3643a0a8c691687fbd327711e45993228c",
+    "checkmark.tsx": "ad13df777b2fbf04d096093ee71f7673dd3d84df6cf21b90042fe6ecf1d8da46",
+    "index.ts": "44f269e257e06c3aad44824686d103f2110f0697d3a57eca7ad192c580ed6cd7",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/checkmark/",
+  "license": "MIT"
+}

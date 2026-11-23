@@ -815,11 +815,11 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 ### Checkpoint after T142
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 ## Utilities and internationalization
 
-- [ ] **T143 Checkmark component** (depends on T016).
+- [x] **T143 Checkmark component** (depends on T016).
   - Files: `packages/react/src/components/checkmark/checkmark.tsx`, `checkmark.css`, `checkmark.test.tsx`, `index.ts`, `apps/docs/content/components/checkmark.mdx`.
   - Acceptance: locale, portals, visibility and SSR; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/checkmark/checkmark.test.tsx && npm run test:e2e -- checkmark`.
