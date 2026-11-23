@@ -184,6 +184,9 @@ const EnvironmentProviderDocs = lazy(
   () => import("../content/components/environment-provider.mdx"),
 );
 const ForDocs = lazy(() => import("../content/components/for.mdx"));
+const FormatByteDocs = lazy(
+  () => import("../content/components/format-byte.mdx"),
+);
 const StatDocs = lazy(() => import("../content/components/stat.mdx"));
 
 export const routes = [
@@ -277,6 +280,7 @@ export const routes = [
   "/components/icon/",
   "/components/image/",
   "/components/status/",
+  "/components/format-byte/",
   "/components/for/",
   "/components/environment-provider/",
   "/components/client-only/",
@@ -377,6 +381,7 @@ const componentLinks = [
   { title: "Icon", href: "/components/icon/" },
   { title: "Stat", href: "/components/stat/" },
   { title: "Status", href: "/components/status/" },
+  { title: "Format Byte", href: "/components/format-byte/" },
   { title: "For", href: "/components/for/" },
   { title: "Environment Provider", href: "/components/environment-provider/" },
   { title: "Client Only", href: "/components/client-only/" },
@@ -931,6 +936,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/for/" ? (
               <Suspense fallback={<p>Loading for guide...</p>}>
                 <ForDocs />
+              </Suspense>
+            ) : route === "/components/format-byte/" ? (
+              <Suspense fallback={<p>Loading format byte guide...</p>}>
+                <FormatByteDocs />
               </Suspense>
             ) : route === "/components/stat/" ? (
               <Suspense fallback={<p>Loading stat guide...</p>}>

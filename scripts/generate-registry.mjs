@@ -133,6 +133,7 @@ import { checkmarkRegistryItem } from "../packages/react/dist/components/checkma
 import { clientOnlyRegistryItem } from "../packages/react/dist/components/client-only/metadata.js";
 import { environmentProviderRegistryItem } from "../packages/react/dist/components/environment-provider/metadata.js";
 import { forRegistryItem } from "../packages/react/dist/components/for/metadata.js";
+import { formatByteRegistryItem } from "../packages/react/dist/components/format-byte/metadata.js";
 import { statRegistryItem } from "../packages/react/dist/components/stat/metadata.js";
 
 for (const item of [
@@ -231,6 +232,7 @@ for (const item of [
   skeletonRegistryItem,
   spinnerRegistryItem,
   statRegistryItem,
+  formatByteRegistryItem,
   forRegistryItem,
   environmentProviderRegistryItem,
   clientOnlyRegistryItem,

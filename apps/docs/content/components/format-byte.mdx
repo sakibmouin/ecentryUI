@@ -1,0 +1,23 @@
+import { FormatByteExample } from "../../src/examples/format-byte.tsx";
+import source from "../../src/examples/format-byte.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Format Byte
+
+Display file sizes using localized decimal units.
+
+## Install
+
+```sh
+ecentry add format-byte
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <FormatByteExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Pass a finite byte count as `value`. The formatter selects a decimal unit from bytes through petabytes and rounds to one fractional digit by default. Use `maximumFractionDigits` to change precision and `unitDisplay` to select short, narrow, or long unit names. Specify `locale` for the intended language.

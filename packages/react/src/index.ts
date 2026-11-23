@@ -434,3 +434,6 @@ export type {
 
 export { For } from "./components/for/for.js";
 export type { ForProps } from "./components/for/for.js";
+
+export { FormatByte } from "./components/format-byte/format-byte.js";
+export type { FormatByteProps } from "./components/format-byte/format-byte.js";

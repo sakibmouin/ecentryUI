@@ -840,7 +840,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/for/for.tsx`, `for.css`, `for.test.tsx`, `index.ts`, `apps/docs/content/components/for.mdx`.
   - Acceptance: locale, portals, visibility and SSR; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/for/for.test.tsx && npm run test:e2e -- for`.
-- [ ] **T147 Format Byte component** (depends on T016).
+- [x] **T147 Format Byte component** (depends on T016).
   - Files: `packages/react/src/components/format-byte/format-byte.tsx`, `format-byte.css`, `format-byte.test.tsx`, `index.ts`, `apps/docs/content/components/format-byte.mdx`.
   - Acceptance: locale, portals, visibility and SSR; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/format-byte/format-byte.test.tsx && npm run test:e2e -- format-byte`.
