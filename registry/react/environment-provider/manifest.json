@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "environment-provider",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["environment-provider.tsx", "index.ts"],
+  "hashes": {
+    "environment-provider.tsx": "ec9a7974750f3af242c5f9731ddbc2fb010321d25c7951ab426629b9f0e4b574",
+    "index.ts": "6eaf2c3c94bdf4df8ae3d15bcfd6f46691758d081dfd0a45c4682a93bf13161d"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/environment-provider/",
+  "license": "MIT"
+}

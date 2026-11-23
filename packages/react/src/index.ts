@@ -421,3 +421,13 @@ import "./components/checkmark/checkmark.css";
 
 export { ClientOnly } from "./components/client-only/client-only.js";
 export type { ClientOnlyProps } from "./components/client-only/client-only.js";
+
+export {
+  EnvironmentProvider,
+  useEnvironment,
+} from "./components/environment-provider/environment-provider.js";
+export type {
+  Environment,
+  EnvironmentRoot,
+  EnvironmentProviderProps,
+} from "./components/environment-provider/environment-provider.js";

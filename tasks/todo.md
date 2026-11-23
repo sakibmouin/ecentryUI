@@ -827,7 +827,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/client-only/client-only.tsx`, `client-only.css`, `client-only.test.tsx`, `index.ts`, `apps/docs/content/components/client-only.mdx`.
   - Acceptance: locale, portals, visibility and SSR; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/client-only/client-only.test.tsx && npm run test:e2e -- client-only`.
-- [ ] **T145 Environment Provider component** (depends on T016).
+- [x] **T145 Environment Provider component** (depends on T016).
   - Files: `packages/react/src/components/environment-provider/environment-provider.tsx`, `environment-provider.css`, `environment-provider.test.tsx`, `index.ts`, `apps/docs/content/components/environment-provider.mdx`.
   - Acceptance: locale, portals, visibility and SSR; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/environment-provider/environment-provider.test.tsx && npm run test:e2e -- environment-provider`.

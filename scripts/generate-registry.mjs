@@ -131,6 +131,7 @@ import { tagRegistryItem } from "../packages/react/dist/components/tag/metadata.
 import { timelineRegistryItem } from "../packages/react/dist/components/timeline/metadata.js";
 import { checkmarkRegistryItem } from "../packages/react/dist/components/checkmark/metadata.js";
 import { clientOnlyRegistryItem } from "../packages/react/dist/components/client-only/metadata.js";
+import { environmentProviderRegistryItem } from "../packages/react/dist/components/environment-provider/metadata.js";
 import { statRegistryItem } from "../packages/react/dist/components/stat/metadata.js";
 
 for (const item of [
@@ -229,6 +230,7 @@ for (const item of [
   skeletonRegistryItem,
   spinnerRegistryItem,
   statRegistryItem,
+  environmentProviderRegistryItem,
   clientOnlyRegistryItem,
   checkmarkRegistryItem,
   timelineRegistryItem,

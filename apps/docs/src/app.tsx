@@ -180,6 +180,9 @@ const CheckmarkDocs = lazy(() => import("../content/components/checkmark.mdx"));
 const ClientOnlyDocs = lazy(
   () => import("../content/components/client-only.mdx"),
 );
+const EnvironmentProviderDocs = lazy(
+  () => import("../content/components/environment-provider.mdx"),
+);
 const StatDocs = lazy(() => import("../content/components/stat.mdx"));
 
 export const routes = [
@@ -273,6 +276,7 @@ export const routes = [
   "/components/icon/",
   "/components/image/",
   "/components/status/",
+  "/components/environment-provider/",
   "/components/client-only/",
   "/components/checkmark/",
   "/components/timeline/",
@@ -371,6 +375,7 @@ const componentLinks = [
   { title: "Icon", href: "/components/icon/" },
   { title: "Stat", href: "/components/stat/" },
   { title: "Status", href: "/components/status/" },
+  { title: "Environment Provider", href: "/components/environment-provider/" },
   { title: "Client Only", href: "/components/client-only/" },
   { title: "Checkmark", href: "/components/checkmark/" },
   { title: "Timeline", href: "/components/timeline/" },
@@ -915,6 +920,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/client-only/" ? (
               <Suspense fallback={<p>Loading client only guide...</p>}>
                 <ClientOnlyDocs />
+              </Suspense>
+            ) : route === "/components/environment-provider/" ? (
+              <Suspense fallback={<p>Loading environment provider guide...</p>}>
+                <EnvironmentProviderDocs />
               </Suspense>
             ) : route === "/components/stat/" ? (
               <Suspense fallback={<p>Loading stat guide...</p>}>

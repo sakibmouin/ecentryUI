@@ -1,0 +1,25 @@
+import { EnvironmentProviderExample } from "../../src/examples/environment-provider.tsx";
+import source from "../../src/examples/environment-provider.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Environment Provider
+
+Resolve DOM APIs within a document or shadow root.
+
+## Install
+
+```sh
+ecentry add environment-provider
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <EnvironmentProviderExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Pass `getRootNode` to select the DOM root for descendants. Call `useEnvironment()` to get `getRootNode()`, `getDocument()`, and `getWindow()`. Read these getters when needed, such as in effects and event handlers, so a late-mounted root can be resolved.
+
+Without an override, the provider inherits the nearest environment or uses the browser document. Getters return `undefined` when a root is unavailable, including during server rendering.
