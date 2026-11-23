@@ -1,0 +1,50 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-table-scroll {
+    max-inline-size: 100%;
+    overflow: auto;
+  }
+
+  .ec-table-scroll:focus-visible {
+    outline: 2px solid var(--ec-colors-accent, #116e5e);
+    outline-offset: 2px;
+  }
+
+  .ec-table {
+    inline-size: 100%;
+    border-collapse: collapse;
+    color: var(--ec-colors-text, #19211c);
+    line-height: 1.45;
+  }
+
+  .ec-table :is(caption, th, td) {
+    padding: 0.65rem 0.85rem;
+    text-align: start;
+  }
+
+  .ec-table caption {
+    font-weight: 700;
+  }
+
+  .ec-table :is(th, td) {
+    border-block-end: 1px solid var(--ec-colors-border, #c8d3ca);
+  }
+
+  .ec-table thead,
+  .ec-table[data-striped] tbody tr:nth-child(even) {
+    background: var(--ec-colors-surface, #f2f5f2);
+  }
+
+  .ec-table[data-density="compact"] :is(th, td) {
+    padding-block: 0.35rem;
+  }
+}
+
+@layer ec.utilities {
+  @media (forced-colors: active) {
+    .ec-table-scroll:focus-visible {
+      outline-color: Highlight;
+    }
+  }
+}

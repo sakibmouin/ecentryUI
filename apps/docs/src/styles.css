@@ -337,6 +337,10 @@ h3 {
   justify-content: center;
   background: radial-gradient(circle at center, #fff, #f9fbf9);
 }
+.example-preview > [data-ec-scope] {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
 .example-button {
   border: 1px solid #126c58;
   border-radius: 7px;
@@ -484,7 +488,7 @@ h3 {
 .content-inner .example-panel {
   margin-bottom: 46px;
 }
-.content-inner table {
+.content-inner table:not(.example-preview *) {
   display: block;
   width: 100%;
   overflow-x: auto;
@@ -493,25 +497,24 @@ h3 {
   font-size: 12px;
   line-height: 1.6;
 }
-.content-inner th,
-.content-inner td {
+.content-inner table:not(.example-preview *) :is(th, td) {
   padding: 11px 16px;
   min-width: 125px;
   text-align: left;
   border-bottom: 1px solid #e3eae4;
 }
-.content-inner th {
+.content-inner table:not(.example-preview *) th {
   color: #345646;
   background: #edf5ef;
   font-weight: 700;
   white-space: nowrap;
 }
-.content-inner td:first-child {
+.content-inner table:not(.example-preview *) td:first-child {
   color: #166f5d;
   font-family: ui-monospace, monospace;
   font-weight: 600;
 }
-.content-inner tr:last-child td {
+.content-inner table:not(.example-preview *) tr:last-child td {
   border-bottom: 0;
 }
 .content-inner .api-scroll {

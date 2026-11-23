@@ -1,0 +1,25 @@
+import { TableExample } from "../../src/examples/table.tsx";
+import source from "../../src/examples/table.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Table
+
+Compare related values across rows and columns.
+
+## Install
+
+```sh
+ecentry add table
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <TableExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Use native table children such as `thead`, `tbody`, and `tfoot`. Supply a descriptive `caption` and use `scope="col"` or `scope="row"` on headers. Use `density="compact"` for tighter rows and `striped` for alternating row backgrounds. Setting `loading` marks the table busy while leaving existing data visible.
+
+The wrapper scrolls horizontally when the table exceeds the available width. Set `scrollLabel` on wide tables to name the scroll region and give keyboard users a focus target.

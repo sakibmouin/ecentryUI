@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "table",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "styles.d.ts", "table.css", "table.tsx"],
+  "hashes": {
+    "index.ts": "dfc0f7ddae76ddfc2d0052eab03a001a18b263f0016c224a9377ff072a3556cf",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa",
+    "table.css": "3c3112427720c33ca0cf8ef24e6376b005abd316e5967d982c1399811d2c2bd4",
+    "table.tsx": "c7db3529ede4789de51f56b5501e90e446584551dc845510171b33941ab1e1e9"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": ["colors.accent", "colors.border", "colors.surface", "colors.text"],
+  "docsUrl": "https://ecentry.dev/components/table/",
+  "license": "MIT"
+}

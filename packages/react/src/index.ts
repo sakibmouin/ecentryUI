@@ -395,3 +395,7 @@ export type { StatusProps } from "./components/status/status.js";
 export { Steps } from "./components/steps/steps.js";
 export type { StepItem, StepsProps } from "./components/steps/steps.js";
 import "./components/steps/steps.css";
+
+export { Table } from "./components/table/table.js";
+export type { TableProps } from "./components/table/table.js";
+import "./components/table/table.css";
