@@ -6,7 +6,7 @@ export const formatByteRegistryItem = {
     source: `packages/react/src/components/format-byte/${path}`,
     path,
   })),
-  dependencies: [],
+  dependencies: ["locale-provider"],
   peerDependencies: { react: ">=18" },
   tokens: [],
   docsUrl: "https://ecentry.dev/components/format-byte/",

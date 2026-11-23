@@ -6,7 +6,7 @@ export const formatNumberRegistryItem = {
     source: `packages/react/src/components/format-number/${path}`,
     path,
   })),
-  dependencies: [],
+  dependencies: ["locale-provider"],
   peerDependencies: { react: ">=18" },
   tokens: [],
   docsUrl: "https://ecentry.dev/components/format-number/",

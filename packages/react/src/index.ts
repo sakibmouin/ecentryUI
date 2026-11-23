@@ -440,3 +440,12 @@ export type { FormatByteProps } from "./components/format-byte/format-byte.js";
 
 export { FormatNumber } from "./components/format-number/format-number.js";
 export type { FormatNumberProps } from "./components/format-number/format-number.js";
+
+export {
+  LocaleProvider,
+  useLocale,
+} from "./components/locale-provider/locale-provider.js";
+export type {
+  LocaleContextValue,
+  LocaleProviderProps,
+} from "./components/locale-provider/locale-provider.js";

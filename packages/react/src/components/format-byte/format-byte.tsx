@@ -1,4 +1,7 @@
 // SPDX-License-Identifier: MIT
+"use client";
+import { useLocale } from "../locale-provider/locale-provider.js";
+
 export interface FormatByteProps {
   value: number;
   locale?: string | string[];
@@ -16,10 +19,11 @@ const scaledUnits = [
 
 export function FormatByte({
   value,
-  locale = "en",
+  locale,
   unitDisplay = "short",
   maximumFractionDigits = 1,
 }: FormatByteProps) {
+  const context = useLocale();
   if (!Number.isFinite(value)) return null;
   let amount = value;
   let unit = "byte";
@@ -28,7 +32,7 @@ export function FormatByte({
     amount /= 1000;
     unit = nextUnit;
   }
-  const formatter = new Intl.NumberFormat(locale, {
+  const formatter = new Intl.NumberFormat(locale ?? context.locale, {
     style: "unit",
     unit,
     unitDisplay,

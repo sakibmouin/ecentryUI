@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "locale-provider",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "locale-provider.tsx"],
+  "hashes": {
+    "index.ts": "0551b2c59e47872153333cc9fc92168d2f8ae30281d886136717ed039b966087",
+    "locale-provider.tsx": "fcfef76f31a96c1c0f99ee80f5cad0b1263531864bd445a3598e09755e26d756"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/locale-provider/",
+  "license": "MIT"
+}

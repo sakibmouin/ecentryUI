@@ -1,0 +1,25 @@
+import { LocaleProviderExample } from "../../src/examples/locale-provider.tsx";
+import source from "../../src/examples/locale-provider.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Locale Provider
+
+Set a shared language and text direction for a region.
+
+## Install
+
+```sh
+ecentry add locale-provider
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <LocaleProviderExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Supply a BCP 47 `locale` and set `direction="rtl"` for right-to-left content. The root applies `lang` and `dir` to the DOM. Nested providers inherit either setting when it is omitted.
+
+Use `useLocale()` to read the active context. Format Byte and Format Number use the provider's locale unless they receive an explicit `locale`. The defaults outside a provider are English and left-to-right direction.

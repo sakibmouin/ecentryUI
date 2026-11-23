@@ -5,10 +5,10 @@
   "framework": "react",
   "files": ["format-byte.tsx", "index.ts"],
   "hashes": {
-    "format-byte.tsx": "01a18e7ac1b503090e1f3c3714a33c005ee971ea13a6c304adfd47956273870a",
+    "format-byte.tsx": "1bda937360535f2095b40f8cbfa88e2391fcae1bdd00b7fd974ab1b32aec9fe4",
     "index.ts": "30005fc4f0926f99b262dceab4fa5217fda88121179d951d430a34713e60875b"
   },
-  "dependencies": [],
+  "dependencies": ["locale-provider"],
   "peerDependencies": { "react": ">=18" },
   "tokens": [],
   "docsUrl": "https://ecentry.dev/components/format-byte/",

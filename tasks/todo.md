@@ -851,9 +851,9 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 ### Checkpoint after T148
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T149 Locale Provider component** (depends on T016).
+- [x] **T149 Locale Provider component** (depends on T016).
   - Files: `packages/react/src/components/locale-provider/locale-provider.tsx`, `locale-provider.css`, `locale-provider.test.tsx`, `index.ts`, `apps/docs/content/components/locale-provider.mdx`.
   - Acceptance: locale, portals, visibility and SSR; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/locale-provider/locale-provider.test.tsx && npm run test:e2e -- locale-provider`.
