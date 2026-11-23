@@ -774,14 +774,14 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/status/status.tsx`, `status.css`, `status.test.tsx`, `index.ts`, `apps/docs/content/components/status.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/status/status.test.tsx && npm run test:e2e -- status`.
-- [ ] **T136 Steps behavior** (depends on T016).
+- [x] **T136 Steps behavior** (depends on T016).
   - Files: `packages/react/src/components/steps/steps.tsx`, `steps.test.tsx`.
   - Acceptance: linear/nonlinear navigation and progress; controlled/uncontrolled and keyboard contract tests pass.
   - Verify: `npm test -- --run packages/react/src/components/steps/steps.test.tsx`.
 
 ### Checkpoint after T136
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T137 Steps presentation and docs** (depends on T136).
   - Files: `packages/react/src/components/steps/steps.css`, `index.ts`, `apps/docs/content/components/steps.mdx`.
