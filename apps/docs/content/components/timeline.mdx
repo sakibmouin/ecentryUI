@@ -1,0 +1,25 @@
+import { TimelineExample } from "../../src/examples/timeline.tsx";
+import source from "../../src/examples/timeline.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Timeline
+
+Show events in the order they occurred.
+
+## Install
+
+```sh
+ecentry add timeline
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <TimelineExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Pass `items` in display order. Each item has a unique `id`, a `title`, optional `description`, and an optional `time` with `dateTime` and a readable `label`. Use `currentId` to mark the current event.
+
+The root is an ordered list. The marker is decorative. Use meaningful event text and a machine-readable date when displaying a timestamp. Links and other controls in event descriptions keep their native keyboard behavior.

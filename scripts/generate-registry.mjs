@@ -128,6 +128,7 @@ import { stepsRegistryItem } from "../packages/react/dist/components/steps/metad
 import { statusRegistryItem } from "../packages/react/dist/components/status/metadata.js";
 import { tabsRegistryItem } from "../packages/react/dist/components/tabs/metadata.js";
 import { tagRegistryItem } from "../packages/react/dist/components/tag/metadata.js";
+import { timelineRegistryItem } from "../packages/react/dist/components/timeline/metadata.js";
 import { statRegistryItem } from "../packages/react/dist/components/stat/metadata.js";
 
 for (const item of [
@@ -226,6 +227,7 @@ for (const item of [
   skeletonRegistryItem,
   spinnerRegistryItem,
   statRegistryItem,
+  timelineRegistryItem,
   tagRegistryItem,
   tabsRegistryItem,
   statusRegistryItem,

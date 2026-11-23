@@ -407,3 +407,10 @@ import "./components/tabs/tabs.css";
 export { Tag } from "./components/tag/tag.js";
 export type { TagProps } from "./components/tag/tag.js";
 import "./components/tag/tag.css";
+
+export { Timeline } from "./components/timeline/timeline.js";
+export type {
+  TimelineItem,
+  TimelineProps,
+} from "./components/timeline/timeline.js";
+import "./components/timeline/timeline.css";

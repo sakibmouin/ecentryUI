@@ -1,0 +1,57 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-timeline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: var(--ec-colors-text, #19211c);
+  }
+
+  .ec-timeline__item {
+    position: relative;
+    display: grid;
+    gap: 0.25rem;
+    padding-inline-start: 1.6rem;
+  }
+
+  .ec-timeline__item:not(:last-child) {
+    padding-block-end: 1.25rem;
+  }
+
+  .ec-timeline__item::before,
+  .ec-timeline__item:not(:last-child)::after {
+    position: absolute;
+    content: "";
+  }
+
+  .ec-timeline__item::before {
+    inset-block-start: 0.4rem;
+    inset-inline-start: 0.15rem;
+    inline-size: 0.65rem;
+    block-size: 0.65rem;
+    box-sizing: border-box;
+    border: 2px solid var(--ec-colors-text-muted, #58675d);
+    border-radius: 50%;
+  }
+
+  .ec-timeline__item:not(:last-child)::after {
+    inset-block: 1.1rem -0.35rem;
+    inset-inline-start: 0.45rem;
+    border-inline-start: 1px solid var(--ec-colors-border, #c8d3ca);
+  }
+
+  .ec-timeline__item[aria-current="true"]::before {
+    border-color: var(--ec-colors-accent, #116e5e);
+    border-width: 0.325rem;
+  }
+
+  .ec-timeline__title {
+    font-weight: 700;
+  }
+
+  .ec-timeline__time {
+    font-size: 0.875rem;
+    color: var(--ec-colors-text-muted, #58675d);
+  }
+}

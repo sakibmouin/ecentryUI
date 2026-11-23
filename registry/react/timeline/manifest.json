@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "timeline",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "styles.d.ts", "timeline.css", "timeline.tsx"],
+  "hashes": {
+    "index.ts": "5bab90e91e8b3ede9964fd79253d83565908783486a8f5a588ed8f6cb2479803",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa",
+    "timeline.css": "a755a79af3d7c579fe99a7a3754d45e8b02e8bf49005408e36edfba906831d56",
+    "timeline.tsx": "dd82fe040156f58cc06a1d8d8111d90f28246768c4fc13cc2881db9650332fc6"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [
+    "colors.accent",
+    "colors.border",
+    "colors.text",
+    "colors.text-muted"
+  ],
+  "docsUrl": "https://ecentry.dev/components/timeline/",
+  "license": "MIT"
+}

@@ -175,6 +175,7 @@ const StepsDocs = lazy(() => import("../content/components/steps.mdx"));
 const StatusDocs = lazy(() => import("../content/components/status.mdx"));
 const TabsDocs = lazy(() => import("../content/components/tabs.mdx"));
 const TagDocs = lazy(() => import("../content/components/tag.mdx"));
+const TimelineDocs = lazy(() => import("../content/components/timeline.mdx"));
 const StatDocs = lazy(() => import("../content/components/stat.mdx"));
 
 export const routes = [
@@ -268,6 +269,7 @@ export const routes = [
   "/components/icon/",
   "/components/image/",
   "/components/status/",
+  "/components/timeline/",
   "/components/tag/",
   "/components/tabs/",
   "/components/steps/",
@@ -363,6 +365,7 @@ const componentLinks = [
   { title: "Icon", href: "/components/icon/" },
   { title: "Stat", href: "/components/stat/" },
   { title: "Status", href: "/components/status/" },
+  { title: "Timeline", href: "/components/timeline/" },
   { title: "Tag", href: "/components/tag/" },
   { title: "Tabs", href: "/components/tabs/" },
   { title: "Steps", href: "/components/steps/" },
@@ -892,6 +895,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/tag/" ? (
               <Suspense fallback={<p>Loading tag guide...</p>}>
                 <TagDocs />
+              </Suspense>
+            ) : route === "/components/timeline/" ? (
+              <Suspense fallback={<p>Loading timeline guide...</p>}>
+                <TimelineDocs />
               </Suspense>
             ) : route === "/components/stat/" ? (
               <Suspense fallback={<p>Loading stat guide...</p>}>

@@ -808,7 +808,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/tag/tag.tsx`, `tag.css`, `tag.test.tsx`, `index.ts`, `apps/docs/content/components/tag.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/tag/tag.test.tsx && npm run test:e2e -- tag`.
-- [ ] **T142 Timeline component** (depends on T016).
+- [x] **T142 Timeline component** (depends on T016).
   - Files: `packages/react/src/components/timeline/timeline.tsx`, `timeline.css`, `timeline.test.tsx`, `index.ts`, `apps/docs/content/components/timeline.mdx`.
   - Acceptance: semantic status, loading and content display; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/timeline/timeline.test.tsx && npm run test:e2e -- timeline`.
