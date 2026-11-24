@@ -470,3 +470,7 @@ export type {
   SkipNavContentProps,
 } from "./components/skip-nav/skip-nav.js";
 import "./components/skip-nav/skip-nav.css";
+
+export { Theme } from "./components/theme/theme.js";
+export type { ThemeProps } from "./components/theme/theme.js";
+import "./components/theme/theme.css";

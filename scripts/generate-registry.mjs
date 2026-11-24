@@ -141,6 +141,7 @@ import { presenceRegistryItem } from "../packages/react/dist/components/presence
 import { radiomarkRegistryItem } from "../packages/react/dist/components/radiomark/metadata.js";
 import { showRegistryItem } from "../packages/react/dist/components/show/metadata.js";
 import { skipNavLinkRegistryItem } from "../packages/react/dist/components/skip-nav/metadata.js";
+import { themeRegistryItem } from "../packages/react/dist/components/theme/metadata.js";
 import { statRegistryItem } from "../packages/react/dist/components/stat/metadata.js";
 
 for (const item of [
@@ -239,6 +240,7 @@ for (const item of [
   skeletonRegistryItem,
   spinnerRegistryItem,
   statRegistryItem,
+  themeRegistryItem,
   skipNavLinkRegistryItem,
   showRegistryItem,
   radiomarkRegistryItem,

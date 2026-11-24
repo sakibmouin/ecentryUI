@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "theme",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "styles.d.ts", "theme.css", "theme.tsx"],
+  "hashes": {
+    "index.ts": "30072580fa03002b4e8fdccb772f35eb8328fbe24f03a574494c9d37fbf0c9ea",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa",
+    "theme.css": "520dd826cb809bf4eba253cf6b47c16bf56eb6543efa115181ca767965f9dd28",
+    "theme.tsx": "0f9264b83d83599654259833fd343118b091ca70edeab21dfba29cbe9f01e30b"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": ["colors.background", "colors.text"],
+  "docsUrl": "https://ecentry.dev/components/theme/",
+  "license": "MIT"
+}

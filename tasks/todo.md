@@ -885,9 +885,9 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 ### Checkpoint after T154
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T155 Theme component** (depends on T016).
+- [x] **T155 Theme component** (depends on T016).
   - Files: `packages/react/src/components/theme/theme.tsx`, `theme.css`, `theme.test.tsx`, `index.ts`, `apps/docs/content/components/theme.mdx`.
   - Acceptance: locale, portals, visibility and SSR; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/theme/theme.test.tsx && npm run test:e2e -- theme`.

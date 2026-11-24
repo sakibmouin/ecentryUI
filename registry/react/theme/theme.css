@@ -1,0 +1,15 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-theme[data-ec-theme="light"] {
+    color-scheme: light;
+  }
+  .ec-theme[data-ec-theme="dark"] {
+    color-scheme: dark;
+  }
+
+  .ec-theme[data-background] {
+    color: var(--ec-colors-text, CanvasText);
+    background: var(--ec-colors-background, Canvas);
+  }
+}

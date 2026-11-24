@@ -1,0 +1,23 @@
+import { ThemeExample } from "../../src/examples/theme.tsx";
+import source from "../../src/examples/theme.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Theme
+
+Apply an explicit light or dark appearance to a subtree.
+
+## Install
+
+```sh
+ecentry add theme
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <ThemeExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Use `appearance="dark"` for a dark scope. The default is light, and nested scopes can choose a different appearance. The root sets `data-ec-theme` for ecentryUI token selectors and configures the native color scheme for items such as form controls. Set `withBackground` to apply the scope's foreground and background.
