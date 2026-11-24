@@ -1,4 +1,6 @@
 import { lazy, Suspense, useState } from "react";
+import catalog from "virtual:ecentry-docs-catalog";
+import { CatalogReference, DocsSearch } from "./catalog-reference.js";
 import { CounterExample } from "./examples/counter.js";
 import { ExamplePanel } from "./example-panel.js";
 import counterSource from "./examples/counter.tsx?raw";
@@ -207,114 +209,8 @@ const StatDocs = lazy(() => import("../content/components/stat.mdx"));
 export const routes = [
   "/",
   "/guides/examples/",
-  "/components/button/",
-  "/components/input/",
-  "/components/dialog/",
-  "/components/absolute-center/",
-  "/components/aspect-ratio/",
-  "/components/bleed/",
-  "/components/box/",
-  "/components/center/",
-  "/components/container/",
-  "/components/flex/",
-  "/components/float/",
-  "/components/floating-panel/",
-  "/components/grid/",
-  "/components/group/",
-  "/components/scroll-area/",
-  "/components/separator/",
-  "/components/simple-grid/",
-  "/components/splitter/",
-  "/components/stack/",
-  "/components/wrap/",
-  "/components/blockquote/",
-  "/components/code/",
-  "/components/code-block/",
-  "/components/em/",
-  "/components/heading/",
-  "/components/highlight/",
-  "/components/kbd/",
-  "/components/link/",
-  "/components/link-overlay/",
-  "/components/list/",
-  "/components/mark/",
-  "/components/prose/",
-  "/components/rich-text-editor/",
-  "/components/text/",
-  "/components/close-button/",
-  "/components/icon-button/",
-  "/components/download-trigger/",
-  "/components/calendar/",
-  "/components/date-input/",
-  "/components/date-picker/",
-  "/components/checkbox/",
-  "/components/checkbox-card/",
-  "/components/color-picker/",
-  "/components/color-swatch/",
-  "/components/editable/",
-  "/components/field/",
-  "/components/fieldset/",
-  "/components/file-upload/",
-  "/components/number-input/",
-  "/components/password-input/",
-  "/components/pin-input/",
-  "/components/radio/",
-  "/components/radio-card/",
-  "/components/rating/",
-  "/components/segmented-control/",
-  "/components/native-select/",
-  "/components/slider/",
-  "/components/switch/",
-  "/components/textarea/",
-  "/components/tags-input/",
-  "/components/combobox/",
-  "/components/command/",
-  "/components/listbox/",
-  "/components/select/",
-  "/components/tree-view/",
-  "/components/action-bar/",
-  "/components/drawer/",
-  "/components/hover-card/",
-  "/components/menu/",
-  "/components/overlay-manager/",
-  "/components/popover/",
-  "/components/toast/",
-  "/components/toggle-tip/",
-  "/components/tooltip/",
-  "/components/accordion/",
-  "/components/alert/",
-  "/components/avatar/",
-  "/components/badge/",
-  "/components/breadcrumb/",
-  "/components/card/",
-  "/components/carousel/",
-  "/components/clipboard/",
-  "/components/collapsible/",
-  "/components/data-list/",
-  "/components/empty-state/",
-  "/components/icon/",
-  "/components/image/",
-  "/components/status/",
-  "/components/visually-hidden/",
-  "/components/theme/",
-  "/components/skip-nav/",
-  "/components/show/",
-  "/components/radiomark/",
-  "/components/presence/",
-  "/components/portal/",
-  "/components/locale-provider/",
-  "/components/format-number/",
-  "/components/format-byte/",
-  "/components/for/",
-  "/components/environment-provider/",
-  "/components/client-only/",
-  "/components/checkmark/",
-  "/components/timeline/",
-  "/components/tag/",
-  "/components/tabs/",
-  "/components/steps/",
-  "/components/table/",
-] as const;
+  ...catalog.map(({ href }) => href),
+];
 
 const componentLinks = [
   { title: "Button", href: "/components/button/" },
@@ -570,6 +466,7 @@ export function App({ routePath }: { routePath: string }) {
           </span>
         </a>
         <div className="header-right">
+          <DocsSearch />
           <span className="version-pill">React · 0.0.0</span>
           <button
             className="nav-toggle"
@@ -1024,6 +921,7 @@ export function App({ routePath }: { routePath: string }) {
                 </p>
               </>
             )}
+            <CatalogReference href={route} />
           </div>
           <footer className="site-footer">
             <span>ecentryUI</span>

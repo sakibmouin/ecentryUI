@@ -19,7 +19,8 @@
     "dev:docs": "npm run dev --workspace @ecentry/docs",
     "build:docs": "npm run build --workspace @ecentry/docs",
     "preview:docs": "npm run preview --workspace @ecentry/docs",
-    "test:consumer": "npm run build && node fixtures/consumers/run.mjs"
+    "test:consumer": "npm run build && node fixtures/consumers/run.mjs",
+    "test:docs": "vitest --run tests/unit/docs-search.test.ts tests/unit/docs-catalog.test.ts"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.14.0",

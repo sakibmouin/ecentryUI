@@ -2229,3 +2229,75 @@ h3 {
   color: white;
   cursor: pointer;
 }
+
+.docs-search {
+  position: relative;
+  z-index: 10;
+}
+
+.docs-search input {
+  inline-size: clamp(7.5rem, 22vw, 14rem);
+  max-inline-size: 100%;
+  min-block-size: 2.25rem;
+  padding-inline: 0.6rem;
+  border: 1px solid #bbc9bf;
+  border-radius: 6px;
+  background: white;
+  color: #1b2924;
+  font: inherit;
+}
+
+.docs-search-results {
+  position: absolute;
+  inset-block-start: calc(100% + 0.35rem);
+  inset-inline-end: 0;
+  inline-size: min(20rem, calc(100vw - 2rem));
+  max-block-size: 65vh;
+  overflow: auto;
+  border: 1px solid #bbc9bf;
+  border-radius: 8px;
+  background: white;
+}
+
+.docs-search-results ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.3rem;
+}
+
+.docs-search-results :is(a, p) {
+  display: block;
+  margin: 0;
+  padding: 0.55rem 0.65rem;
+}
+
+.docs-search-results a:focus-visible {
+  outline-offset: -3px;
+}
+
+.docs-search-results code {
+  display: block;
+  color: #526459;
+}
+
+.content-inner .api-scroll caption {
+  padding: 0.5rem 0;
+  text-align: start;
+  font-weight: 700;
+}
+
+.content-inner .api-scroll th[scope="row"] {
+  background: transparent;
+}
+
+@media (max-width: 680px) {
+  .docs-search {
+    position: static;
+  }
+
+  .docs-search-results {
+    inset-inline: 1rem;
+    inset-block-start: calc(100% - 0.25rem);
+    inline-size: auto;
+  }
+}

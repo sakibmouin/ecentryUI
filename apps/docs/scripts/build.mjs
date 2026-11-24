@@ -5,6 +5,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { build } from "esbuild";
 import mdx from "@mdx-js/esbuild";
 import remarkGfm from "remark-gfm";
+import { generateCatalog } from "./catalog.mjs";
 
 const appRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -28,6 +29,22 @@ await build({
   jsx: "automatic",
   loader: { ".css": "empty" },
   plugins: [
+    {
+      name: "ecentry-docs-catalog",
+      setup(plugin) {
+        plugin.onResolve(
+          { filter: /^virtual:ecentry-docs-catalog$/ },
+          ({ path }) => ({ path, namespace: "ecentry-docs-catalog" }),
+        );
+        plugin.onLoad(
+          { filter: /.*/, namespace: "ecentry-docs-catalog" },
+          async () => ({
+            contents: JSON.stringify(await generateCatalog()),
+            loader: "json",
+          }),
+        );
+      },
+    },
     {
       name: "raw-examples",
       setup(plugin) {
@@ -58,12 +75,13 @@ for (const route of routes) {
     .map((word) => word.replace(/^./, (letter) => letter.toUpperCase()))
     .join(" ");
   const title = `${pageTitle} | ecentryUI documentation`;
+  const markup = await render(route);
   const html = template
     .replace(
       "<title>ecentryUI documentation</title>",
       `<title>${title}</title>`,
     )
-    .replace('<div id="root"></div>', `<div id="root">${render(route)}</div>`);
+    .replace('<div id="root"></div>', `<div id="root">${markup}</div>`);
   const destination = path.join(appRoot, "dist", route, "index.html");
   await mkdir(path.dirname(destination), { recursive: true });
   await writeFile(destination, html);

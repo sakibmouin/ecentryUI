@@ -3,3 +3,8 @@ declare module "*.mdx" {
   const Content: ComponentType;
   export default Content;
 }
+
+declare module "virtual:ecentry-docs-catalog" {
+  const catalog: import("./catalog-types.js").CatalogEntry[];
+  export default catalog;
+}
