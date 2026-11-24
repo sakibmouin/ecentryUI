@@ -48,12 +48,25 @@ function lockChange(
   };
 }
 
-export async function planAdd(root: string, plan: InstallPlan) {
+export async function planAdd(
+  root: string,
+  plan: InstallPlan,
+  requestedDirectories: readonly string[] = [],
+) {
   const { content, state } = await loadState(root);
   const files = { ...state.files };
   const changes: ProjectChange[] = [];
   for (const file of plan.files) {
     if (Object.hasOwn(files, file.path)) {
+      if (
+        requestedDirectories.some((directory) =>
+          file.path.startsWith(`${directory}/`),
+        )
+      ) {
+        throw new Error(
+          `File already exists or was modified: ${file.path}. Use update.`,
+        );
+      }
       if (files[file.path] !== file.content) {
         throw new Error(
           `A newer registry version is available for ${file.path}. Use update.`,

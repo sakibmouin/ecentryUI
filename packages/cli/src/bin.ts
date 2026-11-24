@@ -200,7 +200,11 @@ async function main(args: string[]): Promise<void> {
     showPlan(plan);
     console.log("  record upstream base in ecentry.lock.json");
     if (dryRun) return;
-    const changes = await planAdd(root, plan);
+    const changes = await planAdd(
+      root,
+      plan,
+      ids.map((id) => `${config.sourceDir}/${id}`),
+    );
     if (!changes.length || (!yes && !(await confirm()))) return;
     await applyProjectChanges(root, changes, true);
     await installDependencies(root, plan);
