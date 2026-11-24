@@ -6,6 +6,7 @@ The specifications are approved. The npm and TypeScript workspace, registry, doc
 
 - [Read the specifications](docs/specs/README.md)
 - [Review the implementation plan](tasks/plan.md)
+- [Inspect the catalog evidence](docs/catalog-evidence.md)
 
 ## Source updates
 
@@ -30,8 +31,8 @@ Run these commands from the repository root:
 - `npm run dev:docs` starts the documentation site locally.
 - `npm run build:docs` creates static documentation pages and client assets.
 - `npm run test:docs` checks the generated catalog and documentation search.
-- `npm run test:consumer -- vite` installs a sample item in a clean Vite project and checks its production render.
-- `npm run test:consumer -- next` verifies the sample item in a clean Next.js project, including SSR and hydration.
+- `npm run test:consumer -- vite` installs and compiles the catalog in a clean Vite project and checks a production render.
+- `npm run test:consumer -- next` installs and compiles the catalog in a clean Next.js project and checks SSR and hydration.
 - `npx playwright install chromium` installs the browser used by `npm run test:e2e`.
 
 Foundation, registry, CLI, and component tests through Bleed are active. Component and documentation coverage grows with each implementation task.

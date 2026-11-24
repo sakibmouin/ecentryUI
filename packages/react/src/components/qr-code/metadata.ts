@@ -9,7 +9,7 @@ export const qrCodeRegistryItem = {
     }),
   ),
   dependencies: [],
-  npmDependencies: { qrcode: "^1.5.4" },
+  npmDependencies: { "@types/qrcode": "^1.5.6", qrcode: "^1.5.4" },
   peerDependencies: { react: ">=18" },
   tokens: [
     "colors.text",

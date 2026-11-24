@@ -915,7 +915,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 - [x] **T160 Playground and example safety** (depends on catalog tasks as applicable).
   - Acceptance: Controls, preview and copyable code stay synchronized; untrusted code is isolated.
   - Verify: `npm run test:e2e -- playground`.
-- [ ] **T161 Catalog completion audit** (depends on catalog tasks as applicable).
+- [x] **T161 Catalog completion audit** (depends on catalog tasks as applicable).
   - Acceptance: Every catalog entry has a page, contract, tests, source install and completion evidence.
   - Verify: `npm run registry:validate && npm run test:docs`.
 - [ ] **T162 Release quality gate** (depends on catalog tasks as applicable).

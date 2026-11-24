@@ -4,6 +4,7 @@ import {
   mkdtemp,
   mkdir,
   readFile,
+  readdir,
   rename,
   rm,
   writeFile,
@@ -97,39 +98,16 @@ try {
     [cli, "add", "sample", "--registry", path.join(root, "registry"), "--yes"],
     { cwd: root, stdio: "inherit" },
   );
-  for (const component of [
-    "button",
-    "input",
-    "dialog",
-    "absolute-center",
-    "aspect-ratio",
-    "bleed",
-    "box",
-    "center",
-    "container",
-    "flex",
-    "float",
-    "floating-panel",
-    "grid",
-    "group",
-    "scroll-area",
-    "separator",
-    "simple-grid",
-    "splitter",
-  ]) {
-    execFileSync(
-      process.execPath,
-      [
-        cli,
-        "add",
-        component,
-        "--registry",
-        path.join(repo, "registry/react"),
-        "--yes",
-      ],
-      { cwd: root, stdio: "inherit" },
-    );
-  }
+  const catalog = path.join(repo, "registry/react");
+  const ids = (await readdir(catalog, { withFileTypes: true }))
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
+    .sort();
+  execFileSync(
+    process.execPath,
+    [cli, "add", ...ids, "--registry", catalog, "--yes"],
+    { cwd: root, stdio: "inherit" },
+  );
   execFileSync("npm", ["run", "build"], { cwd: root, stdio: "inherit" });
   const html = await readFile(path.join(root, "dist/index.html"), "utf8");
   if (!html.includes("assets/index-"))

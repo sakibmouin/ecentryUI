@@ -85,7 +85,9 @@ export function CatalogReference({ href }: { href: string }) {
     <section aria-labelledby="api-reference">
       <h2 id="api-reference">API reference</h2>
       <p>
-        Registry version <code>{entry.version}</code>.
+        <a href={`/registry/react/${entry.id}/${entry.version}/manifest.json`}>
+          Registry source {entry.version}
+        </a>
       </p>
       {entry.api.length === 0 && (
         <p>This component uses native element attributes.</p>

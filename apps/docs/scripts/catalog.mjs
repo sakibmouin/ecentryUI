@@ -94,6 +94,12 @@ export async function generateCatalog() {
           JSON.parse,
         ),
       ]);
+      if (
+        manifest.id !== id ||
+        !/^\d+\.\d+\.\d+(?:-[a-z0-9.-]+)?$/i.test(manifest.version)
+      ) {
+        throw new Error(`Invalid manifest identity for ${id}`);
+      }
       const title = source.match(/^# (.+)$/m)?.[1];
       if (!title) throw new Error(`Missing heading for ${id}`);
       return {

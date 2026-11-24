@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { cp, readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { build } from "esbuild";
@@ -64,6 +64,15 @@ await build({
     mdx({ remarkPlugins: [remarkGfm] }),
   ],
 });
+
+const catalog = await generateCatalog();
+for (const { id, version } of catalog) {
+  await cp(
+    path.join(repoRoot, "registry/react", id),
+    path.join(appRoot, "dist/registry/react", id, version),
+    { recursive: true },
+  );
+}
 
 const { render, routes } = await import(pathToFileURL(ssrFile).href);
 const template = await readFile(path.join(appRoot, "dist/index.html"), "utf8");

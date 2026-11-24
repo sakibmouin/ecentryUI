@@ -25,4 +25,16 @@ test("Docs search finds aliases, supports keyboard navigation, and links to gene
       .getByRole("region", { name: "StepsProps" })
       .getByRole("rowheader", { name: "onValueChange" }),
   ).toBeVisible();
+  const manifestPath = "/registry/react/steps/0.1.0/manifest.json";
+  await expect(
+    page.getByRole("link", { name: "Registry source 0.1.0" }),
+  ).toHaveAttribute("href", manifestPath);
+  const manifest = await page.request.get(
+    new URL(manifestPath, page.url()).toString(),
+  );
+  expect(manifest.ok()).toBe(true);
+  expect(await manifest.json()).toMatchObject({
+    id: "steps",
+    version: "0.1.0",
+  });
 });
