@@ -3,6 +3,7 @@ import catalog from "virtual:ecentry-docs-catalog";
 import { CatalogReference, DocsSearch } from "./catalog-reference.js";
 import { CounterExample } from "./examples/counter.js";
 import { ExamplePanel } from "./example-panel.js";
+import { Playground } from "./playground.js";
 import counterSource from "./examples/counter.tsx?raw";
 import ButtonDocs from "../content/components/button.mdx";
 import InputDocs from "../content/components/input.mdx";
@@ -209,6 +210,7 @@ const StatDocs = lazy(() => import("../content/components/stat.mdx"));
 export const routes = [
   "/",
   "/guides/examples/",
+  "/guides/playground/",
   ...catalog.map(({ href }) => href),
 ];
 
@@ -498,6 +500,14 @@ export function App({ routePath }: { routePath: string }) {
               >
                 Examples
               </a>
+              <a
+                href="/guides/playground/"
+                aria-current={
+                  route === "/guides/playground/" ? "page" : undefined
+                }
+              >
+                Playground
+              </a>
             </div>
             <div className="nav-group">
               <div className="nav-label">COMPONENTS</div>
@@ -523,6 +533,8 @@ export function App({ routePath }: { routePath: string }) {
               <Home />
             ) : route === "/guides/examples/" ? (
               <Examples />
+            ) : route === "/guides/playground/" ? (
+              <Playground />
             ) : route === "/components/button/" ? (
               <ButtonDocs />
             ) : route === "/components/input/" ? (

@@ -15,6 +15,11 @@ function normalize(text: string) {
 }
 
 const guides = [
+  {
+    title: "Playground",
+    href: "/guides/playground/",
+    terms: ["button", "props", "copy code"],
+  },
   { title: "Overview", href: "/", terms: ["introduction", "getting started"] },
   {
     title: "Examples guide",

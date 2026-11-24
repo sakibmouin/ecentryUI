@@ -2301,3 +2301,65 @@ h3 {
     inline-size: auto;
   }
 }
+
+.docs-playground {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr) minmax(0, 1.2fr);
+  gap: 1rem;
+}
+
+.docs-playground fieldset,
+.docs-playground-preview,
+.docs-playground-source {
+  min-inline-size: 0;
+  padding: 1rem;
+  border: 1px solid #dce6df;
+  border-radius: 8px;
+  background: white;
+}
+
+.docs-playground fieldset {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.docs-playground fieldset label {
+  display: block;
+}
+
+.docs-playground :is(input:not([type="checkbox"]), select) {
+  width: 100%;
+  padding: 0.35rem;
+  border: 1px solid #bbc9bf;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.docs-playground-preview {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  overflow: auto;
+}
+
+.docs-playground-source {
+  grid-column: 1 / -1;
+}
+
+.docs-playground-source > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.docs-playground-source pre {
+  overflow: auto;
+}
+
+@media (max-width: 680px) {
+  .docs-playground {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

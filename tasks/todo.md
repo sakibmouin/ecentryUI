@@ -912,7 +912,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 - [x] **T159 Documentation search and API tables** (depends on catalog tasks as applicable).
   - Acceptance: Search covers names, aliases, props and states; API tables derive from public types.
   - Verify: `npm run test:docs && npm run build:docs`.
-- [ ] **T160 Playground and example safety** (depends on catalog tasks as applicable).
+- [x] **T160 Playground and example safety** (depends on catalog tasks as applicable).
   - Acceptance: Controls, preview and copyable code stay synchronized; untrusted code is isolated.
   - Verify: `npm run test:e2e -- playground`.
 - [ ] **T161 Catalog completion audit** (depends on catalog tasks as applicable).
