@@ -898,13 +898,13 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 ## Distribution and documentation completion
 
-- [ ] **T157 CLI diff and update** (depends on catalog tasks as applicable).
+- [x] **T157 CLI diff and update** (depends on catalog tasks as applicable).
   - Acceptance: Dry run is read-only; local edits survive or produce an explicit three-way conflict.
   - Verify: `npm test -- --run packages/cli`.
 
 ### Checkpoint after T157
 
-- [ ] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
+- [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
 - [ ] **T158 CLI doctor and compatibility** (depends on catalog tasks as applicable).
   - Acceptance: Detect missing files, bad registry data, incompatible peers and offline freshness limits.

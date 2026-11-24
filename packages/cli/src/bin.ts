@@ -8,6 +8,8 @@ import { validateRegistry } from "@ecentry/registry-schema";
 import type { RegistryPayload } from "@ecentry/registry-schema";
 import { applyInstallPlan, createInitPlan, installItems } from "./index.js";
 import type { InstallPlan, ProjectConfig } from "./index.js";
+import { applyProjectChanges, readProjectFile } from "./project-files.js";
+import { describeDiff, planAdd, planUpdate, previewDiff } from "./update.js";
 
 async function loadRegistry(directory: string): Promise<RegistryPayload[]> {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -89,10 +91,22 @@ async function installDependencies(
   });
 }
 
+function terminalText(value: string) {
+  return [...value]
+    .map((character) =>
+      character === "\n" || character === "\t" || !/\p{Cc}/u.test(character)
+        ? character
+        : "\uFFFD",
+    )
+    .join("");
+}
+
 async function main(args: string[]): Promise<void> {
   const [command, ...rest] = args;
   const dryRun = rest.includes("--dry-run");
   const yes = rest.includes("--yes");
+  const diff =
+    command === "diff" || (command === "add" && rest.includes("--diff"));
   const registryFlag = rest.indexOf("--registry");
   const registryDirectory =
     registryFlag >= 0 ? rest[registryFlag + 1] : undefined;
@@ -121,28 +135,65 @@ async function main(args: string[]): Promise<void> {
     return;
   }
 
-  if (command === "add") {
-    if (!ids.length) throw new Error("add needs at least one component ID");
-    const config = JSON.parse(
-      await readFile(path.join(root, "ecentry.json"), "utf8"),
-    ) as ProjectConfig;
+  if (command === "add" || command === "update" || command === "diff") {
+    if (!ids.length)
+      throw new Error(`${command} needs at least one component ID`);
+    const { content } = await readProjectFile(root, "ecentry.json");
+    if (content === null) throw new Error("Run ecentry init first.");
+    const config = JSON.parse(content) as ProjectConfig;
     const defaultRegistry = path.resolve(
       path.dirname(fileURLToPath(import.meta.url)),
       "../../../registry/react",
     );
     const registry = await loadRegistry(registryDirectory ?? defaultRegistry);
     const plan = installItems(ids, config, { registry });
+    if (diff) {
+      const diffs = await previewDiff(root, config.sourceDir, plan);
+      console.log(
+        diffs.length ? diffs.map(terminalText).join("\n") : "No differences.",
+      );
+      return;
+    }
+
+    if (command === "update") {
+      const update = await planUpdate(root, config.sourceDir, plan);
+      if (update.conflicts.length) {
+        for (const conflict of update.conflicts) {
+          console.error(
+            `Conflict in ${conflict.path}\n${terminalText(conflict.detail)}`,
+          );
+        }
+        throw new Error("Resolve the conflicts and run update again.");
+      }
+      if (!update.changes.length) {
+        console.log("Already up to date.");
+        return;
+      }
+      for (const change of update.changes) {
+        if (change.path === "ecentry.lock.json")
+          console.log("  record upstream base in ecentry.lock.json");
+        else console.log(terminalText(describeDiff(change)));
+      }
+      if (dryRun || (!yes && !(await confirm()))) return;
+      await applyProjectChanges(root, update.changes, true);
+      await installDependencies(root, plan);
+      await applyProjectChanges(root, update.changes);
+      return;
+    }
+
     showPlan(plan);
+    console.log("  record upstream base in ecentry.lock.json");
     if (dryRun) return;
-    if (!yes && !(await confirm())) return;
-    await applyInstallPlan(root, plan, { dryRun: true });
+    const changes = await planAdd(root, plan);
+    if (!changes.length || (!yes && !(await confirm()))) return;
+    await applyProjectChanges(root, changes, true);
     await installDependencies(root, plan);
-    await applyInstallPlan(root, plan);
+    await applyProjectChanges(root, changes);
     return;
   }
 
   throw new Error(
-    "Usage: ecentry init|add [components] [--dry-run] [--yes] [--registry dir]",
+    "Usage: ecentry init|add|diff|update [components] [--dry-run] [--yes] [--registry dir]",
   );
 }
 

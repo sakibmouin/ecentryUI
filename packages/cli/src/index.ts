@@ -1,5 +1,4 @@
-import { lstat, mkdir, open } from "node:fs/promises";
-import path from "node:path";
+import { applyProjectChanges, safePath } from "./project-files.js";
 import { validateRegistry } from "@ecentry/registry-schema";
 import type { RegistryPayload } from "@ecentry/registry-schema";
 
@@ -22,16 +21,17 @@ export interface InstallPlan {
   peerDependencies: Readonly<Record<string, string>>;
 }
 
-const safePath = /^[a-z0-9][a-z0-9._-]*(?:\/[a-z0-9][a-z0-9._-]*)*$/;
-
-function validateConfig(config: ProjectConfig): void {
+export function validateConfig(config: ProjectConfig): void {
   if (config.version !== 1)
     throw new Error("Unsupported project config version");
   for (const field of ["sourceDir", "cssEntry"] as const) {
-    if (!safePath.test(config[field]))
+    if (typeof config[field] !== "string" || !safePath.test(config[field]))
       throw new Error(`Invalid ${field}: ${config[field]}`);
   }
-  if (!/^@\/[a-z0-9/_-]+$/.test(config.importAlias)) {
+  if (
+    typeof config.importAlias !== "string" ||
+    !/^@\/[a-z0-9/_-]+$/.test(config.importAlias)
+  ) {
     throw new Error(`Invalid importAlias: ${config.importAlias}`);
   }
 }
@@ -98,60 +98,18 @@ export function installItems(
   return { files, items, npmDependencies, peerDependencies };
 }
 
-async function assertSafeDestination(
-  root: string,
-  relative: string,
-): Promise<void> {
-  if (!safePath.test(relative))
-    throw new Error(`Unsafe install path: ${relative}`);
-  const parts = relative.split("/");
-  let current = root;
-  for (const part of parts.slice(0, -1)) {
-    current = path.join(current, part);
-    const stat = await lstat(current).catch((error: NodeJS.ErrnoException) => {
-      if (error.code === "ENOENT") return null;
-      throw error;
-    });
-    if (stat?.isSymbolicLink())
-      throw new Error(`Symlink in install path: ${relative}`);
-    if (stat && !stat.isDirectory())
-      throw new Error(`Non-directory in install path: ${relative}`);
-  }
-  const target = path.join(root, relative);
-  const existing = await lstat(target).catch((error: NodeJS.ErrnoException) => {
-    if (error.code === "ENOENT") return null;
-    throw error;
-  });
-  if (existing)
-    throw new Error(`File already exists or was modified: ${relative}`);
-}
-
 export async function applyInstallPlan(
   projectRoot: string,
   plan: InstallPlan,
   options: { dryRun?: boolean } = {},
 ): Promise<void> {
-  for (const file of plan.files)
-    await assertSafeDestination(projectRoot, file.path);
-  if (options.dryRun) return;
-  const written: string[] = [];
-  try {
-    for (const file of plan.files) {
-      const target = path.join(projectRoot, file.path);
-      await mkdir(path.dirname(target), { recursive: true });
-      const handle = await open(target, "wx");
-      written.push(target);
-      try {
-        await handle.writeFile(file.content);
-      } finally {
-        await handle.close();
-      }
-    }
-  } catch (error) {
-    const { unlink } = await import("node:fs/promises");
-    await Promise.all(
-      written.map((file) => unlink(file).catch(() => undefined)),
-    );
-    throw error;
-  }
+  await applyProjectChanges(
+    projectRoot,
+    plan.files.map((file) => ({
+      path: file.path,
+      before: null,
+      after: file.content,
+    })),
+    options.dryRun,
+  );
 }

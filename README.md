@@ -7,6 +7,12 @@ The specifications are approved. The npm and TypeScript workspace, registry, doc
 - [Read the specifications](docs/specs/README.md)
 - [Review the implementation plan](tasks/plan.md)
 
+## Source updates
+
+Use `ecentry diff <component>` or `ecentry add <component> --diff` to compare local files with the registry. Run `ecentry update <component> --dry-run` to preview a three-way merge. An interactive update shows the proposed changes before asking for confirmation. Keep `ecentry.lock.json` in version control so updates have the installed base for comparison.
+
+If changes overlap, the CLI prints the local, base, and registry versions. Edit the local file to resolve the overlap, then rerun the update. Older installs with no recorded base can be tracked by updating against the original registry snapshot when the source matches it.
+
 ## Development
 
 Run these commands from the repository root:
