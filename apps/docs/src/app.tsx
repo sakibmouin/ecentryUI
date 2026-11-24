@@ -197,6 +197,7 @@ const PortalDocs = lazy(() => import("../content/components/portal.mdx"));
 const PresenceDocs = lazy(() => import("../content/components/presence.mdx"));
 const RadiomarkDocs = lazy(() => import("../content/components/radiomark.mdx"));
 const ShowDocs = lazy(() => import("../content/components/show.mdx"));
+const SkipNavDocs = lazy(() => import("../content/components/skip-nav.mdx"));
 const StatDocs = lazy(() => import("../content/components/stat.mdx"));
 
 export const routes = [
@@ -290,6 +291,7 @@ export const routes = [
   "/components/icon/",
   "/components/image/",
   "/components/status/",
+  "/components/skip-nav/",
   "/components/show/",
   "/components/radiomark/",
   "/components/presence/",
@@ -397,6 +399,7 @@ const componentLinks = [
   { title: "Icon", href: "/components/icon/" },
   { title: "Stat", href: "/components/stat/" },
   { title: "Status", href: "/components/status/" },
+  { title: "Skip Nav", href: "/components/skip-nav/" },
   { title: "Show", href: "/components/show/" },
   { title: "Radiomark", href: "/components/radiomark/" },
   { title: "Presence", href: "/components/presence/" },
@@ -986,6 +989,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/show/" ? (
               <Suspense fallback={<p>Loading show guide...</p>}>
                 <ShowDocs />
+              </Suspense>
+            ) : route === "/components/skip-nav/" ? (
+              <Suspense fallback={<p>Loading skip nav guide...</p>}>
+                <SkipNavDocs />
               </Suspense>
             ) : route === "/components/stat/" ? (
               <Suspense fallback={<p>Loading stat guide...</p>}>

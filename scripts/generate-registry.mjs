@@ -140,6 +140,7 @@ import { portalRegistryItem } from "../packages/react/dist/components/portal/met
 import { presenceRegistryItem } from "../packages/react/dist/components/presence/metadata.js";
 import { radiomarkRegistryItem } from "../packages/react/dist/components/radiomark/metadata.js";
 import { showRegistryItem } from "../packages/react/dist/components/show/metadata.js";
+import { skipNavLinkRegistryItem } from "../packages/react/dist/components/skip-nav/metadata.js";
 import { statRegistryItem } from "../packages/react/dist/components/stat/metadata.js";
 
 for (const item of [
@@ -238,6 +239,7 @@ for (const item of [
   skeletonRegistryItem,
   spinnerRegistryItem,
   statRegistryItem,
+  skipNavLinkRegistryItem,
   showRegistryItem,
   radiomarkRegistryItem,
   presenceRegistryItem,

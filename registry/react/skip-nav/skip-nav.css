@@ -1,0 +1,29 @@
+/* SPDX-License-Identifier: MIT */
+@layer ec.reset, ec.tokens, ec.components, ec.variants, ec.utilities;
+@layer ec.components {
+  .ec-skip-nav-link {
+    position: absolute;
+    inset-block-start: 0.5rem;
+    inset-inline-start: 0.5rem;
+    z-index: 20;
+    padding: 0.65rem 0.9rem;
+    border: 1px solid var(--ec-colors-accent, #116e5e);
+    border-radius: var(--ec-radii-md, 8px);
+    background: var(--ec-colors-surface, #fff);
+    color: var(--ec-colors-text, #19211c);
+  }
+
+  .ec-skip-nav-link:not(:focus) {
+    clip-path: inset(50%);
+    inline-size: 1px;
+    block-size: 1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .ec-skip-nav-link:focus-visible {
+    outline: 2px solid var(--ec-colors-accent, #116e5e);
+    outline-offset: 2px;
+  }
+}

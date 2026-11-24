@@ -1,0 +1,25 @@
+import { SkipNavExample } from "../../src/examples/skip-nav.tsx";
+import source from "../../src/examples/skip-nav.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Skip Nav
+
+Let keyboard users bypass navigation and move directly to content.
+
+## Install
+
+```sh
+ecentry add skip-nav
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <SkipNavExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Render `SkipNavLink` early in the page tab order and `SkipNavContent` where the shortcut should land. The default IDs match. For multiple pairs, give each link a `targetId` and set that value as the destination's `id`. Use an existing focusable landmark as the target by giving it the matching ID and `tabIndex={-1}`.
+
+The link is visible on focus and uses native fragment navigation. The destination can receive focus without adding another stop to the sequential tab order.

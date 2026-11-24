@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "skip-nav",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": ["index.ts", "skip-nav.css", "skip-nav.tsx", "styles.d.ts"],
+  "hashes": {
+    "index.ts": "a159fc9e1a8505441f6cfb93d940ec16df2bd1b5d70473163898e59cfde151a2",
+    "skip-nav.css": "61f0e65c0a0012e662160a3db7e6b1a2bf0ee467dde246c554384c03c2f7f4fd",
+    "skip-nav.tsx": "b303cb4bac87d5130bf19d6701316601b1d2bcabde7a2e345bce2ceca4f13557",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": ["colors.accent", "colors.surface", "colors.text", "radii.md"],
+  "docsUrl": "https://ecentry.dev/components/skip-nav/",
+  "license": "MIT"
+}

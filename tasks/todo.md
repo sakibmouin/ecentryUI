@@ -878,7 +878,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/show/show.tsx`, `show.css`, `show.test.tsx`, `index.ts`, `apps/docs/content/components/show.mdx`.
   - Acceptance: locale, portals, visibility and SSR; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/show/show.test.tsx && npm run test:e2e -- show`.
-- [ ] **T154 Skip Nav component** (depends on T016).
+- [x] **T154 Skip Nav component** (depends on T016).
   - Files: `packages/react/src/components/skip-nav/skip-nav.tsx`, `skip-nav.css`, `skip-nav.test.tsx`, `index.ts`, `apps/docs/content/components/skip-nav.mdx`.
   - Acceptance: locale, portals, visibility and SSR; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/skip-nav/skip-nav.test.tsx && npm run test:e2e -- skip-nav`.
