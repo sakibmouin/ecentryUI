@@ -33,3 +33,32 @@ test("docs navigation remains usable on a narrow screen", async ({ page }) => {
   await expect(page).toHaveURL(/\/components\/input\/$/);
   await expect(page.getByRole("heading", { name: "Input" })).toBeVisible();
 });
+
+test("Example controls wait for hydration before accepting keyboard input", async ({
+  page,
+}) => {
+  let loadClient = () => {};
+  const clientReady = new Promise<void>((resolve) => {
+    loadClient = resolve;
+  });
+  await page.route(/\/assets\/index-[\w-]+\.js$/, async (route) => {
+    await clientReady;
+    await route.continue();
+  });
+  const select = page.getByRole("button", { name: /^Favorite food / });
+  try {
+    await page.goto("http://127.0.0.1:4177/components/select/", {
+      waitUntil: "commit",
+    });
+    const preview = page.locator(".example-preview");
+    await expect(
+      preview.getByText("Favorite food", { exact: true }),
+    ).toBeVisible();
+    await expect(preview).toHaveAttribute("inert", "");
+    await expect(select).toHaveCount(0);
+  } finally {
+    loadClient();
+  }
+  await select.press("ArrowDown");
+  await expect(select).toHaveAttribute("aria-expanded", "true");
+});

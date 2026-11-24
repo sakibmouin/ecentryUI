@@ -311,6 +311,9 @@ h3 {
   margin-top: 24px;
   overflow: hidden;
 }
+.example-panel[aria-busy="true"] {
+  cursor: progress;
+}
 .example-tabs {
   display: flex;
   gap: 2px;

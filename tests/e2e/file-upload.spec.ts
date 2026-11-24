@@ -44,18 +44,14 @@ test("File Upload keeps a browser selection made before hydration", async ({
     await page.goto("http://127.0.0.1:4177/components/file-upload/", {
       waitUntil: "commit",
     });
-    const region = page.getByRole("region", { name: "File upload example" });
-    const input = region.locator("input[type=file]");
-    const [picker] = await Promise.all([
-      page.waitForEvent("filechooser"),
-      input.click(),
-    ]);
-    await picker.setFiles({
+    const input = page.locator('.ec-file-upload input[type="file"]');
+    // A source consumer can expose the native input before React hydrates.
+    await input.setInputFiles({
       name: "selected-early.txt",
       mimeType: "text/plain",
       buffer: Buffer.from("hello"),
     });
-    await expect(region.getByText("selected-early.txt")).toHaveCount(0);
+    await expect(page.getByText("selected-early.txt")).toHaveCount(0);
   } finally {
     loadClient();
   }

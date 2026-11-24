@@ -1,4 +1,4 @@
-import { useId, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import type { KeyboardEvent, ReactNode } from "react";
 
 export function ExamplePanel({
@@ -10,6 +10,8 @@ export function ExamplePanel({
 }) {
   const id = useId();
   const [tab, setTab] = useState<"preview" | "code">("preview");
+  const [ready, setReady] = useState(false);
+  useEffect(() => setReady(true), []);
   function onTabKeyDown(event: KeyboardEvent<HTMLButtonElement>) {
     if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
       event.preventDefault();
@@ -19,8 +21,18 @@ export function ExamplePanel({
     }
   }
   return (
-    <section className="example-panel" aria-label="Live example">
-      <div className="example-tabs" role="tablist" aria-label="Example view">
+    <section
+      className="example-panel"
+      aria-label="Live example"
+      aria-busy={!ready || undefined}
+    >
+      <div
+        className="example-tabs"
+        role="tablist"
+        aria-label="Example view"
+        inert={!ready}
+        aria-hidden={!ready || undefined}
+      >
         <button
           id={`${id}-example-tab-preview`}
           role="tab"
@@ -44,6 +56,8 @@ export function ExamplePanel({
       </div>
       <div
         role="tabpanel"
+        inert={!ready}
+        aria-hidden={!ready || undefined}
         aria-labelledby={`${id}-example-tab-${tab}`}
         className={tab === "preview" ? "example-preview" : "example-code"}
       >

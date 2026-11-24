@@ -46,7 +46,7 @@ export function DocsSearch() {
         ref={input}
         type="search"
         aria-label="Search docs"
-        placeholder="Search docs"
+        placeholder="Search"
         value={query}
         onChange={(event) => {
           setQuery(event.target.value);
