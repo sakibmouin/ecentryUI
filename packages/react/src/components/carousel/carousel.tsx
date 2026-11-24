@@ -43,7 +43,8 @@ export function Carousel({
   const [hovered, setHovered] = useState(false);
   const [focused, setFocused] = useState(false);
   const [userPaused, setUserPaused] = useState(false);
-  const [reducedMotion, setReducedMotion] = useState(false);
+  // Keep autoplay off until the browser preference has been read.
+  const [reducedMotion, setReducedMotion] = useState(true);
   const rootRef = useRef<HTMLDivElement>(null);
   const current = slides[index];
 
@@ -57,7 +58,10 @@ export function Carousel({
     onIndexChange?.(target);
   }
   useEffect(() => {
-    if (typeof window.matchMedia !== "function") return;
+    if (typeof window.matchMedia !== "function") {
+      setReducedMotion(false);
+      return;
+    }
     const query = window.matchMedia("(prefers-reduced-motion: reduce)");
     const update = () => setReducedMotion(query.matches);
     update();

@@ -51,3 +51,23 @@ test("Carousel disables autoplay for reduced motion", async ({ page }) => {
     carousel.getByRole("button", { name: "Pause autoplay" }),
   ).toHaveCount(0);
 });
+
+test.describe("Carousel first paint", () => {
+  test.use({ reducedMotion: "reduce" });
+
+  test("keeps autoplay off until the client's motion preference is known", async ({
+    page,
+  }) => {
+    await page.route(/\/assets\/index-[\w-]+\.js$/, (route) => route.abort());
+    await page.goto("http://127.0.0.1:4177/components/carousel/");
+    const carousel = page.locator(".ec-carousel");
+    await expect(carousel.locator('[aria-label="1 of 3: Plan"]')).toBeVisible();
+    await expect(
+      carousel.locator('button[aria-label="Pause autoplay"]'),
+    ).toHaveCount(0);
+    await expect(carousel.locator(".ec-carousel__viewport")).toHaveAttribute(
+      "aria-live",
+      "polite",
+    );
+  });
+});
