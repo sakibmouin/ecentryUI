@@ -41,6 +41,17 @@ test("Absolute Center positions each axis in LTR, RTL, and narrow layouts", asyn
       rtlChild!.x + rtlChild!.width / 2 - (rtlParent!.x + rtlParent!.width / 2),
     ),
   ).toBeLessThan(1);
+  const preview = page.getByRole("region", {
+    name: "Absolute Center examples",
+  });
+  const light = await preview.evaluate(
+    (element) => globalThis.getComputedStyle(element).backgroundColor,
+  );
+  await preview.getByRole("button", { name: "Dark mode" }).click();
+  await expect(preview).not.toHaveCSS("background-color", light);
+  await expect(
+    preview.getByRole("button", { name: "Light mode" }),
+  ).toBeVisible();
   const audit = await new AxeBuilder({ page }).analyze();
   expect(
     audit.violations.filter(

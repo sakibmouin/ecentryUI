@@ -33,6 +33,15 @@ test("Bleed extends past padding on logical edges in LTR and RTL", async ({
   expect(rtlBleed!.x + rtlBleed!.width).toBeGreaterThan(
     rtlParent!.x + rtlParent!.width,
   );
+  const preview = page.getByRole("region", { name: "Bleed examples" });
+  const light = await preview.evaluate(
+    (element) => globalThis.getComputedStyle(element).backgroundColor,
+  );
+  await preview.getByRole("button", { name: "Dark mode" }).click();
+  await expect(preview).not.toHaveCSS("background-color", light);
+  await expect(
+    preview.getByRole("button", { name: "Light mode" }),
+  ).toBeVisible();
   const audit = await new AxeBuilder({ page }).analyze();
   expect(
     audit.violations.filter(

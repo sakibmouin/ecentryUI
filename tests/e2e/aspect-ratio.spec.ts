@@ -22,6 +22,15 @@ test("Aspect Ratio keeps media frames proportional across widths", async ({
   const after = await page.getByTestId("wide-frame").boundingBox();
   expect(after!.width).toBeLessThan(before!.width);
   expect(Math.abs(after!.width / after!.height - 16 / 9)).toBeLessThan(0.02);
+  const preview = page.getByRole("region", { name: "Aspect Ratio examples" });
+  const light = await preview.evaluate(
+    (element) => globalThis.getComputedStyle(element).backgroundColor,
+  );
+  await preview.getByRole("button", { name: "Dark mode" }).click();
+  await expect(preview).not.toHaveCSS("background-color", light);
+  await expect(
+    preview.getByRole("button", { name: "Light mode" }),
+  ).toBeVisible();
   const audit = await new AxeBuilder({ page }).analyze();
   expect(
     audit.violations.filter(

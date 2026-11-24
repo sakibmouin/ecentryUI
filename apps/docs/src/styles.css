@@ -659,12 +659,12 @@ h3 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
   padding: 36px;
-  background: #fff;
+  background: var(--ec-colors-background, #fff);
 }
 .absolute-demo-group > span {
   display: block;
   margin-bottom: 10px;
-  color: #526459;
+  color: var(--ec-colors-text-muted, #526459);
   font-size: 12px;
   font-weight: 700;
 }
@@ -672,15 +672,15 @@ h3 {
   position: relative;
   height: 140px;
   overflow: hidden;
-  border: 1px dashed #c5d5c9;
+  border: 1px dashed var(--ec-colors-border, #c5d5c9);
   border-radius: 8px;
-  background: #f5f9f6;
+  background: var(--ec-colors-surface, #f5f9f6);
 }
 .absolute-demo-badge {
   padding: 8px 12px;
   border-radius: 6px;
-  background: #116e5e;
-  color: #fff;
+  background: var(--ec-colors-accent, #116e5e);
+  color: var(--ec-colors-background, #fff);
   font-size: 12px;
   font-weight: 700;
 }
@@ -692,12 +692,12 @@ h3 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
   padding: 36px;
-  background: #fff;
+  background: var(--ec-colors-background, #fff);
 }
 .aspect-demo-group > span {
   display: block;
   margin-bottom: 10px;
-  color: #526459;
+  color: var(--ec-colors-text-muted, #526459);
   font-size: 12px;
   font-weight: 700;
 }
@@ -737,33 +737,42 @@ h3 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
   padding: 36px;
-  background: #fff;
+  background: var(--ec-colors-background, #fff);
 }
 .bleed-demo-group > span {
   display: block;
   margin-bottom: 10px;
-  color: #526459;
+  color: var(--ec-colors-text-muted, #526459);
   font-size: 12px;
   font-weight: 700;
 }
 .bleed-demo-inset {
   padding: 16px;
   min-height: 125px;
-  border: 1px dashed #c5d5c9;
+  border: 1px dashed var(--ec-colors-border, #c5d5c9);
   border-radius: 8px;
-  background: #f5f9f6;
+  background: var(--ec-colors-surface, #f5f9f6);
 }
 .bleed-demo-inset > p {
   margin: 0 0 14px;
-  color: #526459;
+  color: var(--ec-colors-text-muted, #526459);
   font-size: 12px;
 }
 .bleed-demo-surface {
   padding: 14px 16px;
-  background: #116e5e;
-  color: #fff;
+  background: var(--ec-colors-accent, #116e5e);
+  color: var(--ec-colors-background, #fff);
   font-size: 13px;
   font-weight: 700;
+}
+.example-preview
+  > [data-ec-scope]:has(
+    > :is(.absolute-demo-grid, .aspect-demo-grid, .bleed-demo-grid)
+  ) {
+  width: 100%;
+}
+:is(.absolute-demo-grid, .aspect-demo-grid, .bleed-demo-grid) > button {
+  grid-column: 1 / -1;
 }
 .box-demo {
   display: grid;
@@ -877,7 +886,8 @@ h3 {
 .center-demo-square {
   border-radius: 10px;
 }
-.center-demo > button {
+:is(.absolute-demo-grid, .aspect-demo-grid, .bleed-demo-grid, .center-demo)
+  > button {
   justify-self: start;
   padding: 8px 4px;
   border: 0;
@@ -888,7 +898,8 @@ h3 {
   text-underline-offset: 3px;
   cursor: pointer;
 }
-.center-demo > button:focus-visible {
+:is(.absolute-demo-grid, .aspect-demo-grid, .bleed-demo-grid, .center-demo)
+  > button:focus-visible {
   outline: 2px solid var(--ec-colors-focus, Highlight);
   outline-offset: 2px;
 }
