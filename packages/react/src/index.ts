@@ -474,3 +474,7 @@ import "./components/skip-nav/skip-nav.css";
 export { Theme } from "./components/theme/theme.js";
 export type { ThemeProps } from "./components/theme/theme.js";
 import "./components/theme/theme.css";
+
+export { VisuallyHidden } from "./components/visually-hidden/visually-hidden.js";
+export type { VisuallyHiddenProps } from "./components/visually-hidden/visually-hidden.js";
+import "./components/visually-hidden/visually-hidden.css";

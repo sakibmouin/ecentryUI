@@ -199,6 +199,9 @@ const RadiomarkDocs = lazy(() => import("../content/components/radiomark.mdx"));
 const ShowDocs = lazy(() => import("../content/components/show.mdx"));
 const SkipNavDocs = lazy(() => import("../content/components/skip-nav.mdx"));
 const ThemeDocs = lazy(() => import("../content/components/theme.mdx"));
+const VisuallyHiddenDocs = lazy(
+  () => import("../content/components/visually-hidden.mdx"),
+);
 const StatDocs = lazy(() => import("../content/components/stat.mdx"));
 
 export const routes = [
@@ -292,6 +295,7 @@ export const routes = [
   "/components/icon/",
   "/components/image/",
   "/components/status/",
+  "/components/visually-hidden/",
   "/components/theme/",
   "/components/skip-nav/",
   "/components/show/",
@@ -401,6 +405,7 @@ const componentLinks = [
   { title: "Icon", href: "/components/icon/" },
   { title: "Stat", href: "/components/stat/" },
   { title: "Status", href: "/components/status/" },
+  { title: "Visually Hidden", href: "/components/visually-hidden/" },
   { title: "Theme", href: "/components/theme/" },
   { title: "Skip Nav", href: "/components/skip-nav/" },
   { title: "Show", href: "/components/show/" },
@@ -1000,6 +1005,10 @@ export function App({ routePath }: { routePath: string }) {
             ) : route === "/components/theme/" ? (
               <Suspense fallback={<p>Loading theme guide...</p>}>
                 <ThemeDocs />
+              </Suspense>
+            ) : route === "/components/visually-hidden/" ? (
+              <Suspense fallback={<p>Loading visually hidden guide...</p>}>
+                <VisuallyHiddenDocs />
               </Suspense>
             ) : route === "/components/stat/" ? (
               <Suspense fallback={<p>Loading stat guide...</p>}>

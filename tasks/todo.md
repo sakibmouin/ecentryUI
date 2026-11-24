@@ -891,7 +891,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
   - Files: `packages/react/src/components/theme/theme.tsx`, `theme.css`, `theme.test.tsx`, `index.ts`, `apps/docs/content/components/theme.mdx`.
   - Acceptance: locale, portals, visibility and SSR; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/theme/theme.test.tsx && npm run test:e2e -- theme`.
-- [ ] **T156 Visually Hidden component** (depends on T016).
+- [x] **T156 Visually Hidden component** (depends on T016).
   - Files: `packages/react/src/components/visually-hidden/visually-hidden.tsx`, `visually-hidden.css`, `visually-hidden.test.tsx`, `index.ts`, `apps/docs/content/components/visually-hidden.mdx`.
   - Acceptance: locale, portals, visibility and SSR; default, applicable variants/states, accessible behavior, docs preview and source install work.
   - Verify: `npm test -- --run packages/react/src/components/visually-hidden/visually-hidden.test.tsx && npm run test:e2e -- visually-hidden`.

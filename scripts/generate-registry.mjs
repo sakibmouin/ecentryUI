@@ -142,6 +142,7 @@ import { radiomarkRegistryItem } from "../packages/react/dist/components/radioma
 import { showRegistryItem } from "../packages/react/dist/components/show/metadata.js";
 import { skipNavLinkRegistryItem } from "../packages/react/dist/components/skip-nav/metadata.js";
 import { themeRegistryItem } from "../packages/react/dist/components/theme/metadata.js";
+import { visuallyHiddenRegistryItem } from "../packages/react/dist/components/visually-hidden/metadata.js";
 import { statRegistryItem } from "../packages/react/dist/components/stat/metadata.js";
 
 for (const item of [
@@ -240,6 +241,7 @@ for (const item of [
   skeletonRegistryItem,
   spinnerRegistryItem,
   statRegistryItem,
+  visuallyHiddenRegistryItem,
   themeRegistryItem,
   skipNavLinkRegistryItem,
   showRegistryItem,

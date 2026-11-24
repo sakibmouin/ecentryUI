@@ -1,0 +1,23 @@
+import { VisuallyHiddenExample } from "../../src/examples/visually-hidden.tsx";
+import source from "../../src/examples/visually-hidden.tsx?raw";
+import { ExamplePanel } from "../../src/example-panel.tsx";
+
+# Visually Hidden
+
+Hide content visually while preserving its accessible text.
+
+## Install
+
+```sh
+ecentry add visually-hidden
+```
+
+## Preview
+
+<ExamplePanel source={source}>
+  <VisuallyHiddenExample />
+</ExamplePanel>
+
+## API and accessibility
+
+Use it for text that belongs in a control's accessible name or description. The text stays in the accessibility tree. Use `revealOnFocus` only when an intentionally hidden control needs to become visible on keyboard focus.

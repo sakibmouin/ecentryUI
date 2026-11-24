@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "visually-hidden",
+  "version": "0.1.0",
+  "framework": "react",
+  "files": [
+    "index.ts",
+    "styles.d.ts",
+    "visually-hidden.css",
+    "visually-hidden.tsx"
+  ],
+  "hashes": {
+    "index.ts": "8cfe2fe2c77eb5aa41f9dd36708640ceada0c133bcee96bf6ac5247c6551c955",
+    "styles.d.ts": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa",
+    "visually-hidden.css": "5e7cc73e135cdb27cdf8862c2603e3dee7ecb9230ff9bb9a219ee753cae1dc84",
+    "visually-hidden.tsx": "f5c2b227eab27b21437e52606575191e6618f69061eb2516b163f99c8b5d4d6f"
+  },
+  "dependencies": [],
+  "peerDependencies": { "react": ">=18" },
+  "tokens": [],
+  "docsUrl": "https://ecentry.dev/components/visually-hidden/",
+  "license": "MIT"
+}
