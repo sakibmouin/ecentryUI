@@ -26,3 +26,24 @@ test("Hover Card opens by pointer and keyboard and closes on Escape", async ({
     ),
   ).toEqual([]);
 });
+
+test("Hover Card stays open when the pointer leaves keyboard-focused content", async ({
+  page,
+}) => {
+  await page.clock.install();
+  await page.goto("http://127.0.0.1:4177/components/hover-card/");
+  const example = page.getByRole("region", { name: "Hover card example" });
+  const trigger = example.getByRole("button", { name: "Meet the team" });
+  await trigger.hover();
+  await expect(
+    example.getByRole("dialog", { name: "Design team" }),
+  ).toBeVisible();
+  await trigger.press("ArrowDown");
+  const link = example.getByRole("link", { name: "Read team details" });
+  await expect(link).toBeFocused();
+  await page.getByRole("heading", { name: "Hover Card", exact: true }).hover();
+  await page.clock.runFor(250);
+  await expect(link).toBeFocused();
+  await link.press("Escape");
+  await expect(trigger).toBeFocused();
+});

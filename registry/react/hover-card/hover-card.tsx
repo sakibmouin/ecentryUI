@@ -37,6 +37,7 @@ export function HoverCard({
   const openTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const focusOnOpen = useRef(false);
+  const pointerInside = useRef(false);
   function change(next: boolean) {
     if (next === open) return;
     if (controlledOpen === undefined) setInternalOpen(next);
@@ -71,7 +72,15 @@ export function HoverCard({
   }
   function scheduleClose() {
     clearTimers();
-    closeTimer.current = setTimeout(() => change(false), closeDelay);
+    closeTimer.current = setTimeout(() => {
+      const root = rootRef.current;
+      if (
+        pointerInside.current ||
+        root?.contains(root.ownerDocument.activeElement)
+      )
+        return;
+      change(false);
+    }, closeDelay);
   }
   function handleBlur(event: FocusEvent<HTMLDivElement>) {
     if (!rootRef.current?.contains(event.relatedTarget as Node))
@@ -105,8 +114,14 @@ export function HoverCard({
     <div
       ref={rootRef}
       className={`ec-hover-card-root${className ? ` ${className}` : ""}`}
-      onMouseEnter={scheduleOpen}
-      onMouseLeave={scheduleClose}
+      onMouseEnter={() => {
+        pointerInside.current = true;
+        scheduleOpen();
+      }}
+      onMouseLeave={() => {
+        pointerInside.current = false;
+        scheduleClose();
+      }}
       onBlur={handleBlur}
       onKeyDown={handleKeyDown}
     >
@@ -134,8 +149,6 @@ export function HoverCard({
           role="dialog"
           aria-labelledby={`${cardId}-title`}
           className="ec-hover-card"
-          onMouseEnter={clearTimers}
-          onMouseLeave={scheduleClose}
         >
           <h2 id={`${cardId}-title`}>{title}</h2>
           <div className="ec-hover-card__body">{children}</div>
