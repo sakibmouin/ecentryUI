@@ -871,7 +871,7 @@ h3 {
 .center-demo-square,
 .center-demo-circle {
   background: var(--ec-colors-accent, #116e5e);
-  color: #fff;
+  color: var(--ec-colors-background, #fff);
   font-weight: 800;
 }
 .center-demo-square {

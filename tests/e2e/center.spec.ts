@@ -39,6 +39,13 @@ test("Center, Square, and Circle preserve geometry, semantics, and appearance", 
     .not.toBe(light);
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(panel).toBeVisible();
+  const darkBackground = await page
+    .getByRole("region", { name: "Center examples" })
+    .evaluate(
+      (element) => globalThis.getComputedStyle(element).backgroundColor,
+    );
+  await expect(square).toHaveCSS("color", darkBackground);
+  await expect(circle).toHaveCSS("color", darkBackground);
   const audit = await new AxeBuilder({ page }).analyze();
   expect(
     audit.violations.filter(
