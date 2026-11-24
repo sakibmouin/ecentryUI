@@ -1,3 +1,5 @@
+import console from "node:console";
+import process from "node:process";
 import { access, readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, URL } from "node:url";

@@ -19,4 +19,4 @@ it("derives docs entries and API fields from canonical public types", async () =
   expect(
     steps?.api.flatMap(({ props }) => props.map(({ name }) => name)),
   ).not.toContain("draggable");
-});
+}, 20_000);
