@@ -7,6 +7,7 @@ The specifications are approved. The npm and TypeScript workspace, registry, doc
 - [Read the specifications](docs/specs/README.md)
 - [Review the implementation plan](tasks/plan.md)
 - [Inspect the catalog evidence](docs/catalog-evidence.md)
+- [Review release verification](docs/release-verification.md)
 
 ## Source updates
 

@@ -921,9 +921,10 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 - [ ] **T162 Release quality gate** (depends on catalog tasks as applicable).
   - Acceptance: All builds, tests, accessibility, visual and consumer fixture gates pass with no open critical gaps.
   - Verify: `npm run build && npm run typecheck && npm run lint && npm test -- --run && npm run test:e2e && npm run registry:validate && npm run build:docs`.
+  - Progress and outstanding checks are recorded in [release verification](../docs/release-verification.md).
 
 ## Wave checkpoints
 
-- [ ] After each family: run all focused component tests, docs build, registry validation and both consumer fixture builds.
+- [x] After each family: run all focused component tests, docs build, registry validation and both consumer fixture builds.
 - [ ] Review responsive light/dark screenshots and keyboard flows before starting the next family.
 - [ ] Before release: every catalog task and all checks above are complete.
