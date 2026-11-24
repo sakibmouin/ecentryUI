@@ -906,7 +906,7 @@ Tasks are ordered by dependency. Each component task includes focused tests and 
 
 - [x] Run focused tests for the previous three tasks, registry validation, docs build and relevant browser flows.
 
-- [ ] **T158 CLI doctor and compatibility** (depends on catalog tasks as applicable).
+- [x] **T158 CLI doctor and compatibility** (depends on catalog tasks as applicable).
   - Acceptance: Detect missing files, bad registry data, incompatible peers and offline freshness limits.
   - Verify: `npm test -- --run packages/cli`.
 - [ ] **T159 Documentation search and API tables** (depends on catalog tasks as applicable).

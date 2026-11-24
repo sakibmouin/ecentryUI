@@ -13,6 +13,8 @@ Use `ecentry diff <component>` or `ecentry add <component> --diff` to compare lo
 
 If changes overlap, the CLI prints the local, base, and registry versions. Edit the local file to resolve the overlap, then rerun the update. Older installs with no recorded base can be tracked by updating against the original registry snapshot when the source matches it.
 
+Use `ecentry doctor [components] --offline --registry <directory>` to verify configuration, registry integrity, source files, and installed package versions with a local snapshot. Omitting the directory uses the bundled snapshot. Doctor reports that it cannot verify remote freshness. CLI 0.0.x supports registry schema 1. Component versions are recorded independently in each manifest.
+
 ## Development
 
 Run these commands from the repository root:

@@ -10,6 +10,7 @@ import { applyInstallPlan, createInitPlan, installItems } from "./index.js";
 import type { InstallPlan, ProjectConfig } from "./index.js";
 import { applyProjectChanges, readProjectFile } from "./project-files.js";
 import { describeDiff, planAdd, planUpdate, previewDiff } from "./update.js";
+import { inspectProject } from "./doctor.js";
 
 async function loadRegistry(directory: string): Promise<RegistryPayload[]> {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -21,8 +22,8 @@ async function loadRegistry(directory: string): Promise<RegistryPayload[]> {
     const manifest = JSON.parse(
       await readFile(path.join(root, "manifest.json"), "utf8"),
     ) as RegistryPayload["manifest"];
-    if (!Array.isArray(manifest.files))
-      throw new Error(`Invalid files for ${entry.name}`);
+    if (manifest?.id !== entry.name || !Array.isArray(manifest.files))
+      throw new Error(`Invalid registry manifest: ${entry.name}`);
     const files: Record<string, string> = {};
     for (const file of manifest.files) {
       if (
@@ -135,8 +136,13 @@ async function main(args: string[]): Promise<void> {
     return;
   }
 
-  if (command === "add" || command === "update" || command === "diff") {
-    if (!ids.length)
+  if (
+    command === "add" ||
+    command === "update" ||
+    command === "diff" ||
+    command === "doctor"
+  ) {
+    if (command !== "doctor" && !ids.length)
       throw new Error(`${command} needs at least one component ID`);
     const { content } = await readProjectFile(root, "ecentry.json");
     if (content === null) throw new Error("Run ecentry init first.");
@@ -146,6 +152,16 @@ async function main(args: string[]): Promise<void> {
       "../../../registry/react",
     );
     const registry = await loadRegistry(registryDirectory ?? defaultRegistry);
+    if (command === "doctor") {
+      console.log(
+        "Checking a local registry snapshot. Registry freshness could not be verified.",
+      );
+      const issues = await inspectProject(root, config, registry, ids);
+      for (const issue of issues) console.error(terminalText(issue));
+      if (issues.length) process.exitCode = 1;
+      else console.log("Project and registry checks passed.");
+      return;
+    }
     const plan = installItems(ids, config, { registry });
     if (diff) {
       const diffs = await previewDiff(root, config.sourceDir, plan);
@@ -193,7 +209,7 @@ async function main(args: string[]): Promise<void> {
   }
 
   throw new Error(
-    "Usage: ecentry init|add|diff|update [components] [--dry-run] [--yes] [--registry dir]",
+    "Usage: ecentry init|add|diff|update|doctor [components] [--dry-run] [--yes] [--registry dir] [--offline]",
   );
 }
 
