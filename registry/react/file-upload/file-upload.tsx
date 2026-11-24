@@ -32,6 +32,7 @@ export function FileUpload({
   const generated = useId();
   const inputId = id ?? generated;
   const inputRef = useRef<HTMLInputElement>(null);
+  const observedSelection = useRef(false);
   const [internalFiles, setInternalFiles] = useState<File[]>(defaultFiles);
   const [error, setError] = useState<string>();
   const selected = files ?? internalFiles;
@@ -92,6 +93,13 @@ export function FileUpload({
     }
     update(next);
   }
+  useEffect(() => {
+    if (observedSelection.current) return;
+    observedSelection.current = true;
+    // The native picker can accept files before React attaches its change handler.
+    add(Array.from(inputRef.current?.files ?? []));
+  }, []);
+
   function drop(event: DragEvent<HTMLDivElement>) {
     event.preventDefault();
     if (disabled) return;
@@ -118,7 +126,10 @@ export function FileUpload({
           aria-describedby={
             error ? `${inputId}-error` : rest["aria-describedby"]
           }
-          onChange={(event) => add(Array.from(event.currentTarget.files ?? []))}
+          onChange={(event) => {
+            observedSelection.current = true;
+            add(Array.from(event.currentTarget.files ?? []));
+          }}
         />
         <span>Choose {multiple ? "files" : "a file"} or drop here</span>
       </div>

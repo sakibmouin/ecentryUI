@@ -28,3 +28,38 @@ test("File Upload picks, removes, and resets files", async ({ page }) => {
     ),
   ).toEqual([]);
 });
+
+test("File Upload keeps a browser selection made before hydration", async ({
+  page,
+}) => {
+  let loadClient = () => {};
+  const clientReady = new Promise<void>((resolve) => {
+    loadClient = resolve;
+  });
+  await page.route(/\/assets\/index-[\w-]+\.js$/, async (route) => {
+    await clientReady;
+    await route.continue();
+  });
+  try {
+    await page.goto("http://127.0.0.1:4177/components/file-upload/", {
+      waitUntil: "commit",
+    });
+    const region = page.getByRole("region", { name: "File upload example" });
+    const input = region.locator("input[type=file]");
+    const [picker] = await Promise.all([
+      page.waitForEvent("filechooser"),
+      input.click(),
+    ]);
+    await picker.setFiles({
+      name: "selected-early.txt",
+      mimeType: "text/plain",
+      buffer: Buffer.from("hello"),
+    });
+    await expect(region.getByText("selected-early.txt")).toHaveCount(0);
+  } finally {
+    loadClient();
+  }
+  await expect(
+    page.getByRole("button", { name: "Remove selected-early.txt" }),
+  ).toBeVisible();
+});
